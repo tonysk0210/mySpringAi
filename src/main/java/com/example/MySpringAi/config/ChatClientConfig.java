@@ -1,6 +1,6 @@
-package com.example.MySpringAi.config;
+package com.example.mySpringAi.config;
 
-import com.example.MySpringAi.tools.TimeTool;
+import com.example.mySpringAi.tools.TimeTool;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;

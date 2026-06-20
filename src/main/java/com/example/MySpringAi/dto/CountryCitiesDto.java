@@ -1,4 +1,4 @@
-package com.example.MySpringAi.dto;
+package com.example.mySpringAi.dto;
 
 import java.util.List;
 

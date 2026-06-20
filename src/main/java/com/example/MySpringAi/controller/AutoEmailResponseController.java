@@ -1,6 +1,6 @@
-package com.example.MySpringAi.controller;
+package com.example.mySpringAi.controller;
 
-import com.example.MySpringAi.payload.AutoEmailResponsePayload;
+import com.example.mySpringAi.payload.AutoEmailResponsePayload;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.chat.prompt.PromptTemplate;

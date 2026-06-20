@@ -1,4 +1,4 @@
-package com.example.MySpringAi.component;
+package com.example.mySpringAi.component;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.ai.tool.ToolCallbackProvider;

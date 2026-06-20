@@ -1,4 +1,4 @@
-package com.example.MySpringAi.config;
+package com.example.mySpringAi.config;
 
 import org.springframework.ai.embedding.EmbeddingModel;
 import org.springframework.ai.ollama.OllamaEmbeddingModel;

@@ -1,7 +1,7 @@
-package com.example.MySpringAi.controller;
+package com.example.mySpringAi.controller;
 
-import com.example.MySpringAi.payload.GenericChatPayload;
-import com.example.MySpringAi.tools.HelpDeskTicketTool;
+import com.example.mySpringAi.payload.GenericChatPayload;
+import com.example.mySpringAi.tools.HelpDeskTicketTool;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

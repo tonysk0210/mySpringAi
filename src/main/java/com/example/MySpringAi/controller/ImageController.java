@@ -1,4 +1,4 @@
-package com.example.MySpringAi.controller;
+package com.example.mySpringAi.controller;
 
 import org.springframework.ai.image.ImageModel;
 import org.springframework.ai.image.ImagePrompt;

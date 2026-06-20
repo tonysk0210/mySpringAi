@@ -1,7 +1,7 @@
-package com.example.MySpringAi.controller;
+package com.example.mySpringAi.controller;
 
-import com.example.MySpringAi.dto.CountryCitiesDto;
-import com.example.MySpringAi.payload.JsonOutputPayload;
+import com.example.mySpringAi.dto.CountryCitiesDto;
+import com.example.mySpringAi.payload.JsonOutputPayload;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.converter.BeanOutputConverter;
 import org.springframework.ai.converter.ListOutputConverter;

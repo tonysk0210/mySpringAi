@@ -5,13 +5,13 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.8</version>
+        <version>3.5.15</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>MySpringAi</artifactId>
+    <artifactId>mySpringAi</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>MySpringAi</name>
+    <name>mySpringAi</name>
     <description>Demo project for Spring Boot</description>
     <url/>
     <licenses>
@@ -34,6 +34,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
         </dependency>
         <!--Model Provider: OpenAI-->
         <dependency>
@@ -107,6 +112,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
     <dependencyManagement>
         <dependencies>

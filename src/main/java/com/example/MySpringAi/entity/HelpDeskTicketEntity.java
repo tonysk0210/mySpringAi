@@ -1,4 +1,4 @@
-package com.example.MySpringAi.entity;
+package com.example.mySpringAi.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

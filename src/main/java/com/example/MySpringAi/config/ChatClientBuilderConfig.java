@@ -1,4 +1,4 @@
-package com.example.MySpringAi.config;
+package com.example.mySpringAi.config;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.ollama.OllamaChatModel;

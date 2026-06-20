@@ -1,4 +1,4 @@
-package com.example.MySpringAi.component.rag;
+package com.example.mySpringAi.component.rag;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.document.Document;

@@ -1,6 +1,6 @@
-package com.example.MySpringAi.controller;
+package com.example.mySpringAi.controller;
 
-import com.example.MySpringAi.payload.GenericChatPayload;
+import com.example.mySpringAi.payload.GenericChatPayload;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.rag.advisor.RetrievalAugmentationAdvisor;

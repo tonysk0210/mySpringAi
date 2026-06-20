@@ -1,8 +1,8 @@
-package com.example.MySpringAi.tools;
+package com.example.mySpringAi.tools;
 
-import com.example.MySpringAi.entity.HelpDeskTicketEntity;
-import com.example.MySpringAi.payload.HelpDeskTicketPayload;
-import com.example.MySpringAi.service.HelpDeskTicketService;
+import com.example.mySpringAi.entity.HelpDeskTicketEntity;
+import com.example.mySpringAi.payload.HelpDeskTicketPayload;
+import com.example.mySpringAi.service.HelpDeskTicketService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.model.ToolContext;

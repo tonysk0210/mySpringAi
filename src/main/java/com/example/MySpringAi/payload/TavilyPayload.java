@@ -1,4 +1,4 @@
-package com.example.MySpringAi.payload;
+package com.example.mySpringAi.payload;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;

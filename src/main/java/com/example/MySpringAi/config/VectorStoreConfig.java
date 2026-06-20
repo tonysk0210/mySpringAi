@@ -1,4 +1,4 @@
-package com.example.MySpringAi.config;
+package com.example.mySpringAi.config;
 
 
 import io.qdrant.client.QdrantClient;

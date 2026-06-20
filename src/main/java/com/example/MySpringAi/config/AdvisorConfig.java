@@ -1,7 +1,7 @@
-package com.example.MySpringAi.config;
+package com.example.mySpringAi.config;
 
-import com.example.MySpringAi.component.rag.MaskingDocumentPostProcessor;
-import com.example.MySpringAi.component.rag.TavilyWebSearchDocumentRetriever;
+import com.example.mySpringAi.component.rag.MaskingDocumentPostProcessor;
+import com.example.mySpringAi.component.rag.TavilyWebSearchDocumentRetriever;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.rag.advisor.RetrievalAugmentationAdvisor;
 import org.springframework.ai.rag.preretrieval.query.transformation.TranslationQueryTransformer;

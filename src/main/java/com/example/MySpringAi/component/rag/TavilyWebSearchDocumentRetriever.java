@@ -1,7 +1,7 @@
-package com.example.MySpringAi.component.rag;
+package com.example.mySpringAi.component.rag;
 
-import com.example.MySpringAi.dto.TavilyDto;
-import com.example.MySpringAi.payload.TavilyPayload;
+import com.example.mySpringAi.dto.TavilyDto;
+import com.example.mySpringAi.payload.TavilyPayload;
 import com.google.common.net.HttpHeaders;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.document.Document;

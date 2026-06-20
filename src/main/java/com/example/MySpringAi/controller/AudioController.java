@@ -1,4 +1,4 @@
-package com.example.MySpringAi.controller;
+package com.example.mySpringAi.controller;
 
 import org.springframework.ai.audio.transcription.AudioTranscriptionPrompt;
 import org.springframework.ai.audio.transcription.AudioTranscriptionResponse;

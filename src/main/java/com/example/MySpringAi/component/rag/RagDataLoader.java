@@ -1,4 +1,4 @@
-package com.example.MySpringAi.component.rag;
+package com.example.mySpringAi.component.rag;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.ai.document.Document;

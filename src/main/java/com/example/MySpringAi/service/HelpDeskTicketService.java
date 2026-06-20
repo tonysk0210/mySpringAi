@@ -1,8 +1,8 @@
-package com.example.MySpringAi.service;
+package com.example.mySpringAi.service;
 
-import com.example.MySpringAi.entity.HelpDeskTicketEntity;
-import com.example.MySpringAi.payload.HelpDeskTicketPayload;
-import com.example.MySpringAi.repo.HelpDeskTicketRepository;
+import com.example.mySpringAi.entity.HelpDeskTicketEntity;
+import com.example.mySpringAi.payload.HelpDeskTicketPayload;
+import com.example.mySpringAi.repo.HelpDeskTicketRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
