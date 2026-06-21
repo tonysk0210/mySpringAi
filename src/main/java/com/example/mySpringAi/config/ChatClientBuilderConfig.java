@@ -10,16 +10,17 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ChatClientBuilderConfig {
 
+    // 手動建立 OpenAI 專用 ChatClient.Builder，避免依賴 Spring AI 預設 builder。
     @Bean
-    @Qualifier("openAiBuilder")
+    @Qualifier("openaiBuilder")
     public ChatClient.Builder openAiChatClientBuilder(OpenAiChatModel model) {
         return ChatClient.builder(model);
     }
 
+    // 手動建立 Ollama 專用 ChatClient.Builder，避免依賴 Spring AI 預設 builder。
     @Bean
     @Qualifier("ollamaBuilder")
     public ChatClient.Builder ollamaChatClientBuilder(OllamaChatModel model) {
         return ChatClient.builder(model);
     }
 }
-
