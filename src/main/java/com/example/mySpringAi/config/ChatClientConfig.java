@@ -14,14 +14,34 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * 1.
  * OpenAiChatModel 和 OllamaChatModel 是 Spring 自動建立的 Bean 在 pom.xml 引入
- *
  * spring-ai-starter-model-openai 會自動建立 OpenAiChatModel Bean。
  * spring-ai-starter-model-ollama 會自動建立 OllamaChatModel Bean。
  * 因為專案同時有多個 ChatModel 實作，所以這裡直接注入具體型別避免歧義
+ *
+ * 2.
+ * ChatClient.create 不會預設配置 memory；memory 需要透過 advisor 加入，通常用 builder 設成 defaultAdvisors 比較適合。
  */
 @Configuration
 public class ChatClientConfig {
+
+    // A. 使用 OpenAI 模型，並搭配 in-memory chat memory 來記住對話上下文。
+    @Bean("openaiChatClient-inChatMemory")
+    public ChatClient openaiChatClientInChatMemory(OpenAiChatModel openAiChatModel, @Qualifier("generic-inMemoryChatMemory") ChatMemory chatMemory) {
+
+        // 1. 設定模型用的「參數」
+        ChatOptions.Builder chatOptions = ChatOptions.builder().temperature(0.5).maxTokens(500);
+        // 2. 建立 MessageChatMemoryAdvisor，也就是「會話記憶攔截器」。
+        Advisor inMemoryAdvisor = MessageChatMemoryAdvisor.builder(chatMemory).build();
+
+        return ChatClient.builder(openAiChatModel)
+                .defaultOptions(chatOptions)
+                .defaultAdvisors(new SimpleLoggerAdvisor(), inMemoryAdvisor) // inMemoryAdvisor 加入預設 Advisor（攔截器）// 加入 in-memory chat memory advisor，讓此 ChatClient 自動讀取與保存對話記憶。
+                .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。")
+                .build();
+    }
+
 
     @Bean("openaiChatClient-jdbcChatMemory")
     public ChatClient openaiChatClient(OpenAiChatModel openAiChatModel, @Qualifier("openai-jdbcChatMemory") ChatMemory chatMemory) {
@@ -48,17 +68,7 @@ public class ChatClientConfig {
                 .build();
     }
 
-    @Bean("openaiChatClient-inChatMemory")
-    public ChatClient openaiChatClientInMemory(OpenAiChatModel openAiChatModel, @Qualifier("generic-inMemoryChatMemory") ChatMemory chatMemory) {
-        ChatOptions.Builder chatOptions = ChatOptions.builder().temperature(0.5).maxTokens(500);
-        Advisor inMemoryAdvisor = MessageChatMemoryAdvisor.builder(chatMemory).build();
 
-        return ChatClient.builder(openAiChatModel)
-                .defaultOptions(chatOptions)
-                .defaultAdvisors(new SimpleLoggerAdvisor(), inMemoryAdvisor) // inMemoryAdvisor 加入預設 Advisor（攔截器）
-                .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。")
-                .build();
-    }
 
     @Bean("openaiChatClient-jdbcChatMemory-toolCalling")
     public ChatClient openaiToolCalling(OpenAiChatModel openAiChatModel, @Qualifier("openai-jdbcChatMemory") ChatMemory chatMemory, TimeTool timeTool) {
