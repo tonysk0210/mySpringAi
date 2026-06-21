@@ -24,6 +24,7 @@ public class TokenUsageAuditAdvisor implements CallAdvisor {
         // 3. 取得 token usage 的資訊。注意，metadata 或 usage 可能為 null，所以要先檢查。
         Usage usage = chatResponse.getMetadata().getUsage();
 
+        // 4. 如果 usage 不為 null，就 log 它。
         if (usage != null) {
             log.info("Token 使用量 : {}", usage.toString());
         }
