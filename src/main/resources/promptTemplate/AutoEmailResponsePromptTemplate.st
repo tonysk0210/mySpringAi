@@ -1,7 +1,9 @@
-A customer named {customerName} sent the following message: {customerMessage}
+客戶 {customerName} 傳送了以下訊息：
 
-Write a polite and helpful email response addressing the issue.
-Maintain a professional tone and provide reassurance.
+{customerMessage}
 
-Respond as if you're writing the email body only. Don't include subject,
-signature
+請撰寫一封禮貌且有幫助的電子郵件回覆，針對客戶提出的問題進行回應。
+
+請保持專業且友善的語氣，並提供適當的安撫與保證。
+
+請僅回覆電子郵件內文，不需包含主旨、署名或簽名。

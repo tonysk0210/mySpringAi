@@ -14,16 +14,29 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * 1.
- * OpenAiChatModel 和 OllamaChatModel 是 Spring 自動建立的 Bean 在 pom.xml 引入
+ * 1. OpenAiChatModel 和 OllamaChatModel 是 Spring 自動建立的 Bean 在 pom.xml 引入
  * spring-ai-starter-model-openai 會自動建立 OpenAiChatModel Bean。
  * spring-ai-starter-model-ollama 會自動建立 OllamaChatModel Bean。
  * 因為專案同時有多個 ChatModel 實作，所以這裡直接注入具體型別避免歧義
- * 2.
- * ChatClient.create 不會預設配置 memory；memory 需要透過 advisor 加入，通常用 builder 設成 defaultAdvisors 比較適合。
+ * <p>
+ * 2. ChatClient.create 不會預設配置 memory；memory 需要透過 advisor 加入，通常用 builder 設成 defaultAdvisors 比較適合。
  */
 @Configuration
 public class ChatClientConfig {
+
+    // 使用 OpenAI 模型、但沒有聊天記憶功能的 ChatClient bean，提供給不需要記憶功能的場景使用（例如單次問答、工具調用等）。
+    @Bean("openaiChatClient-withoutMemory")
+    public ChatClient openaiChatClientWithoutMemory(OpenAiChatModel openAiChatModel) {
+
+        // 1. 設定模型用的「參數」
+        ChatOptions.Builder chatOptions = ChatOptions.builder().temperature(0.5).maxTokens(500);
+
+        return ChatClient.builder(openAiChatModel)
+                .defaultOptions(chatOptions)
+                .defaultAdvisors(new SimpleLoggerAdvisor())
+                .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。")
+                .build();
+    }
 
     //  使用 OpenAI 模型，並搭配 in-memory chat memory 來記住對話上下文。
     @Bean("openaiChatClient-inChatMemory")
@@ -69,7 +82,6 @@ public class ChatClientConfig {
     }
 
 
-
     @Bean("openaiChatClient-jdbcChatMemory-toolCalling")
     public ChatClient openaiToolCalling(OpenAiChatModel openAiChatModel, @Qualifier("openai-jdbcChatMemory") ChatMemory chatMemory, TimeTool timeTool) {
         ChatOptions.Builder chatOptions = ChatOptions.builder().temperature(0.5).maxTokens(500);
@@ -83,15 +95,5 @@ public class ChatClientConfig {
                 .build();
     }
 
-    /*------------------------without ChatMemory------------------------*/
-    @Bean("openaiChatClient-withoutMemory")
-    public ChatClient openaiChatClientWithoutMemory(OpenAiChatModel openAiChatModel) {
-        ChatOptions.Builder chatOptions = ChatOptions.builder().temperature(0.5).maxTokens(500);
 
-        return ChatClient.builder(openAiChatModel)
-                .defaultOptions(chatOptions)
-                .defaultAdvisors(new SimpleLoggerAdvisor())
-                .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。")
-                .build();
-    }
 }

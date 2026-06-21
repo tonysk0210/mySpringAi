@@ -2,8 +2,6 @@ package com.example.mySpringAi.controller;
 
 import com.example.mySpringAi.payload.AutoEmailResponsePayload;
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.chat.prompt.Prompt;
-import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,9 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import reactor.core.publisher.Flux;
-
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
@@ -22,9 +17,7 @@ public class AutoEmailResponseController {
 
     private final ChatClient openaiChatClientWithoutMemory;
 
-    /**
-     * 這個方法會使用 Spring AI 的 PromptTemplate 來生成 Prompt，然後使用 ChatClient 來生成對應的 Response
-     */
+    // 指定 PromptTemplate 的位置，Spring 會自動讀取這個檔案並注入 Resource 物件。這裡的 promptTemplateText 是一個 Resource，可以透過 getInputStream() 來讀取檔案內容。
     @Value("classpath:promptTemplate/AutoEmailResponsePromptTemplate.st")
     private Resource emailResponsePromptTemplateText;
 
@@ -33,10 +26,16 @@ public class AutoEmailResponseController {
         this.openaiChatClientWithoutMemory = openaiChatClientWithoutMemory;
     }
 
-    //openai auto-generate email response given customer name & customer concern
+    /**
+     * 使用 OpenAI 的 ChatGPT 來生成電子郵件回應。這個 API 接收一個 AutoEmailResponsePayload 物件，包含客戶名稱和客戶訊息，然後使用預先定義的 PromptTemplate 來生成回應。
+     *
+     * @param autoEmailResponsePayload 包含客戶名稱和客戶訊息的物件
+     * @return 生成的電子郵件回應內容
+     */
     @PostMapping("/openai/emailResponse")
     public String openaiEmailResponse(@RequestBody AutoEmailResponsePayload autoEmailResponsePayload) {
         return openaiChatClientWithoutMemory.prompt()
+                // 使用預先定義的 PromptTemplate 來生成 Prompt，並將客戶名稱和訊息作為參數傳入。這裡的 promptUserSpec.text() 方法會將 PromptTemplate 的內容與參數結合，生成最終的 Prompt。
                 .user(promptUserSpec -> promptUserSpec.text(emailResponsePromptTemplateText)
                         .param("customerName", autoEmailResponsePayload.customerName())
                         .param("customerMessage", autoEmailResponsePayload.customerMessage()))
