@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.15</version>
+        <version>4.1.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
@@ -28,28 +28,33 @@
     </scm>
     <properties>
         <java.version>25</java.version>
-        <spring-ai.version>1.1.0</spring-ai.version>
+        <spring-ai.version>2.0.0</spring-ai.version>
+        <lombok.version>1.18.46</lombok.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-webmvc</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
         </dependency>
-        <!--Model Provider: OpenAI-->
+
+        <!-- Model Provider: OpenAI 模型 -->
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-starter-model-openai</artifactId>
         </dependency>
-        <!--Model Provider: Ollama-->
+
+        <!-- Model Provider: Ollama 模型 -->
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-starter-model-ollama</artifactId>
         </dependency>
+
         <!--聊天記憶（ChatMemory）透過 JDBC 儲存」套件-->
         <!-- - 沒有 JDBC 依賴時：會用內建的記憶體型 MessageWindowChatMemory。
              - 加入 JDBC 依賴後：自動配置會建立 JDBC 版 ChatMemory，原先的 MessageWindowChatMemory 不再生效。-->
@@ -75,7 +80,7 @@
         <!-- ChatClient 的自動 RAG Advisor -->
         <dependency>
             <groupId>org.springframework.ai</groupId>
-            <artifactId>spring-ai-advisors-vector-store</artifactId>
+            <artifactId>spring-ai-vector-store-advisor</artifactId>
         </dependency>
         <!-- 幫 Spring Boot 自動建立 QdrantVectorStore -->
         <dependency>
@@ -100,6 +105,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
             <optional>true</optional>
         </dependency>
         <!-- 讓你的 Spring Boot 應用「對外暴露健康狀態、監控資訊與管理端點」-->
@@ -131,6 +137,19 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
             </plugin>
         </plugins>
     </build>

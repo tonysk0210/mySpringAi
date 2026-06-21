@@ -15,6 +15,10 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * OpenAiChatModel 和 OllamaChatModel 是 Spring 自動建立的 Bean 在 pom.xml 引入
+ *
+ * spring-ai-starter-model-openai 會自動建立 OpenAiChatModel Bean。
+ * spring-ai-starter-model-ollama 會自動建立 OllamaChatModel Bean。
+ * 因為專案同時有多個 ChatModel 實作，所以這裡直接注入具體型別避免歧義
  */
 @Configuration
 public class ChatClientConfig {
@@ -22,7 +26,7 @@ public class ChatClientConfig {
     @Bean("openaiChatClient-jdbcChatMemory")
     public ChatClient openaiChatClient(OpenAiChatModel openAiChatModel, @Qualifier("openai-jdbcChatMemory") ChatMemory chatMemory) {
         //ChatMemory 已經是一個 Bean（由 MessageWindowChatMemory 建立），並且會被成功注入
-        ChatOptions chatOptions = ChatOptions.builder().temperature(0.5).maxTokens(500).build();  // 1. 設定模型用的「參數」：
+        ChatOptions.Builder chatOptions = ChatOptions.builder().temperature(0.5).maxTokens(500);  // 1. 設定模型用的「參數」：
         Advisor jdbcChatMemoryAdvisor = MessageChatMemoryAdvisor.builder(chatMemory).build(); // 2. 建立 MessageChatMemoryAdvisor，也就是「會話記憶攔截器」。
 
         return ChatClient.builder(openAiChatModel)
@@ -34,7 +38,7 @@ public class ChatClientConfig {
 
     @Bean("ollamaChatClient-jdbcChatMemory")
     public ChatClient ollmaChatClient(OllamaChatModel ollamaChatModel, @Qualifier("ollama-jdbcChatMemory") ChatMemory chatMemory) {
-        ChatOptions chatOptions = ChatOptions.builder().temperature(0.5).maxTokens(500).build();
+        ChatOptions.Builder chatOptions = ChatOptions.builder().temperature(0.5).maxTokens(500);
         Advisor jdbcChatMemoryAdvisor = MessageChatMemoryAdvisor.builder(chatMemory).build();
 
         return ChatClient.builder(ollamaChatModel)
@@ -46,7 +50,7 @@ public class ChatClientConfig {
 
     @Bean("openaiChatClient-inChatMemory")
     public ChatClient openaiChatClientInMemory(OpenAiChatModel openAiChatModel, @Qualifier("generic-inMemoryChatMemory") ChatMemory chatMemory) {
-        ChatOptions chatOptions = ChatOptions.builder().temperature(0.5).maxTokens(500).build();
+        ChatOptions.Builder chatOptions = ChatOptions.builder().temperature(0.5).maxTokens(500);
         Advisor inMemoryAdvisor = MessageChatMemoryAdvisor.builder(chatMemory).build();
 
         return ChatClient.builder(openAiChatModel)
@@ -58,7 +62,7 @@ public class ChatClientConfig {
 
     @Bean("openaiChatClient-jdbcChatMemory-toolCalling")
     public ChatClient openaiToolCalling(OpenAiChatModel openAiChatModel, @Qualifier("openai-jdbcChatMemory") ChatMemory chatMemory, TimeTool timeTool) {
-        ChatOptions chatOptions = ChatOptions.builder().temperature(0.5).maxTokens(500).build();
+        ChatOptions.Builder chatOptions = ChatOptions.builder().temperature(0.5).maxTokens(500);
         Advisor jdbcChatMemoryAdvisor = MessageChatMemoryAdvisor.builder(chatMemory).build();
 
         return ChatClient.builder(openAiChatModel)
@@ -72,7 +76,7 @@ public class ChatClientConfig {
     /*------------------------without ChatMemory------------------------*/
     @Bean("openaiChatClient-withoutMemory")
     public ChatClient openaiChatClientWithoutMemory(OpenAiChatModel openAiChatModel) {
-        ChatOptions chatOptions = ChatOptions.builder().temperature(0.5).maxTokens(500).build();
+        ChatOptions.Builder chatOptions = ChatOptions.builder().temperature(0.5).maxTokens(500);
 
         return ChatClient.builder(openAiChatModel)
                 .defaultOptions(chatOptions)

@@ -31,7 +31,7 @@ public class ImageController {
     String genateImageWithOptions(@RequestParam("message") String message) {
         var imageResponse = imageModel.call(new ImagePrompt(message,
                 OpenAiImageOptions.builder()
-                        .N(1) //Number of images
+                        .n(1) //Number of images
                         .quality("hd")
                         .style("natural")
                         .height(1024)

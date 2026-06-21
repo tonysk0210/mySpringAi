@@ -34,7 +34,7 @@ public class GenericChatController {
     @PostMapping("/openai/chat-jdbc")
     public String openaiChat(@RequestBody GenericChatPayload genericChatPayload, @RequestHeader("userName") String userName) {
 
-        // .prompt() 可以接受 1️⃣ 純文字字串 (String), 2️⃣ Message (UserMessage / SystemMessage / AssistantMessage), 3️⃣ Prompt 物件（完整 Prompt, 4️⃣ 包含 Tool / Function 調用的 Prompt
+        // .prompt() 可以接受 1. 純文字字串 (String), 2. Message (UserMessage / SystemMessage / AssistantMessage), 3. Prompt 物件（完整 Prompt, 4. 包含 Tool / Function 調用的 Prompt
         return openaiJdbcChatClient.prompt(genericChatPayload.message())
                 //.advisors(...) 這一行程式碼的確會將參數廣播給所有顧問。在這個場景中，雖然 SimpleLoggerAdvisor 忽略了它，但 MessageChatMemoryAdvisor 正是依賴這個參數來完成它的核心職責（即管理記憶體）。Assign userName to CONVERSATION_ID which is used for MessageChatMemoryAdvisor
                 .advisors(advisorSpec -> advisorSpec.param(CONVERSATION_ID, "openai-" + userName))
@@ -51,8 +51,12 @@ public class GenericChatController {
 
     /*in memory api*/
     //openai api
+
+    /**
+     *
+     */
     @PostMapping("/openai/chat-inMemory")
-    public String openaiChatinMemory(@RequestBody GenericChatPayload genericChatPayload, @RequestHeader("userName") String userName) {
+    public String openaiChatInMemory(@RequestBody GenericChatPayload genericChatPayload, @RequestHeader("userName") String userName) {
 
         return openaiInMemoryChatClient.prompt(genericChatPayload.message())
                 .advisors(advisorSpec -> advisorSpec.param(CONVERSATION_ID, userName))

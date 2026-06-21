@@ -1,5 +1,6 @@
 package com.example.mySpringAi.controller;
 
+import com.openai.models.audio.AudioResponseFormat;
 import org.springframework.ai.audio.transcription.AudioTranscriptionPrompt;
 import org.springframework.ai.audio.transcription.AudioTranscriptionResponse;
 import org.springframework.ai.audio.tts.TextToSpeechModel;
@@ -9,7 +10,6 @@ import org.springframework.ai.openai.OpenAiAudioSpeechModel;
 import org.springframework.ai.openai.OpenAiAudioSpeechOptions;
 import org.springframework.ai.openai.OpenAiAudioTranscriptionModel;
 import org.springframework.ai.openai.OpenAiAudioTranscriptionOptions;
-import org.springframework.ai.openai.api.OpenAiAudioApi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
@@ -38,7 +38,9 @@ public class AudioController {
 
     @GetMapping("/transcribe")
     String transcribe(@Value("classpath:SpringAI.mp3") Resource audioFile) {
-        return openAiAudioTranscriptionModel.call(audioFile);
+        return openAiAudioTranscriptionModel.call(new AudioTranscriptionPrompt(audioFile))
+                .getResult()
+                .getOutput();
     }
 
     @GetMapping("/transcribe-options")
@@ -50,7 +52,7 @@ public class AudioController {
                         .prompt("Talking about Spring AI")
                         .language("en")
                         .temperature(0.5f)
-                        .responseFormat(OpenAiAudioApi.TranscriptResponseFormat.VTT).build()));
+                        .responseFormat(AudioResponseFormat.VTT).build()));
         return audioTranscriptionResponse.getResult().getOutput();
     }
 
@@ -65,12 +67,11 @@ public class AudioController {
     @GetMapping("/text-to-speech-options")
     String spechWithOptions(@RequestParam("message") String message) throws IOException {
         TextToSpeechResponse speechResponse = speechModel.call(new TextToSpeechPrompt(message,
-                OpenAiAudioSpeechOptions.builder().voice(OpenAiAudioApi.SpeechRequest.Voice.NOVA) // 指定「語音合成（TTS）要用哪一種聲音（Voice）」
+                OpenAiAudioSpeechOptions.builder().voice(OpenAiAudioSpeechOptions.Voice.NOVA) // 指定「語音合成（TTS）要用哪一種聲音（Voice）」
                         .speed(1.0)
-                        .responseFormat(OpenAiAudioApi.SpeechRequest.AudioResponseFormat.MP3).build()));
+                        .responseFormat(OpenAiAudioSpeechOptions.AudioResponseFormat.MP3).build()));
         Path path = Paths.get("speech-options.mp3");
         Files.write(path, speechResponse.getResult().getOutput());
         return "MP3 saved successfully to " + path.toAbsolutePath();
     }
 }
-
