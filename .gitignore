@@ -44,3 +44,6 @@ GEMINI.md
 
 ### media ###
 *.mp3
+
+# macOS
+.DS_Store
