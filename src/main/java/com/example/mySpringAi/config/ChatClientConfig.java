@@ -1,5 +1,6 @@
 package com.example.mySpringAi.config;
 
+import com.example.mySpringAi.advisor.TokenUsageAuditAdvisor;
 import com.example.mySpringAi.tools.TimeTool;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
@@ -33,7 +34,7 @@ public class ChatClientConfig {
 
         return ChatClient.builder(openAiChatModel)
                 .defaultOptions(chatOptions)
-                .defaultAdvisors(new SimpleLoggerAdvisor())
+                .defaultAdvisors(new SimpleLoggerAdvisor()) // 加入 SimpleLoggerAdvisor，讓此 ChatClient 自動記錄對話過程。
                 .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。")
                 .build();
     }
@@ -50,7 +51,7 @@ public class ChatClientConfig {
 
         return ChatClient.builder(openAiChatModel)
                 .defaultOptions(chatOptions)
-                .defaultAdvisors(new SimpleLoggerAdvisor(), inMemoryAdvisor) // inMemoryAdvisor 加入預設 Advisor（攔截器）// 加入 in-memory chat memory advisor，讓此 ChatClient 自動讀取與保存對話記憶。
+                .defaultAdvisors(new TokenUsageAuditAdvisor(), new SimpleLoggerAdvisor(), inMemoryAdvisor) // 加入 in-memory chat memory advisor，讓此 ChatClient 自動讀取與保存對話記憶。
                 .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。")
                 .build();
     }
@@ -64,7 +65,7 @@ public class ChatClientConfig {
 
         return ChatClient.builder(openAiChatModel)
                 .defaultOptions(chatOptions)
-                .defaultAdvisors(new SimpleLoggerAdvisor(), jdbcChatMemoryAdvisor) // 3. jdbcChatMemoryAdvisor 加入預設 Advisor（攔截器）
+                .defaultAdvisors(new TokenUsageAuditAdvisor(), new SimpleLoggerAdvisor(), jdbcChatMemoryAdvisor) // 3. jdbcChatMemoryAdvisor 加入預設 Advisor（攔截器）
                 .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。")
                 .build();
     }
@@ -76,7 +77,7 @@ public class ChatClientConfig {
 
         return ChatClient.builder(ollamaChatModel)
                 .defaultOptions(chatOptions)
-                .defaultAdvisors(new SimpleLoggerAdvisor(), jdbcChatMemoryAdvisor)
+                .defaultAdvisors(new TokenUsageAuditAdvisor(), new SimpleLoggerAdvisor(), jdbcChatMemoryAdvisor)
                 .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。")
                 .build();
     }
@@ -89,7 +90,7 @@ public class ChatClientConfig {
 
         return ChatClient.builder(openAiChatModel)
                 .defaultOptions(chatOptions)
-                .defaultAdvisors(new SimpleLoggerAdvisor(), jdbcChatMemoryAdvisor)
+                .defaultAdvisors(new TokenUsageAuditAdvisor(), new SimpleLoggerAdvisor(), jdbcChatMemoryAdvisor)
                 .defaultTools(timeTool)
                 .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。")
                 .build();

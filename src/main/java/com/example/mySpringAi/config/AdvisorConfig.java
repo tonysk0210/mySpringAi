@@ -49,7 +49,7 @@ public class AdvisorConfig {
     @Bean
     @Qualifier("preAndPostRAAdvisor")
     public RetrievalAugmentationAdvisor transformerRetrievalAugmentationAdvisor(@Qualifier("pdfVectorStore") VectorStore vectorStore,
- @Qualifier("openaiBuilder") ChatClient.Builder chatClientBuilder) {
+                                                                                @Qualifier("openaiBuilder") ChatClient.Builder chatClientBuilder) {
         // 先把 Query 翻譯成英文，再用 pdfVectorStore 做檢索
         return RetrievalAugmentationAdvisor.builder()
                 .queryTransformers(TranslationQueryTransformer.builder() // pre-retrieval: Query 翻譯
