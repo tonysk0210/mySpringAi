@@ -6,15 +6,17 @@ import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.io.Resource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import static org.springframework.ai.chat.memory.ChatMemory.CONVERSATION_ID;
 
+
 @RestController
 @RequestMapping("/mcp")
-
+@ConditionalOnProperty(prefix = "spring.ai.mcp.client", name = "enabled", havingValue = "true") // 只有在 application.properties 或 application.yml 中設定 spring.ai.mcp.client.enabled=true 時，這個 Controller 才會被註冊到 Spring Context 中
 public class McpClientController {
 
     private final ChatClient chatClient;
