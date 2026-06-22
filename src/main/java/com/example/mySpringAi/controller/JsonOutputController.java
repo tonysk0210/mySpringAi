@@ -47,6 +47,21 @@ public class JsonOutputController {
     }
 
     /**
+     * 讓 Spring AI 要求模型輸出符合 List<CountryCitiesDto> 結構的內容，然後用 ParameterizedTypeReference 把模型回傳文字轉成 List<CountryCitiesDto> 物件。
+     */
+    @PostMapping("/openai/generateListJsonDto")
+    public ResponseEntity<List<CountryCitiesDto>> openaiGenerateListJsonDto(@RequestBody JsonOutputPayload jsonOutputPayload) {
+
+        // 呼叫 OpenAI 生成符合 List<CountryCitiesDto> 結構的 JSON 數據
+        List<CountryCitiesDto> listDto = openaiChatClientWithoutMemory.prompt()
+                .user(jsonOutputPayload.message())
+                .call()
+                .entity(new ParameterizedTypeReference<List<CountryCitiesDto>>() {
+                }); // 要求 LLM 回傳符合 List<CountryCitiesDto> 結構的內容，並轉成 List<CountryCitiesDto> 物件。
+        return ResponseEntity.ok(listDto);
+    }
+
+    /**
      * 讓 Spring AI 要求模型輸出符合 List<String> 結構的內容，然後用 ListOutputConverter 把模型回傳文字轉成 List<String> 物件。
      */
     @PostMapping("/openai/generateList")
@@ -60,7 +75,6 @@ public class JsonOutputController {
         return ResponseEntity.ok(list);
     }
 
-
     /**
      * 讓 Spring AI 要求模型輸出符合 Map<String, Object> 結構的內容，然後用 MapOutputConverter 把模型回傳文字轉成 Map<String, Object> 物件。
      */
@@ -73,20 +87,5 @@ public class JsonOutputController {
                 .call()
                 .entity(new MapOutputConverter()); // 要求 LLM 回傳符合 Map<String, Object> 結構的內容，並轉成 Map<String, Object> 物件。
         return ResponseEntity.ok(map);
-    }
-
-    /**
-     * 讓 Spring AI 要求模型輸出符合 List<CountryCitiesDto> 結構的內容，然後用 ParameterizedTypeReference 把模型回傳文字轉成 List<CountryCitiesDto> 物件。
-     */
-    @PostMapping("/openai/generateListJsonDto")
-    public ResponseEntity<List<CountryCitiesDto>> openaiGenerateListJsonDto(@RequestBody JsonOutputPayload jsonOutputPayload) {
-
-        // 呼叫 OpenAI 生成符合 List<CountryCitiesDto> 結構的 JSON 數據
-        List<CountryCitiesDto> listDto = openaiChatClientWithoutMemory.prompt()
-                .user(jsonOutputPayload.message())
-                .call()
-                .entity(new ParameterizedTypeReference<List<CountryCitiesDto>>() {
-                }); // 要求 LLM 回傳符合 List<CountryCitiesDto> 結構的內容，並轉成 List<CountryCitiesDto> 物件。
-        return ResponseEntity.ok(listDto);
     }
 }
