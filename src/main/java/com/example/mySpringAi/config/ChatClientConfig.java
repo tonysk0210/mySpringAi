@@ -21,8 +21,10 @@ import org.springframework.context.annotation.Configuration;
  * spring-ai-starter-model-openai 會自動建立 OpenAiChatModel Bean。
  * spring-ai-starter-model-ollama 會自動建立 OllamaChatModel Bean。
  * 因為專案同時有多個 ChatModel 實作，所以這裡直接注入具體型別避免歧義
- * <p>
+ *
  * 2. ChatClient.create 不會預設配置 memory；memory 需要透過 advisor 加入，通常用 builder 設成 defaultAdvisors 比較適合。
+ *
+ * 3. TokenUsageAuditAdvisor 會計算對話的 token 數量並記錄下來，方便後續統計。SimpleLoggerAdvisor 會記錄對話過程到 log 文件中，方便追蹤問題。
  */
 @Configuration
 public class ChatClientConfig {
@@ -36,7 +38,7 @@ public class ChatClientConfig {
 
         return ChatClient.builder(openAiChatModel)
                 .defaultOptions(chatOptions)
-                .defaultAdvisors(new SimpleLoggerAdvisor()) // 加入 SimpleLoggerAdvisor，讓此 ChatClient 自動記錄對話過程。
+                .defaultAdvisors(new TokenUsageAuditAdvisor(), new SimpleLoggerAdvisor()) // 加入 SimpleLoggerAdvisor，讓此 ChatClient 自動記錄對話過程。
                 .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。")
                 .build();
     }

@@ -1678,3 +1678,1451 @@ java.nio.channels.AsynchronousCloseException
 2026-06-22T01:29:45.122+08:00  INFO 27228 --- [mySpringAi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-06-22T01:29:45.123+08:00  INFO 27228 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
 2026-06-22T01:29:45.123+08:00  INFO 27228 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-06-22T09:22:18.317+08:00  INFO 21580 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 21580 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-06-22T09:22:18.321+08:00  INFO 21580 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-22T09:22:18.422+08:00  INFO 21580 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-22T09:22:18.422+08:00  INFO 21580 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-22T09:22:18.458+08:00  INFO 21580 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-06-22T09:22:20.338+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Image qdrant/qdrant:latest Pulling 
+2026-06-22T09:22:26.997+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  4f4fb700ef54 Pulling fs layer 0B
+2026-06-22T09:22:26.997+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Pulling fs layer 0B
+2026-06-22T09:22:26.998+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  169e35931ada Pulling fs layer 0B
+2026-06-22T09:22:26.998+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  4f4fb700ef54 Pulling fs layer 0B
+2026-06-22T09:22:26.998+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  a621d80a8a37 Pulling fs layer 0B
+2026-06-22T09:22:26.998+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  4f4fb700ef54 Pulling fs layer 0B
+2026-06-22T09:22:26.998+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Pulling fs layer 0B
+2026-06-22T09:22:26.998+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  4f4fb700ef54 Pulling fs layer 0B
+2026-06-22T09:22:26.998+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  4f4fb700ef54 Pulling fs layer 0B
+2026-06-22T09:22:26.998+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Pulling fs layer 0B
+2026-06-22T09:22:26.998+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  4f4fb700ef54 Pulling fs layer 0B
+2026-06-22T09:22:26.998+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  ea89e0657a56 Pulling fs layer 0B
+2026-06-22T09:22:26.998+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c19de56e02d2 Pulling fs layer 0B
+2026-06-22T09:22:26.998+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  4f4fb700ef54 Pulling fs layer 0B
+2026-06-22T09:22:27.348+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  391e68678c5c Download complete 0B
+2026-06-22T09:22:27.749+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  f08b302999db Downloading 1.049MB
+2026-06-22T09:22:27.749+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  4f4fb700ef54 Download complete 0B
+2026-06-22T09:22:27.848+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  f08b302999db Downloading 1.049MB
+2026-06-22T09:22:27.948+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  a621d80a8a37 Download complete 0B
+2026-06-22T09:22:27.949+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  f08b302999db Downloading 2.097MB
+2026-06-22T09:22:28.048+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  f08b302999db Downloading 2.097MB
+2026-06-22T09:22:28.151+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  f08b302999db Downloading 2.097MB
+2026-06-22T09:22:28.247+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  f08b302999db Downloading 3.146MB
+2026-06-22T09:22:28.247+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  ea89e0657a56 Download complete 0B
+2026-06-22T09:22:28.347+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  169e35931ada Download complete 0B
+2026-06-22T09:22:28.347+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  f08b302999db Downloading 3.146MB
+2026-06-22T09:22:28.447+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  f08b302999db Downloading 4.194MB
+2026-06-22T09:22:28.548+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  f08b302999db Download complete 0B
+2026-06-22T09:22:28.948+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 1.049MB
+2026-06-22T09:22:29.048+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 1.049MB
+2026-06-22T09:22:29.148+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 1.049MB
+2026-06-22T09:22:29.148+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 1.049MB
+2026-06-22T09:22:29.247+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 1.049MB
+2026-06-22T09:22:29.249+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c19de56e02d2 Download complete 0B
+2026-06-22T09:22:29.249+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 1.049MB
+2026-06-22T09:22:29.347+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 1.049MB
+2026-06-22T09:22:29.347+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 1.049MB
+2026-06-22T09:22:29.447+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 2.097MB
+2026-06-22T09:22:29.448+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 1.049MB
+2026-06-22T09:22:29.548+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 2.097MB
+2026-06-22T09:22:29.548+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 1.049MB
+2026-06-22T09:22:29.549+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 1.049MB
+2026-06-22T09:22:29.647+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 2.097MB
+2026-06-22T09:22:29.647+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 2.097MB
+2026-06-22T09:22:29.647+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 1.049MB
+2026-06-22T09:22:29.746+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 3.146MB
+2026-06-22T09:22:29.747+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 2.097MB
+2026-06-22T09:22:29.747+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 1.049MB
+2026-06-22T09:22:29.847+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 3.146MB
+2026-06-22T09:22:29.847+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 2.097MB
+2026-06-22T09:22:29.847+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 1.049MB
+2026-06-22T09:22:29.949+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 3.146MB
+2026-06-22T09:22:29.949+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 2.097MB
+2026-06-22T09:22:29.949+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 1.049MB
+2026-06-22T09:22:30.048+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 3.146MB
+2026-06-22T09:22:30.049+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 2.097MB
+2026-06-22T09:22:30.049+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 1.049MB
+2026-06-22T09:22:30.147+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 4.194MB
+2026-06-22T09:22:30.148+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 3.146MB
+2026-06-22T09:22:30.149+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 1.049MB
+2026-06-22T09:22:30.248+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 3.146MB
+2026-06-22T09:22:30.249+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 1.049MB
+2026-06-22T09:22:30.249+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 4.194MB
+2026-06-22T09:22:30.348+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 3.146MB
+2026-06-22T09:22:30.349+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 1.049MB
+2026-06-22T09:22:30.350+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 4.194MB
+2026-06-22T09:22:30.447+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 4.194MB
+2026-06-22T09:22:30.447+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 3.146MB
+2026-06-22T09:22:30.447+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 1.049MB
+2026-06-22T09:22:30.548+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 3.146MB
+2026-06-22T09:22:30.549+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 1.049MB
+2026-06-22T09:22:30.550+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 4.194MB
+2026-06-22T09:22:30.648+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 5.243MB
+2026-06-22T09:22:30.649+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 4.194MB
+2026-06-22T09:22:30.649+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 2.097MB
+2026-06-22T09:22:30.749+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 4.194MB
+2026-06-22T09:22:30.749+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 2.097MB
+2026-06-22T09:22:30.750+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 5.243MB
+2026-06-22T09:22:30.846+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 5.243MB
+2026-06-22T09:22:30.847+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 4.194MB
+2026-06-22T09:22:30.847+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 2.097MB
+2026-06-22T09:22:30.947+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 6.291MB
+2026-06-22T09:22:30.947+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 4.194MB
+2026-06-22T09:22:30.947+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 2.097MB
+2026-06-22T09:22:31.048+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 6.291MB
+2026-06-22T09:22:31.049+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 4.194MB
+2026-06-22T09:22:31.049+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 2.097MB
+2026-06-22T09:22:31.148+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 6.291MB
+2026-06-22T09:22:31.149+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 5.243MB
+2026-06-22T09:22:31.149+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 2.097MB
+2026-06-22T09:22:31.247+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 6.291MB
+2026-06-22T09:22:31.248+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 5.243MB
+2026-06-22T09:22:31.248+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 2.097MB
+2026-06-22T09:22:31.349+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 6.857MB
+2026-06-22T09:22:31.349+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 5.243MB
+2026-06-22T09:22:31.350+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 2.097MB
+2026-06-22T09:22:31.447+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 5.243MB
+2026-06-22T09:22:31.447+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 2.097MB
+2026-06-22T09:22:31.447+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 7.34MB
+2026-06-22T09:22:31.547+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 7.34MB
+2026-06-22T09:22:31.547+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 6.291MB
+2026-06-22T09:22:31.548+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 2.097MB
+2026-06-22T09:22:31.648+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 7.34MB
+2026-06-22T09:22:31.649+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 6.291MB
+2026-06-22T09:22:31.649+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 2.097MB
+2026-06-22T09:22:31.747+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 7.34MB
+2026-06-22T09:22:31.747+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 6.291MB
+2026-06-22T09:22:31.747+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 2.097MB
+2026-06-22T09:22:31.848+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 8.389MB
+2026-06-22T09:22:31.848+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 6.291MB
+2026-06-22T09:22:31.848+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 3.146MB
+2026-06-22T09:22:31.948+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 8.389MB
+2026-06-22T09:22:31.949+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 6.291MB
+2026-06-22T09:22:31.949+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 3.146MB
+2026-06-22T09:22:32.047+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 8.389MB
+2026-06-22T09:22:32.048+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 6.291MB
+2026-06-22T09:22:32.048+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 3.146MB
+2026-06-22T09:22:32.147+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 8.389MB
+2026-06-22T09:22:32.149+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 6.291MB
+2026-06-22T09:22:32.149+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 3.146MB
+2026-06-22T09:22:32.248+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 8.389MB
+2026-06-22T09:22:32.249+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 6.291MB
+2026-06-22T09:22:32.249+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 3.146MB
+2026-06-22T09:22:32.348+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 8.389MB
+2026-06-22T09:22:32.349+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 7.34MB
+2026-06-22T09:22:32.351+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 3.146MB
+2026-06-22T09:22:32.446+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 9.437MB
+2026-06-22T09:22:32.447+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 7.34MB
+2026-06-22T09:22:32.447+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 3.146MB
+2026-06-22T09:22:32.548+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 9.437MB
+2026-06-22T09:22:32.548+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 7.34MB
+2026-06-22T09:22:32.549+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 3.146MB
+2026-06-22T09:22:32.647+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 9.437MB
+2026-06-22T09:22:32.648+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 7.34MB
+2026-06-22T09:22:32.649+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 3.146MB
+2026-06-22T09:22:32.748+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 7.34MB
+2026-06-22T09:22:32.749+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 3.146MB
+2026-06-22T09:22:32.750+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 9.437MB
+2026-06-22T09:22:32.847+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 7.34MB
+2026-06-22T09:22:32.847+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 3.146MB
+2026-06-22T09:22:32.847+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 9.437MB
+2026-06-22T09:22:32.948+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 9.437MB
+2026-06-22T09:22:32.948+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 8.389MB
+2026-06-22T09:22:32.948+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 3.146MB
+2026-06-22T09:22:33.048+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 3.146MB
+2026-06-22T09:22:33.049+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 10.49MB
+2026-06-22T09:22:33.049+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 8.389MB
+2026-06-22T09:22:33.147+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 8.389MB
+2026-06-22T09:22:33.148+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 3.146MB
+2026-06-22T09:22:33.148+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 10.49MB
+2026-06-22T09:22:33.248+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 10.49MB
+2026-06-22T09:22:33.248+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 8.389MB
+2026-06-22T09:22:33.249+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 3.146MB
+2026-06-22T09:22:33.347+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 8.389MB
+2026-06-22T09:22:33.348+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 3.146MB
+2026-06-22T09:22:33.348+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 10.49MB
+2026-06-22T09:22:33.447+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 10.49MB
+2026-06-22T09:22:33.447+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 9.437MB
+2026-06-22T09:22:33.448+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 4.194MB
+2026-06-22T09:22:33.549+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 11.53MB
+2026-06-22T09:22:33.549+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 9.437MB
+2026-06-22T09:22:33.549+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 4.194MB
+2026-06-22T09:22:33.648+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 11.53MB
+2026-06-22T09:22:33.649+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 9.437MB
+2026-06-22T09:22:33.650+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 4.194MB
+2026-06-22T09:22:33.747+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 11.53MB
+2026-06-22T09:22:33.747+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 9.437MB
+2026-06-22T09:22:33.747+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 4.194MB
+2026-06-22T09:22:33.846+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 11.53MB
+2026-06-22T09:22:33.847+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 9.437MB
+2026-06-22T09:22:33.847+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 4.194MB
+2026-06-22T09:22:33.950+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 4.194MB
+2026-06-22T09:22:33.950+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 12.58MB
+2026-06-22T09:22:33.950+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 10.49MB
+2026-06-22T09:22:34.055+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 12.58MB
+2026-06-22T09:22:34.056+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 10.49MB
+2026-06-22T09:22:34.057+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 4.194MB
+2026-06-22T09:22:34.151+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 12.58MB
+2026-06-22T09:22:34.153+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 10.49MB
+2026-06-22T09:22:34.154+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 4.194MB
+2026-06-22T09:22:34.258+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 10.49MB
+2026-06-22T09:22:34.258+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 4.194MB
+2026-06-22T09:22:34.259+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 13.63MB
+2026-06-22T09:22:34.351+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 13.63MB
+2026-06-22T09:22:34.351+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 10.49MB
+2026-06-22T09:22:34.352+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 4.194MB
+2026-06-22T09:22:34.448+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 13.63MB
+2026-06-22T09:22:34.449+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 11.53MB
+2026-06-22T09:22:34.449+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 4.194MB
+2026-06-22T09:22:34.548+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 13.63MB
+2026-06-22T09:22:34.549+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 11.53MB
+2026-06-22T09:22:34.549+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 4.194MB
+2026-06-22T09:22:34.649+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 14.68MB
+2026-06-22T09:22:34.650+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 11.53MB
+2026-06-22T09:22:34.650+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 4.194MB
+2026-06-22T09:22:34.749+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 14.68MB
+2026-06-22T09:22:34.750+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 11.53MB
+2026-06-22T09:22:34.750+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 4.194MB
+2026-06-22T09:22:34.847+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 14.68MB
+2026-06-22T09:22:34.848+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 12.58MB
+2026-06-22T09:22:34.848+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 5.243MB
+2026-06-22T09:22:34.948+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 12.58MB
+2026-06-22T09:22:34.948+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 5.243MB
+2026-06-22T09:22:34.949+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 14.68MB
+2026-06-22T09:22:35.046+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 15.73MB
+2026-06-22T09:22:35.046+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 12.58MB
+2026-06-22T09:22:35.046+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 5.243MB
+2026-06-22T09:22:35.146+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 15.73MB
+2026-06-22T09:22:35.147+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 12.58MB
+2026-06-22T09:22:35.147+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 5.243MB
+2026-06-22T09:22:35.247+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 15.73MB
+2026-06-22T09:22:35.247+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 12.58MB
+2026-06-22T09:22:35.247+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 5.243MB
+2026-06-22T09:22:35.346+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 15.73MB
+2026-06-22T09:22:35.347+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 13.63MB
+2026-06-22T09:22:35.347+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 5.243MB
+2026-06-22T09:22:35.446+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 16.78MB
+2026-06-22T09:22:35.446+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 13.63MB
+2026-06-22T09:22:35.446+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 5.243MB
+2026-06-22T09:22:35.546+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 16.78MB
+2026-06-22T09:22:35.546+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 13.63MB
+2026-06-22T09:22:35.546+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 5.243MB
+2026-06-22T09:22:35.647+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 16.78MB
+2026-06-22T09:22:35.647+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 13.63MB
+2026-06-22T09:22:35.647+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 5.243MB
+2026-06-22T09:22:35.746+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 17.83MB
+2026-06-22T09:22:35.746+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 14.68MB
+2026-06-22T09:22:35.746+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 5.243MB
+2026-06-22T09:22:35.846+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 17.83MB
+2026-06-22T09:22:35.846+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 14.68MB
+2026-06-22T09:22:35.846+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 5.243MB
+2026-06-22T09:22:35.946+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 5.243MB
+2026-06-22T09:22:35.947+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 17.83MB
+2026-06-22T09:22:35.947+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 14.68MB
+2026-06-22T09:22:36.046+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 18.87MB
+2026-06-22T09:22:36.046+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 14.68MB
+2026-06-22T09:22:36.046+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 5.243MB
+2026-06-22T09:22:36.146+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 15.73MB
+2026-06-22T09:22:36.146+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 6.291MB
+2026-06-22T09:22:36.146+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 18.87MB
+2026-06-22T09:22:36.246+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 15.73MB
+2026-06-22T09:22:36.246+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 6.291MB
+2026-06-22T09:22:36.246+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 18.87MB
+2026-06-22T09:22:36.346+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 15.73MB
+2026-06-22T09:22:36.346+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 6.291MB
+2026-06-22T09:22:36.346+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 19.92MB
+2026-06-22T09:22:36.447+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 19.92MB
+2026-06-22T09:22:36.448+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 15.73MB
+2026-06-22T09:22:36.449+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 6.291MB
+2026-06-22T09:22:36.548+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 19.92MB
+2026-06-22T09:22:36.549+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 15.73MB
+2026-06-22T09:22:36.549+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 6.291MB
+2026-06-22T09:22:36.646+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 19.92MB
+2026-06-22T09:22:36.647+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 16.78MB
+2026-06-22T09:22:36.647+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 6.291MB
+2026-06-22T09:22:36.746+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 16.78MB
+2026-06-22T09:22:36.746+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 6.291MB
+2026-06-22T09:22:36.746+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 20.97MB
+2026-06-22T09:22:36.848+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 20.97MB
+2026-06-22T09:22:36.848+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 16.78MB
+2026-06-22T09:22:36.848+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 6.291MB
+2026-06-22T09:22:36.950+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 20.97MB
+2026-06-22T09:22:36.951+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 16.78MB
+2026-06-22T09:22:36.952+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Downloading 6.291MB
+2026-06-22T09:22:37.051+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 22.02MB
+2026-06-22T09:22:37.052+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 17.83MB
+2026-06-22T09:22:37.052+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Download complete 0B
+2026-06-22T09:22:37.148+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 22.02MB
+2026-06-22T09:22:37.148+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 17.83MB
+2026-06-22T09:22:37.247+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 17.83MB
+2026-06-22T09:22:37.247+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 22.02MB
+2026-06-22T09:22:37.347+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 23.07MB
+2026-06-22T09:22:37.347+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 17.83MB
+2026-06-22T09:22:37.448+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 23.07MB
+2026-06-22T09:22:37.448+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 17.83MB
+2026-06-22T09:22:37.546+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 23.07MB
+2026-06-22T09:22:37.546+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 17.83MB
+2026-06-22T09:22:37.651+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 23.07MB
+2026-06-22T09:22:37.651+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 18.87MB
+2026-06-22T09:22:37.747+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 23.07MB
+2026-06-22T09:22:37.747+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 18.87MB
+2026-06-22T09:22:37.847+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 24.12MB
+2026-06-22T09:22:37.847+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 18.87MB
+2026-06-22T09:22:37.946+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 24.12MB
+2026-06-22T09:22:37.946+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 19.92MB
+2026-06-22T09:22:38.046+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 24.12MB
+2026-06-22T09:22:38.047+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 19.92MB
+2026-06-22T09:22:38.145+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 25.17MB
+2026-06-22T09:22:38.145+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 19.92MB
+2026-06-22T09:22:38.247+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 19.92MB
+2026-06-22T09:22:38.247+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 25.17MB
+2026-06-22T09:22:38.347+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 20.97MB
+2026-06-22T09:22:38.347+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 25.17MB
+2026-06-22T09:22:38.445+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 26.21MB
+2026-06-22T09:22:38.445+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 20.97MB
+2026-06-22T09:22:38.552+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 26.21MB
+2026-06-22T09:22:38.552+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 20.97MB
+2026-06-22T09:22:38.645+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 26.21MB
+2026-06-22T09:22:38.647+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 20.97MB
+2026-06-22T09:22:38.744+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 26.21MB
+2026-06-22T09:22:38.746+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 22.02MB
+2026-06-22T09:22:38.846+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 27.26MB
+2026-06-22T09:22:38.846+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 22.02MB
+2026-06-22T09:22:38.946+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 27.26MB
+2026-06-22T09:22:38.947+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 22.02MB
+2026-06-22T09:22:39.049+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 23.07MB
+2026-06-22T09:22:39.049+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 28.31MB
+2026-06-22T09:22:39.148+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 23.07MB
+2026-06-22T09:22:39.148+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 28.31MB
+2026-06-22T09:22:39.246+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 28.31MB
+2026-06-22T09:22:39.246+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 23.07MB
+2026-06-22T09:22:39.346+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 24.12MB
+2026-06-22T09:22:39.346+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Downloading 29.36MB
+2026-06-22T09:22:39.446+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Download complete 0B
+2026-06-22T09:22:39.447+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 24.12MB
+2026-06-22T09:22:39.454+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Extracting 1B
+2026-06-22T09:22:39.547+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 24.12MB
+2026-06-22T09:22:39.555+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Extracting 1B
+2026-06-22T09:22:39.646+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 25.17MB
+2026-06-22T09:22:39.656+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Extracting 1B
+2026-06-22T09:22:39.745+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 25.17MB
+2026-06-22T09:22:39.758+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Extracting 1B
+2026-06-22T09:22:39.846+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 25.17MB
+2026-06-22T09:22:39.858+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Extracting 1B
+2026-06-22T09:22:39.946+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 26.21MB
+2026-06-22T09:22:39.953+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Extracting 1B
+2026-06-22T09:22:40.045+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 26.21MB
+2026-06-22T09:22:40.053+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Extracting 1B
+2026-06-22T09:22:40.147+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 26.21MB
+2026-06-22T09:22:40.153+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Extracting 1B
+2026-06-22T09:22:40.246+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 27.26MB
+2026-06-22T09:22:40.253+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Extracting 1B
+2026-06-22T09:22:40.345+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 27.26MB
+2026-06-22T09:22:40.356+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Extracting 1B
+2026-06-22T09:22:40.446+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 27.26MB
+2026-06-22T09:22:40.455+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Extracting 2B
+2026-06-22T09:22:40.546+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 28.31MB
+2026-06-22T09:22:40.552+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Extracting 2B
+2026-06-22T09:22:40.645+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 28.31MB
+2026-06-22T09:22:40.652+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Extracting 2B
+2026-06-22T09:22:40.748+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 29.36MB
+2026-06-22T09:22:40.755+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Extracting 2B
+2026-06-22T09:22:40.845+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 29.36MB
+2026-06-22T09:22:40.851+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Extracting 2B
+2026-06-22T09:22:40.945+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 29.36MB
+2026-06-22T09:22:40.953+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Extracting 2B
+2026-06-22T09:22:41.045+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 30.41MB
+2026-06-22T09:22:41.052+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c19de56e02d2 Extracting 1B
+2026-06-22T09:22:41.054+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  5b4d6ff92fc4 Pull complete 0B
+2026-06-22T09:22:41.145+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 30.41MB
+2026-06-22T09:22:41.151+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c19de56e02d2 Extracting 1B
+2026-06-22T09:22:41.245+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 31.46MB
+2026-06-22T09:22:41.251+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c19de56e02d2 Pull complete 0B
+2026-06-22T09:22:41.345+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Downloading 32.26MB
+2026-06-22T09:22:41.446+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Download complete 0B
+2026-06-22T09:22:41.453+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Extracting 1B
+2026-06-22T09:22:41.551+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Extracting 1B
+2026-06-22T09:22:41.650+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Extracting 1B
+2026-06-22T09:22:41.751+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Extracting 1B
+2026-06-22T09:22:41.853+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Extracting 1B
+2026-06-22T09:22:41.955+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Extracting 1B
+2026-06-22T09:22:42.057+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Extracting 1B
+2026-06-22T09:22:42.158+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Extracting 1B
+2026-06-22T09:22:42.255+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c57b3684dca6 Pull complete 0B
+2026-06-22T09:22:42.350+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  a621d80a8a37 Pull complete 0B
+2026-06-22T09:22:42.353+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  169e35931ada Pull complete 0B
+2026-06-22T09:22:42.447+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  ea89e0657a56 Pull complete 0B
+2026-06-22T09:22:42.449+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Extracting 1B
+2026-06-22T09:22:42.548+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Extracting 1B
+2026-06-22T09:22:42.645+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  4f4fb700ef54 Extracting 1B
+2026-06-22T09:22:42.647+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  63c3693beb8f Pull complete 0B
+2026-06-22T09:22:42.704+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  4f4fb700ef54 Pull complete 0B
+2026-06-22T09:22:42.710+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Image qdrant/qdrant:latest Pulled 
+2026-06-22T09:22:42.835+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Creating 
+2026-06-22T09:22:42.925+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Created 
+2026-06-22T09:22:42.933+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Creating 
+2026-06-22T09:22:43.274+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Created 
+2026-06-22T09:22:43.309+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Starting 
+2026-06-22T09:22:44.342+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Started 
+2026-06-22T09:22:44.343+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Waiting 
+2026-06-22T09:22:44.852+08:00  INFO 21580 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Healthy 
+2026-06-22T09:22:46.655+08:00  INFO 21580 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-22T09:22:46.933+08:00  INFO 21580 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 266 ms. Found 1 JPA repository interface.
+2026-06-22T09:22:48.321+08:00  INFO 21580 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-22T09:22:48.341+08:00  INFO 21580 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-22T09:22:48.341+08:00  INFO 21580 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-22T09:22:48.419+08:00  INFO 21580 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2989 ms
+2026-06-22T09:22:48.643+08:00  INFO 21580 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-22T09:22:48.961+08:00  INFO 21580 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./h2db/chatmemory user=
+2026-06-22T09:22:48.963+08:00  INFO 21580 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-22T09:22:49.083+08:00  INFO 21580 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-22T09:22:49.150+08:00  INFO 21580 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-22T09:22:49.795+08:00  INFO 21580 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-22T09:22:49.916+08:00  INFO 21580 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-22T09:22:51.326+08:00  INFO 21580 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-22T09:22:51.409+08:00  INFO 21580 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T09:22:54.283+08:00  WARN 21580 --- [mySpringAi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ragDataLoader' defined in file [D:\Fork\mySpringAi\target\classes\com\example\mySpringAi\component\rag\RagDataLoader.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'vectorStore' defined in class path resource [org/springframework/ai/vectorstore/qdrant/autoconfigure/QdrantVectorStoreAutoConfiguration.class]: 401: You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.
+2026-06-22T09:22:54.297+08:00  INFO 21580 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T09:22:54.302+08:00  INFO 21580 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-22T09:22:54.311+08:00  INFO 21580 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-22T09:22:54.313+08:00  INFO 21580 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-22T09:22:54.334+08:00  INFO 21580 --- [mySpringAi] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-22T09:22:54.368+08:00 ERROR 21580 --- [mySpringAi] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ragDataLoader' defined in file [D:\Fork\mySpringAi\target\classes\com\example\mySpringAi\component\rag\RagDataLoader.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'vectorStore' defined in class path resource [org/springframework/ai/vectorstore/qdrant/autoconfigure/QdrantVectorStoreAutoConfiguration.class]: 401: You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1380) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
+	at com.example.mySpringAi.MySpringAiApplication.main(MySpringAiApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.0.jar:4.1.0]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'vectorStore' defined in class path resource [org/springframework/ai/vectorstore/qdrant/autoconfigure/QdrantVectorStoreAutoConfiguration.class]: 401: You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1232) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1711) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 24 common frames omitted
+Caused by: com.openai.errors.UnauthorizedException: 401: You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.
+	at com.openai.errors.UnauthorizedException$Builder.build(UnauthorizedException.kt:98) ~[openai-java-core-4.39.1.jar:4.39.1]
+	at com.openai.core.handlers.ErrorHandler$errorHandler$1.handle(ErrorHandler.kt:59) ~[openai-java-core-4.39.1.jar:4.39.1]
+	at com.openai.core.handlers.ErrorHandler$errorHandler$1.handle(ErrorHandler.kt:46) ~[openai-java-core-4.39.1.jar:4.39.1]
+	at com.openai.services.blocking.EmbeddingServiceImpl$WithRawResponseImpl.create(EmbeddingServiceImpl.kt:80) ~[openai-java-core-4.39.1.jar:4.39.1]
+	at com.openai.services.blocking.EmbeddingServiceImpl.create(EmbeddingServiceImpl.kt:44) ~[openai-java-core-4.39.1.jar:4.39.1]
+	at com.openai.services.blocking.EmbeddingService.create(EmbeddingService.kt:33) ~[openai-java-core-4.39.1.jar:4.39.1]
+	at org.springframework.ai.openai.OpenAiEmbeddingModel.lambda$call$2(OpenAiEmbeddingModel.java:246) ~[spring-ai-openai-2.0.0.jar:2.0.0]
+	at io.micrometer.observation.Observation.observe(Observation.java:634) ~[micrometer-observation-1.17.0.jar:1.17.0]
+	at org.springframework.ai.openai.OpenAiEmbeddingModel.call(OpenAiEmbeddingModel.java:245) ~[spring-ai-openai-2.0.0.jar:2.0.0]
+	at org.springframework.ai.embedding.EmbeddingModel.embed(EmbeddingModel.java:85) ~[spring-ai-model-2.0.0.jar:2.0.0]
+	at org.springframework.ai.embedding.EmbeddingModel.embed(EmbeddingModel.java:51) ~[spring-ai-model-2.0.0.jar:2.0.0]
+	at org.springframework.ai.embedding.AbstractEmbeddingModel.dimensions(AbstractEmbeddingModel.java:72) ~[spring-ai-model-2.0.0.jar:2.0.0]
+	at org.springframework.ai.embedding.AbstractEmbeddingModel.dimensions(AbstractEmbeddingModel.java:97) ~[spring-ai-model-2.0.0.jar:2.0.0]
+	at org.springframework.ai.vectorstore.qdrant.QdrantVectorStore.afterPropertiesSet(QdrantVectorStore.java:329) ~[spring-ai-qdrant-store-2.0.0.jar:2.0.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 35 common frames omitted
+
+2026-06-22T09:23:26.562+08:00  INFO 20768 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 20768 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-06-22T09:23:26.564+08:00  INFO 20768 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-22T09:23:26.623+08:00  INFO 20768 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-22T09:23:26.623+08:00  INFO 20768 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-22T09:23:26.641+08:00  INFO 20768 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-06-22T09:23:27.418+08:00  INFO 20768 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Creating 
+2026-06-22T09:23:27.454+08:00  INFO 20768 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Created 
+2026-06-22T09:23:27.459+08:00  INFO 20768 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Creating 
+2026-06-22T09:23:27.554+08:00  INFO 20768 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Created 
+2026-06-22T09:23:27.578+08:00  INFO 20768 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Starting 
+2026-06-22T09:23:27.906+08:00  INFO 20768 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Started 
+2026-06-22T09:23:27.907+08:00  INFO 20768 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Waiting 
+2026-06-22T09:23:28.413+08:00  INFO 20768 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Healthy 
+2026-06-22T09:23:29.796+08:00  INFO 20768 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-22T09:23:29.984+08:00  INFO 20768 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 179 ms. Found 1 JPA repository interface.
+2026-06-22T09:23:31.046+08:00  INFO 20768 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-22T09:23:31.063+08:00  INFO 20768 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-22T09:23:31.063+08:00  INFO 20768 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-22T09:23:31.120+08:00  INFO 20768 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2166 ms
+2026-06-22T09:23:31.299+08:00  INFO 20768 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-22T09:23:31.548+08:00  INFO 20768 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./h2db/chatmemory user=
+2026-06-22T09:23:31.550+08:00  INFO 20768 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-22T09:23:31.646+08:00  INFO 20768 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-22T09:23:31.704+08:00  INFO 20768 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-22T09:23:32.232+08:00  INFO 20768 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-22T09:23:32.311+08:00  INFO 20768 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-22T09:23:33.491+08:00  INFO 20768 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-22T09:23:33.549+08:00  INFO 20768 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T09:23:36.070+08:00  WARN 20768 --- [mySpringAi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ragDataLoader' defined in file [D:\Fork\mySpringAi\target\classes\com\example\mySpringAi\component\rag\RagDataLoader.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'vectorStore' defined in class path resource [org/springframework/ai/vectorstore/qdrant/autoconfigure/QdrantVectorStoreAutoConfiguration.class]: 401: You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.
+2026-06-22T09:23:36.085+08:00  INFO 20768 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T09:23:36.092+08:00  INFO 20768 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-22T09:23:36.103+08:00  INFO 20768 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-22T09:23:36.109+08:00  INFO 20768 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-22T09:23:36.134+08:00  INFO 20768 --- [mySpringAi] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-22T09:23:36.169+08:00 ERROR 20768 --- [mySpringAi] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ragDataLoader' defined in file [D:\Fork\mySpringAi\target\classes\com\example\mySpringAi\component\rag\RagDataLoader.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'vectorStore' defined in class path resource [org/springframework/ai/vectorstore/qdrant/autoconfigure/QdrantVectorStoreAutoConfiguration.class]: 401: You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1380) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
+	at com.example.mySpringAi.MySpringAiApplication.main(MySpringAiApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.0.jar:4.1.0]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'vectorStore' defined in class path resource [org/springframework/ai/vectorstore/qdrant/autoconfigure/QdrantVectorStoreAutoConfiguration.class]: 401: You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1232) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1711) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 24 common frames omitted
+Caused by: com.openai.errors.UnauthorizedException: 401: You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.
+	at com.openai.errors.UnauthorizedException$Builder.build(UnauthorizedException.kt:98) ~[openai-java-core-4.39.1.jar:4.39.1]
+	at com.openai.core.handlers.ErrorHandler$errorHandler$1.handle(ErrorHandler.kt:59) ~[openai-java-core-4.39.1.jar:4.39.1]
+	at com.openai.core.handlers.ErrorHandler$errorHandler$1.handle(ErrorHandler.kt:46) ~[openai-java-core-4.39.1.jar:4.39.1]
+	at com.openai.services.blocking.EmbeddingServiceImpl$WithRawResponseImpl.create(EmbeddingServiceImpl.kt:80) ~[openai-java-core-4.39.1.jar:4.39.1]
+	at com.openai.services.blocking.EmbeddingServiceImpl.create(EmbeddingServiceImpl.kt:44) ~[openai-java-core-4.39.1.jar:4.39.1]
+	at com.openai.services.blocking.EmbeddingService.create(EmbeddingService.kt:33) ~[openai-java-core-4.39.1.jar:4.39.1]
+	at org.springframework.ai.openai.OpenAiEmbeddingModel.lambda$call$2(OpenAiEmbeddingModel.java:246) ~[spring-ai-openai-2.0.0.jar:2.0.0]
+	at io.micrometer.observation.Observation.observe(Observation.java:634) ~[micrometer-observation-1.17.0.jar:1.17.0]
+	at org.springframework.ai.openai.OpenAiEmbeddingModel.call(OpenAiEmbeddingModel.java:245) ~[spring-ai-openai-2.0.0.jar:2.0.0]
+	at org.springframework.ai.embedding.EmbeddingModel.embed(EmbeddingModel.java:85) ~[spring-ai-model-2.0.0.jar:2.0.0]
+	at org.springframework.ai.embedding.EmbeddingModel.embed(EmbeddingModel.java:51) ~[spring-ai-model-2.0.0.jar:2.0.0]
+	at org.springframework.ai.embedding.AbstractEmbeddingModel.dimensions(AbstractEmbeddingModel.java:72) ~[spring-ai-model-2.0.0.jar:2.0.0]
+	at org.springframework.ai.embedding.AbstractEmbeddingModel.dimensions(AbstractEmbeddingModel.java:97) ~[spring-ai-model-2.0.0.jar:2.0.0]
+	at org.springframework.ai.vectorstore.qdrant.QdrantVectorStore.afterPropertiesSet(QdrantVectorStore.java:329) ~[spring-ai-qdrant-store-2.0.0.jar:2.0.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 35 common frames omitted
+
+2026-06-22T09:25:29.397+08:00  INFO 6796 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 6796 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-06-22T09:25:29.399+08:00  INFO 6796 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-22T09:25:29.446+08:00  INFO 6796 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-22T09:25:29.446+08:00  INFO 6796 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-22T09:25:29.463+08:00  INFO 6796 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-06-22T09:25:30.360+08:00  INFO 6796 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Creating 
+2026-06-22T09:25:30.398+08:00  INFO 6796 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Created 
+2026-06-22T09:25:30.404+08:00  INFO 6796 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Creating 
+2026-06-22T09:25:30.510+08:00  INFO 6796 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Created 
+2026-06-22T09:25:30.536+08:00  INFO 6796 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Starting 
+2026-06-22T09:25:30.846+08:00  INFO 6796 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Started 
+2026-06-22T09:25:30.847+08:00  INFO 6796 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Waiting 
+2026-06-22T09:25:31.352+08:00  INFO 6796 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Healthy 
+2026-06-22T09:25:32.687+08:00  INFO 6796 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-22T09:25:32.907+08:00  INFO 6796 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 206 ms. Found 1 JPA repository interface.
+2026-06-22T09:25:33.914+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-22T09:25:33.929+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-22T09:25:33.929+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-22T09:25:33.982+08:00  INFO 6796 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2130 ms
+2026-06-22T09:25:34.158+08:00  INFO 6796 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-22T09:25:34.405+08:00  INFO 6796 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./h2db/chatmemory user=
+2026-06-22T09:25:34.407+08:00  INFO 6796 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-22T09:25:34.498+08:00  INFO 6796 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-22T09:25:34.553+08:00  INFO 6796 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-22T09:25:35.043+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-22T09:25:35.126+08:00  INFO 6796 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-22T09:25:36.143+08:00  INFO 6796 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-22T09:25:36.216+08:00  INFO 6796 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T09:25:42.630+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 12 chunks.
+2026-06-22T09:25:43.844+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-22T09:25:44.057+08:00  WARN 6796 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-22T09:25:44.534+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-22T09:25:44.552+08:00  WARN 6796 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-22T09:25:44.553+08:00  WARN 6796 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-22T09:25:44.616+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-22T09:25:44.854+08:00  INFO 6796 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 16.288 seconds (process running for 17.71)
+2026-06-22T09:25:45.091+08:00  INFO 6796 --- [mySpringAi] [RMI TCP Connection(5)-172.20.10.12] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-22T09:25:45.091+08:00  INFO 6796 --- [mySpringAi] [RMI TCP Connection(5)-172.20.10.12] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-22T09:25:45.096+08:00  INFO 6796 --- [mySpringAi] [RMI TCP Connection(5)-172.20.10.12] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-06-22T09:26:16.563+08:00  INFO 6796 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 37 class path changes (0 additions, 36 deletions, 1 modification)
+2026-06-22T09:26:16.586+08:00  INFO 6796 --- [mySpringAi] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-22T09:26:16.618+08:00  INFO 6796 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-22T09:26:16.648+08:00  INFO 6796 --- [mySpringAi] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T09:26:16.658+08:00  INFO 6796 --- [mySpringAi] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-22T09:26:16.710+08:00  INFO 6796 --- [mySpringAi] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-22T09:26:17.686+08:00  INFO 6796 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 6796 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-06-22T09:26:17.687+08:00  INFO 6796 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-22T09:26:17.699+08:00  INFO 6796 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-06-22T09:26:19.186+08:00  INFO 6796 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-22T09:26:19.751+08:00  INFO 6796 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-22T09:26:19.933+08:00  INFO 6796 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 179 ms. Found 0 JPA repository interfaces.
+2026-06-22T09:26:20.245+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-22T09:26:20.247+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-22T09:26:20.247+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-22T09:26:20.327+08:00  INFO 6796 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1140 ms
+2026-06-22T09:26:20.414+08:00  INFO 6796 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-06-22T09:26:20.466+08:00  INFO 6796 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn12: url=jdbc:h2:file:./h2db/chatmemory user=
+2026-06-22T09:26:20.467+08:00  INFO 6796 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-06-22T09:26:20.487+08:00  INFO 6796 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-22T09:26:20.558+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-22T09:26:20.560+08:00  INFO 6796 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-22T09:26:20.609+08:00  INFO 6796 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-22T09:26:20.617+08:00  INFO 6796 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T09:26:20.686+08:00  WARN 6796 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-22T09:26:21.096+08:00  WARN 6796 --- [mySpringAi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'vectorStore' defined in class path resource [org/springframework/ai/vectorstore/qdrant/autoconfigure/QdrantVectorStoreAutoConfiguration.class]: Unsatisfied dependency expressed through method 'vectorStore' parameter 0: No qualifying bean of type 'org.springframework.ai.embedding.EmbeddingModel' available: expected single matching bean but found 2: ollamaEmbeddingModel,openAiEmbeddingModel
+2026-06-22T09:26:21.100+08:00  INFO 6796 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T09:26:21.102+08:00  INFO 6796 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-06-22T09:26:21.314+08:00  INFO 6796 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-06-22T09:26:21.315+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-22T09:26:21.330+08:00  INFO 6796 --- [mySpringAi] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-22T09:26:21.378+08:00 ERROR 6796 --- [mySpringAi] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method vectorStore in org.springframework.ai.vectorstore.qdrant.autoconfigure.QdrantVectorStoreAutoConfiguration required a single bean, but 2 were found:
+	- ollamaEmbeddingModel: defined by method 'ollamaEmbeddingModel' in class path resource [org/springframework/ai/model/ollama/autoconfigure/OllamaEmbeddingAutoConfiguration.class]
+	- openAiEmbeddingModel: defined by method 'openAiEmbeddingModel' in class path resource [org/springframework/ai/model/openai/autoconfigure/OpenAiEmbeddingAutoConfiguration.class]
+
+This may be due to missing parameter name information
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+Ensure that your compiler is configured to use the '-parameters' flag.
+You may need to update both your build tool settings as well as your IDE.
+(See https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-6.1-Release-Notes#parameter-name-retention)
+
+
+2026-06-22T09:26:24.542+08:00  INFO 6796 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 6796 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-06-22T09:26:24.542+08:00  INFO 6796 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-22T09:26:24.556+08:00  INFO 6796 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-06-22T09:26:25.639+08:00  INFO 6796 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-22T09:26:26.762+08:00  INFO 6796 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-22T09:26:27.170+08:00  INFO 6796 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 404 ms. Found 1 JPA repository interface.
+2026-06-22T09:26:29.971+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-22T09:26:29.973+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-22T09:26:29.974+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-22T09:26:30.233+08:00  INFO 6796 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 4593 ms
+2026-06-22T09:26:30.701+08:00  INFO 6796 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-06-22T09:26:30.788+08:00  INFO 6796 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn23: url=jdbc:h2:file:./h2db/chatmemory user=
+2026-06-22T09:26:30.789+08:00  INFO 6796 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-06-22T09:26:30.852+08:00  INFO 6796 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-22T09:26:31.105+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-22T09:26:31.110+08:00  INFO 6796 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-22T09:26:31.403+08:00  INFO 6796 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-22T09:26:31.421+08:00  INFO 6796 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T09:26:35.021+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 12 chunks.
+2026-06-22T09:26:35.733+08:00  WARN 6796 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-22T09:26:37.058+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-22T09:26:37.119+08:00  WARN 6796 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-22T09:26:37.120+08:00  WARN 6796 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-22T09:26:37.170+08:00  INFO 6796 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-22T09:26:37.352+08:00  INFO 6796 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 13.716 seconds (process running for 70.208)
+2026-06-22T09:26:37.358+08:00  INFO 6796 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-22T09:27:00.566+08:00  INFO 6796 --- [mySpringAi] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-22T09:27:00.567+08:00  INFO 6796 --- [mySpringAi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-22T09:27:00.568+08:00  INFO 6796 --- [mySpringAi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-22T09:27:00.663+08:00 DEBUG 6796 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='hello?', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={chat_memory_conversation_id=Kyle}]
+2026-06-22T09:27:02.839+08:00  INFO 6796 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=30, completionTokens=13, totalTokens=43, cacheReadInputTokens=0}
+2026-06-22T09:27:02.869+08:00 DEBUG 6796 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DtNjCh7ntWvRDR09tpRKahjMknhgr",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 30,
+      "completionTokens" : 13,
+      "totalTokens" : 43,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 13,
+        "prompt_tokens" : 30,
+        "total_tokens" : 43,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-DtNjCh7ntWvRDR09tpRKahjMknhgr",
+        "reasoningContent" : ""
+      },
+      "text" : "您好！有什麼我可以幫忙的呢？",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-DtNjCh7ntWvRDR09tpRKahjMknhgr",
+        "reasoningContent" : ""
+      },
+      "text" : "您好！有什麼我可以幫忙的呢？",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-22T09:28:48.322+08:00  INFO 6796 --- [mySpringAi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-22T09:28:48.331+08:00  INFO 6796 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-22T09:28:48.335+08:00  INFO 6796 --- [mySpringAi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T09:28:48.335+08:00  INFO 6796 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-06-22T09:28:48.336+08:00  INFO 6796 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-06-22T12:46:02.953+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 6876 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-06-22T12:46:02.955+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-22T12:46:03.026+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-22T12:46:03.027+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-22T12:46:03.051+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-06-22T12:46:03.862+08:00  INFO 6876 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Creating 
+2026-06-22T12:46:03.934+08:00  INFO 6876 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Created 
+2026-06-22T12:46:03.940+08:00  INFO 6876 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Creating 
+2026-06-22T12:46:04.055+08:00  INFO 6876 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Created 
+2026-06-22T12:46:04.087+08:00  INFO 6876 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Starting 
+2026-06-22T12:46:04.492+08:00  INFO 6876 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Started 
+2026-06-22T12:46:04.492+08:00  INFO 6876 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Waiting 
+2026-06-22T12:46:05.001+08:00  INFO 6876 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Healthy 
+2026-06-22T12:46:06.393+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-22T12:46:06.573+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 164 ms. Found 1 JPA repository interface.
+2026-06-22T12:46:07.574+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-22T12:46:07.588+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-22T12:46:07.588+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-22T12:46:07.644+08:00  INFO 6876 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2122 ms
+2026-06-22T12:46:07.842+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-22T12:46:07.946+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./h2db/chatmemory user=
+2026-06-22T12:46:07.948+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-22T12:46:08.058+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-22T12:46:08.138+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-22T12:46:08.781+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-22T12:46:08.898+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.3.232
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-22T12:46:10.170+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-22T12:46:10.229+08:00  INFO 6876 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T12:46:16.355+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 12 chunks.
+2026-06-22T12:46:17.912+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-22T12:46:18.112+08:00  WARN 6876 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-22T12:46:18.620+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-22T12:46:18.638+08:00  WARN 6876 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-22T12:46:18.640+08:00  WARN 6876 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-22T12:46:18.694+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-22T12:46:18.913+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 16.792 seconds (process running for 18.573)
+2026-06-22T12:46:19.432+08:00  INFO 6876 --- [mySpringAi] [RMI TCP Connection(5)-192.168.20.58] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-22T12:46:19.433+08:00  INFO 6876 --- [mySpringAi] [RMI TCP Connection(5)-192.168.20.58] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-22T12:46:19.438+08:00  INFO 6876 --- [mySpringAi] [RMI TCP Connection(5)-192.168.20.58] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-06-22T12:47:32.394+08:00 DEBUG 6876 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='hello?', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={chat_memory_conversation_id=Kyle}]
+2026-06-22T12:47:34.664+08:00  INFO 6876 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=30, completionTokens=13, totalTokens=43, cacheReadInputTokens=0}
+2026-06-22T12:47:34.697+08:00 DEBUG 6876 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DtQrG77N9ceByJFPCmvCerFE7xp1D",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 30,
+      "completionTokens" : 13,
+      "totalTokens" : 43,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 13,
+        "prompt_tokens" : 30,
+        "total_tokens" : 43,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DtQrG77N9ceByJFPCmvCerFE7xp1D",
+        "reasoningContent" : ""
+      },
+      "text" : "您好！有什麼我可以幫忙的嗎？",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DtQrG77N9ceByJFPCmvCerFE7xp1D",
+        "reasoningContent" : ""
+      },
+      "text" : "您好！有什麼我可以幫忙的嗎？",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-22T13:12:23.296+08:00  INFO 6876 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2026-06-22T13:12:23.317+08:00  INFO 6876 --- [mySpringAi] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-22T13:12:23.337+08:00  INFO 6876 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-22T13:12:23.363+08:00  INFO 6876 --- [mySpringAi] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T13:12:23.371+08:00  INFO 6876 --- [mySpringAi] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-22T13:12:23.400+08:00  INFO 6876 --- [mySpringAi] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-22T13:12:24.392+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 6876 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-06-22T13:12:24.393+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-22T13:12:24.409+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-06-22T13:12:25.181+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-22T13:12:25.732+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-22T13:12:25.921+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 187 ms. Found 1 JPA repository interface.
+2026-06-22T13:12:26.656+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-22T13:12:26.660+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-22T13:12:26.660+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-22T13:12:26.766+08:00  INFO 6876 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1585 ms
+2026-06-22T13:12:26.911+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-06-22T13:12:26.982+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn17: url=jdbc:h2:file:./h2db/chatmemory user=
+2026-06-22T13:12:26.983+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-06-22T13:12:27.028+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-22T13:12:27.122+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-22T13:12:27.126+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-22T13:12:27.258+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-22T13:12:27.270+08:00  INFO 6876 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T13:12:28.591+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 12 chunks.
+2026-06-22T13:12:30.656+08:00  WARN 6876 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-22T13:12:31.025+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-22T13:12:31.049+08:00  WARN 6876 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-22T13:12:31.050+08:00  WARN 6876 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-22T13:12:31.074+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-22T13:12:31.272+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 7.685 seconds (process running for 1590.918)
+2026-06-22T13:12:31.276+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-22T13:12:32.401+08:00  INFO 6876 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2026-06-22T13:12:32.405+08:00  INFO 6876 --- [mySpringAi] [Thread-52] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-22T13:12:32.417+08:00  INFO 6876 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-22T13:12:32.424+08:00  INFO 6876 --- [mySpringAi] [Thread-52] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T13:12:32.426+08:00  INFO 6876 --- [mySpringAi] [Thread-52] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-06-22T13:12:32.447+08:00  INFO 6876 --- [mySpringAi] [Thread-52] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-06-22T13:12:32.991+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 6876 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-06-22T13:12:32.991+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-22T13:12:32.998+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-06-22T13:12:33.598+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-22T13:12:34.064+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-22T13:12:34.254+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 188 ms. Found 1 JPA repository interface.
+2026-06-22T13:12:35.014+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-22T13:12:35.015+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-22T13:12:35.016+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-22T13:12:35.220+08:00  INFO 6876 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1622 ms
+2026-06-22T13:12:35.580+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-06-22T13:12:35.669+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn28: url=jdbc:h2:file:./h2db/chatmemory user=
+2026-06-22T13:12:35.672+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-06-22T13:12:35.732+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-22T13:12:35.865+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-22T13:12:35.869+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-22T13:12:36.028+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-22T13:12:36.048+08:00  INFO 6876 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T13:12:37.885+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 12 chunks.
+2026-06-22T13:12:39.271+08:00  WARN 6876 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-22T13:12:40.120+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-22T13:12:40.154+08:00  WARN 6876 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-22T13:12:40.155+08:00  WARN 6876 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-22T13:12:40.193+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-22T13:12:40.335+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 7.774 seconds (process running for 1599.982)
+2026-06-22T13:12:40.340+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-22T13:12:52.189+08:00  INFO 6876 --- [mySpringAi] [http-nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-22T13:12:52.189+08:00  INFO 6876 --- [mySpringAi] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-22T13:12:52.192+08:00  INFO 6876 --- [mySpringAi] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-22T13:12:52.274+08:00 DEBUG 6876 --- [mySpringAi] [http-nio-8080-exec-5] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='list all the cities of Taiwan', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={spring.ai.chat.client.output.format=Your response should be in JSON format.
+Do not include any explanations, only provide a RFC8259 compliant JSON response following this format without deviation.
+Do not include markdown code blocks in your response.
+Remove the ```json markdown from the output.
+Here is the JSON Schema instance your output must adhere to:
+```{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "city" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "country" : {
+      "type" : "string"
+    }
+  },
+  "required" : [ "city", "country" ],
+  "additionalProperties" : false
+}```
+}]
+2026-06-22T13:12:54.138+08:00 DEBUG 6876 --- [mySpringAi] [http-nio-8080-exec-5] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DtRFlquKFOQC98VP5EpFBqfkMowkV",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 205,
+      "completionTokens" : 71,
+      "totalTokens" : 276,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 71,
+        "prompt_tokens" : 205,
+        "total_tokens" : 276,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DtRFlquKFOQC98VP5EpFBqfkMowkV",
+        "reasoningContent" : ""
+      },
+      "text" : "{\n  \"city\": [\n    \"台北市\",\n    \"新北市\",\n    \"桃園市\",\n    \"台中市\",\n    \"台南市\",\n    \"高雄市\",\n    \"基隆市\",\n    \"新竹市\",\n    \"嘉義市\"\n  ],\n  \"country\": \"台灣\"\n}",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DtRFlquKFOQC98VP5EpFBqfkMowkV",
+        "reasoningContent" : ""
+      },
+      "text" : "{\n  \"city\": [\n    \"台北市\",\n    \"新北市\",\n    \"桃園市\",\n    \"台中市\",\n    \"台南市\",\n    \"高雄市\",\n    \"基隆市\",\n    \"新竹市\",\n    \"嘉義市\"\n  ],\n  \"country\": \"台灣\"\n}",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-22T13:14:13.969+08:00  INFO 6876 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-06-22T13:14:13.973+08:00  INFO 6876 --- [mySpringAi] [Thread-72] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-22T13:14:13.989+08:00  INFO 6876 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-22T13:14:13.997+08:00  INFO 6876 --- [mySpringAi] [Thread-72] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T13:14:13.999+08:00  INFO 6876 --- [mySpringAi] [Thread-72] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-06-22T13:14:14.208+08:00  INFO 6876 --- [mySpringAi] [Thread-72] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-06-22T13:14:14.987+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 6876 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-06-22T13:14:14.988+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-22T13:14:14.994+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-06-22T13:14:15.863+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-22T13:14:16.408+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-22T13:14:16.528+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 1 JPA repository interface.
+2026-06-22T13:14:16.774+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-22T13:14:16.775+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-22T13:14:16.775+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-22T13:14:16.819+08:00  INFO 6876 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 955 ms
+2026-06-22T13:14:16.874+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-06-22T13:14:16.931+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn39: url=jdbc:h2:file:./h2db/chatmemory user=
+2026-06-22T13:14:16.932+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-06-22T13:14:16.946+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-22T13:14:16.976+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-22T13:14:16.978+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-22T13:14:17.031+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-22T13:14:17.037+08:00  INFO 6876 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T13:14:17.767+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 12 chunks.
+2026-06-22T13:14:19.052+08:00  WARN 6876 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-22T13:14:19.267+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-22T13:14:19.286+08:00  WARN 6876 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-22T13:14:19.286+08:00  WARN 6876 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-22T13:14:19.310+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-22T13:14:19.390+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 5.061 seconds (process running for 1699.036)
+2026-06-22T13:14:19.392+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-22T13:14:20.655+08:00  INFO 6876 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-06-22T13:14:20.658+08:00  INFO 6876 --- [mySpringAi] [Thread-92] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-22T13:14:20.672+08:00  INFO 6876 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-22T13:14:20.681+08:00  INFO 6876 --- [mySpringAi] [Thread-92] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T13:14:20.681+08:00  INFO 6876 --- [mySpringAi] [Thread-92] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-06-22T13:14:20.718+08:00  INFO 6876 --- [mySpringAi] [Thread-92] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-06-22T13:14:21.123+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 6876 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-06-22T13:14:21.123+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-22T13:14:21.130+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-06-22T13:14:21.908+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-22T13:14:22.318+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-22T13:14:22.487+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 167 ms. Found 1 JPA repository interface.
+2026-06-22T13:14:22.840+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-22T13:14:22.840+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-22T13:14:22.841+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-22T13:14:22.898+08:00  INFO 6876 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 989 ms
+2026-06-22T13:14:22.945+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-06-22T13:14:22.997+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn50: url=jdbc:h2:file:./h2db/chatmemory user=
+2026-06-22T13:14:22.998+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-06-22T13:14:23.008+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-22T13:14:23.044+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-22T13:14:23.047+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-22T13:14:23.089+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-22T13:14:23.092+08:00  INFO 6876 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T13:14:23.687+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 12 chunks.
+2026-06-22T13:14:24.520+08:00  WARN 6876 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-22T13:14:24.734+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-22T13:14:24.743+08:00  WARN 6876 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-22T13:14:24.743+08:00  WARN 6876 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-22T13:14:24.755+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-22T13:14:24.833+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 4.043 seconds (process running for 1704.48)
+2026-06-22T13:14:24.849+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-22T13:15:30.446+08:00  INFO 6876 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-06-22T13:15:30.450+08:00  INFO 6876 --- [mySpringAi] [Thread-112] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-22T13:15:30.468+08:00  INFO 6876 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-22T13:15:30.476+08:00  INFO 6876 --- [mySpringAi] [Thread-112] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T13:15:30.478+08:00  INFO 6876 --- [mySpringAi] [Thread-112] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-06-22T13:15:30.688+08:00  INFO 6876 --- [mySpringAi] [Thread-112] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2026-06-22T13:15:31.428+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 6876 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-06-22T13:15:31.428+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-22T13:15:31.435+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-06-22T13:15:32.523+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-22T13:15:33.170+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-22T13:15:33.312+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 140 ms. Found 1 JPA repository interface.
+2026-06-22T13:15:33.592+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-22T13:15:33.593+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-22T13:15:33.593+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-22T13:15:33.643+08:00  INFO 6876 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1119 ms
+2026-06-22T13:15:33.692+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-06-22T13:15:33.749+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn61: url=jdbc:h2:file:./h2db/chatmemory user=
+2026-06-22T13:15:33.751+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-06-22T13:15:33.779+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-22T13:15:33.867+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-22T13:15:33.870+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-22T13:15:33.945+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-22T13:15:33.951+08:00  INFO 6876 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T13:15:34.884+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 12 chunks.
+2026-06-22T13:15:36.363+08:00  WARN 6876 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-22T13:15:36.610+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-22T13:15:36.621+08:00  WARN 6876 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-22T13:15:36.621+08:00  WARN 6876 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-22T13:15:36.634+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-22T13:15:36.720+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 5.876 seconds (process running for 1776.366)
+2026-06-22T13:15:36.723+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-22T13:15:38.011+08:00  INFO 6876 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-06-22T13:15:38.015+08:00  INFO 6876 --- [mySpringAi] [Thread-132] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-22T13:15:38.026+08:00  INFO 6876 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-22T13:15:38.030+08:00  INFO 6876 --- [mySpringAi] [Thread-132] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T13:15:38.033+08:00  INFO 6876 --- [mySpringAi] [Thread-132] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-06-22T13:15:38.056+08:00  INFO 6876 --- [mySpringAi] [Thread-132] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2026-06-22T13:15:38.459+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 6876 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-06-22T13:15:38.459+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-22T13:15:38.465+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-06-22T13:15:39.170+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-22T13:15:39.441+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-22T13:15:39.519+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 1 JPA repository interface.
+2026-06-22T13:15:39.730+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-22T13:15:39.730+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-22T13:15:39.730+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-22T13:15:39.772+08:00  INFO 6876 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 600 ms
+2026-06-22T13:15:39.820+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-06-22T13:15:39.863+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection conn72: url=jdbc:h2:file:./h2db/chatmemory user=
+2026-06-22T13:15:39.864+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-06-22T13:15:39.875+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-22T13:15:39.901+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-22T13:15:39.902+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-22T13:15:39.939+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-22T13:15:39.943+08:00  INFO 6876 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T13:15:40.504+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 12 chunks.
+2026-06-22T13:15:41.262+08:00  WARN 6876 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-22T13:15:41.439+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-22T13:15:41.447+08:00  WARN 6876 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-22T13:15:41.448+08:00  WARN 6876 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-22T13:15:41.457+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-22T13:15:41.519+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 3.379 seconds (process running for 1781.164)
+2026-06-22T13:15:41.521+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-22T13:16:42.120+08:00  INFO 6876 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-06-22T13:16:42.124+08:00  INFO 6876 --- [mySpringAi] [Thread-152] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-22T13:16:42.138+08:00  INFO 6876 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-22T13:16:42.144+08:00  INFO 6876 --- [mySpringAi] [Thread-152] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T13:16:42.146+08:00  INFO 6876 --- [mySpringAi] [Thread-152] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2026-06-22T13:16:42.170+08:00  INFO 6876 --- [mySpringAi] [Thread-152] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2026-06-22T13:16:42.939+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 6876 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-06-22T13:16:42.939+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-22T13:16:42.944+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-06-22T13:16:44.117+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-22T13:16:45.083+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-22T13:16:45.202+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 1 JPA repository interface.
+2026-06-22T13:16:45.680+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-22T13:16:45.680+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-22T13:16:45.680+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-22T13:16:45.776+08:00  INFO 6876 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1658 ms
+2026-06-22T13:16:45.877+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2026-06-22T13:16:45.932+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection conn83: url=jdbc:h2:file:./h2db/chatmemory user=
+2026-06-22T13:16:45.933+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2026-06-22T13:16:45.957+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-22T13:16:46.014+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-22T13:16:46.016+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-22T13:16:46.098+08:00  INFO 6876 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-22T13:16:46.102+08:00  INFO 6876 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T13:16:46.896+08:00  INFO 6876 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 12 chunks.
+2026-06-22T13:16:47.008+08:00  WARN 6876 --- [mySpringAi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ragDataLoader': Invocation of init method failed
+2026-06-22T13:16:47.010+08:00  INFO 6876 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-22T13:16:47.010+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2026-06-22T13:16:47.012+08:00  INFO 6876 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2026-06-22T13:16:47.025+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-22T13:16:47.055+08:00 ERROR 6876 --- [mySpringAi] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ragDataLoader': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:220) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:426) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1807) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
+	at com.example.mySpringAi.MySpringAiApplication.main(MySpringAiApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.0.jar:4.1.0]
+Caused by: java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleepNanos0(Native Method) ~[na:na]
+	at java.base/java.lang.Thread.sleepNanos(Thread.java:509) ~[na:na]
+	at java.base/java.lang.Thread.sleep(Thread.java:540) ~[na:na]
+	at com.openai.core.DefaultSleeper.sleep(DefaultSleeper.kt:12) ~[openai-java-core-4.39.1.jar:4.39.1]
+	at com.openai.core.PhantomReachableSleeper.sleep(PhantomReachableSleeper.kt:17) ~[openai-java-core-4.39.1.jar:4.39.1]
+	at com.openai.core.http.RetryingHttpClient.execute(RetryingHttpClient.kt:72) ~[openai-java-core-4.39.1.jar:4.39.1]
+	at com.openai.services.blocking.EmbeddingServiceImpl$WithRawResponseImpl.create(EmbeddingServiceImpl.kt:79) ~[openai-java-core-4.39.1.jar:4.39.1]
+	at com.openai.services.blocking.EmbeddingServiceImpl.create(EmbeddingServiceImpl.kt:44) ~[openai-java-core-4.39.1.jar:4.39.1]
+	at com.openai.services.blocking.EmbeddingService.create(EmbeddingService.kt:33) ~[openai-java-core-4.39.1.jar:4.39.1]
+	at org.springframework.ai.openai.OpenAiEmbeddingModel.lambda$call$2(OpenAiEmbeddingModel.java:246) ~[spring-ai-openai-2.0.0.jar:2.0.0]
+	at io.micrometer.observation.Observation.observe(Observation.java:634) ~[micrometer-observation-1.17.0.jar:1.17.0]
+	at org.springframework.ai.openai.OpenAiEmbeddingModel.call(OpenAiEmbeddingModel.java:245) ~[spring-ai-openai-2.0.0.jar:2.0.0]
+	at org.springframework.ai.embedding.EmbeddingModel.embed(EmbeddingModel.java:85) ~[spring-ai-model-2.0.0.jar:2.0.0]
+	at org.springframework.ai.embedding.EmbeddingModel.embed(EmbeddingModel.java:51) ~[spring-ai-model-2.0.0.jar:2.0.0]
+	at org.springframework.ai.embedding.AbstractEmbeddingModel.dimensions(AbstractEmbeddingModel.java:72) ~[spring-ai-model-2.0.0.jar:2.0.0]
+	at org.springframework.ai.embedding.AbstractEmbeddingModel.dimensions(AbstractEmbeddingModel.java:97) ~[spring-ai-model-2.0.0.jar:2.0.0]
+	at org.springframework.ai.vectorstore.qdrant.QdrantVectorStore.createObservationContextBuilder(QdrantVectorStore.java:348) ~[spring-ai-qdrant-store-2.0.0.jar:2.0.0]
+	at org.springframework.ai.vectorstore.observation.AbstractObservationVectorStore.add(AbstractObservationVectorStore.java:78) ~[spring-ai-vector-store-2.0.0.jar:2.0.0]
+	at com.example.mySpringAi.component.rag.RagDataLoader.loadPdfIntoVectorStore(RagDataLoader.java:105) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:453) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:397) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:217) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 23 common frames omitted
+
+2026-06-22T13:16:48.552+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 6876 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-06-22T13:16:48.553+08:00  INFO 6876 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-22T13:16:48.557+08:00  INFO 6876 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
