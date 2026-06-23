@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Configuration;
 /**
  * 定義 2 種 ChatMemory 的 Bean，供 ChatClientConfig 使用，分別使用記憶體和資料庫儲存聊天記錄
  */
-
 @Configuration
 public class ChatMemoryConfig {
 
