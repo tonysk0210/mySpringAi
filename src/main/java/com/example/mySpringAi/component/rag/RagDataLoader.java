@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-
 @Component
 public class RagDataLoader {
 
@@ -22,15 +21,38 @@ public class RagDataLoader {
     private final VectorStore pdfVectorSotre;
 
     @Value("classpath:/Eazybytes_HR_Policies.pdf")
-    Resource pdfFile;
+    Resource pdfFile; //
 
+    /**
+     * vectorStore     -> Spring AI 自動建立 -> rag-collection
+     * pdfVectorStore  -> 你自己建立       -> pdf-collection
+     * <p>
+     * // vectorStore 來自 pom.xml 的 spring-ai-starter-vector-store-qdrant
+     * // 並透過 spring.ai.vectorstore.qdrant.collection-name=rag-collection 決定 collection
+     */
     @Autowired
     public RagDataLoader(VectorStore vectorStore, @Qualifier("pdfVectorStore") VectorStore pdfVectorSotre) {
-        // vectorStore: 預設 rag-collection；pdfVectorSotre: 指向 pdf-collection
-        this.vectorStore = vectorStore;
-        this.pdfVectorSotre = pdfVectorSotre;
+
+        this.vectorStore = vectorStore; // 自動建立的 vectorStore
+        this.pdfVectorSotre = pdfVectorSotre; // 手動建立的 pdfVectorStore
+        /*
+        第一個參數：
+        VectorStore vectorStore
+          -> 找 VectorStore 型別
+          -> 找到 vectorStore、pdfVectorStore 兩個
+          -> 沒有 @Qualifier
+          -> 用參數名稱 vectorStore 去 match bean 名稱
+          -> 選到 auto-config 的 vectorStore
+
+        第二個參數：
+        @Qualifier("pdfVectorStore") VectorStore pdfVectorSotre
+          -> 直接選 pdfVectorStore
+        */
     }
 
+    /**
+     * 載入「手寫句子資料」到預設 rag-collection。
+     */
     @PostConstruct
     public void loadSentenceIntoVectorStore() {
         List<String> sentences = List.of(
@@ -89,10 +111,17 @@ public class RagDataLoader {
                 "CRM systems manage customer relationships and sales pipelines.",
                 "SWOT analysis identifies strengths, weaknesses, opportunities, and threats."
         );
+
+        // 1. 把句子轉成 Document
         List<Document> documents = sentences.stream().map(Document::new).toList(); // VectorStore 只吃 Document，不吃 String
+
+        // 2. 把 Document 送進 Qdrant
         vectorStore.add(documents); // 把資料送進 Qdrant
     }
 
+    /**
+     * 載入「PDF 檔案資料」到自定義 pdf-collection。
+     */
     @PostConstruct
     public void loadPdfIntoVectorStore() {
         // 讀取 classpath PDF 並轉成 Spring AI Document 列表

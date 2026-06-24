@@ -23,6 +23,7 @@ import static org.springframework.ai.chat.memory.ChatMemory.CONVERSATION_ID;
 public class RagController {
 
     private final ChatClient chatClient;
+    private final ChatClient openaiChatClientWithoutMemory;
     private final VectorStore vectorStore;
     private final VectorStore pdfVectorStore;
     private final RetrievalAugmentationAdvisor retrievalAugmentationAdvisor;
@@ -37,6 +38,7 @@ public class RagController {
 
     @Autowired
     public RagController(@Qualifier("openaiChatClient-jdbcChatMemory") ChatClient chatClient,
+                         @Qualifier("openaiChatClient-withoutMemory") ChatClient openaiChatClientWithoutMemory,
                          VectorStore vectorStore,
                          @Qualifier("pdfVectorStore") VectorStore pdfVectorStore,
                          RetrievalAugmentationAdvisor retrievalAugmentationAdvisor,
@@ -44,6 +46,7 @@ public class RagController {
                          @Qualifier("preAndPostRAAdvisor") RetrievalAugmentationAdvisor preAndPostRAAdvisor) {
         // 將 Spring AI 的 ChatClient 與向量資料庫元件注入，供 /rag 使用
         this.chatClient = chatClient;
+        this.openaiChatClientWithoutMemory = openaiChatClientWithoutMemory;
         this.vectorStore = vectorStore;
         this.pdfVectorStore = pdfVectorStore;
         this.retrievalAugmentationAdvisor = retrievalAugmentationAdvisor;
@@ -51,24 +54,32 @@ public class RagController {
         this.preAndPostRAAdvisor = preAndPostRAAdvisor;
     }
 
+    /**
+     * 使用者問題
+     * -> 去 Qdrant 找相關文件
+     * -> 把文件放進 system prompt
+     * -> 把使用者問題放進 user prompt
+     * -> 用 OpenAI 回答
+     */
     @PostMapping("/rag")
     public String openaiChat(@RequestBody GenericChatPayload genericChatPayload, @RequestHeader("userName") String userName) {
-        // === 1. 準備向量搜尋條件，用用戶輸入去找語意相近的文件 ===
-        // 一次「向量搜尋條件」的封裝物件
+
+        // 1. 建立「搜尋條件」準備向量搜尋條件，用用戶輸入去找語意相近的文件
         SearchRequest searchRequest = SearchRequest.builder()
-                .query(genericChatPayload.message()) // 用這一句話去找「語意上最接近」的 Documents
-                .topK(5)                              // 只要最相似的 前 5 筆 Document
-                .similarityThreshold(.5)           // 搜尋的相似度門檻
+                .query(genericChatPayload.message())    // 使用者輸入當查詢文字
+                .topK(5)                                 // 最多取前 5 筆最相似的 Document
+                .similarityThreshold(.5)             // 搜尋的相似度門檻
                 .build();
 
-        // === 2. 從向量資料庫取得知識片段，並拼成可注入提示詞的上下文 ===
+        // 2. 從向量資料庫取得知識片段
         List<Document> listOfSimilarDocuments = vectorStore.similaritySearch(searchRequest); // 從向量資料庫撈出最相關的知識片段
+
+        // 3. 取出每個 Document 的文字內容，串成可放進 prompt 的上下文
         String similarContext = listOfSimilarDocuments.stream().map(Document::getText).collect(Collectors.joining(",\n")); // 將所有 Document 轉成 String
 
-        // === 3. 帶著對話記憶與檢索結果呼叫大模型 ===
-        return chatClient.prompt()
-                .advisors(advisorSpec -> advisorSpec.param(CONVERSATION_ID, "rag-" + userName))
-                .system(systemSpec -> systemSpec.text(ragPromptTemplate).param("documents", similarContext)) // 將知識片段加到 System Prompt
+        // 4. 帶著對話記憶與檢索結果呼叫大模型
+        return openaiChatClientWithoutMemory.prompt()
+                .system(systemSpec -> systemSpec.text(ragPromptTemplate).param("documents", similarContext)) // 讀取 RAG prompt template，並把向量搜尋取得的文件內容填入 {documents}，作為 system prompt 傳給模型
                 .user(genericChatPayload.message()) // 將用戶的訊息加到 User Prompt
                 .call().content();
     }
