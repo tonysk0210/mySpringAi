@@ -70,27 +70,33 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- 讓 Spring Boot 應用啟動時，可以自動偵測並使用專案裡的 Docker Compose 檔案。
+        Spring Boot 在執行應用時會嘗試整合 Docker Compose，例如啟動 compose.yml 裡的服務，讓本機開發時不用手動先執行 docker compose up。 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-docker-compose</artifactId>
             <scope>runtime</scope>
         </dependency>
 
-        <!-- RAG 基本流程工具（抽象）-->
+        <!-- Spring AI RAG 流程元件：提供 RetrievalAugmentationAdvisor、DocumentRetriever、Query Transformer、Post Processor 等工具 -->
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-rag</artifactId>
         </dependency>
+
         <!-- ChatClient 的自動 RAG Advisor -->
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-vector-store-advisor</artifactId>
         </dependency>
-        <!-- 幫 Spring Boot 自動建立 QdrantVectorStore -->
+
+        <!-- Spring AI Qdrant Vector Store Starter：自動配置 QdrantClient 與預設 QdrantVectorStore，用來連接 Qdrant 向量資料庫
+         這段依賴在你的專案裡有兩層效果：一層是透過 properties 建立預設 VectorStore，另一層是你自己又用同一個 QdrantClient 建了 pdfVectorStore。-->
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-starter-vector-store-qdrant</artifactId>
         </dependency>
+
         <!--  我不管你是什麼檔案格式，我幫你抽出文字內容  -->
         <dependency>
             <groupId>org.springframework.ai</groupId>

@@ -283,3 +283,307 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2026-06-24T00:14:46.243+08:00  INFO 316 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
 2026-06-24T00:14:46.398+08:00  INFO 316 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 4.355 seconds (process running for 1541.995)
 2026-06-24T00:14:46.402+08:00  INFO 316 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-24T12:35:43.340+08:00  INFO 19200 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 19200 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-06-24T12:35:43.344+08:00  INFO 19200 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-24T12:35:43.427+08:00  INFO 19200 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-24T12:35:43.427+08:00  INFO 19200 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-24T12:35:43.470+08:00  INFO 19200 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-06-24T12:35:44.674+08:00  INFO 19200 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Creating 
+2026-06-24T12:35:44.716+08:00  INFO 19200 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Created 
+2026-06-24T12:35:44.721+08:00  INFO 19200 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Creating 
+2026-06-24T12:35:44.839+08:00  INFO 19200 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Created 
+2026-06-24T12:35:44.868+08:00  INFO 19200 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Starting 
+2026-06-24T12:35:45.472+08:00  INFO 19200 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Started 
+2026-06-24T12:35:45.472+08:00  INFO 19200 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Waiting 
+2026-06-24T12:35:45.979+08:00  INFO 19200 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Healthy 
+2026-06-24T12:35:47.862+08:00  INFO 19200 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-24T12:35:48.227+08:00  INFO 19200 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 347 ms. Found 1 JPA repository interface.
+2026-06-24T12:35:49.964+08:00  INFO 19200 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-24T12:35:49.987+08:00  INFO 19200 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-24T12:35:49.988+08:00  INFO 19200 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-24T12:35:50.064+08:00  INFO 19200 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3504 ms
+2026-06-24T12:35:50.291+08:00  INFO 19200 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-24T12:35:51.988+08:00  WARN 19200 --- [mySpringAi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'jdbcChatMemoryScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'jdbcChatMemoryScriptDatabaseInitializer' defined in class path resource [org/springframework/ai/model/chat/memory/repository/jdbc/autoconfigure/JdbcChatMemoryRepositoryAutoConfiguration.class]: Failed to instantiate [org.springframework.ai.model.chat.memory.repository.jdbc.autoconfigure.JdbcChatMemoryRepositorySchemaInitializer]: Factory method 'jdbcChatMemoryScriptDatabaseInitializer' threw exception with message: Failed to determine DatabaseDriver
+2026-06-24T12:35:51.993+08:00  INFO 19200 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-24T12:35:52.016+08:00  INFO 19200 --- [mySpringAi] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-24T12:35:52.029+08:00 ERROR 19200 --- [mySpringAi] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'jdbcChatMemoryScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'jdbcChatMemoryScriptDatabaseInitializer' defined in class path resource [org/springframework/ai/model/chat/memory/repository/jdbc/autoconfigure/JdbcChatMemoryRepositoryAutoConfiguration.class]: Failed to instantiate [org.springframework.ai.model.chat.memory.repository.jdbc.autoconfigure.JdbcChatMemoryRepositorySchemaInitializer]: Factory method 'jdbcChatMemoryScriptDatabaseInitializer' threw exception with message: Failed to determine DatabaseDriver
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
+	at com.example.mySpringAi.MySpringAiApplication.main(MySpringAiApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.0.jar:4.1.0]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jdbcChatMemoryScriptDatabaseInitializer' defined in class path resource [org/springframework/ai/model/chat/memory/repository/jdbc/autoconfigure/JdbcChatMemoryRepositoryAutoConfiguration.class]: Failed to instantiate [org.springframework.ai.model.chat.memory.repository.jdbc.autoconfigure.JdbcChatMemoryRepositorySchemaInitializer]: Factory method 'jdbcChatMemoryScriptDatabaseInitializer' threw exception with message: Failed to determine DatabaseDriver
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1360) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ai.model.chat.memory.repository.jdbc.autoconfigure.JdbcChatMemoryRepositorySchemaInitializer]: Factory method 'jdbcChatMemoryScriptDatabaseInitializer' threw exception with message: Failed to determine DatabaseDriver
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:183) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:152) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 23 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to determine DatabaseDriver
+	at org.springframework.boot.jdbc.init.PlatformPlaceholderDatabaseDriverResolver.getDatabaseDriver(PlatformPlaceholderDatabaseDriverResolver.java:144) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
+	at org.springframework.boot.jdbc.init.PlatformPlaceholderDatabaseDriverResolver.determinePlatform(PlatformPlaceholderDatabaseDriverResolver.java:132) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
+	at org.springframework.boot.jdbc.init.PlatformPlaceholderDatabaseDriverResolver.lambda$resolveAll$0(PlatformPlaceholderDatabaseDriverResolver.java:97) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
+	at org.springframework.boot.jdbc.init.PlatformPlaceholderDatabaseDriverResolver.resolveAll(PlatformPlaceholderDatabaseDriverResolver.java:122) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
+	at org.springframework.boot.jdbc.init.PlatformPlaceholderDatabaseDriverResolver.resolveAll(PlatformPlaceholderDatabaseDriverResolver.java:97) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
+	at org.springframework.boot.jdbc.init.PropertiesBasedDataSourceScriptDatabaseInitializer.resolveSchemaLocations(PropertiesBasedDataSourceScriptDatabaseInitializer.java:90) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
+	at org.springframework.boot.jdbc.init.PropertiesBasedDataSourceScriptDatabaseInitializer.getSettings(PropertiesBasedDataSourceScriptDatabaseInitializer.java:75) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
+	at org.springframework.boot.jdbc.init.PropertiesBasedDataSourceScriptDatabaseInitializer.<init>(PropertiesBasedDataSourceScriptDatabaseInitializer.java:59) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
+	at org.springframework.boot.jdbc.init.PropertiesBasedDataSourceScriptDatabaseInitializer.<init>(PropertiesBasedDataSourceScriptDatabaseInitializer.java:47) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
+	at org.springframework.ai.model.chat.memory.repository.jdbc.autoconfigure.JdbcChatMemoryRepositorySchemaInitializer.<init>(JdbcChatMemoryRepositorySchemaInitializer.java:34) ~[spring-ai-autoconfigure-model-chat-memory-repository-jdbc-2.0.0.jar:2.0.0]
+	at org.springframework.ai.model.chat.memory.repository.jdbc.autoconfigure.JdbcChatMemoryRepositoryAutoConfiguration.jdbcChatMemoryScriptDatabaseInitializer(JdbcChatMemoryRepositoryAutoConfiguration.java:57) ~[spring-ai-autoconfigure-model-chat-memory-repository-jdbc-2.0.0.jar:2.0.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 26 common frames omitted
+Caused by: org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:355) ~[spring-jdbc-7.0.8.jar:7.0.8]
+	at org.springframework.boot.jdbc.init.PlatformPlaceholderDatabaseDriverResolver.getDatabaseDriver(PlatformPlaceholderDatabaseDriverResolver.java:140) ~[spring-boot-jdbc-4.1.0.jar:4.1.0]
+	... 39 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84) ~[spring-jdbc-7.0.8.jar:7.0.8]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:329) ~[spring-jdbc-7.0.8.jar:7.0.8]
+	... 40 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name or password [28000-240]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:522) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.message.DbException.get(DbException.java:188) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.engine.Engine.validateUserAndPassword(Engine.java:396) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.engine.Engine.createSession(Engine.java:206) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:350) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124) ~[h2-2.4.240.jar:2.4.240]
+	at org.h2.Driver.connect(Driver.java:59) ~[h2-2.4.240.jar:2.4.240]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160) ~[spring-jdbc-7.0.8.jar:7.0.8]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118) ~[spring-jdbc-7.0.8.jar:7.0.8]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81) ~[spring-jdbc-7.0.8.jar:7.0.8]
+	... 41 common frames omitted
+
+2026-06-24T12:36:25.852+08:00  INFO 6564 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 6564 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-06-24T12:36:25.856+08:00  INFO 6564 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-24T12:36:25.945+08:00  INFO 6564 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-24T12:36:25.945+08:00  INFO 6564 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-24T12:36:25.977+08:00  INFO 6564 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-06-24T12:36:27.146+08:00  INFO 6564 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Creating 
+2026-06-24T12:36:27.188+08:00  INFO 6564 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Created 
+2026-06-24T12:36:27.193+08:00  INFO 6564 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Creating 
+2026-06-24T12:36:27.305+08:00  INFO 6564 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Created 
+2026-06-24T12:36:27.330+08:00  INFO 6564 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Starting 
+2026-06-24T12:36:27.672+08:00  INFO 6564 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Started 
+2026-06-24T12:36:27.673+08:00  INFO 6564 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Waiting 
+2026-06-24T12:36:28.182+08:00  INFO 6564 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Healthy 
+2026-06-24T12:36:29.688+08:00  INFO 6564 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-24T12:36:29.922+08:00  INFO 6564 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 222 ms. Found 1 JPA repository interface.
+2026-06-24T12:36:31.124+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-24T12:36:31.140+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-24T12:36:31.140+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-24T12:36:31.206+08:00  INFO 6564 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2489 ms
+2026-06-24T12:36:31.402+08:00  INFO 6564 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-24T12:36:31.689+08:00  INFO 6564 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-24T12:36:31.691+08:00  INFO 6564 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-24T12:36:31.859+08:00  INFO 6564 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-24T12:36:31.978+08:00  INFO 6564 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-24T12:36:32.700+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-24T12:36:32.835+08:00  INFO 6564 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-24T12:36:34.388+08:00  INFO 6564 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-24T12:36:34.463+08:00  INFO 6564 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24T12:36:42.906+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 12 chunks.
+2026-06-24T12:36:47.012+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-24T12:36:47.257+08:00  WARN 6564 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-24T12:36:47.774+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-24T12:36:47.796+08:00  WARN 6564 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-24T12:36:47.798+08:00  WARN 6564 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-24T12:36:47.899+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-24T12:36:48.229+08:00  INFO 6564 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 24.903 seconds (process running for 27.853)
+2026-06-24T12:36:48.869+08:00  INFO 6564 --- [mySpringAi] [RMI TCP Connection(4)-192.168.20.58] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-24T12:36:48.870+08:00  INFO 6564 --- [mySpringAi] [RMI TCP Connection(4)-192.168.20.58] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-24T12:36:48.874+08:00  INFO 6564 --- [mySpringAi] [RMI TCP Connection(4)-192.168.20.58] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-06-24T13:12:17.786+08:00  INFO 6564 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-24T13:12:17.814+08:00  INFO 6564 --- [mySpringAi] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-24T13:12:17.830+08:00  INFO 6564 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-24T13:12:17.845+08:00  INFO 6564 --- [mySpringAi] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24T13:12:17.853+08:00  INFO 6564 --- [mySpringAi] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-24T13:12:17.865+08:00  INFO 6564 --- [mySpringAi] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-24T13:12:18.572+08:00  INFO 6564 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 6564 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-06-24T13:12:18.573+08:00  INFO 6564 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-24T13:12:18.580+08:00  INFO 6564 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-06-24T13:12:19.086+08:00  INFO 6564 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-24T13:12:19.419+08:00  INFO 6564 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-24T13:12:19.565+08:00  INFO 6564 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 145 ms. Found 1 JPA repository interface.
+2026-06-24T13:12:19.878+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-24T13:12:19.879+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-24T13:12:19.879+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-24T13:12:19.922+08:00  INFO 6564 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 835 ms
+2026-06-24T13:12:19.980+08:00  INFO 6564 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-06-24T13:12:20.045+08:00  INFO 6564 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn22: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-24T13:12:20.046+08:00  INFO 6564 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-06-24T13:12:20.082+08:00  INFO 6564 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-24T13:12:20.153+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-24T13:12:20.157+08:00  INFO 6564 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-24T13:12:20.238+08:00  INFO 6564 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-24T13:12:20.245+08:00  INFO 6564 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24T13:12:21.328+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 12 chunks.
+2026-06-24T13:12:25.454+08:00  WARN 6564 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-24T13:12:25.725+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-24T13:12:25.736+08:00  WARN 6564 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-24T13:12:25.736+08:00  WARN 6564 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-24T13:12:25.755+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-24T13:12:25.854+08:00  INFO 6564 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 7.833 seconds (process running for 2165.493)
+2026-06-24T13:12:25.857+08:00  INFO 6564 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-24T13:19:25.982+08:00  INFO 6564 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-24T13:19:25.986+08:00  INFO 6564 --- [mySpringAi] [Thread-35] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-24T13:19:26.000+08:00  INFO 6564 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-24T13:19:26.011+08:00  INFO 6564 --- [mySpringAi] [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24T13:19:26.014+08:00  INFO 6564 --- [mySpringAi] [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-06-24T13:19:26.021+08:00  INFO 6564 --- [mySpringAi] [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-06-24T13:19:26.512+08:00  INFO 6564 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 6564 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-06-24T13:19:26.512+08:00  INFO 6564 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-24T13:19:26.522+08:00  INFO 6564 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-06-24T13:19:27.029+08:00  INFO 6564 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-24T13:19:27.446+08:00  INFO 6564 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-24T13:19:27.552+08:00  INFO 6564 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104 ms. Found 1 JPA repository interface.
+2026-06-24T13:19:28.000+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-24T13:19:28.002+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-24T13:19:28.003+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-24T13:19:28.095+08:00  INFO 6564 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1058 ms
+2026-06-24T13:19:28.221+08:00  INFO 6564 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-06-24T13:19:28.275+08:00  INFO 6564 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn33: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-24T13:19:28.275+08:00  INFO 6564 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-06-24T13:19:28.302+08:00  INFO 6564 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-24T13:19:28.339+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-24T13:19:28.341+08:00  INFO 6564 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-24T13:19:28.385+08:00  INFO 6564 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-24T13:19:28.389+08:00  INFO 6564 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24T13:19:29.095+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 12 chunks.
+2026-06-24T13:19:33.140+08:00  WARN 6564 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-24T13:19:33.361+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-24T13:19:33.371+08:00  WARN 6564 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-24T13:19:33.371+08:00  WARN 6564 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-24T13:19:33.382+08:00  INFO 6564 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-24T13:19:33.464+08:00  INFO 6564 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 7.347 seconds (process running for 2593.104)
+2026-06-24T13:19:33.467+08:00  INFO 6564 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-24T13:20:28.576+08:00  INFO 6564 --- [mySpringAi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-24T13:20:28.589+08:00  INFO 6564 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-24T13:20:28.595+08:00  INFO 6564 --- [mySpringAi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24T13:20:28.597+08:00  INFO 6564 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-06-24T13:20:28.598+08:00  INFO 6564 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-06-24T13:20:33.453+08:00  INFO 11552 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 11552 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-06-24T13:20:33.455+08:00  INFO 11552 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-24T13:20:33.512+08:00  INFO 11552 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-24T13:20:33.512+08:00  INFO 11552 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-24T13:20:33.531+08:00  INFO 11552 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-06-24T13:20:34.353+08:00  INFO 11552 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Creating 
+2026-06-24T13:20:34.405+08:00  INFO 11552 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Created 
+2026-06-24T13:20:34.410+08:00  INFO 11552 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Creating 
+2026-06-24T13:20:34.510+08:00  INFO 11552 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Created 
+2026-06-24T13:20:34.533+08:00  INFO 11552 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Starting 
+2026-06-24T13:20:34.883+08:00  INFO 11552 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Started 
+2026-06-24T13:20:34.883+08:00  INFO 11552 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Waiting 
+2026-06-24T13:20:35.390+08:00  INFO 11552 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Healthy 
+2026-06-24T13:20:36.759+08:00  INFO 11552 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-24T13:20:36.973+08:00  INFO 11552 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 203 ms. Found 1 JPA repository interface.
+2026-06-24T13:20:37.961+08:00  INFO 11552 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-24T13:20:37.975+08:00  INFO 11552 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-24T13:20:37.975+08:00  INFO 11552 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-24T13:20:38.033+08:00  INFO 11552 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2123 ms
+2026-06-24T13:20:38.198+08:00  INFO 11552 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-24T13:20:38.439+08:00  INFO 11552 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-24T13:20:38.441+08:00  INFO 11552 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-24T13:20:38.548+08:00  INFO 11552 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-24T13:20:38.612+08:00  INFO 11552 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-24T13:20:39.189+08:00  INFO 11552 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-24T13:20:39.272+08:00  INFO 11552 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-24T13:20:40.529+08:00  INFO 11552 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-24T13:20:40.599+08:00  INFO 11552 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24T13:20:45.036+08:00  INFO 11552 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 12 chunks.
+2026-06-24T13:20:48.007+08:00  INFO 11552 --- [mySpringAi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-24T13:20:48.366+08:00  WARN 11552 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-24T13:20:48.837+08:00  INFO 11552 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-24T13:20:48.858+08:00  WARN 11552 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-24T13:20:48.860+08:00  WARN 11552 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-24T13:20:48.928+08:00  INFO 11552 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-24T13:20:49.143+08:00  INFO 11552 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 16.473 seconds (process running for 18.271)
+2026-06-24T13:20:49.376+08:00  INFO 11552 --- [mySpringAi] [RMI TCP Connection(5)-192.168.20.58] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-24T13:20:49.377+08:00  INFO 11552 --- [mySpringAi] [RMI TCP Connection(5)-192.168.20.58] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-24T13:20:49.381+08:00  INFO 11552 --- [mySpringAi] [RMI TCP Connection(5)-192.168.20.58] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-06-24T13:25:44.943+08:00  INFO 11552 --- [mySpringAi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-24T13:25:44.961+08:00  INFO 11552 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-24T13:25:44.981+08:00  INFO 11552 --- [mySpringAi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24T13:25:44.987+08:00  INFO 11552 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-24T13:25:44.988+08:00  INFO 11552 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

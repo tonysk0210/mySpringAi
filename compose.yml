@@ -1,7 +1,15 @@
+# 搭配 pom.xml 裡的 spring-boot-docker-compose，Spring Boot 啟動時可以自動偵測這個 compose.yml，並幫你啟動 Qdrant。
+# 這樣你的 Spring AI QdrantVectorStore 就能連到本機的 Qdrant 向量資料庫。
+
+# •qdrant：服務名稱，Spring Boot / Docker Compose 會用這個名字識別服務。
+# •image: qdrant/qdrant:latest：從 Docker Hub 使用最新版 Qdrant 映像檔。
+# •6333:6333：把容器內的 Qdrant REST API 開到本機 localhost:6333。
+# •6334:6334：把容器內的 Qdrant gRPC API 開到本機 localhost:6334。
+
 services:
   qdrant:
     image: 'qdrant/qdrant:latest' #從 Docker Hub 下載 Qdrant
     ports:
-      - "6333:6333" # 開放 Qdrant REST API　http://localhost:6333/dashboard#/collections
+      - "6333:6333" # 開放 Qdrant REST API　http://localhost:6333/dashboard#/collections 可存取 dashboard
       - "6334:6334" # 開放 Qdrant gRPC API
-      # "外部Port : 內部Port"
+      # "外部 Port : 內部 Port"
