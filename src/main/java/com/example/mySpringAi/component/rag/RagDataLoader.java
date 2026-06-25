@@ -21,7 +21,7 @@ public class RagDataLoader {
     private final VectorStore pdfVectorSotre;
 
     @Value("classpath:/Eazybytes_HR_Policies.pdf")
-    Resource pdfFile; //
+    Resource pdfFile;
 
     /**
      * vectorStore     -> Spring AI 自動建立 -> rag-collection
@@ -124,13 +124,20 @@ public class RagDataLoader {
      */
     @PostConstruct
     public void loadPdfIntoVectorStore() {
-        // 讀取 classpath PDF 並轉成 Spring AI Document 列表
+
+        // 1. 建立一個 TikaDocumentReader 讀取 pdfFile，並嘗試從 PDF 中抽出文字內容
         TikaDocumentReader reader = new TikaDocumentReader(pdfFile);
+
+        // 2. 真正讀取 PDF，並把結果轉成 Spring AI 的 Document 清單
         List<Document> documents = reader.get();
+
+        // 3. 確認 PDF 是否有被成功讀取 Document size: 1
         System.out.println("Document size: " + documents.size());
 
-        // 先切塊避免單一 chunk 過長，再批次寫入 pdf-collection
+        // 4. 使用 TokenTextSplitter，用 token 數量來切文件：每個 chunk 目標大小約為 100 tokens，最多切 400 個 chunk
         TextSplitter splitter = TokenTextSplitter.builder().withChunkSize(100).withMaxNumChunks(400).build();
+
+        // 5. 把切好的 Document 清單送進 pdfVectorSotre，完成建立 pdf-collection
         pdfVectorSotre.add(splitter.split(documents));
     }
 }

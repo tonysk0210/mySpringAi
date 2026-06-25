@@ -37,11 +37,11 @@
             <artifactId>spring-boot-starter-webmvc</artifactId>
         </dependency>
 
-        <!--<dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
-        </dependency>-->
+        </dependency>
 
         <!-- Model Provider: OpenAI 模型 -->
         <dependency>
@@ -97,11 +97,12 @@
             <artifactId>spring-ai-starter-vector-store-qdrant</artifactId>
         </dependency>
 
-        <!--  我不管你是什麼檔案格式，我幫你抽出文字內容  -->
+        <!--  Spring AI 提供的文件讀取工具，底層整合 Apache Tika，主要用途是從各種文件格式中解析出文字內容，常見於 RAG 流程，例如讀 PDF、Word、HTML、TXT 後切 chunk、做 embedding、丟進 vector store  -->
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-tika-document-reader</artifactId>
         </dependency>
+
         <!-- 讓 Spring Boot 具備「自動啟動 MCP Server、建立 MCP Client、並把 MCP tools 接到 LLM Tool Calling」的能力-->
         <dependency>
             <groupId>org.springframework.ai</groupId>

@@ -62,7 +62,7 @@ public class RagController {
      * -> 用 OpenAI 回答
      */
     @PostMapping("/rag")
-    public String openaiChat(@RequestBody GenericChatPayload genericChatPayload, @RequestHeader("userName") String userName) {
+    public String openaiChat(@RequestBody GenericChatPayload genericChatPayload) {
 
         // 1. 建立「搜尋條件」準備向量搜尋條件，用用戶輸入去找語意相近的文件
         SearchRequest searchRequest = SearchRequest.builder()
@@ -85,9 +85,8 @@ public class RagController {
     }
 
     @PostMapping("/ragPdf")
-    public String pdf(@RequestBody GenericChatPayload genericChatPayload, @RequestHeader("userName") String userName) {
-        return chatClient.prompt()
-                .advisors(advisorSpec -> advisorSpec.param(CONVERSATION_ID, "ragPdf-" + userName))
+    public String pdf(@RequestBody GenericChatPayload genericChatPayload) {
+        return openaiChatClientWithoutMemory.prompt()
                 .advisors(retrievalAugmentationAdvisor)
                 .user(genericChatPayload.message())
                 .call().content();
