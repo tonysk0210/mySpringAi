@@ -13,6 +13,23 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.web.client.RestClient;
 
+/**
+ * RetrievalAugmentationAdvisor 把「搜尋、取文件、組上下文、塞進 prompt」包成一個 advisor 動作。
+ * <p>
+ * 使用者問題
+ * ↓
+ * 拿使用者問題當 query
+ * ↓
+ * 用 pdfVectorStore 做 similarity search
+ * ↓
+ * 取 topK = 3 的相關 Document
+ * ↓
+ * 過濾 similarityThreshold < 0.5 的結果
+ * ↓
+ * 把 Document 內容補進 prompt/context
+ * ↓
+ * 送給 LLM 回答
+ */
 @Configuration
 public class AdvisorConfig {
 
