@@ -8,7 +8,6 @@ import org.springframework.ai.vectorstore.SearchRequest;
 import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.web.bind.annotation.*;
@@ -32,9 +31,6 @@ public class RagController {
 
     @Value("classpath:/promptTemplate/RagPromptTemplate.st")
     Resource ragPromptTemplate;
-
-    /*@Value("classpath:/promptTemplate/ragPdfPromptTemplate.st")
-    Resource ragPdfPromptTemplate;*/
 
     @Autowired
     public RagController(@Qualifier("openaiChatClient-jdbcChatMemory") ChatClient chatClient,
@@ -84,10 +80,20 @@ public class RagController {
                 .call().content();
     }
 
+    /**
+     * 使用 PDF RAG advisor 回答使用者問題。
+     * <p>
+     * 使用者問題
+     * -> 交給 retrievalAugmentationAdvisor
+     * -> advisor 使用 pdfVectorStore 到 Qdrant 的 pdf-collection 做 similarity search
+     * -> 取回符合 topK / similarityThreshold 條件的 PDF 文件片段
+     * -> 將檢索到的 Document 內容補進 prompt/context
+     * -> 用不帶 chat memory 的 OpenAI ChatClient 產生回答
+     */
     @PostMapping("/ragPdf")
     public String pdf(@RequestBody GenericChatPayload genericChatPayload) {
         return openaiChatClientWithoutMemory.prompt()
-                .advisors(retrievalAugmentationAdvisor)
+                .advisors(retrievalAugmentationAdvisor) // 帶著 retrievalAugmentationAdvisor
                 .user(genericChatPayload.message())
                 .call().content();
     }
