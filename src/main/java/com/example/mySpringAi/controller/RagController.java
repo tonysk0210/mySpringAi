@@ -26,7 +26,7 @@ public class RagController {
     private final VectorStore vectorStore;
     private final VectorStore pdfVectorStore;
     private final RetrievalAugmentationAdvisor retrievalAugmentationAdvisor;
-    private final RetrievalAugmentationAdvisor trvilyRAAdvisor;
+    private final RetrievalAugmentationAdvisor tavilyRaAdvisor;
     private final RetrievalAugmentationAdvisor preAndPostRAAdvisor;
 
     @Value("classpath:/promptTemplate/RagPromptTemplate.st")
@@ -38,7 +38,7 @@ public class RagController {
                          VectorStore vectorStore,
                          @Qualifier("pdfVectorStore") VectorStore pdfVectorStore,
                          RetrievalAugmentationAdvisor retrievalAugmentationAdvisor,
-                         @Qualifier("TrvilyRAAdvisor") RetrievalAugmentationAdvisor trvilyRAAdvisor,
+                         @Qualifier("tavilyRaAdvisor") RetrievalAugmentationAdvisor tavilyRaAdvisor,
                          @Qualifier("preAndPostRAAdvisor") RetrievalAugmentationAdvisor preAndPostRAAdvisor) {
         // 將 Spring AI 的 ChatClient 與向量資料庫元件注入，供 /rag 使用
         this.chatClient = chatClient;
@@ -46,7 +46,7 @@ public class RagController {
         this.vectorStore = vectorStore;
         this.pdfVectorStore = pdfVectorStore;
         this.retrievalAugmentationAdvisor = retrievalAugmentationAdvisor;
-        this.trvilyRAAdvisor = trvilyRAAdvisor;
+        this.tavilyRaAdvisor = tavilyRaAdvisor;
         this.preAndPostRAAdvisor = preAndPostRAAdvisor;
     }
 
@@ -84,10 +84,11 @@ public class RagController {
      * 使用 PDF RAG advisor 回答使用者問題。
      * <p>
      * 使用者問題
-     * -> 交給 retrievalAugmentationAdvisor
+     * -> ChatClient 在 call() 時執行 retrievalAugmentationAdvisor
      * -> advisor 使用 pdfVectorStore 到 Qdrant 的 pdf-collection 做 similarity search
-     * -> 取回符合 topK / similarityThreshold 條件的 PDF 文件片段
-     * -> 將檢索到的 Document 內容補進 prompt/context
+     * -> 取回符合 topK / similarityThreshold 條件的 PDF Document chunks
+     * -> ContextualQueryAugmenter 將 Document 內容套進 RagPdfPromptTemplate.st 的 {context}
+     * -> 將使用者問題套進 {query}
      * -> 用不帶 chat memory 的 OpenAI ChatClient 產生回答
      */
     @PostMapping("/ragPdf")
@@ -98,11 +99,21 @@ public class RagController {
                 .call().content();
     }
 
+    /**
+     * 使用 Tavily RAG advisor 回答使用者問題。
+     * <p>
+     * 使用者呼叫 /ragTavily
+     * -> ChatClient 執行 tavilyRaAdvisor
+     * -> RetrievalAugmentationAdvisor 拿使用者問題建立 Query
+     * -> 呼叫 TavilyWebSearchDocumentRetriever.retrieve(query)
+     * -> retrieve() 回傳 List<Document>
+     * -> advisor 把 Document 內容整理進 prompt context
+     * -> LLM 根據 user question + Tavily 搜尋內容回答
+     */
     @PostMapping("/ragTavily")
-    public String Tavily(@RequestBody GenericChatPayload genericChatPayload, @RequestHeader("userName") String userName) {
-        return chatClient.prompt()
-                .advisors(advisorSpec -> advisorSpec.param(CONVERSATION_ID, "ragTavily-" + userName))
-                .advisors(trvilyRAAdvisor)
+    public String tavily(@RequestBody GenericChatPayload genericChatPayload) {
+        return openaiChatClientWithoutMemory.prompt()
+                .advisors(tavilyRaAdvisor) // 帶著 tavilyRaAdvisor 自定義 retrievalAugmentationAdvisor
                 .user(genericChatPayload.message())
                 .call().content();
     }

@@ -17,23 +17,6 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.Resource;
 import org.springframework.web.client.RestClient;
 
-/**
- * RetrievalAugmentationAdvisor 把「搜尋、取文件、組上下文、塞進 prompt」包成一個 advisor 動作。
- * <p>
- * 使用者問題
- * ↓
- * 拿使用者問題當 query
- * ↓
- * 用 pdfVectorStore 做 similarity search
- * ↓
- * 取 topK = 3 的相關 Document
- * ↓
- * 過濾 similarityThreshold < 0.5 的結果
- * ↓
- * 把 Document 內容補進 prompt/context
- * ↓
- * 送給 LLM 回答
- */
 @Configuration
 public class AdvisorConfig {
 
@@ -113,14 +96,17 @@ public class AdvisorConfig {
          */
     }
 
+    /**
+     * 建立一個專門給 /tavilyRa 用的 Tavily RAG advisor。
+     */
     @Bean
-    @Qualifier("TrvilyRAAdvisor")
-    public RetrievalAugmentationAdvisor trvilyRetrievalAugmentationAdvisor() {
+    @Qualifier("tavilyRaAdvisor")
+    public RetrievalAugmentationAdvisor tavilyRetrievalAugmentationAdvisor(RestClient.Builder restClientBuilder) {
         return RetrievalAugmentationAdvisor.builder()
                 .documentRetriever(
                         TavilyWebSearchDocumentRetriever.builder()
-                                .restClientBuilder(RestClient.builder()) // RestClient.builder() 是「Spring Framework 提供的 API」
-                                .resultLimit(5)
+                                .restClientBuilder(restClientBuilder) // 使用 Spring 注入的 RestClient.Builder，交給 Tavily retriever 後續設定 baseUrl/header 並 build 成 RestClient
+                                .maxResults(5)
                                 .build()
                 ).build();
     }
