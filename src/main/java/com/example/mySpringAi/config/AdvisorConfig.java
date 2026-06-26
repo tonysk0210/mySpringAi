@@ -15,7 +15,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.Resource;
-import org.springframework.web.client.RestClient;
 
 @Configuration
 public class AdvisorConfig {
@@ -101,13 +100,10 @@ public class AdvisorConfig {
      */
     @Bean
     @Qualifier("tavilyRaAdvisor")
-    public RetrievalAugmentationAdvisor tavilyRetrievalAugmentationAdvisor(RestClient.Builder restClientBuilder) {
+    public RetrievalAugmentationAdvisor tavilyRetrievalAugmentationAdvisor(TavilyWebSearchDocumentRetriever tavilyWebSearchDocumentRetriever) {
         return RetrievalAugmentationAdvisor.builder()
                 .documentRetriever(
-                        TavilyWebSearchDocumentRetriever.builder()
-                                .restClientBuilder(restClientBuilder) // 使用 Spring 注入的 RestClient.Builder，交給 Tavily retriever 後續設定 baseUrl/header 並 build 成 RestClient
-                                .maxResults(5)
-                                .build()
+                        tavilyWebSearchDocumentRetriever
                 ).build();
     }
 
