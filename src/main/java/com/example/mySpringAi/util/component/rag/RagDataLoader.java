@@ -1,6 +1,8 @@
 package com.example.mySpringAi.util.component.rag;
 
+import io.qdrant.client.QdrantClient;
 import jakarta.annotation.PostConstruct;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.reader.tika.TikaDocumentReader;
 import org.springframework.ai.transformer.splitter.TextSplitter;
@@ -14,11 +16,13 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Slf4j
 @Component
 public class RagDataLoader {
 
     private final VectorStore vectorStore;
-    private final VectorStore pdfVectorSotre;
+    private final VectorStore pdfVectorStore;
+    private final QdrantClient qdrantClient;
 
     @Value("classpath:/Eazybytes_HR_Policies.pdf")
     Resource pdfFile;
@@ -31,10 +35,12 @@ public class RagDataLoader {
      * 並透過 spring.ai.vectorstore.qdrant.collection-name=rag-collection 決定 collection
      */
     @Autowired
-    public RagDataLoader(VectorStore vectorStore, @Qualifier("pdfVectorStore") VectorStore pdfVectorSotre) {
-
-        this.vectorStore = vectorStore; // 自動建立的 vectorStore
-        this.pdfVectorSotre = pdfVectorSotre; // 手動建立的 pdfVectorStore
+    public RagDataLoader(VectorStore vectorStore,
+                         @Qualifier("pdfVectorStore") VectorStore pdfVectorStore,
+                         QdrantClient qdrantClient) {
+        this.vectorStore = vectorStore;
+        this.pdfVectorStore = pdfVectorStore;
+        this.qdrantClient = qdrantClient;
         /*
         第一個參數：
         VectorStore vectorStore
@@ -55,6 +61,11 @@ public class RagDataLoader {
      */
     @PostConstruct
     public void loadSentenceIntoVectorStore() {
+        if (hasData("rag-collection")) {
+            log.info("rag-collection 已有資料，跳過載入");
+            return;
+        }
+
         List<String> sentences = List.of(
                 "Java is used for building scalable enterprise applications.",
                 "Python is commonly used for machine learning and automation tasks.",
@@ -113,10 +124,11 @@ public class RagDataLoader {
         );
 
         // 1. 把句子轉成 Document
-        List<Document> documents = sentences.stream().map(Document::new).toList(); // VectorStore 只吃 Document，不吃 String
+        List<Document> documents = sentences.stream().map(Document::new).toList();
 
         // 2. 把 Document 送進 Qdrant
-        vectorStore.add(documents); // 把資料送進 Qdrant
+        vectorStore.add(documents);
+        log.info("rag-collection 載入完成，共 {} 筆", documents.size());
     }
 
     /**
@@ -124,20 +136,34 @@ public class RagDataLoader {
      */
     @PostConstruct
     public void loadPdfIntoVectorStore() {
+        if (hasData("pdf-collection")) {
+            log.info("pdf-collection 已有資料，跳過載入");
+            return;
+        }
 
         // 1. 建立一個 TikaDocumentReader 讀取 pdfFile，並嘗試從 PDF 中抽出文字內容
         TikaDocumentReader reader = new TikaDocumentReader(pdfFile);
 
         // 2. 真正讀取 PDF，並把結果轉成 Spring AI 的 Document 清單
         List<Document> documents = reader.get();
+        log.info("PDF 讀取完成，共 {} 份文件", documents.size());
 
-        // 3. 確認 PDF 是否有被成功讀取 Document size: 1
-        System.out.println("Document size: " + documents.size());
-
-        // 4. 使用 TokenTextSplitter，用 token 數量來切文件：每個 chunk 目標大小約為 200 tokens，最多切 400 個 chunk
+        // 3. 使用 TokenTextSplitter，用 token 數量來切文件：每個 chunk 目標大小約為 200 tokens，最多切 400 個 chunk
         TextSplitter splitter = TokenTextSplitter.builder().withChunkSize(200).withMaxNumChunks(400).build();
 
-        // 5. 把切好的 Document 清單送進 pdfVectorSotre，完成建立 pdf-collection
-        pdfVectorSotre.add(splitter.split(documents));
+        // 4. 把切好的 Document 清單送進 pdfVectorSotre，完成建立 pdf-collection
+        pdfVectorStore.add(splitter.split(documents));
+        log.info("pdf-collection 載入完成");
+    }
+
+    // 向 Qdrant 查詢 collection 的 point 數量，大於 0 表示已有資料
+    private boolean hasData(String collectionName) {
+        try {
+            long count = qdrantClient.getCollectionInfoAsync(collectionName).get().getPointsCount();
+            return count > 0;
+        } catch (Exception e) {
+            log.warn("無法查詢 {} 的資料量，視為空集合重新載入", collectionName);
+            return false;
+        }
     }
 }

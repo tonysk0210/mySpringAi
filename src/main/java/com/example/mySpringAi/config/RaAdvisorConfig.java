@@ -154,7 +154,7 @@ public class RaAdvisorConfig {
                                 .build()
                 )
                 // 3. (post-retrieval) 設定文件檢索器；收到使用者問題後，advisor 會透過它去找相關 Document。
-                .documentPostProcessors( // post-retrieval: masking email & phone number
+                .documentPostProcessors(
                         MaskingDocumentPostProcessor.getInstance()
                 )
                 // 4. 設定 query augmenter；它負責把檢索到的 Document 內容和原始問題套進 prompt template。

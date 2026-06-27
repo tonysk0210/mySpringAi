@@ -75,7 +75,7 @@ public class PrettyLoggerAdvisor implements CallAdvisor {
         String text = response.chatResponse().getResult().getOutput().getText();
         StringBuilder sb = new StringBuilder();
         sb.append("\n╔══ ◄ LLM Response ").append(BAR).append("\n");
-        appendSection(sb, "[ANSWER]", text != null ? text : "(no text)");
+        appendSection(sb, "[ASSISTANT]", text != null ? text : "(no text)");
         sb.append("╚").append(BAR).append("══════════════════");
         log.debug(sb.toString());
     }
