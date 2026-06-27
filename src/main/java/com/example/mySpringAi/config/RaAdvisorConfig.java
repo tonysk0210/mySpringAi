@@ -16,8 +16,22 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.Resource;
 
+/**
+ * RAG 相關的 Spring Bean 設定。
+ * RetrievalAugmentationAdvisor 負責 RAG 中的 Retrieval + Augmentation：
+ * 先檢索相關 Document，再把 Document 內容補進 prompt；最後的 Generation 由 ChatClient/LLM 完成。
+ * <p>
+ * Retrieval：
+ * 根據使用者問題去找相關 Document
+ * <p>
+ * Augmentation：
+ * 把找到的 Document 內容補進 prompt/context
+ * <p>
+ * Generation：
+ * 不是它本身做，而是後面的 ChatClient / LLM 做
+ */
 @Configuration
-public class AdvisorConfig {
+public class RaAdvisorConfig {
 
     /**
      * 建立一個專門給 /ragPdf 用的 PDF RAG advisor。
@@ -96,38 +110,48 @@ public class AdvisorConfig {
     }
 
     /**
-     * 建立一個專門給 /tavilyRa 用的 Tavily RAG advisor。
+     * 建立一個專門給 /tavilyRa 用的 Tavily RAG advisor。 注入自定義的 TavilyWebSearchDocumentRetriever 作為文件檢索器。
      */
     @Bean
     @Qualifier("tavilyRaAdvisor")
     public RetrievalAugmentationAdvisor tavilyRetrievalAugmentationAdvisor(TavilyWebSearchDocumentRetriever tavilyWebSearchDocumentRetriever) {
         return RetrievalAugmentationAdvisor.builder()
-                .documentRetriever(
-                        tavilyWebSearchDocumentRetriever
-                ).build();
+                .documentRetriever(tavilyWebSearchDocumentRetriever).build();
     }
 
     @Bean
     @Qualifier("preAndPostRAAdvisor")
     public RetrievalAugmentationAdvisor transformerRetrievalAugmentationAdvisor(@Qualifier("pdfVectorStore") VectorStore vectorStore,
-                                                                                @Qualifier("openaiBuilder") ChatClient.Builder chatClientBuilder) {
-        // 先把 Query 翻譯成英文，再用 pdfVectorStore 做檢索
+                                                                                @Qualifier("openaiBuilder") ChatClient.Builder chatClientBuilder,
+                                                                                @Value("classpath:/promptTemplate/RagPdfPromptTemplate.st") Resource ragPdfPromptTemplate) {
+
         return RetrievalAugmentationAdvisor.builder()
+                // 1. 先把 Query 翻譯成英文，再用 pdfVectorStore 做檢索 llm 第一次介入翻譯
                 .queryTransformers(TranslationQueryTransformer.builder() // pre-retrieval: Query 翻譯
                         .chatClientBuilder(chatClientBuilder.clone()) // 用 clone 避免汙染全域 Builder
                         .targetLanguage("english") // 將原始查詢翻譯為英文
                         .build()
-                )
+                ).order(-120)
+                // 2. 這裡主要靠 embedding similarity，不是靠最終回答模型自由理解，所以須按照與 collection 相同語言去找資料找出的資料會較準確
                 .documentRetriever(
                         VectorStoreDocumentRetriever.builder()
-                                .vectorStore(vectorStore) // 指定 PDF collection
-                                .topK(3) // 回傳最相似的前三筆
-                                .similarityThreshold(0.5) // 相似度門檻低於 0.5 就忽略
+                                .vectorStore(vectorStore)
+                                .topK(3)
+                                .similarityThreshold(0.5)
                                 .build()
                 )
+                // 3. 設定文件檢索器；收到使用者問題後，advisor 會透過它去找相關 Document。
                 .documentPostProcessors( // post-retrieval: masking email & phone number
                         MaskingDocumentPostProcessor.getInstance()
                 )
+                // 4. 設定 query augmenter；它負責把檢索到的 Document 內容和原始問題套進 prompt template。
+                .queryAugmenter(
+                        ContextualQueryAugmenter.builder()
+                                // 8. 讀取 RagPdfPromptTemplate.st，並用它包裝檢索結果；template 需包含 {context} 與 {query}。
+                                .promptTemplate(new PromptTemplate(ragPdfPromptTemplate))
+                                // 9. 建立 ContextualQueryAugmenter；執行時會把 {context} 換成 Document 文字，把 {query} 換成使用者問題。
+                                .build())
+                .order(-100)
                 .build();
     }
 }

@@ -30,6 +30,7 @@ public class TavilyWebSearchDocumentRetriever implements DocumentRetriever {
 
     /**
      * 建立一個可以呼叫 Tavily Web Search API 的 RestClient，並設定最多要拿幾筆搜尋結果。
+     *
      */
     public TavilyWebSearchDocumentRetriever(RestClient.Builder restClientBuilder,
                                             @Value("${tavily.apiKey:}") String apiKey) {
@@ -38,7 +39,7 @@ public class TavilyWebSearchDocumentRetriever implements DocumentRetriever {
 
         // 2. 驗證 api.properties 注入的 tavily.apiKey 不為空
         Assert.hasText(apiKey, "tavily.apiKey 設定不可為空");
-        
+
         // 3. 建立 RestClient 物件；所以之後在 retrieve(Query query) 裡面呼叫：restClient.post()　就會直接對 Tavily API 發送 POST request，而且自動帶上 Authorization header
         // restClient 是這個類別用來發 HTTP request 給 Tavily API 的工具。
         this.restClient = restClientBuilder

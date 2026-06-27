@@ -812,12 +812,12 @@ Caused by: java.lang.IllegalArgumentException: tavily.apiKey 設定不可為空
 	at org.springframework.util.Assert.hasText(Assert.java:254) ~[spring-core-7.0.8.jar:7.0.8]
 	at com.example.mySpringAi.component.rag.TavilyWebSearchDocumentRetriever.<init>(TavilyWebSearchDocumentRetriever.java:37) ~[classes/:na]
 	at com.example.mySpringAi.component.rag.TavilyWebSearchDocumentRetriever$Builder.build(TavilyWebSearchDocumentRetriever.java:151) ~[classes/:na]
-	at com.example.mySpringAi.config.AdvisorConfig.tavilyRetrievalAugmentationAdvisor(AdvisorConfig.java:112) ~[classes/:na]
-	at com.example.mySpringAi.config.AdvisorConfig$$SpringCGLIB$$0.CGLIB$tavilyRetrievalAugmentationAdvisor$2(<generated>) ~[classes/:na]
-	at com.example.mySpringAi.config.AdvisorConfig$$SpringCGLIB$$FastClass$$1.invoke(<generated>) ~[classes/:na]
+	at com.example.mySpringAi.config.RaAdvisorConfig.tavilyRetrievalAugmentationAdvisor(AdvisorConfig.java:112) ~[classes/:na]
+	at com.example.mySpringAi.config.RaAdvisorConfig$$SpringCGLIB$$0.CGLIB$tavilyRetrievalAugmentationAdvisor$2(<generated>) ~[classes/:na]
+	at com.example.mySpringAi.config.RaAdvisorConfig$$SpringCGLIB$$FastClass$$1.invoke(<generated>) ~[classes/:na]
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-7.0.8.jar:7.0.8]
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:398) ~[spring-context-7.0.8.jar:7.0.8]
-	at com.example.mySpringAi.config.AdvisorConfig$$SpringCGLIB$$0.tavilyRetrievalAugmentationAdvisor(<generated>) ~[classes/:na]
+	at com.example.mySpringAi.config.RaAdvisorConfig$$SpringCGLIB$$0.tavilyRetrievalAugmentationAdvisor(<generated>) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155) ~[spring-beans-7.0.8.jar:7.0.8]
@@ -2177,7 +2177,7 @@ java.lang.IllegalStateException: Error processing condition on org.springframewo
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.0.jar:4.1.0]
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.example.mySpringAi.config.AdvisorConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6d2b7295]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.example.mySpringAi.config.RaAdvisorConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6d2b7295]
 	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-7.0.8.jar:7.0.8]
 	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-7.0.8.jar:7.0.8]
 	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-7.0.8.jar:7.0.8]
@@ -2338,7 +2338,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of method tavilyRetrievalAugmentationAdvisor in com.example.mySpringAi.config.AdvisorConfig required a bean of type 'com.example.mySpringAi.component.rag.TavilyWebSearchDocumentRetriever' that could not be found.
+Parameter 0 of method tavilyRetrievalAugmentationAdvisor in com.example.mySpringAi.config.RaAdvisorConfig required a bean of type 'com.example.mySpringAi.component.rag.TavilyWebSearchDocumentRetriever' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Qualifier("tavilyRaAdvisor")
@@ -2833,7 +2833,7 @@ java.lang.IllegalStateException: Error processing condition on org.springframewo
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.0.jar:4.1.0]
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.example.mySpringAi.config.AdvisorConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@80d9b7b]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.example.mySpringAi.config.RaAdvisorConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@80d9b7b]
 	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-7.0.8.jar:7.0.8]
 	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-7.0.8.jar:7.0.8]
 	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-7.0.8.jar:7.0.8]
@@ -3745,3 +3745,2810 @@ how is the usa stock market performed today?
 }
 2026-06-27T06:30:12.308+08:00 DEBUG 2116 --- [mySpringAi] [http-nio-8080-exec-5] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='how is the taiwan stock market performed today?', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={}]
 2026-06-27T06:30:12.309+08:00  INFO 2116 --- [mySpringAi] [ai-advisor-2] e.m.c.r.TavilyWebSearchDocumentRetriever : TavilyWebSearchDocumentRetriever: user 下的 query = how is the taiwan stock market performed today?
+2026-06-27T06:32:33.025+08:00  WARN 2116 --- [mySpringAi] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m41s677ms702µs600ns).
+2026-06-27T06:32:34.390+08:00  INFO 2116 --- [mySpringAi] [http-nio-8080-exec-5] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=301, completionTokens=48, totalTokens=349, cacheReadInputTokens=0}
+2026-06-27T06:32:34.390+08:00 DEBUG 2116 --- [mySpringAi] [http-nio-8080-exec-5] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-Dv9O5Fmb9We1dZqmavPlmrbOzmhtX",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 301,
+      "completionTokens" : 48,
+      "totalTokens" : 349,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 48,
+        "prompt_tokens" : 301,
+        "total_tokens" : 349,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "refusal" : "",
+        "finishReason" : "STOP",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-Dv9O5Fmb9We1dZqmavPlmrbOzmhtX",
+        "reasoningContent" : ""
+      },
+      "text" : "台灣股市今日的表現較為疲弱，指數在收盤時下跌了1,683.50點，跌幅約為3.64%，目前指數為44,571.76點。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "refusal" : "",
+        "finishReason" : "STOP",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-Dv9O5Fmb9We1dZqmavPlmrbOzmhtX",
+        "reasoningContent" : ""
+      },
+      "text" : "台灣股市今日的表現較為疲弱，指數在收盤時下跌了1,683.50點，跌幅約為3.64%，目前指數為44,571.76點。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T06:34:00.836+08:00  INFO 2116 --- [mySpringAi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T06:34:00.925+08:00  INFO 2116 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T06:34:00.956+08:00  INFO 2116 --- [mySpringAi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T06:34:00.963+08:00  INFO 2116 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-27T06:34:00.966+08:00  INFO 2116 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-27T07:39:26.618+08:00  INFO 9956 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 9956 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T07:39:26.622+08:00  INFO 9956 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T07:39:26.706+08:00  INFO 9956 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-27T07:39:26.706+08:00  INFO 9956 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-27T07:39:26.738+08:00  INFO 9956 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T07:39:27.958+08:00  INFO 9956 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Creating 
+2026-06-27T07:39:28.129+08:00  INFO 9956 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Created 
+2026-06-27T07:39:28.134+08:00  INFO 9956 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Creating 
+2026-06-27T07:39:28.746+08:00  INFO 9956 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Created 
+2026-06-27T07:39:28.766+08:00  INFO 9956 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Starting 
+2026-06-27T07:39:29.750+08:00  INFO 9956 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Started 
+2026-06-27T07:39:29.751+08:00  INFO 9956 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Waiting 
+2026-06-27T07:39:30.255+08:00  INFO 9956 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Healthy 
+2026-06-27T07:39:31.855+08:00  INFO 9956 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T07:39:32.084+08:00  INFO 9956 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 214 ms. Found 1 JPA repository interface.
+2026-06-27T07:39:33.265+08:00  INFO 9956 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T07:39:33.282+08:00  INFO 9956 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T07:39:33.282+08:00  INFO 9956 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T07:39:33.375+08:00  INFO 9956 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2541 ms
+2026-06-27T07:39:33.577+08:00  INFO 9956 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-27T07:39:33.878+08:00  INFO 9956 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T07:39:33.880+08:00  INFO 9956 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-27T07:39:34.008+08:00  INFO 9956 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T07:39:34.084+08:00  INFO 9956 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-27T07:39:34.680+08:00  INFO 9956 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T07:39:34.784+08:00  INFO 9956 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T07:39:35.949+08:00  INFO 9956 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T07:39:36.009+08:00  INFO 9956 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T07:39:45.493+08:00  INFO 9956 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 12 chunks.
+2026-06-27T07:39:47.722+08:00  INFO 9956 --- [mySpringAi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-27T07:39:47.954+08:00  WARN 9956 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T07:39:48.663+08:00  INFO 9956 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T07:39:48.687+08:00  WARN 9956 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T07:39:48.688+08:00  WARN 9956 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T07:39:48.759+08:00  INFO 9956 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T07:39:49.015+08:00  INFO 9956 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 23.413 seconds (process running for 25.268)
+2026-06-27T07:39:49.351+08:00  INFO 9956 --- [mySpringAi] [RMI TCP Connection(4)-192.168.50.58] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-27T07:39:49.351+08:00  INFO 9956 --- [mySpringAi] [RMI TCP Connection(4)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-27T07:39:49.355+08:00  INFO 9956 --- [mySpringAi] [RMI TCP Connection(4)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-06-27T07:39:55.197+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='java chungchang min hrilh teh
+
+(請根據以上內容，務必使用清楚、易理解且專業的繁體中文回答)', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={}]
+2026-06-27T07:40:00.170+08:00  INFO 9956 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=419, completionTokens=37, totalTokens=456, cacheReadInputTokens=0}
+2026-06-27T07:40:00.199+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvARLgGeDzW71aR9xtN0K2moxJtGK",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 419,
+      "completionTokens" : 37,
+      "totalTokens" : 456,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 37,
+        "prompt_tokens" : 419,
+        "total_tokens" : 456,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvARLgGeDzW71aR9xtN0K2moxJtGK",
+        "reasoningContent" : ""
+      },
+      "text" : "抱歉，您所詢問的「java chungchang min hrilh teh」內容在提供的資料中沒有相關資訊，因此我無法提供具體的回答。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvARLgGeDzW71aR9xtN0K2moxJtGK",
+        "reasoningContent" : ""
+      },
+      "text" : "抱歉，您所詢問的「java chungchang min hrilh teh」內容在提供的資料中沒有相關資訊，因此我無法提供具體的回答。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T07:41:43.165+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-5] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='【規則】
+1. 請根據「文件」中的資訊回答，並使用繁體中文。
+2. 只要文件中有任何與問題相關的資訊，就必須整理這些資訊回答。
+3. 如果文件只有部分資訊，請根據已有資訊簡短回答，不要說無法確定。
+4. 只有在文件完全沒有任何相關資訊時，才回覆：「根據目前文件，我無法確定」。
+5. 不要捏造文件中沒有的事實。
+
+文件：
+----------
+Compound interest increases investment returns over time.,
+Diversifying investments reduces overall risk.,
+Mutual funds pool money from investors to buy securities.,
+The stock market opens at 9:30 a.m. EST on weekdays.,
+A blockchain is a distributed, immutable ledger of transactions.
+----------', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='tell me something about investment?', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={}]
+2026-06-27T07:41:44.783+08:00  INFO 9956 --- [mySpringAi] [http-nio-8080-exec-5] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=195, completionTokens=29, totalTokens=224, cacheReadInputTokens=0}
+2026-06-27T07:41:44.784+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-5] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvAT1hkf5Lom5XsAu37Zwq1ZnR5yJ",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 195,
+      "completionTokens" : 29,
+      "totalTokens" : 224,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 29,
+        "prompt_tokens" : 195,
+        "total_tokens" : 224,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvAT1hkf5Lom5XsAu37Zwq1ZnR5yJ",
+        "reasoningContent" : ""
+      },
+      "text" : "根據文件，投資中複利可以增加投資回報，分散投資可以降低整體風險。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvAT1hkf5Lom5XsAu37Zwq1ZnR5yJ",
+        "reasoningContent" : ""
+      },
+      "text" : "根據文件，投資中複利可以增加投資回報，分散投資可以降低整體風險。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T07:42:14.236+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-6] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='investment chungchang eng emaw min hrilh teh
+
+(請根據以上內容，務必使用清楚、易理解且專業的繁體中文回答)', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={}]
+2026-06-27T07:42:16.128+08:00  INFO 9956 --- [mySpringAi] [http-nio-8080-exec-6] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=431, completionTokens=24, totalTokens=455, cacheReadInputTokens=0}
+2026-06-27T07:42:16.129+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-6] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvATXCpsRvcO2qwOfDNttiJ37DfMQ",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 431,
+      "completionTokens" : 24,
+      "totalTokens" : 455,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 24,
+        "prompt_tokens" : 431,
+        "total_tokens" : 455,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvATXCpsRvcO2qwOfDNttiJ37DfMQ",
+        "reasoningContent" : ""
+      },
+      "text" : "很抱歉，提供的內容中沒有相關資訊關於「投資變更」或相關事宜。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvATXCpsRvcO2qwOfDNttiJ37DfMQ",
+        "reasoningContent" : ""
+      },
+      "text" : "很抱歉，提供的內容中沒有相關資訊關於「投資變更」或相關事宜。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T07:48:08.620+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-10] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='investment chungchang eng emaw min hrilh teh
+
+(請根據以上內容，務必使用清楚、易理解且專業的繁體中文回答)', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={}]
+2026-06-27T07:48:11.718+08:00  INFO 9956 --- [mySpringAi] [http-nio-8080-exec-10] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=427, completionTokens=38, totalTokens=465, cacheReadInputTokens=0}
+2026-06-27T07:48:11.718+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-10] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvAZHFLlr2GWUUC7BGUInFbVjZQub",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 427,
+      "completionTokens" : 38,
+      "totalTokens" : 465,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 38,
+        "prompt_tokens" : 427,
+        "total_tokens" : 465,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvAZHFLlr2GWUUC7BGUInFbVjZQub",
+        "reasoningContent" : ""
+      },
+      "text" : "抱歉，您詢問的內容「investment chungchang eng emaw min hrilh teh」在提供的資訊中沒有相關資料，因此我無法提供詳細的回答。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvAZHFLlr2GWUUC7BGUInFbVjZQub",
+        "reasoningContent" : ""
+      },
+      "text" : "抱歉，您詢問的內容「investment chungchang eng emaw min hrilh teh」在提供的資訊中沒有相關資料，因此我無法提供詳細的回答。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T08:31:12.104+08:00  WARN 9956 --- [mySpringAi] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m38s101ms883µs300ns).
+2026-06-27T08:34:07.690+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='leave policy chungchang min hrilh teh
+
+(請根據以上內容，務必使用清楚、易理解且專業的繁體中文回答)', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={}]
+2026-06-27T08:34:12.703+08:00  INFO 9956 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=417, completionTokens=82, totalTokens=499, cacheReadInputTokens=0}
+2026-06-27T08:34:12.704+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvBHopeJOm6x7ijyhwTrhdZTIrCj0",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 417,
+      "completionTokens" : 82,
+      "totalTokens" : 499,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 82,
+        "prompt_tokens" : 417,
+        "total_tokens" : 499,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBHopeJOm6x7ijyhwTrhdZTIrCj0",
+        "reasoningContent" : ""
+      },
+      "text" : "請假政策包括以下幾項：  \n- 事假（Casual Leave, CL）：每年可請8天。  \n- 病假（Sick Leave, SL）：每年可請8天。  \n- 年假（Earned Leave, EL）：相關細節未提供。  \n\n所有請假申請需提前通知主管，並遵守公司規定。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBHopeJOm6x7ijyhwTrhdZTIrCj0",
+        "reasoningContent" : ""
+      },
+      "text" : "請假政策包括以下幾項：  \n- 事假（Casual Leave, CL）：每年可請8天。  \n- 病假（Sick Leave, SL）：每年可請8天。  \n- 年假（Earned Leave, EL）：相關細節未提供。  \n\n所有請假申請需提前通知主管，並遵守公司規定。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T08:34:36.425+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。
+
+請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。
+如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+
+CONTEXT:
+----------
+WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):
+• Daily stand-ups and weekly check-ins are mandatory. 
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+tutor@eazybytes.
+• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.
+----------
+
+問題：
+leave policy chungchang min hrilh teh
+
+回答：', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={rag_document_context=[Document{id='70e121b2-59ee-4054-9f7b-a4acf8c3a427', text='WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):', media='null', metadata={chunk_index=3, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.19672263, total_chunks=12}, score=0.8032773733139038}, Document{id='c4501779-842f-4365-bda1-e09636794f25', text='• Daily stand-ups and weekly check-ins are mandatory. 
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+tutor@eazybytes.', media='null', metadata={chunk_index=8, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.20939982, total_chunks=12}, score=0.7906001806259155}, Document{id='cc8c1346-c957-4ea9-a35a-20616fcc305f', text='• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.', media='null', metadata={chunk_index=7, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.21076399, total_chunks=12}, score=0.7892360091209412}]}]
+2026-06-27T08:34:37.266+08:00  INFO 9956 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=406, completionTokens=2, totalTokens=408, cacheReadInputTokens=0}
+2026-06-27T08:34:37.266+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvBIDNmT4XF2cmrBbsYBfCRaWUst5",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 406,
+      "completionTokens" : 2,
+      "totalTokens" : 408,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 2,
+        "prompt_tokens" : 406,
+        "total_tokens" : 408,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBIDNmT4XF2cmrBbsYBfCRaWUst5",
+        "reasoningContent" : ""
+      },
+      "text" : "我不知道",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBIDNmT4XF2cmrBbsYBfCRaWUst5",
+        "reasoningContent" : ""
+      },
+      "text" : "我不知道",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T08:34:54.441+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-4] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。
+
+請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。
+如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+
+CONTEXT:
+----------
+WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):
+• Daily stand-ups and weekly check-ins are mandatory. 
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+tutor@eazybytes.
+• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.
+----------
+
+問題：
+leave policy chungchang min hrilh teh
+
+回答：', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={rag_document_context=[Document{id='70e121b2-59ee-4054-9f7b-a4acf8c3a427', text='WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):', media='null', metadata={chunk_index=3, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.19672263, total_chunks=12}, score=0.8032773733139038}, Document{id='c4501779-842f-4365-bda1-e09636794f25', text='• Daily stand-ups and weekly check-ins are mandatory. 
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+tutor@eazybytes.', media='null', metadata={chunk_index=8, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.20939982, total_chunks=12}, score=0.7906001806259155}, Document{id='cc8c1346-c957-4ea9-a35a-20616fcc305f', text='• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.', media='null', metadata={chunk_index=7, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.21076399, total_chunks=12}, score=0.7892360091209412}]}]
+2026-06-27T08:34:55.269+08:00  INFO 9956 --- [mySpringAi] [http-nio-8080-exec-4] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=406, completionTokens=78, totalTokens=484, cacheReadInputTokens=0}
+2026-06-27T08:34:55.299+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-4] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvBIV8y2G8kJTU4QrbgdlALOqQsUm",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 406,
+      "completionTokens" : 78,
+      "totalTokens" : 484,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 78,
+        "prompt_tokens" : 406,
+        "total_tokens" : 484,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBIV8y2G8kJTU4QrbgdlALOqQsUm",
+        "reasoningContent" : ""
+      },
+      "text" : "根據 CONTEXT，請參考以下請假政策：\r\n- 事假（Casual Leave, CL）：每年8天\r\n- 病假（Sick Leave, SL）：每年8天\r\n- 年假（Earned Leave, EL）：未具體說明天數\r\n\r\n如需更多詳細資訊，建議聯絡相關部門。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBIV8y2G8kJTU4QrbgdlALOqQsUm",
+        "reasoningContent" : ""
+      },
+      "text" : "根據 CONTEXT，請參考以下請假政策：\r\n- 事假（Casual Leave, CL）：每年8天\r\n- 病假（Sick Leave, SL）：每年8天\r\n- 年假（Earned Leave, EL）：未具體說明天數\r\n\r\n如需更多詳細資訊，建議聯絡相關部門。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T08:35:47.807+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-5] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。
+
+請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。
+如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+
+CONTEXT:
+----------
+WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):
+• Daily stand-ups and weekly check-ins are mandatory. 
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+tutor@eazybytes.
+• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.
+----------
+
+問題：
+leave policy chungchang min hrilh teh
+
+回答：', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={rag_document_context=[Document{id='70e121b2-59ee-4054-9f7b-a4acf8c3a427', text='WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):', media='null', metadata={chunk_index=3, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.19672263, total_chunks=12}, score=0.8032773733139038}, Document{id='c4501779-842f-4365-bda1-e09636794f25', text='• Daily stand-ups and weekly check-ins are mandatory. 
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+tutor@eazybytes.', media='null', metadata={chunk_index=8, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.20939982, total_chunks=12}, score=0.7906001806259155}, Document{id='cc8c1346-c957-4ea9-a35a-20616fcc305f', text='• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.', media='null', metadata={chunk_index=7, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.21076399, total_chunks=12}, score=0.7892360091209412}]}]
+2026-06-27T08:35:48.321+08:00  INFO 9956 --- [mySpringAi] [http-nio-8080-exec-5] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=406, completionTokens=2, totalTokens=408, cacheReadInputTokens=0}
+2026-06-27T08:35:48.465+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-5] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvBJMcdqWn9kygfRolGW31lmnJpWX",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 406,
+      "completionTokens" : 2,
+      "totalTokens" : 408,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 2,
+        "prompt_tokens" : 406,
+        "total_tokens" : 408,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBJMcdqWn9kygfRolGW31lmnJpWX",
+        "reasoningContent" : ""
+      },
+      "text" : "我不知道",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBJMcdqWn9kygfRolGW31lmnJpWX",
+        "reasoningContent" : ""
+      },
+      "text" : "我不知道",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T08:35:50.374+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-6] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。
+
+請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。
+如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+
+CONTEXT:
+----------
+WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):
+• Daily stand-ups and weekly check-ins are mandatory. 
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+tutor@eazybytes.
+• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.
+----------
+
+問題：
+leave policy chungchang min hrilh teh
+
+回答：', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={rag_document_context=[Document{id='70e121b2-59ee-4054-9f7b-a4acf8c3a427', text='WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):', media='null', metadata={chunk_index=3, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.19672263, total_chunks=12}, score=0.8032773733139038}, Document{id='c4501779-842f-4365-bda1-e09636794f25', text='• Daily stand-ups and weekly check-ins are mandatory. 
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+tutor@eazybytes.', media='null', metadata={chunk_index=8, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.20939982, total_chunks=12}, score=0.7906001806259155}, Document{id='cc8c1346-c957-4ea9-a35a-20616fcc305f', text='• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.', media='null', metadata={chunk_index=7, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.21076399, total_chunks=12}, score=0.7892360091209412}]}]
+2026-06-27T08:35:51.900+08:00  INFO 9956 --- [mySpringAi] [http-nio-8080-exec-6] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=406, completionTokens=65, totalTokens=471, cacheReadInputTokens=0}
+2026-06-27T08:35:51.901+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-6] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvBJPdxQuc28Rjbh4FdWh6yfSM3eu",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 406,
+      "completionTokens" : 65,
+      "totalTokens" : 471,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 65,
+        "prompt_tokens" : 406,
+        "total_tokens" : 471,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBJPdxQuc28Rjbh4FdWh6yfSM3eu",
+        "reasoningContent" : ""
+      },
+      "text" : "根據 CONTEXT，EazyBytes 公司的休假政策如下：  \n- 事假（Casual Leave, CL）：每年8天  \n- 病假（Sick Leave, SL）：每年8天  \n- 年假（Earned Leave, EL）：未詳細說明天數。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBJPdxQuc28Rjbh4FdWh6yfSM3eu",
+        "reasoningContent" : ""
+      },
+      "text" : "根據 CONTEXT，EazyBytes 公司的休假政策如下：  \n- 事假（Casual Leave, CL）：每年8天  \n- 病假（Sick Leave, SL）：每年8天  \n- 年假（Earned Leave, EL）：未詳細說明天數。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T08:35:53.690+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-7] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。
+
+請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。
+如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+
+CONTEXT:
+----------
+WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):
+• Daily stand-ups and weekly check-ins are mandatory. 
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+tutor@eazybytes.
+• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.
+----------
+
+問題：
+leave policy chungchang min hrilh teh
+
+回答：', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={rag_document_context=[Document{id='70e121b2-59ee-4054-9f7b-a4acf8c3a427', text='WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):', media='null', metadata={chunk_index=3, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.19672263, total_chunks=12}, score=0.8032773733139038}, Document{id='c4501779-842f-4365-bda1-e09636794f25', text='• Daily stand-ups and weekly check-ins are mandatory. 
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+tutor@eazybytes.', media='null', metadata={chunk_index=8, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.20939982, total_chunks=12}, score=0.7906001806259155}, Document{id='cc8c1346-c957-4ea9-a35a-20616fcc305f', text='• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.', media='null', metadata={chunk_index=7, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.21076399, total_chunks=12}, score=0.7892360091209412}]}]
+2026-06-27T08:35:54.240+08:00  INFO 9956 --- [mySpringAi] [http-nio-8080-exec-7] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=406, completionTokens=2, totalTokens=408, cacheReadInputTokens=0}
+2026-06-27T08:35:54.241+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-7] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvBJSySvbEtXCMcLRtDZzO5rlowsj",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 406,
+      "completionTokens" : 2,
+      "totalTokens" : 408,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 2,
+        "prompt_tokens" : 406,
+        "total_tokens" : 408,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBJSySvbEtXCMcLRtDZzO5rlowsj",
+        "reasoningContent" : ""
+      },
+      "text" : "我不知道",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBJSySvbEtXCMcLRtDZzO5rlowsj",
+        "reasoningContent" : ""
+      },
+      "text" : "我不知道",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T08:35:55.648+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-8] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。
+
+請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。
+如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+
+CONTEXT:
+----------
+WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):
+• Daily stand-ups and weekly check-ins are mandatory. 
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+tutor@eazybytes.
+• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.
+----------
+
+問題：
+leave policy chungchang min hrilh teh
+
+回答：', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={rag_document_context=[Document{id='70e121b2-59ee-4054-9f7b-a4acf8c3a427', text='WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):', media='null', metadata={chunk_index=3, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.19672263, total_chunks=12}, score=0.8032773733139038}, Document{id='c4501779-842f-4365-bda1-e09636794f25', text='• Daily stand-ups and weekly check-ins are mandatory. 
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+tutor@eazybytes.', media='null', metadata={chunk_index=8, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.20939982, total_chunks=12}, score=0.7906001806259155}, Document{id='cc8c1346-c957-4ea9-a35a-20616fcc305f', text='• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.', media='null', metadata={chunk_index=7, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.21076399, total_chunks=12}, score=0.7892360091209412}]}]
+2026-06-27T08:35:56.184+08:00  INFO 9956 --- [mySpringAi] [http-nio-8080-exec-8] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=406, completionTokens=2, totalTokens=408, cacheReadInputTokens=0}
+2026-06-27T08:35:56.185+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-8] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvBJUZqcaFVlCEm96FDFy9Sd5f3P2",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 406,
+      "completionTokens" : 2,
+      "totalTokens" : 408,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 2,
+        "prompt_tokens" : 406,
+        "total_tokens" : 408,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBJUZqcaFVlCEm96FDFy9Sd5f3P2",
+        "reasoningContent" : ""
+      },
+      "text" : "我不知道",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBJUZqcaFVlCEm96FDFy9Sd5f3P2",
+        "reasoningContent" : ""
+      },
+      "text" : "我不知道",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T08:35:57.815+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-10] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。
+
+請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。
+如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+
+CONTEXT:
+----------
+WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):
+• Daily stand-ups and weekly check-ins are mandatory. 
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+tutor@eazybytes.
+• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.
+----------
+
+問題：
+leave policy chungchang min hrilh teh
+
+回答：', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={rag_document_context=[Document{id='70e121b2-59ee-4054-9f7b-a4acf8c3a427', text='WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):', media='null', metadata={chunk_index=3, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.19672263, total_chunks=12}, score=0.8032773733139038}, Document{id='c4501779-842f-4365-bda1-e09636794f25', text='• Daily stand-ups and weekly check-ins are mandatory. 
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+tutor@eazybytes.', media='null', metadata={chunk_index=8, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.20939982, total_chunks=12}, score=0.7906001806259155}, Document{id='cc8c1346-c957-4ea9-a35a-20616fcc305f', text='• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.', media='null', metadata={chunk_index=7, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.21076399, total_chunks=12}, score=0.7892360091209412}]}]
+2026-06-27T08:35:58.381+08:00  INFO 9956 --- [mySpringAi] [http-nio-8080-exec-10] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=406, completionTokens=2, totalTokens=408, cacheReadInputTokens=0}
+2026-06-27T08:35:58.381+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-10] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvBJWcDEb7mghYRcdEhPifx5DWgWy",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 406,
+      "completionTokens" : 2,
+      "totalTokens" : 408,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 2,
+        "prompt_tokens" : 406,
+        "total_tokens" : 408,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBJWcDEb7mghYRcdEhPifx5DWgWy",
+        "reasoningContent" : ""
+      },
+      "text" : "我不知道",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBJWcDEb7mghYRcdEhPifx5DWgWy",
+        "reasoningContent" : ""
+      },
+      "text" : "我不知道",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T08:36:15.806+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-9] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='leave policy chungchang min hrilh teh
+
+(請根據以上內容，務必使用清楚、易理解且專業的繁體中文回答)', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={}]
+2026-06-27T08:36:17.746+08:00  INFO 9956 --- [mySpringAi] [http-nio-8080-exec-9] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=417, completionTokens=87, totalTokens=504, cacheReadInputTokens=0}
+2026-06-27T08:36:17.747+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-9] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvBJpWXxqpO0mHajNyZc5Eb165rN6",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 417,
+      "completionTokens" : 87,
+      "totalTokens" : 504,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 87,
+        "prompt_tokens" : 417,
+        "total_tokens" : 504,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBJpWXxqpO0mHajNyZc5Eb165rN6",
+        "reasoningContent" : ""
+      },
+      "text" : "請假政策包括以下幾種：  \n- 事假（Casual Leave, CL）：每年可請8天。  \n- 病假（Sick Leave, SL）：每年可請8天。  \n- 年假（Earned Leave, EL）：相關細節未在提供的資料中提及。  \n\n請假時，需提前通知主管，並遵守公司規定。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBJpWXxqpO0mHajNyZc5Eb165rN6",
+        "reasoningContent" : ""
+      },
+      "text" : "請假政策包括以下幾種：  \n- 事假（Casual Leave, CL）：每年可請8天。  \n- 病假（Sick Leave, SL）：每年可請8天。  \n- 年假（Earned Leave, EL）：相關細節未在提供的資料中提及。  \n\n請假時，需提前通知主管，並遵守公司規定。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T08:36:18.632+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-1] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='leave policy chungchang min hrilh teh
+
+(請根據以上內容，務必使用清楚、易理解且專業的繁體中文回答)', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={}]
+2026-06-27T08:36:20.193+08:00  INFO 9956 --- [mySpringAi] [http-nio-8080-exec-1] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=417, completionTokens=75, totalTokens=492, cacheReadInputTokens=0}
+2026-06-27T08:36:20.193+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-1] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvBJsakhSzgUokQyAhnVLhdE3iuHQ",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 417,
+      "completionTokens" : 75,
+      "totalTokens" : 492,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 75,
+        "prompt_tokens" : 417,
+        "total_tokens" : 492,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBJsakhSzgUokQyAhnVLhdE3iuHQ",
+        "reasoningContent" : ""
+      },
+      "text" : "請假政策包括以下內容：\r\n- 事假（Casual Leave, CL）：每年可請8天。\r\n- 病假（Sick Leave, SL）：每年可請8天。\r\n- 年假（Earned Leave, EL）：相關細節未提供。\r\n\r\n請假時需提前通知，並遵守公司規定。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBJsakhSzgUokQyAhnVLhdE3iuHQ",
+        "reasoningContent" : ""
+      },
+      "text" : "請假政策包括以下內容：\r\n- 事假（Casual Leave, CL）：每年可請8天。\r\n- 病假（Sick Leave, SL）：每年可請8天。\r\n- 年假（Earned Leave, EL）：相關細節未提供。\r\n\r\n請假時需提前通知，並遵守公司規定。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T08:36:21.034+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='leave policy chungchang min hrilh teh
+
+(請根據以上內容，務必使用清楚、易理解且專業的繁體中文回答)', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={}]
+2026-06-27T08:36:23.232+08:00  INFO 9956 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=417, completionTokens=79, totalTokens=496, cacheReadInputTokens=0}
+2026-06-27T08:36:23.232+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvBJvii6jpQjKnqggQCeh76RlYJbL",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 417,
+      "completionTokens" : 79,
+      "totalTokens" : 496,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 79,
+        "prompt_tokens" : 417,
+        "total_tokens" : 496,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBJvii6jpQjKnqggQCeh76RlYJbL",
+        "reasoningContent" : ""
+      },
+      "text" : "請假政策包括以下內容：\n\n- 零用假（Casual Leave, CL）：每年可請8天。\n- 病假（Sick Leave, SL）：每年可請8天。\n- 優點假（Earned Leave, EL）：相關細節未提及。\n\n請假時，須提前通知主管，並遵守公司規定。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBJvii6jpQjKnqggQCeh76RlYJbL",
+        "reasoningContent" : ""
+      },
+      "text" : "請假政策包括以下內容：\n\n- 零用假（Casual Leave, CL）：每年可請8天。\n- 病假（Sick Leave, SL）：每年可請8天。\n- 優點假（Earned Leave, EL）：相關細節未提及。\n\n請假時，須提前通知主管，並遵守公司規定。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T08:36:24.479+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='leave policy chungchang min hrilh teh
+
+(請根據以上內容，務必使用清楚、易理解且專業的繁體中文回答)', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={}]
+2026-06-27T08:36:26.142+08:00  INFO 9956 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=417, completionTokens=72, totalTokens=489, cacheReadInputTokens=0}
+2026-06-27T08:36:26.142+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvBJy0E5H2Gy1NnB2a5UqnCFRrlcz",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 417,
+      "completionTokens" : 72,
+      "totalTokens" : 489,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 72,
+        "prompt_tokens" : 417,
+        "total_tokens" : 489,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBJy0E5H2Gy1NnB2a5UqnCFRrlcz",
+        "reasoningContent" : ""
+      },
+      "text" : "請假政策如下：  \n- 事假（Casual Leave, CL）：每年8天  \n- 病假（Sick Leave, SL）：每年8天  \n- 年假（Earned Leave, EL）：相關細節未提及  \n\n所有請假申請需提前通知主管，並遵守公司規定。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBJy0E5H2Gy1NnB2a5UqnCFRrlcz",
+        "reasoningContent" : ""
+      },
+      "text" : "請假政策如下：  \n- 事假（Casual Leave, CL）：每年8天  \n- 病假（Sick Leave, SL）：每年8天  \n- 年假（Earned Leave, EL）：相關細節未提及  \n\n所有請假申請需提前通知主管，並遵守公司規定。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T08:36:33.488+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-4] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。
+
+請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。
+如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+
+CONTEXT:
+----------
+WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):
+• Daily stand-ups and weekly check-ins are mandatory. 
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+tutor@eazybytes.
+• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.
+----------
+
+問題：
+leave policy chungchang min hrilh teh
+
+回答：', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={rag_document_context=[Document{id='70e121b2-59ee-4054-9f7b-a4acf8c3a427', text='WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):', media='null', metadata={chunk_index=3, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.19672263, total_chunks=12}, score=0.8032773733139038}, Document{id='c4501779-842f-4365-bda1-e09636794f25', text='• Daily stand-ups and weekly check-ins are mandatory. 
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+tutor@eazybytes.', media='null', metadata={chunk_index=8, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.20939982, total_chunks=12}, score=0.7906001806259155}, Document{id='cc8c1346-c957-4ea9-a35a-20616fcc305f', text='• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.', media='null', metadata={chunk_index=7, parent_document_id=f08f2ee5-09d9-4844-b7e6-bc79caf6b3cb, source=Eazybytes_HR_Policies.pdf, distance=0.21076399, total_chunks=12}, score=0.7892360091209412}]}]
+2026-06-27T08:36:34.169+08:00  INFO 9956 --- [mySpringAi] [http-nio-8080-exec-4] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=406, completionTokens=2, totalTokens=408, cacheReadInputTokens=0}
+2026-06-27T08:36:34.169+08:00 DEBUG 9956 --- [mySpringAi] [http-nio-8080-exec-4] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvBK6qSTTtlFbuBafepi7zwm4dP5S",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 406,
+      "completionTokens" : 2,
+      "totalTokens" : 408,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 2,
+        "prompt_tokens" : 406,
+        "total_tokens" : 408,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBK6qSTTtlFbuBafepi7zwm4dP5S",
+        "reasoningContent" : ""
+      },
+      "text" : "我不知道",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBK6qSTTtlFbuBafepi7zwm4dP5S",
+        "reasoningContent" : ""
+      },
+      "text" : "我不知道",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T08:52:42.549+08:00  INFO 9956 --- [mySpringAi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T08:52:42.559+08:00  INFO 9956 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T08:52:42.578+08:00  INFO 9956 --- [mySpringAi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T08:52:42.583+08:00  INFO 9956 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-27T08:52:42.588+08:00  INFO 9956 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-27T08:52:52.557+08:00  INFO 27856 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 27856 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T08:52:52.677+08:00  INFO 27856 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T08:52:52.730+08:00  INFO 27856 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-27T08:52:52.730+08:00  INFO 27856 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-27T08:52:52.746+08:00  INFO 27856 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T08:52:53.758+08:00  INFO 27856 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Creating 
+2026-06-27T08:52:53.932+08:00  INFO 27856 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Created 
+2026-06-27T08:52:53.938+08:00  INFO 27856 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Creating 
+2026-06-27T08:52:54.771+08:00  INFO 27856 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Created 
+2026-06-27T08:52:54.791+08:00  INFO 27856 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Starting 
+2026-06-27T08:52:55.795+08:00  INFO 27856 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Started 
+2026-06-27T08:52:55.796+08:00  INFO 27856 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Waiting 
+2026-06-27T08:52:56.300+08:00  INFO 27856 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Healthy 
+2026-06-27T08:52:57.881+08:00  INFO 27856 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T08:52:58.102+08:00  INFO 27856 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 209 ms. Found 1 JPA repository interface.
+2026-06-27T08:52:59.360+08:00  INFO 27856 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T08:52:59.376+08:00  INFO 27856 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T08:52:59.377+08:00  INFO 27856 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T08:52:59.473+08:00  INFO 27856 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2607 ms
+2026-06-27T08:52:59.665+08:00  INFO 27856 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-27T08:52:59.948+08:00  INFO 27856 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T08:52:59.951+08:00  INFO 27856 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-27T08:53:00.057+08:00  INFO 27856 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T08:53:00.122+08:00  INFO 27856 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-27T08:53:00.700+08:00  INFO 27856 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T08:53:00.794+08:00  INFO 27856 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T08:53:01.938+08:00  INFO 27856 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T08:53:01.999+08:00  INFO 27856 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T08:53:08.615+08:00  INFO 27856 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 12 chunks.
+2026-06-27T08:53:11.627+08:00  INFO 27856 --- [mySpringAi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-27T08:53:11.872+08:00  WARN 27856 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T08:53:12.465+08:00  INFO 27856 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T08:53:12.485+08:00  WARN 27856 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T08:53:12.487+08:00  WARN 27856 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T08:53:12.559+08:00  INFO 27856 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T08:53:12.975+08:00  INFO 27856 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 21.341 seconds (process running for 23.351)
+2026-06-27T08:53:13.219+08:00  INFO 27856 --- [mySpringAi] [RMI TCP Connection(4)-192.168.50.58] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-27T08:53:13.219+08:00  INFO 27856 --- [mySpringAi] [RMI TCP Connection(4)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-27T08:53:13.230+08:00  INFO 27856 --- [mySpringAi] [RMI TCP Connection(4)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2026-06-27T08:54:09.895+08:00 DEBUG 27856 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。
+
+請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。
+如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+
+CONTEXT:
+----------
+WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):
+• Daily stand-ups and weekly check-ins are mandatory. 
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+tutor@eazybytes.
+• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.
+----------
+
+問題：
+leave policy chungchang min hrilh teh
+
+回答：', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={rag_document_context=[Document{id='7ccffc51-5445-47c1-b5ed-287dad6b15ec', text='WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):', media='null', metadata={chunk_index=3, parent_document_id=a985c9ba-4bd3-4340-9ac4-a6648e438d76, source=Eazybytes_HR_Policies.pdf, distance=0.19853693, total_chunks=12}, score=0.8014630675315857}, Document{id='078c631f-9253-41eb-a4c8-0bea970770f1', text='• Daily stand-ups and weekly check-ins are mandatory. 
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+tutor@eazybytes.', media='null', metadata={chunk_index=8, parent_document_id=a985c9ba-4bd3-4340-9ac4-a6648e438d76, source=Eazybytes_HR_Policies.pdf, distance=0.20744342, total_chunks=12}, score=0.7925565838813782}, Document{id='4dd7ddd2-54c4-416f-bfac-689811956a1c', text='• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.', media='null', metadata={chunk_index=7, parent_document_id=a985c9ba-4bd3-4340-9ac4-a6648e438d76, source=Eazybytes_HR_Policies.pdf, distance=0.21063316, total_chunks=12}, score=0.7893668413162231}]}]
+2026-06-27T08:54:12.329+08:00  INFO 27856 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=406, completionTokens=3, totalTokens=409, cacheReadInputTokens=0}
+2026-06-27T08:54:12.353+08:00 DEBUG 27856 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvBbAsg44L9dENa4wDEgIwpzSai72",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 406,
+      "completionTokens" : 3,
+      "totalTokens" : 409,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 3,
+        "prompt_tokens" : 406,
+        "total_tokens" : 409,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-DvBbAsg44L9dENa4wDEgIwpzSai72",
+        "reasoningContent" : ""
+      },
+      "text" : "我不知道。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-DvBbAsg44L9dENa4wDEgIwpzSai72",
+        "reasoningContent" : ""
+      },
+      "text" : "我不知道。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T08:54:22.667+08:00 DEBUG 27856 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。
+
+請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。
+如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+
+CONTEXT:
+----------
+WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):
+Grievance Redressal 
+14. Exit Policy 
+15. Acknowledgement 
+
+1. INTRODUCTION 
+Welcome to EazyBytes! This HR Policy Manual outlines the company's policies, procedures, and 
+expectations to ensure a positive and productive work environment. 
+
+2. CODE OF CONDUCT 
+• Employees must act with integrity, professionalism, and respect. 
+• Confidential information must not be shared externally. 
+• Avoid conflicts of interest and report them if they arise. 
+
+3.
+• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.
+----------
+
+問題：
+leave policy chungchang min hrilh teh
+
+(請根據以上內容，務必使用清楚、易理解且專業的繁體中文回答)
+
+回答：', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={rag_document_context=[Document{id='7ccffc51-5445-47c1-b5ed-287dad6b15ec', text='WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):', media='null', metadata={chunk_index=3, pii_masked=true, parent_document_id=a985c9ba-4bd3-4340-9ac4-a6648e438d76, source=Eazybytes_HR_Policies.pdf, distance=0.201163, total_chunks=12}, score=0.7988370060920715}, Document{id='c5f7a162-97ba-49ba-859f-772e78193353', text='Grievance Redressal 
+14. Exit Policy 
+15. Acknowledgement 
+
+1. INTRODUCTION 
+Welcome to EazyBytes! This HR Policy Manual outlines the company's policies, procedures, and 
+expectations to ensure a positive and productive work environment. 
+
+2. CODE OF CONDUCT 
+• Employees must act with integrity, professionalism, and respect. 
+• Confidential information must not be shared externally. 
+• Avoid conflicts of interest and report them if they arise. 
+
+3.', media='null', metadata={chunk_index=1, pii_masked=true, parent_document_id=a985c9ba-4bd3-4340-9ac4-a6648e438d76, source=Eazybytes_HR_Policies.pdf, distance=0.20610523, total_chunks=12}, score=0.7938947677612305}, Document{id='4dd7ddd2-54c4-416f-bfac-689811956a1c', text='• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.', media='null', metadata={chunk_index=7, pii_masked=true, parent_document_id=a985c9ba-4bd3-4340-9ac4-a6648e438d76, source=Eazybytes_HR_Policies.pdf, distance=0.20681608, total_chunks=12}, score=0.7931839227676392}]}]
+2026-06-27T08:54:24.429+08:00  INFO 27856 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=431, completionTokens=90, totalTokens=521, cacheReadInputTokens=0}
+2026-06-27T08:54:24.429+08:00 DEBUG 27856 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvBbMXJHA3l2AZk6RUF3ZIfNnIGXs",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 431,
+      "completionTokens" : 90,
+      "totalTokens" : 521,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 90,
+        "prompt_tokens" : 431,
+        "total_tokens" : 521,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-DvBbMXJHA3l2AZk6RUF3ZIfNnIGXs",
+        "reasoningContent" : ""
+      },
+      "text" : "根據 EazyBytes 的請假政策，員工每年可享有以下假期：\r\n\r\n- 事假（Casual Leave, CL）：8 天\r\n- 病假（Sick Leave, SL）：8 天\r\n- 年假（Earned Leave, EL）：相關細節未在提供的內容中說明\r\n\r\n如需請假，員工應提前通知，並遵守公司規定。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-DvBbMXJHA3l2AZk6RUF3ZIfNnIGXs",
+        "reasoningContent" : ""
+      },
+      "text" : "根據 EazyBytes 的請假政策，員工每年可享有以下假期：\r\n\r\n- 事假（Casual Leave, CL）：8 天\r\n- 病假（Sick Leave, SL）：8 天\r\n- 年假（Earned Leave, EL）：相關細節未在提供的內容中說明\r\n\r\n如需請假，員工應提前通知，並遵守公司規定。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T08:56:47.137+08:00  INFO 27856 --- [mySpringAi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T08:56:47.146+08:00  INFO 27856 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T08:56:47.164+08:00  INFO 27856 --- [mySpringAi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T08:56:47.171+08:00  INFO 27856 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-27T08:56:47.173+08:00  INFO 27856 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-27T08:56:56.796+08:00  INFO 18312 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 18312 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T08:56:56.798+08:00  INFO 18312 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T08:56:56.858+08:00  INFO 18312 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-27T08:56:56.859+08:00  INFO 18312 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-27T08:56:56.883+08:00  INFO 18312 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T08:56:57.912+08:00  INFO 18312 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Creating 
+2026-06-27T08:56:58.062+08:00  INFO 18312 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Created 
+2026-06-27T08:56:58.067+08:00  INFO 18312 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Creating 
+2026-06-27T08:56:58.793+08:00  INFO 18312 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Created 
+2026-06-27T08:56:58.813+08:00  INFO 18312 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Starting 
+2026-06-27T08:56:59.851+08:00  INFO 18312 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Started 
+2026-06-27T08:56:59.852+08:00  INFO 18312 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Waiting 
+2026-06-27T08:57:00.357+08:00  INFO 18312 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Healthy 
+2026-06-27T08:57:01.924+08:00  INFO 18312 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T08:57:02.146+08:00  INFO 18312 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 211 ms. Found 1 JPA repository interface.
+2026-06-27T08:57:03.343+08:00  INFO 18312 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T08:57:03.359+08:00  INFO 18312 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T08:57:03.359+08:00  INFO 18312 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T08:57:03.450+08:00  INFO 18312 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2522 ms
+2026-06-27T08:57:03.640+08:00  INFO 18312 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-27T08:57:03.941+08:00  INFO 18312 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T08:57:03.943+08:00  INFO 18312 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-27T08:57:04.057+08:00  INFO 18312 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T08:57:04.122+08:00  INFO 18312 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-27T08:57:04.709+08:00  INFO 18312 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T08:57:04.802+08:00  INFO 18312 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T08:57:05.991+08:00  INFO 18312 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T08:57:06.050+08:00  INFO 18312 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T08:57:15.254+08:00  INFO 18312 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 12 chunks.
+2026-06-27T08:57:16.743+08:00  INFO 18312 --- [mySpringAi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-27T08:57:16.976+08:00  WARN 18312 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T08:57:17.540+08:00  INFO 18312 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T08:57:17.562+08:00  WARN 18312 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T08:57:17.564+08:00  WARN 18312 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T08:57:17.642+08:00  INFO 18312 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T08:57:17.854+08:00  INFO 18312 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 21.889 seconds (process running for 23.615)
+2026-06-27T08:57:18.300+08:00  INFO 18312 --- [mySpringAi] [RMI TCP Connection(3)-192.168.50.58] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-27T08:57:18.301+08:00  INFO 18312 --- [mySpringAi] [RMI TCP Connection(3)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-27T08:57:18.309+08:00  INFO 18312 --- [mySpringAi] [RMI TCP Connection(3)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-06-27T08:57:32.298+08:00 DEBUG 18312 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。
+
+請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。
+如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+
+CONTEXT:
+----------
+WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):
+Grievance Redressal 
+14. Exit Policy 
+15. Acknowledgement 
+
+1. INTRODUCTION 
+Welcome to EazyBytes! This HR Policy Manual outlines the company's policies, procedures, and 
+expectations to ensure a positive and productive work environment. 
+
+2. CODE OF CONDUCT 
+• Employees must act with integrity, professionalism, and respect. 
+• Confidential information must not be shared externally. 
+• Avoid conflicts of interest and report them if they arise. 
+
+3.
+• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.
+----------
+
+問題：
+leave policy chungchang min hrilh teh
+
+(請根據以上內容，務必使用清楚、易理解且專業的繁體中文回答)
+
+回答：', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={rag_document_context=[Document{id='e47b8642-7838-49da-bb55-828bdf81e9a9', text='WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL):', media='null', metadata={chunk_index=3, pii_masked=true, parent_document_id=7464842d-d7b0-4e45-b1cf-bcb92563ae1d, source=Eazybytes_HR_Policies.pdf, distance=0.20102787, total_chunks=12}, score=0.7989721298217773}, Document{id='415cf65d-9863-402f-82c0-1dee63889203', text='Grievance Redressal 
+14. Exit Policy 
+15. Acknowledgement 
+
+1. INTRODUCTION 
+Welcome to EazyBytes! This HR Policy Manual outlines the company's policies, procedures, and 
+expectations to ensure a positive and productive work environment. 
+
+2. CODE OF CONDUCT 
+• Employees must act with integrity, professionalism, and respect. 
+• Confidential information must not be shared externally. 
+• Avoid conflicts of interest and report them if they arise. 
+
+3.', media='null', metadata={chunk_index=1, pii_masked=true, parent_document_id=7464842d-d7b0-4e45-b1cf-bcb92563ae1d, source=Eazybytes_HR_Policies.pdf, distance=0.2059018, total_chunks=12}, score=0.7940981984138489}, Document{id='0bc2f863-9a4c-4bd8-baf9-49a3ce887b6e', text='• All complaints will be handled confidentially and impartially. 
+
+11. IT AND DATA SECURITY POLICY 
+• Employees must use company-provided systems for official work. 
+• Do not share credentials or install unauthorized software. 
+• Report any data breaches or suspicious activity to IT immediately. 
+
+12. REMOTE WORK POLICY 
+• Employees may work remotely based on job role and approval. 
+• Employees can work from home for 2 days a week.', media='null', metadata={chunk_index=7, pii_masked=true, parent_document_id=7464842d-d7b0-4e45-b1cf-bcb92563ae1d, source=Eazybytes_HR_Policies.pdf, distance=0.2079395, total_chunks=12}, score=0.7920604944229126}]}]
+2026-06-27T08:57:33.318+08:00  INFO 18312 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=431, completionTokens=109, totalTokens=540, cacheReadInputTokens=0}
+2026-06-27T08:57:33.342+08:00 DEBUG 18312 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvBePqRR7JmqVLmMM7PBcP46sS3UI",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 431,
+      "completionTokens" : 109,
+      "totalTokens" : 540,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 109,
+        "prompt_tokens" : 431,
+        "total_tokens" : 540,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "refusal" : "",
+        "finishReason" : "STOP",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBePqRR7JmqVLmMM7PBcP46sS3UI",
+        "reasoningContent" : ""
+      },
+      "text" : "根據 EazyBytes 的政策，請假相關規定如下：\r\n\r\n- 事假（Casual Leave, CL）：每年可請8天。\r\n- 病假（Sick Leave, SL）：每年可請8天。\r\n- 優待假（Earned Leave, EL）：相關詳細規定未在提供的內容中說明。\r\n\r\n如需進一步了解請假流程或其他相關規定，請參考公司相關的政策文件或向人事部門詢問。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "refusal" : "",
+        "finishReason" : "STOP",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvBePqRR7JmqVLmMM7PBcP46sS3UI",
+        "reasoningContent" : ""
+      },
+      "text" : "根據 EazyBytes 的政策，請假相關規定如下：\r\n\r\n- 事假（Casual Leave, CL）：每年可請8天。\r\n- 病假（Sick Leave, SL）：每年可請8天。\r\n- 優待假（Earned Leave, EL）：相關詳細規定未在提供的內容中說明。\r\n\r\n如需進一步了解請假流程或其他相關規定，請參考公司相關的政策文件或向人事部門詢問。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T09:09:41.635+08:00  INFO 18312 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-06-27T09:09:41.653+08:00  INFO 18312 --- [mySpringAi] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T09:09:41.662+08:00  INFO 18312 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T09:09:41.684+08:00  INFO 18312 --- [mySpringAi] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T09:09:41.691+08:00  INFO 18312 --- [mySpringAi] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-27T09:09:41.912+08:00  INFO 18312 --- [mySpringAi] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

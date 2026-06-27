@@ -10,18 +10,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
-import static org.springframework.ai.chat.memory.ChatMemory.CONVERSATION_ID;
 
 @RestController
 @RequestMapping("/api")
 public class RagController {
 
-    private final ChatClient chatClient;
     private final ChatClient openaiChatClientWithoutMemory;
     private final VectorStore vectorStore;
     private final VectorStore pdfVectorStore;
@@ -33,15 +33,13 @@ public class RagController {
     Resource ragPromptTemplate;
 
     @Autowired
-    public RagController(@Qualifier("openaiChatClient-jdbcChatMemory") ChatClient chatClient,
-                         @Qualifier("openaiChatClient-withoutMemory") ChatClient openaiChatClientWithoutMemory,
+    public RagController(@Qualifier("openaiChatClient-withoutMemory") ChatClient openaiChatClientWithoutMemory,
                          VectorStore vectorStore,
                          @Qualifier("pdfVectorStore") VectorStore pdfVectorStore,
                          RetrievalAugmentationAdvisor retrievalAugmentationAdvisor,
                          @Qualifier("tavilyRaAdvisor") RetrievalAugmentationAdvisor tavilyRaAdvisor,
                          @Qualifier("preAndPostRAAdvisor") RetrievalAugmentationAdvisor preAndPostRAAdvisor) {
         // 將 Spring AI 的 ChatClient 與向量資料庫元件注入，供 /rag 使用
-        this.chatClient = chatClient;
         this.openaiChatClientWithoutMemory = openaiChatClientWithoutMemory;
         this.vectorStore = vectorStore;
         this.pdfVectorStore = pdfVectorStore;
@@ -104,11 +102,11 @@ public class RagController {
      * <p>
      * 使用者呼叫 /ragTavily
      * -> ChatClient 執行 tavilyRaAdvisor
-     * -> RetrievalAugmentationAdvisor 拿使用者問題建立 Query
+     * -> RetrievalAugmentationAdvisor 將使用者問題包成 Query
      * -> 呼叫 TavilyWebSearchDocumentRetriever.retrieve(query)
-     * -> retrieve() 回傳 List<Document>
+     * -> retrieve() 將搜尋結果轉成 List<Document>
      * -> advisor 把 Document 內容整理進 prompt context
-     * -> LLM 根據 user question + Tavily 搜尋內容回答
+     * -> 使用 openaiChatClientWithoutMemory 呼叫模型產生回答
      */
     @PostMapping("/ragTavily")
     public String tavily(@RequestBody GenericChatPayload genericChatPayload) {
@@ -119,9 +117,8 @@ public class RagController {
     }
 
     @PostMapping("/preAndPostRAAdvisor")
-    public String preRetrieval(@RequestBody GenericChatPayload genericChatPayload, @RequestHeader("userName") String userName) {
-        return chatClient.prompt()
-                .advisors(advisorSpec -> advisorSpec.param(CONVERSATION_ID, "ragPrePostProcessing-" + userName))
+    public String preRetrieval(@RequestBody GenericChatPayload genericChatPayload) {
+        return openaiChatClientWithoutMemory.prompt()
                 .advisors(preAndPostRAAdvisor)
                 .user(genericChatPayload.message() + "\n\n(請根據以上內容，務必使用清楚、易理解且專業的繁體中文回答)")
                 .call().content();
