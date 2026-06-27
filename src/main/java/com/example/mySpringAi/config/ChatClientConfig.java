@@ -42,7 +42,21 @@ public class ChatClientConfig {
 
     // 使用 OpenAI 模型、但沒有聊天記憶功能的 ChatClient bean，提供給不需要記憶功能的場景使用（例如單次問答、工具調用等）。有 Semantic Caching 功能
     @Bean("openaiChatClient-NoMemoryWithCaching")
-    public ChatClient openaiChatClientNoMemoryWithCaching(OpenAiChatModel openAiChatModel, SemanticCacheAdvisor semanticCacheAdvisor) {
+    public ChatClient openaiChatClientNoMemoryWithCaching(OpenAiChatModel openAiChatModel, @Qualifier("redisSemanticCacheAdvisor") SemanticCacheAdvisor semanticCacheAdvisor) {
+
+        // 1. 設定模型用的「參數」
+        ChatOptions.Builder<OpenAiChatOptions.Builder> chatOptions = OpenAiChatOptions.builder().temperature(0.5).maxTokens(500);
+
+        // 2. 建立 ChatClient 並加入 3 種 advisor：TokenUsageAuditAdvisor、SimpleLoggerAdvisor、semanticCacheAdvisor
+        return ChatClient.builder(openAiChatModel)
+                .defaultOptions(chatOptions)
+                .defaultAdvisors(new TokenUsageAuditAdvisor(), new PrettyLoggerAdvisor(), new SimpleLoggerAdvisor(), semanticCacheAdvisor)
+                .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。")
+                .build();
+    }
+
+    @Bean("openaiChatClient-WithVectorStoreCaching")
+    public ChatClient openaiChatClientNoMemoryWithVectorStoreCaching(OpenAiChatModel openAiChatModel, @Qualifier("qdrantSemanticCacheAdvisor") SemanticCacheAdvisor semanticCacheAdvisor) {
 
         // 1. 設定模型用的「參數」
         ChatOptions.Builder<OpenAiChatOptions.Builder> chatOptions = OpenAiChatOptions.builder().temperature(0.5).maxTokens(500);

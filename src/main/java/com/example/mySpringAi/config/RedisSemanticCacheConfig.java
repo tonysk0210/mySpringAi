@@ -3,7 +3,9 @@ package com.example.mySpringAi.config;
 import org.springframework.ai.chat.cache.semantic.SemanticCache;
 import org.springframework.ai.chat.cache.semantic.SemanticCacheAdvisor;
 import org.springframework.ai.embedding.EmbeddingModel;
+import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.ai.vectorstore.redis.cache.semantic.DefaultSemanticCache;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,8 +30,8 @@ public class RedisSemanticCacheConfig {
      * 建立 Redis-backed SemanticCache。
      * 它負責把 query embedding 與 ChatResponse 存進 Redis，並用向量相似度查找可重用的回答。
      */
-    @Bean
-    public SemanticCache semanticCache(RedisClient redisClient, EmbeddingModel embeddingModel) {
+    @Bean("redisSemanticCache")
+    public SemanticCache redisSemanticCache(RedisClient redisClient, EmbeddingModel embeddingModel) {
         return DefaultSemanticCache.builder()
                 .jedisClient(redisClient)
                 .embeddingModel(embeddingModel)
@@ -43,8 +45,29 @@ public class RedisSemanticCacheConfig {
      * 建立 SemanticCacheAdvisor。
      * 注意：只有把這個 advisor 加到 ChatClient 的 defaultAdvisors / advisors 後，semantic cache 才會實際生效。
      */
-    @Bean
-    public SemanticCacheAdvisor semanticCacheAdvisor(SemanticCache semanticCache) {
+    @Bean("redisSemanticCacheAdvisor")
+    public SemanticCacheAdvisor redisSemanticCacheAdvisor(@Qualifier("redisSemanticCache") SemanticCache semanticCache) {
+        return SemanticCacheAdvisor.builder().cache(semanticCache).build();
+    }
+
+    /**
+     * 建立 Qdrant-backed SemanticCache。
+     */
+    @Bean("qdrantSemanticCache")
+    SemanticCache qdrantSemanticCache(@Qualifier("cachingVectorStore") VectorStore vectorStore,
+                                      EmbeddingModel embeddingModel) {
+        return DefaultSemanticCache.builder()
+                .vectorStore(vectorStore)
+                .embeddingModel(embeddingModel)
+                .similarityThreshold(0.8)
+                .build();
+    }
+
+    /**
+     * 建立 Qdrant-backed SemanticCacheAdvisor。
+     */
+    @Bean("qdrantSemanticCacheAdvisor")
+    public SemanticCacheAdvisor qdrantSemanticCacheAdvisor(@Qualifier("qdrantSemanticCache") SemanticCache semanticCache) {
         return SemanticCacheAdvisor.builder().cache(semanticCache).build();
     }
 
