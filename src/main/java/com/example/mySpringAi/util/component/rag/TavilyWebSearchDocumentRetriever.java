@@ -1,4 +1,4 @@
-package com.example.mySpringAi.component.rag;
+package com.example.mySpringAi.util.component.rag;
 
 import com.example.mySpringAi.dto.TavilyResponseDto;
 import com.example.mySpringAi.payload.TavilyRequestPayload;

@@ -120,7 +120,7 @@ public class RagController {
     public String preRetrieval(@RequestBody GenericChatPayload genericChatPayload) {
         return openaiChatClientWithoutMemory.prompt()
                 .advisors(preAndPostRAAdvisor)
-                .user(genericChatPayload.message() + "\n\n(請根據以上內容，務必使用清楚、易理解且專業的繁體中文回答)")
+                .user(genericChatPayload.message())
                 .call().content();
     }
 }

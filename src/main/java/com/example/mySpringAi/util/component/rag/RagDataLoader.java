@@ -1,4 +1,4 @@
-package com.example.mySpringAi.component.rag;
+package com.example.mySpringAi.util.component.rag;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.ai.document.Document;
@@ -134,8 +134,8 @@ public class RagDataLoader {
         // 3. 確認 PDF 是否有被成功讀取 Document size: 1
         System.out.println("Document size: " + documents.size());
 
-        // 4. 使用 TokenTextSplitter，用 token 數量來切文件：每個 chunk 目標大小約為 100 tokens，最多切 400 個 chunk
-        TextSplitter splitter = TokenTextSplitter.builder().withChunkSize(100).withMaxNumChunks(400).build();
+        // 4. 使用 TokenTextSplitter，用 token 數量來切文件：每個 chunk 目標大小約為 200 tokens，最多切 400 個 chunk
+        TextSplitter splitter = TokenTextSplitter.builder().withChunkSize(200).withMaxNumChunks(400).build();
 
         // 5. 把切好的 Document 清單送進 pdfVectorSotre，完成建立 pdf-collection
         pdfVectorSotre.add(splitter.split(documents));

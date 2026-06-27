@@ -1,11 +1,13 @@
 package com.example.mySpringAi.config;
 
-import com.example.mySpringAi.component.rag.MaskingDocumentPostProcessor;
-import com.example.mySpringAi.component.rag.TavilyWebSearchDocumentRetriever;
+import com.example.mySpringAi.util.MaskingDocumentPostProcessor;
+import com.example.mySpringAi.util.component.rag.TavilyWebSearchDocumentRetriever;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.ai.rag.advisor.RetrievalAugmentationAdvisor;
 import org.springframework.ai.rag.generation.augmentation.ContextualQueryAugmenter;
+import org.springframework.ai.rag.preretrieval.query.transformation.QueryTransformer;
 import org.springframework.ai.rag.preretrieval.query.transformation.TranslationQueryTransformer;
 import org.springframework.ai.rag.retrieval.search.VectorStoreDocumentRetriever;
 import org.springframework.ai.vectorstore.VectorStore;
@@ -30,6 +32,7 @@ import org.springframework.core.io.Resource;
  * Generation：
  * 不是它本身做，而是後面的 ChatClient / LLM 做
  */
+@Slf4j
 @Configuration
 public class RaAdvisorConfig {
 
@@ -124,14 +127,24 @@ public class RaAdvisorConfig {
     public RetrievalAugmentationAdvisor transformerRetrievalAugmentationAdvisor(@Qualifier("pdfVectorStore") VectorStore vectorStore,
                                                                                 @Qualifier("openaiBuilder") ChatClient.Builder chatClientBuilder,
                                                                                 @Value("classpath:/promptTemplate/RagPdfPromptTemplate.st") Resource ragPdfPromptTemplate) {
+        // 建立實際負責翻譯 query 的 transformer
+        QueryTransformer translationTransformer = TranslationQueryTransformer.builder()
+                .chatClientBuilder(chatClientBuilder.clone()) // 複製一份 builder，讓 TranslationQueryTransformer 建立翻譯 query 用的 ChatClient，避免影響共用 builder
+                .targetLanguage("english")
+                .build();
+
+        // 包裝翻譯 transformer，額外記錄翻譯前後的 query
+        QueryTransformer loggingTransformer = query -> {
+            var transformedQuery = translationTransformer.transform(query);
+            log.info("QueryTransformer 翻譯前 query = {}", query.text()); // 紀錄原始問題
+            log.info("QueryTransformer 翻譯後 query = {}", transformedQuery.text()); // 紀錄翻譯後問題
+            return transformedQuery;
+        };
 
         return RetrievalAugmentationAdvisor.builder()
-                // 1. 先把 Query 翻譯成英文，再用 pdfVectorStore 做檢索 llm 第一次介入翻譯
-                .queryTransformers(TranslationQueryTransformer.builder() // pre-retrieval: Query 翻譯
-                        .chatClientBuilder(chatClientBuilder.clone()) // 用 clone 避免汙染全域 Builder
-                        .targetLanguage("english") // 將原始查詢翻譯為英文
-                        .build()
-                ).order(-120)
+                // 1. (Pre-retrieval 處理) 設定 query transformer；它負責把使用者問題翻譯成英文，並記錄翻譯前後的問題內容。llm 第一次先介入翻譯 (pre-)
+                .queryTransformers(loggingTransformer)
+
                 // 2. 這裡主要靠 embedding similarity，不是靠最終回答模型自由理解，所以須按照與 collection 相同語言去找資料找出的資料會較準確
                 .documentRetriever(
                         VectorStoreDocumentRetriever.builder()
@@ -140,7 +153,7 @@ public class RaAdvisorConfig {
                                 .similarityThreshold(0.5)
                                 .build()
                 )
-                // 3. 設定文件檢索器；收到使用者問題後，advisor 會透過它去找相關 Document。
+                // 3. (post-retrieval) 設定文件檢索器；收到使用者問題後，advisor 會透過它去找相關 Document。
                 .documentPostProcessors( // post-retrieval: masking email & phone number
                         MaskingDocumentPostProcessor.getInstance()
                 )
@@ -154,4 +167,31 @@ public class RaAdvisorConfig {
                 .order(-100)
                 .build();
     }
+    /**
+     *   整體流程圖
+     *
+     *   HTTP POST /api/preAndPostRAAdvisor
+     *     │
+     *     ▼
+     *   [Pre-Retrieval] QueryTransformer (TranslationQueryTransformer)
+     *     │   → LLM 把 query 翻譯成英文
+     *     │
+     *     ▼
+     *   [Retrieval] VectorStoreDocumentRetriever
+     *     │   → 用翻譯後的 query 對 pdfVectorStore 做 similarity search
+     *     │
+     *     ▼
+     *   [Post-Retrieval] MaskingDocumentPostProcessor
+     *     │   → 遮罩 email / phone number
+     *     │
+     *     ▼
+     *   [Augmentation] ContextualQueryAugmenter
+     *     │   → 把 documents 填入 RagPdfPromptTemplate.st 的 {context}
+     *     │
+     *     ▼
+     *   [Generation] OpenAI LLM (gpt-4.1-nano)
+     *     │   → 產生最終回答
+     *     ▼
+     *   HTTP Response
+     */
 }
