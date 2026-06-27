@@ -11746,3 +11746,2566 @@ All offers are contingent upon successful background verification.
     }
   } ]
 }
+2026-06-27T12:44:16.008+08:00  INFO 25928 --- [mySpringAi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T12:44:16.017+08:00  INFO 25928 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T12:44:16.030+08:00  INFO 25928 --- [mySpringAi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T12:44:16.035+08:00  INFO 25928 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-27T12:44:16.036+08:00  INFO 25928 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-27T12:44:33.721+08:00  INFO 28016 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 28016 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T12:44:33.723+08:00  INFO 28016 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T12:44:33.766+08:00  INFO 28016 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-27T12:44:33.767+08:00  INFO 28016 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-27T12:44:33.779+08:00  INFO 28016 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T12:44:34.792+08:00  INFO 28016 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Creating 
+2026-06-27T12:44:34.954+08:00  INFO 28016 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Created 
+2026-06-27T12:44:34.963+08:00  INFO 28016 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Creating 
+2026-06-27T12:44:35.652+08:00  INFO 28016 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Created 
+2026-06-27T12:44:35.672+08:00  INFO 28016 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Starting 
+2026-06-27T12:44:36.653+08:00  INFO 28016 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Started 
+2026-06-27T12:44:36.654+08:00  INFO 28016 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Waiting 
+2026-06-27T12:44:37.159+08:00  INFO 28016 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Healthy 
+2026-06-27T12:44:38.644+08:00  INFO 28016 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T12:44:38.767+08:00  INFO 28016 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 1 JPA repository interface.
+2026-06-27T12:44:39.739+08:00  INFO 28016 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T12:44:39.752+08:00  INFO 28016 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T12:44:39.752+08:00  INFO 28016 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T12:44:39.841+08:00  INFO 28016 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2115 ms
+2026-06-27T12:44:39.990+08:00  INFO 28016 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-27T12:44:40.231+08:00  INFO 28016 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T12:44:40.232+08:00  INFO 28016 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-27T12:44:40.321+08:00  INFO 28016 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T12:44:40.376+08:00  INFO 28016 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-27T12:44:40.811+08:00  INFO 28016 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T12:44:40.893+08:00  INFO 28016 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T12:44:41.879+08:00  INFO 28016 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T12:44:41.929+08:00  INFO 28016 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T12:44:49.036+08:00  INFO 28016 --- [mySpringAi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-27T12:44:52.282+08:00  INFO 28016 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 6 chunks.
+2026-06-27T12:44:53.058+08:00  WARN 28016 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T12:44:53.404+08:00  INFO 28016 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T12:44:53.424+08:00  WARN 28016 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T12:44:53.425+08:00  WARN 28016 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T12:44:53.469+08:00  INFO 28016 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T12:44:53.477+08:00  INFO 28016 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 20.178 seconds (process running for 21.367)
+2026-06-27T12:44:54.018+08:00  INFO 28016 --- [mySpringAi] [RMI TCP Connection(4)-192.168.50.58] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-27T12:44:54.019+08:00  INFO 28016 --- [mySpringAi] [RMI TCP Connection(4)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-27T12:44:54.023+08:00  INFO 28016 --- [mySpringAi] [RMI TCP Connection(4)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-06-27T12:45:16.443+08:00  INFO 28016 --- [mySpringAi] [http-nio-8080-exec-2] c.e.mySpringAi.config.RaAdvisorConfig    : QueryTransformer 翻譯前 query = tell me about notice period contact ways
+2026-06-27T12:45:16.443+08:00  INFO 28016 --- [mySpringAi] [http-nio-8080-exec-2] c.e.mySpringAi.config.RaAdvisorConfig    : QueryTransformer 翻譯後 query = tell me about notice period contact ways
+2026-06-27T12:45:16.968+08:00  INFO 28016 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.util.MaskingDocumentPostProcessor  : 針對 3 筆 documents 執行機敏資訊遮罩
+2026-06-27T12:45:16.974+08:00 DEBUG 28016 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM] 回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]   tell me about notice period contact ways
+║ [DOCS]   3 筆
+║           #1  chunk_index=4    score=0.7931  Eazybytes_HR_Policies.pdf
+║           #2  chunk_index=2    score=0.7864  Eazybytes_HR_Policies.pdf
+║           #3  chunk_index=1    score=0.7601  Eazybytes_HR_Policies.pdf
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T12:45:18.073+08:00  INFO 28016 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=711, completionTokens=47, totalTokens=758, cacheReadInputTokens=0}
+2026-06-27T12:45:18.074+08:00 DEBUG 28016 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ 你可以透過發送電子郵件至 [機敏資訊遮罩_EMAIL] 或撥打 [機敏資訊遮罩_PHONE] 與公司聯繫，進行有關通知期限的協商。
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T12:46:49.463+08:00 DEBUG 28016 --- [mySpringAi] [http-nio-8080-exec-8] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM] 回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]   how is the taiwan stock market performed today?
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T12:46:49.464+08:00  INFO 28016 --- [mySpringAi] [ai-advisor-1] m.u.c.r.TavilyWebSearchDocumentRetriever : TavilyWebSearchDocumentRetriever: user 下的 query = how is the taiwan stock market performed today?
+2026-06-27T12:46:51.997+08:00  INFO 28016 --- [mySpringAi] [http-nio-8080-exec-8] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=273, completionTokens=49, totalTokens=322, cacheReadInputTokens=0}
+2026-06-27T12:46:51.997+08:00 DEBUG 28016 --- [mySpringAi] [http-nio-8080-exec-8] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ 台灣股市今日的表現為下跌，台灣加權指數收盤為44,571.76點，較前一交易日下跌1,683.50點，跌幅約3.64%。
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T12:50:06.735+08:00 DEBUG 28016 --- [mySpringAi] [http-nio-8080-exec-5] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM] 【規則】
+1. 請根據「文件」中的資訊回答，並使用繁體中文。
+2. 只要文件中有任何與問題相關的資訊，就必須整理這些資訊回答。
+3. 如果文件只有部分資訊，請根據已有資訊簡短回答，不要說無法確定。
+4. 只有在文件完全沒有任何相關資訊時，才回覆：「根據目前文件，我無法確定」。
+5. 不要捏造文件中沒有的事實。
+
+文件：
+----------
+Compound interest increases investment returns over time.,
+Diversifying investments reduces overall risk.,
+Mutual funds pool money from investors to buy securities.,
+The stock market opens at 9:30 a.m. EST on weekdays.,
+A blockchain is a distributed, immutable ledger of transactions.
+----------
+║ [USER]   tell me something about investment?
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T12:50:07.414+08:00  INFO 28016 --- [mySpringAi] [http-nio-8080-exec-5] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=195, completionTokens=50, totalTokens=245, cacheReadInputTokens=0}
+2026-06-27T12:50:07.414+08:00 DEBUG 28016 --- [mySpringAi] [http-nio-8080-exec-5] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ 根據文件，投資可以透過複利來增加回報，並且多元化投資可以降低整體風險。此外，基金會將投資者的資金集中起來購買證券。
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T12:55:39.811+08:00  INFO 28016 --- [mySpringAi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T12:55:39.819+08:00  INFO 28016 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T12:55:39.832+08:00  INFO 28016 --- [mySpringAi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T12:55:39.839+08:00  INFO 28016 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-27T12:55:39.840+08:00  INFO 28016 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-27T12:55:57.027+08:00  INFO 7952 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 7952 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T12:55:57.031+08:00  INFO 7952 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T12:55:57.110+08:00  INFO 7952 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-27T12:55:57.110+08:00  INFO 7952 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-27T12:55:57.142+08:00  INFO 7952 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T12:55:58.617+08:00  INFO 7952 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Creating 
+2026-06-27T12:55:58.805+08:00  INFO 7952 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Created 
+2026-06-27T12:55:58.811+08:00  INFO 7952 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Creating 
+2026-06-27T12:55:59.522+08:00  INFO 7952 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Created 
+2026-06-27T12:55:59.544+08:00  INFO 7952 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Starting 
+2026-06-27T12:56:00.501+08:00  INFO 7952 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Started 
+2026-06-27T12:56:00.501+08:00  INFO 7952 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Waiting 
+2026-06-27T12:56:01.006+08:00  INFO 7952 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Healthy 
+2026-06-27T12:56:03.428+08:00  INFO 7952 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T12:56:03.689+08:00  INFO 7952 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 250 ms. Found 1 JPA repository interface.
+2026-06-27T12:56:04.933+08:00  INFO 7952 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T12:56:04.949+08:00  INFO 7952 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T12:56:04.950+08:00  INFO 7952 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T12:56:05.041+08:00  INFO 7952 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3445 ms
+2026-06-27T12:56:05.234+08:00  INFO 7952 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-27T12:56:05.517+08:00  INFO 7952 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T12:56:05.519+08:00  INFO 7952 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-27T12:56:05.622+08:00  INFO 7952 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T12:56:05.684+08:00  INFO 7952 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-27T12:56:06.278+08:00  INFO 7952 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T12:56:06.368+08:00  INFO 7952 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T12:56:07.580+08:00  INFO 7952 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T12:56:07.645+08:00  INFO 7952 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T12:56:14.235+08:00  INFO 7952 --- [mySpringAi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-27T12:56:17.033+08:00  INFO 7952 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 6 chunks.
+2026-06-27T12:56:17.870+08:00  WARN 7952 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T12:56:18.417+08:00  INFO 7952 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T12:56:18.437+08:00  WARN 7952 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T12:56:18.439+08:00  WARN 7952 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T12:56:18.504+08:00  INFO 7952 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T12:56:18.720+08:00  INFO 7952 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 22.61 seconds (process running for 24.523)
+2026-06-27T12:56:19.290+08:00  INFO 7952 --- [mySpringAi] [RMI TCP Connection(6)-192.168.50.58] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-27T12:56:19.290+08:00  INFO 7952 --- [mySpringAi] [RMI TCP Connection(6)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-27T12:56:19.296+08:00  INFO 7952 --- [mySpringAi] [RMI TCP Connection(6)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-06-27T12:56:28.856+08:00  INFO 7952 --- [mySpringAi] [http-nio-8080-exec-2] c.e.mySpringAi.config.RaAdvisorConfig    : QueryTransformer 翻譯前 query = tell me about notice period contact ways
+2026-06-27T12:56:28.856+08:00  INFO 7952 --- [mySpringAi] [http-nio-8080-exec-2] c.e.mySpringAi.config.RaAdvisorConfig    : QueryTransformer 翻譯後 query = tell me about notice period contact ways
+2026-06-27T12:56:29.265+08:00  INFO 7952 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.util.MaskingDocumentPostProcessor  : 針對 3 筆 documents 執行機敏資訊遮罩
+2026-06-27T12:56:29.273+08:00 DEBUG 7952 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM] 回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]   tell me about notice period contact ways
+║ [DOCS]   3 筆
+║           #1  chunk_index=4    score=0.7900  Eazybytes_HR_Policies.pdf
+║           #2  chunk_index=2    score=0.7842  Eazybytes_HR_Policies.pdf
+║           #3  chunk_index=1    score=0.7599  Eazybytes_HR_Policies.pdf
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T12:56:29.275+08:00 DEBUG 7952 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。
+
+請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。
+如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+
+CONTEXT:
+----------
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+[機敏資訊遮罩_EMAIL] or calling [機敏資訊遮罩_PHONE] 
+
+• Full and final settlement will be processed within 53 days of last working day.  
+• Exit interviews are mandatory. 
+
+15. ACKNOWLEDGEMENT 
+All employees must sign an acknowledgement form confirming they have read, understood, and 
+agreed to comply with this policy manual. 
+
+mailto:[機敏資訊遮罩_EMAIL]
+
+4 
+
+For any clarifications, please contact [機敏資訊遮罩_EMAIL] 
+
+	TABLE OF CONTENTS
+	1. INTRODUCTION
+	2.
+• Maternity Leave: 26 weeks 
+• Paternity Leave: 10 days 
+• Unpaid Leave: Subject to manager approval 
+
+6. PAYROLL AND COMPENSATION 
+• Salaries are credited by the 9th working day of every month. 
+• Payslips are available through the HR portal. 
+• Deductions are made for income tax, PF, ESI, etc. 
+
+7. PERFORMANCE MANAGEMENT 
+• Performance appraisals are conducted annually, with results typically announced in June. 
+• Performance reviews are based on goal achievements, teamwork, leadership, and innovation. 
+• Underperformance will be handled with performance improvement plans (PIP). 
+
+8. EMPLOYEE BENEFITS 
+• Health Insurance: Group health insurance for employee and dependents 
+• Wellness Programs: Mental health counseling, gym membership reimbursement 
+• Learning and Development: Budget for courses, certifications, and conferences 
+• Referral Bonus: Bonus for referring successful candidates 
+
+3 
+
+9.
+EMPLOYMENT POLICIES 
+
+a. Equal Opportunity 
+
+EazyBytes is an equal opportunity employer and prohibits discrimination based on race, gender, 
+religion, caste, age, disability, or any other protected category. 
+
+2 
+
+b. Probation Period 
+
+All new hires will undergo a probationary period of 3-6 months, depending on the role. 
+c. Background Verification 
+
+All offers are contingent upon successful background verification. 
+
+4. WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL): 15 days per year
+----------
+
+問題：
+tell me about notice period contact ways
+
+回答：', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={rag_document_context=[Document{id='f5031585-57af-4875-9762-8331e46d7d6e', text='• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+[機敏資訊遮罩_EMAIL] or calling [機敏資訊遮罩_PHONE] 
+
+• Full and final settlement will be processed within 53 days of last working day.  
+• Exit interviews are mandatory. 
+
+15. ACKNOWLEDGEMENT 
+All employees must sign an acknowledgement form confirming they have read, understood, and 
+agreed to comply with this policy manual. 
+
+mailto:[機敏資訊遮罩_EMAIL]
+
+4 
+
+For any clarifications, please contact [機敏資訊遮罩_EMAIL] 
+
+	TABLE OF CONTENTS
+	1. INTRODUCTION
+	2.', media='null', metadata={chunk_index=4, pii_masked=true, parent_document_id=acda98c6-89ef-4cd0-b513-9622848efbf5, source=Eazybytes_HR_Policies.pdf, distance=0.2099793, total_chunks=6}, score=0.7900207042694092}, Document{id='be74fbab-116f-4101-bf58-ad63b35a9700', text='• Maternity Leave: 26 weeks 
+• Paternity Leave: 10 days 
+• Unpaid Leave: Subject to manager approval 
+
+6. PAYROLL AND COMPENSATION 
+• Salaries are credited by the 9th working day of every month. 
+• Payslips are available through the HR portal. 
+• Deductions are made for income tax, PF, ESI, etc. 
+
+7. PERFORMANCE MANAGEMENT 
+• Performance appraisals are conducted annually, with results typically announced in June. 
+• Performance reviews are based on goal achievements, teamwork, leadership, and innovation. 
+• Underperformance will be handled with performance improvement plans (PIP). 
+
+8. EMPLOYEE BENEFITS 
+• Health Insurance: Group health insurance for employee and dependents 
+• Wellness Programs: Mental health counseling, gym membership reimbursement 
+• Learning and Development: Budget for courses, certifications, and conferences 
+• Referral Bonus: Bonus for referring successful candidates 
+
+3 
+
+9.', media='null', metadata={chunk_index=2, pii_masked=true, parent_document_id=acda98c6-89ef-4cd0-b513-9622848efbf5, source=Eazybytes_HR_Policies.pdf, distance=0.21581519, total_chunks=6}, score=0.7841848134994507}, Document{id='0afc48fe-7931-4e1a-87b8-c7715c2feed3', text='EMPLOYMENT POLICIES 
+
+a. Equal Opportunity 
+
+EazyBytes is an equal opportunity employer and prohibits discrimination based on race, gender, 
+religion, caste, age, disability, or any other protected category. 
+
+2 
+
+b. Probation Period 
+
+All new hires will undergo a probationary period of 3-6 months, depending on the role. 
+c. Background Verification 
+
+All offers are contingent upon successful background verification. 
+
+4. WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL): 15 days per year', media='null', metadata={chunk_index=1, pii_masked=true, parent_document_id=acda98c6-89ef-4cd0-b513-9622848efbf5, source=Eazybytes_HR_Policies.pdf, distance=0.24006218, total_chunks=6}, score=0.7599378228187561}]}]
+2026-06-27T12:56:31.775+08:00  INFO 7952 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=711, completionTokens=47, totalTokens=758, cacheReadInputTokens=0}
+2026-06-27T12:56:31.811+08:00 DEBUG 7952 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvFNeFhJqaYb3yJp3KdFkEpQJpbwc",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 711,
+      "completionTokens" : 47,
+      "totalTokens" : 758,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 47,
+        "prompt_tokens" : 711,
+        "total_tokens" : 758,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "refusal" : "",
+        "finishReason" : "STOP",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvFNeFhJqaYb3yJp3KdFkEpQJpbwc",
+        "reasoningContent" : ""
+      },
+      "text" : "您可以透過發送電子郵件至 [機敏資訊遮罩_EMAIL] 或撥打 [機敏資訊遮罩_PHONE] 與公司聯繫，以協商您的離職通知期事宜。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "refusal" : "",
+        "finishReason" : "STOP",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvFNeFhJqaYb3yJp3KdFkEpQJpbwc",
+        "reasoningContent" : ""
+      },
+      "text" : "您可以透過發送電子郵件至 [機敏資訊遮罩_EMAIL] 或撥打 [機敏資訊遮罩_PHONE] 與公司聯繫，以協商您的離職通知期事宜。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T12:56:31.812+08:00 DEBUG 7952 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ 您可以透過發送電子郵件至 [機敏資訊遮罩_EMAIL] 或撥打 [機敏資訊遮罩_PHONE] 與公司聯繫，以協商您的離職通知期事宜。
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T13:02:11.220+08:00  INFO 7952 --- [mySpringAi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T13:02:11.226+08:00  INFO 7952 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T13:02:11.241+08:00  INFO 7952 --- [mySpringAi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T13:02:11.246+08:00  INFO 7952 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-27T13:02:11.248+08:00  INFO 7952 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-27T13:02:30.905+08:00  INFO 812 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 812 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T13:02:30.908+08:00  INFO 812 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T13:02:30.978+08:00  INFO 812 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-27T13:02:30.978+08:00  INFO 812 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-27T13:02:31.002+08:00  INFO 812 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T13:02:32.207+08:00  INFO 812 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Creating 
+2026-06-27T13:02:32.361+08:00  INFO 812 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Created 
+2026-06-27T13:02:32.365+08:00  INFO 812 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Creating 
+2026-06-27T13:02:33.100+08:00  INFO 812 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Created 
+2026-06-27T13:02:33.118+08:00  INFO 812 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Starting 
+2026-06-27T13:02:34.034+08:00  INFO 812 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Started 
+2026-06-27T13:02:34.035+08:00  INFO 812 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Waiting 
+2026-06-27T13:02:34.540+08:00  INFO 812 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Healthy 
+2026-06-27T13:02:36.145+08:00  INFO 812 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T13:02:36.355+08:00  INFO 812 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 198 ms. Found 1 JPA repository interface.
+2026-06-27T13:02:37.668+08:00  INFO 812 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T13:02:37.686+08:00  INFO 812 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T13:02:37.686+08:00  INFO 812 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T13:02:37.782+08:00  INFO 812 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2650 ms
+2026-06-27T13:02:37.979+08:00  INFO 812 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-27T13:02:38.303+08:00  INFO 812 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T13:02:38.305+08:00  INFO 812 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-27T13:02:38.428+08:00  INFO 812 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T13:02:38.503+08:00  INFO 812 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-27T13:02:39.119+08:00  INFO 812 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T13:02:39.216+08:00  INFO 812 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T13:02:40.435+08:00  INFO 812 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T13:02:40.499+08:00  INFO 812 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T13:02:47.775+08:00  INFO 812 --- [mySpringAi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-27T13:02:49.240+08:00  INFO 812 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 6 chunks.
+2026-06-27T13:02:51.698+08:00  WARN 812 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T13:02:52.252+08:00  INFO 812 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T13:02:52.283+08:00  WARN 812 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T13:02:52.285+08:00  WARN 812 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T13:02:52.387+08:00  INFO 812 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T13:02:52.581+08:00  INFO 812 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 22.549 seconds (process running for 24.374)
+2026-06-27T13:02:52.752+08:00  INFO 812 --- [mySpringAi] [RMI TCP Connection(3)-192.168.50.58] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-27T13:02:52.752+08:00  INFO 812 --- [mySpringAi] [RMI TCP Connection(3)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-27T13:02:52.756+08:00  INFO 812 --- [mySpringAi] [RMI TCP Connection(3)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-06-27T13:03:27.282+08:00  INFO 812 --- [mySpringAi] [http-nio-8080-exec-1] c.e.mySpringAi.config.RaAdvisorConfig    : QueryTransformer 翻譯前 query = tell me about notice period contact ways
+2026-06-27T13:03:27.282+08:00  INFO 812 --- [mySpringAi] [http-nio-8080-exec-1] c.e.mySpringAi.config.RaAdvisorConfig    : QueryTransformer 翻譯後 query = tell me about notice period contact ways
+2026-06-27T13:03:28.252+08:00  INFO 812 --- [mySpringAi] [http-nio-8080-exec-1] c.e.m.util.MaskingDocumentPostProcessor  : 針對 3 筆 documents 執行機敏資訊遮罩
+2026-06-27T13:03:28.302+08:00 DEBUG 812 --- [mySpringAi] [http-nio-8080-exec-1] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [INSTRUCTION] 你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。  請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。 如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+║ [CONTEXT]     • Secure internet and VPN usage is required.   13. GRIEVANCE REDRESSAL  • Any grievance should be reported to the HR ...
+║ [QUESTION]    tell me about notice period contact ways
+║ [DOCS]        3 筆
+║               #1  chunk_index=4    score=0.7927  Eazybytes_HR_Policies.pdf
+║               #2  chunk_index=2    score=0.7864  Eazybytes_HR_Policies.pdf
+║               #3  chunk_index=1    score=0.7586  Eazybytes_HR_Policies.pdf
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T13:03:28.304+08:00 DEBUG 812 --- [mySpringAi] [http-nio-8080-exec-1] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。
+
+請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。
+如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+
+CONTEXT:
+----------
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+[機敏資訊遮罩_EMAIL] or calling [機敏資訊遮罩_PHONE] 
+
+• Full and final settlement will be processed within 53 days of last working day.  
+• Exit interviews are mandatory. 
+
+15. ACKNOWLEDGEMENT 
+All employees must sign an acknowledgement form confirming they have read, understood, and 
+agreed to comply with this policy manual. 
+
+mailto:[機敏資訊遮罩_EMAIL]
+
+4 
+
+For any clarifications, please contact [機敏資訊遮罩_EMAIL] 
+
+	TABLE OF CONTENTS
+	1. INTRODUCTION
+	2.
+• Maternity Leave: 26 weeks 
+• Paternity Leave: 10 days 
+• Unpaid Leave: Subject to manager approval 
+
+6. PAYROLL AND COMPENSATION 
+• Salaries are credited by the 9th working day of every month. 
+• Payslips are available through the HR portal. 
+• Deductions are made for income tax, PF, ESI, etc. 
+
+7. PERFORMANCE MANAGEMENT 
+• Performance appraisals are conducted annually, with results typically announced in June. 
+• Performance reviews are based on goal achievements, teamwork, leadership, and innovation. 
+• Underperformance will be handled with performance improvement plans (PIP). 
+
+8. EMPLOYEE BENEFITS 
+• Health Insurance: Group health insurance for employee and dependents 
+• Wellness Programs: Mental health counseling, gym membership reimbursement 
+• Learning and Development: Budget for courses, certifications, and conferences 
+• Referral Bonus: Bonus for referring successful candidates 
+
+3 
+
+9.
+EMPLOYMENT POLICIES 
+
+a. Equal Opportunity 
+
+EazyBytes is an equal opportunity employer and prohibits discrimination based on race, gender, 
+religion, caste, age, disability, or any other protected category. 
+
+2 
+
+b. Probation Period 
+
+All new hires will undergo a probationary period of 3-6 months, depending on the role. 
+c. Background Verification 
+
+All offers are contingent upon successful background verification. 
+
+4. WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL): 15 days per year
+----------
+
+問題：
+tell me about notice period contact ways
+
+回答：', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={rag_document_context=[Document{id='f1d8772a-0b8f-49e6-9bd8-d09348409ccb', text='• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+[機敏資訊遮罩_EMAIL] or calling [機敏資訊遮罩_PHONE] 
+
+• Full and final settlement will be processed within 53 days of last working day.  
+• Exit interviews are mandatory. 
+
+15. ACKNOWLEDGEMENT 
+All employees must sign an acknowledgement form confirming they have read, understood, and 
+agreed to comply with this policy manual. 
+
+mailto:[機敏資訊遮罩_EMAIL]
+
+4 
+
+For any clarifications, please contact [機敏資訊遮罩_EMAIL] 
+
+	TABLE OF CONTENTS
+	1. INTRODUCTION
+	2.', media='null', metadata={chunk_index=4, pii_masked=true, parent_document_id=a78b8c9c-24d0-4c5e-ad02-208909ef951b, source=Eazybytes_HR_Policies.pdf, distance=0.20729244, total_chunks=6}, score=0.7927075624465942}, Document{id='49a4ba99-5501-4d25-948e-abd7e51993ea', text='• Maternity Leave: 26 weeks 
+• Paternity Leave: 10 days 
+• Unpaid Leave: Subject to manager approval 
+
+6. PAYROLL AND COMPENSATION 
+• Salaries are credited by the 9th working day of every month. 
+• Payslips are available through the HR portal. 
+• Deductions are made for income tax, PF, ESI, etc. 
+
+7. PERFORMANCE MANAGEMENT 
+• Performance appraisals are conducted annually, with results typically announced in June. 
+• Performance reviews are based on goal achievements, teamwork, leadership, and innovation. 
+• Underperformance will be handled with performance improvement plans (PIP). 
+
+8. EMPLOYEE BENEFITS 
+• Health Insurance: Group health insurance for employee and dependents 
+• Wellness Programs: Mental health counseling, gym membership reimbursement 
+• Learning and Development: Budget for courses, certifications, and conferences 
+• Referral Bonus: Bonus for referring successful candidates 
+
+3 
+
+9.', media='null', metadata={chunk_index=2, pii_masked=true, parent_document_id=a78b8c9c-24d0-4c5e-ad02-208909ef951b, source=Eazybytes_HR_Policies.pdf, distance=0.21359628, total_chunks=6}, score=0.7864037156105042}, Document{id='077f9bec-572c-49b3-8c20-963e45cf2c28', text='EMPLOYMENT POLICIES 
+
+a. Equal Opportunity 
+
+EazyBytes is an equal opportunity employer and prohibits discrimination based on race, gender, 
+religion, caste, age, disability, or any other protected category. 
+
+2 
+
+b. Probation Period 
+
+All new hires will undergo a probationary period of 3-6 months, depending on the role. 
+c. Background Verification 
+
+All offers are contingent upon successful background verification. 
+
+4. WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL): 15 days per year', media='null', metadata={chunk_index=1, pii_masked=true, parent_document_id=a78b8c9c-24d0-4c5e-ad02-208909ef951b, source=Eazybytes_HR_Policies.pdf, distance=0.24137187, total_chunks=6}, score=0.7586281299591064}]}]
+2026-06-27T13:03:29.854+08:00  INFO 812 --- [mySpringAi] [http-nio-8080-exec-1] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=711, completionTokens=41, totalTokens=752, cacheReadInputTokens=0}
+2026-06-27T13:03:29.887+08:00 DEBUG 812 --- [mySpringAi] [http-nio-8080-exec-1] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvFUPgAk5TDM2zOtgXGdyw35I6bz2",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 711,
+      "completionTokens" : 41,
+      "totalTokens" : 752,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 41,
+        "prompt_tokens" : 711,
+        "total_tokens" : 752,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvFUPgAk5TDM2zOtgXGdyw35I6bz2",
+        "reasoningContent" : ""
+      },
+      "text" : "請將通知期相關的聯繫方式通過電子郵件或電話聯繫[機敏資訊遮罩_EMAIL]或撥打[機敏資訊遮罩_PHONE]。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvFUPgAk5TDM2zOtgXGdyw35I6bz2",
+        "reasoningContent" : ""
+      },
+      "text" : "請將通知期相關的聯繫方式通過電子郵件或電話聯繫[機敏資訊遮罩_EMAIL]或撥打[機敏資訊遮罩_PHONE]。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T13:03:29.888+08:00 DEBUG 812 --- [mySpringAi] [http-nio-8080-exec-1] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ 請將通知期相關的聯繫方式通過電子郵件或電話聯繫[機敏資訊遮罩_EMAIL]或撥打[機敏資訊遮罩_PHONE]。
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T13:21:56.937+08:00  WARN 812 --- [mySpringAi] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m18s514ms17µs800ns).
+2026-06-27T13:22:12.696+08:00  INFO 812 --- [mySpringAi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T13:22:12.706+08:00  INFO 812 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T13:22:12.727+08:00  INFO 812 --- [mySpringAi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T13:22:12.735+08:00  INFO 812 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-27T13:22:12.737+08:00  INFO 812 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-27T13:22:29.102+08:00  INFO 15144 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 15144 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T13:22:29.104+08:00  INFO 15144 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T13:22:29.160+08:00  INFO 15144 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-27T13:22:29.160+08:00  INFO 15144 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-27T13:22:29.181+08:00  INFO 15144 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T13:22:30.198+08:00  INFO 15144 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Creating 
+2026-06-27T13:22:30.493+08:00  INFO 15144 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Created 
+2026-06-27T13:22:30.498+08:00  INFO 15144 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Creating 
+2026-06-27T13:22:31.890+08:00  INFO 15144 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Created 
+2026-06-27T13:22:31.910+08:00  INFO 15144 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Starting 
+2026-06-27T13:22:32.947+08:00  INFO 15144 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Started 
+2026-06-27T13:22:32.947+08:00  INFO 15144 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Waiting 
+2026-06-27T13:22:33.454+08:00  INFO 15144 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Healthy 
+2026-06-27T13:22:35.026+08:00  INFO 15144 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T13:22:35.269+08:00  INFO 15144 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 231 ms. Found 1 JPA repository interface.
+2026-06-27T13:22:36.692+08:00  INFO 15144 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T13:22:36.708+08:00  INFO 15144 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T13:22:36.708+08:00  INFO 15144 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T13:22:36.800+08:00  INFO 15144 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2772 ms
+2026-06-27T13:22:36.977+08:00  INFO 15144 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-27T13:22:37.253+08:00  INFO 15144 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T13:22:37.255+08:00  INFO 15144 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-27T13:22:37.392+08:00  INFO 15144 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T13:22:37.475+08:00  INFO 15144 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-27T13:22:38.069+08:00  INFO 15144 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T13:22:38.166+08:00  INFO 15144 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T13:22:39.492+08:00  INFO 15144 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T13:22:39.558+08:00  INFO 15144 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T13:22:48.530+08:00  INFO 15144 --- [mySpringAi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-27T13:22:50.079+08:00  INFO 15144 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 6 chunks.
+2026-06-27T13:22:52.961+08:00  WARN 15144 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T13:22:53.533+08:00  INFO 15144 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T13:22:53.553+08:00  WARN 15144 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T13:22:53.555+08:00  WARN 15144 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T13:22:53.620+08:00  INFO 15144 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T13:22:53.857+08:00  INFO 15144 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 25.565 seconds (process running for 27.33)
+2026-06-27T13:22:54.482+08:00  INFO 15144 --- [mySpringAi] [RMI TCP Connection(3)-192.168.50.58] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-27T13:22:54.483+08:00  INFO 15144 --- [mySpringAi] [RMI TCP Connection(3)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-27T13:22:54.488+08:00  INFO 15144 --- [mySpringAi] [RMI TCP Connection(3)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-06-27T13:23:13.045+08:00  INFO 15144 --- [mySpringAi] [http-nio-8080-exec-2] c.e.mySpringAi.config.RaAdvisorConfig    : QueryTransformer 翻譯前 query = tell me about notice period contact ways
+2026-06-27T13:23:13.046+08:00  INFO 15144 --- [mySpringAi] [http-nio-8080-exec-2] c.e.mySpringAi.config.RaAdvisorConfig    : QueryTransformer 翻譯後 query = tell me about notice period contact ways
+2026-06-27T13:23:13.477+08:00  INFO 15144 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.util.MaskingDocumentPostProcessor  : 針對 3 筆 documents 執行機敏資訊遮罩
+2026-06-27T13:23:13.484+08:00 DEBUG 15144 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [INSTRUCTION] 你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。  請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。...
+║ [CONTEXT]     • Secure internet and VPN usage is required.   13. GRIEVANCE REDRESSAL  • Any...
+║ [QUESTION]    tell me about notice period contact ways
+║ [DOCS]        3 筆
+║               #1  chunk_index=4    score=0.7932  Eazybytes_HR_Policies.pdf
+║               #2  chunk_index=2    score=0.7855  Eazybytes_HR_Policies.pdf
+║               #3  chunk_index=1    score=0.7585  Eazybytes_HR_Policies.pdf
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T13:23:13.486+08:00 DEBUG 15144 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。
+
+請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。
+如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+
+CONTEXT:
+----------
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+[機敏資訊遮罩_EMAIL] or calling [機敏資訊遮罩_PHONE] 
+
+• Full and final settlement will be processed within 53 days of last working day.  
+• Exit interviews are mandatory. 
+
+15. ACKNOWLEDGEMENT 
+All employees must sign an acknowledgement form confirming they have read, understood, and 
+agreed to comply with this policy manual. 
+
+mailto:[機敏資訊遮罩_EMAIL]
+
+4 
+
+For any clarifications, please contact [機敏資訊遮罩_EMAIL] 
+
+	TABLE OF CONTENTS
+	1. INTRODUCTION
+	2.
+• Maternity Leave: 26 weeks 
+• Paternity Leave: 10 days 
+• Unpaid Leave: Subject to manager approval 
+
+6. PAYROLL AND COMPENSATION 
+• Salaries are credited by the 9th working day of every month. 
+• Payslips are available through the HR portal. 
+• Deductions are made for income tax, PF, ESI, etc. 
+
+7. PERFORMANCE MANAGEMENT 
+• Performance appraisals are conducted annually, with results typically announced in June. 
+• Performance reviews are based on goal achievements, teamwork, leadership, and innovation. 
+• Underperformance will be handled with performance improvement plans (PIP). 
+
+8. EMPLOYEE BENEFITS 
+• Health Insurance: Group health insurance for employee and dependents 
+• Wellness Programs: Mental health counseling, gym membership reimbursement 
+• Learning and Development: Budget for courses, certifications, and conferences 
+• Referral Bonus: Bonus for referring successful candidates 
+
+3 
+
+9.
+EMPLOYMENT POLICIES 
+
+a. Equal Opportunity 
+
+EazyBytes is an equal opportunity employer and prohibits discrimination based on race, gender, 
+religion, caste, age, disability, or any other protected category. 
+
+2 
+
+b. Probation Period 
+
+All new hires will undergo a probationary period of 3-6 months, depending on the role. 
+c. Background Verification 
+
+All offers are contingent upon successful background verification. 
+
+4. WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL): 15 days per year
+----------
+
+問題：
+tell me about notice period contact ways
+
+回答：', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={rag_document_context=[Document{id='c7fe78b4-6885-41eb-84b9-0da32c71824d', text='• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+[機敏資訊遮罩_EMAIL] or calling [機敏資訊遮罩_PHONE] 
+
+• Full and final settlement will be processed within 53 days of last working day.  
+• Exit interviews are mandatory. 
+
+15. ACKNOWLEDGEMENT 
+All employees must sign an acknowledgement form confirming they have read, understood, and 
+agreed to comply with this policy manual. 
+
+mailto:[機敏資訊遮罩_EMAIL]
+
+4 
+
+For any clarifications, please contact [機敏資訊遮罩_EMAIL] 
+
+	TABLE OF CONTENTS
+	1. INTRODUCTION
+	2.', media='null', metadata={chunk_index=4, pii_masked=true, parent_document_id=274187d5-3af1-4abb-86e4-9b9a15efcfda, source=Eazybytes_HR_Policies.pdf, distance=0.20678902, total_chunks=6}, score=0.7932109832763672}, Document{id='c02e370c-137c-49fd-8d06-79500532e8b7', text='• Maternity Leave: 26 weeks 
+• Paternity Leave: 10 days 
+• Unpaid Leave: Subject to manager approval 
+
+6. PAYROLL AND COMPENSATION 
+• Salaries are credited by the 9th working day of every month. 
+• Payslips are available through the HR portal. 
+• Deductions are made for income tax, PF, ESI, etc. 
+
+7. PERFORMANCE MANAGEMENT 
+• Performance appraisals are conducted annually, with results typically announced in June. 
+• Performance reviews are based on goal achievements, teamwork, leadership, and innovation. 
+• Underperformance will be handled with performance improvement plans (PIP). 
+
+8. EMPLOYEE BENEFITS 
+• Health Insurance: Group health insurance for employee and dependents 
+• Wellness Programs: Mental health counseling, gym membership reimbursement 
+• Learning and Development: Budget for courses, certifications, and conferences 
+• Referral Bonus: Bonus for referring successful candidates 
+
+3 
+
+9.', media='null', metadata={chunk_index=2, pii_masked=true, parent_document_id=274187d5-3af1-4abb-86e4-9b9a15efcfda, source=Eazybytes_HR_Policies.pdf, distance=0.21449494, total_chunks=6}, score=0.7855050563812256}, Document{id='d260f456-509c-4ab1-ac39-da4201aaa1f9', text='EMPLOYMENT POLICIES 
+
+a. Equal Opportunity 
+
+EazyBytes is an equal opportunity employer and prohibits discrimination based on race, gender, 
+religion, caste, age, disability, or any other protected category. 
+
+2 
+
+b. Probation Period 
+
+All new hires will undergo a probationary period of 3-6 months, depending on the role. 
+c. Background Verification 
+
+All offers are contingent upon successful background verification. 
+
+4. WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL): 15 days per year', media='null', metadata={chunk_index=1, pii_masked=true, parent_document_id=274187d5-3af1-4abb-86e4-9b9a15efcfda, source=Eazybytes_HR_Policies.pdf, distance=0.24148035, total_chunks=6}, score=0.7585196495056152}]}]
+2026-06-27T13:23:15.045+08:00  INFO 15144 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=711, completionTokens=42, totalTokens=753, cacheReadInputTokens=0}
+2026-06-27T13:23:15.065+08:00 DEBUG 15144 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvFnVtClbPbiOB0d2gQ1YShBoCRHO",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 711,
+      "completionTokens" : 42,
+      "totalTokens" : 753,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 42,
+        "prompt_tokens" : 711,
+        "total_tokens" : 753,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "refusal" : "",
+        "finishReason" : "STOP",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-DvFnVtClbPbiOB0d2gQ1YShBoCRHO",
+        "reasoningContent" : ""
+      },
+      "text" : "您可以透過發送電子郵件至 [機敏資訊遮罩_EMAIL] 或撥打 [機敏資訊遮罩_PHONE] 來聯絡有關通知期限的事宜。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "refusal" : "",
+        "finishReason" : "STOP",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-DvFnVtClbPbiOB0d2gQ1YShBoCRHO",
+        "reasoningContent" : ""
+      },
+      "text" : "您可以透過發送電子郵件至 [機敏資訊遮罩_EMAIL] 或撥打 [機敏資訊遮罩_PHONE] 來聯絡有關通知期限的事宜。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T13:23:15.066+08:00 DEBUG 15144 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ 您可以透過發送電子郵件至 [機敏資訊遮罩_EMAIL] 或撥打 [機敏資訊遮罩_PHONE] 來聯絡有關通知期限的事宜。
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T13:24:41.662+08:00  INFO 15144 --- [mySpringAi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T13:24:41.668+08:00  INFO 15144 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T13:24:41.679+08:00  INFO 15144 --- [mySpringAi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T13:24:41.684+08:00  INFO 15144 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-27T13:24:41.688+08:00  INFO 15144 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-27T13:25:04.225+08:00  INFO 19980 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 19980 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T13:25:04.227+08:00  INFO 19980 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T13:25:04.285+08:00  INFO 19980 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-27T13:25:04.285+08:00  INFO 19980 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-27T13:25:04.305+08:00  INFO 19980 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T13:25:05.355+08:00  INFO 19980 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Creating 
+2026-06-27T13:25:05.518+08:00  INFO 19980 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Created 
+2026-06-27T13:25:05.522+08:00  INFO 19980 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Creating 
+2026-06-27T13:25:06.177+08:00  INFO 19980 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Created 
+2026-06-27T13:25:06.197+08:00  INFO 19980 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Starting 
+2026-06-27T13:25:07.110+08:00  INFO 19980 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Started 
+2026-06-27T13:25:07.111+08:00  INFO 19980 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Waiting 
+2026-06-27T13:25:07.616+08:00  INFO 19980 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Healthy 
+2026-06-27T13:25:09.259+08:00  INFO 19980 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T13:25:09.458+08:00  INFO 19980 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 186 ms. Found 1 JPA repository interface.
+2026-06-27T13:25:10.717+08:00  INFO 19980 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T13:25:10.739+08:00  INFO 19980 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T13:25:10.740+08:00  INFO 19980 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T13:25:10.863+08:00  INFO 19980 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2671 ms
+2026-06-27T13:25:11.050+08:00  INFO 19980 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-27T13:25:11.334+08:00  INFO 19980 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T13:25:11.336+08:00  INFO 19980 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-27T13:25:11.441+08:00  INFO 19980 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T13:25:11.509+08:00  INFO 19980 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-27T13:25:12.135+08:00  INFO 19980 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T13:25:12.236+08:00  INFO 19980 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T13:25:14.269+08:00  INFO 19980 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T13:25:14.377+08:00  INFO 19980 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T13:25:21.550+08:00  INFO 19980 --- [mySpringAi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-27T13:25:24.338+08:00  INFO 19980 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 6 chunks.
+2026-06-27T13:25:25.237+08:00  WARN 19980 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T13:25:25.898+08:00  INFO 19980 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T13:25:25.934+08:00  WARN 19980 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T13:25:25.937+08:00  WARN 19980 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T13:25:26.023+08:00  INFO 19980 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T13:25:26.181+08:00  INFO 19980 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 22.744 seconds (process running for 24.423)
+2026-06-27T13:25:26.677+08:00  INFO 19980 --- [mySpringAi] [RMI TCP Connection(9)-192.168.50.58] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-27T13:25:26.677+08:00  INFO 19980 --- [mySpringAi] [RMI TCP Connection(9)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-27T13:25:26.688+08:00  INFO 19980 --- [mySpringAi] [RMI TCP Connection(9)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2026-06-27T13:25:39.327+08:00  INFO 19980 --- [mySpringAi] [http-nio-8080-exec-2] c.e.mySpringAi.config.RaAdvisorConfig    : QueryTransformer 翻譯前 query = tell me about notice period contact ways
+2026-06-27T13:25:39.327+08:00  INFO 19980 --- [mySpringAi] [http-nio-8080-exec-2] c.e.mySpringAi.config.RaAdvisorConfig    : QueryTransformer 翻譯後 query = tell me about notice period contact ways
+2026-06-27T13:25:39.822+08:00  INFO 19980 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.util.MaskingDocumentPostProcessor  : 針對 3 筆 documents 執行機敏資訊遮罩
+2026-06-27T13:25:39.829+08:00 DEBUG 19980 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [INSTRUCTION] 你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。 請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。 如果答...
+║ [CONTEXT]     • Secure internet and VPN usage is required.  13. GRIEVANCE REDRESSAL  • Any gri...
+║ [QUESTION]    tell me about notice period contact ways
+║ [DOCS]        3 筆
+║               #1  chunk_index=4    score=0.7928  Eazybytes_HR_Policies.pdf
+║               #2  chunk_index=2    score=0.7846  Eazybytes_HR_Policies.pdf
+║               #3  chunk_index=1    score=0.7597  Eazybytes_HR_Policies.pdf
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T13:25:39.831+08:00 DEBUG 19980 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。
+
+請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。
+如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+
+CONTEXT:
+----------
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+[機敏資訊遮罩_EMAIL] or calling [機敏資訊遮罩_PHONE] 
+
+• Full and final settlement will be processed within 53 days of last working day.  
+• Exit interviews are mandatory. 
+
+15. ACKNOWLEDGEMENT 
+All employees must sign an acknowledgement form confirming they have read, understood, and 
+agreed to comply with this policy manual. 
+
+mailto:[機敏資訊遮罩_EMAIL]
+
+4 
+
+For any clarifications, please contact [機敏資訊遮罩_EMAIL] 
+
+	TABLE OF CONTENTS
+	1. INTRODUCTION
+	2.
+• Maternity Leave: 26 weeks 
+• Paternity Leave: 10 days 
+• Unpaid Leave: Subject to manager approval 
+
+6. PAYROLL AND COMPENSATION 
+• Salaries are credited by the 9th working day of every month. 
+• Payslips are available through the HR portal. 
+• Deductions are made for income tax, PF, ESI, etc. 
+
+7. PERFORMANCE MANAGEMENT 
+• Performance appraisals are conducted annually, with results typically announced in June. 
+• Performance reviews are based on goal achievements, teamwork, leadership, and innovation. 
+• Underperformance will be handled with performance improvement plans (PIP). 
+
+8. EMPLOYEE BENEFITS 
+• Health Insurance: Group health insurance for employee and dependents 
+• Wellness Programs: Mental health counseling, gym membership reimbursement 
+• Learning and Development: Budget for courses, certifications, and conferences 
+• Referral Bonus: Bonus for referring successful candidates 
+
+3 
+
+9.
+EMPLOYMENT POLICIES 
+
+a. Equal Opportunity 
+
+EazyBytes is an equal opportunity employer and prohibits discrimination based on race, gender, 
+religion, caste, age, disability, or any other protected category. 
+
+2 
+
+b. Probation Period 
+
+All new hires will undergo a probationary period of 3-6 months, depending on the role. 
+c. Background Verification 
+
+All offers are contingent upon successful background verification. 
+
+4. WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL): 15 days per year
+----------
+
+問題：
+tell me about notice period contact ways
+
+回答：', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={rag_document_context=[Document{id='6d3fb9ba-d537-42d8-9542-86cee74a0ff4', text='• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+[機敏資訊遮罩_EMAIL] or calling [機敏資訊遮罩_PHONE] 
+
+• Full and final settlement will be processed within 53 days of last working day.  
+• Exit interviews are mandatory. 
+
+15. ACKNOWLEDGEMENT 
+All employees must sign an acknowledgement form confirming they have read, understood, and 
+agreed to comply with this policy manual. 
+
+mailto:[機敏資訊遮罩_EMAIL]
+
+4 
+
+For any clarifications, please contact [機敏資訊遮罩_EMAIL] 
+
+	TABLE OF CONTENTS
+	1. INTRODUCTION
+	2.', media='null', metadata={chunk_index=4, pii_masked=true, parent_document_id=9a23e4d5-e048-475e-80ad-b3b853af92ba, source=Eazybytes_HR_Policies.pdf, distance=0.20722002, total_chunks=6}, score=0.7927799820899963}, Document{id='03d283bd-7558-44b8-8bbd-0f1e1581cb4d', text='• Maternity Leave: 26 weeks 
+• Paternity Leave: 10 days 
+• Unpaid Leave: Subject to manager approval 
+
+6. PAYROLL AND COMPENSATION 
+• Salaries are credited by the 9th working day of every month. 
+• Payslips are available through the HR portal. 
+• Deductions are made for income tax, PF, ESI, etc. 
+
+7. PERFORMANCE MANAGEMENT 
+• Performance appraisals are conducted annually, with results typically announced in June. 
+• Performance reviews are based on goal achievements, teamwork, leadership, and innovation. 
+• Underperformance will be handled with performance improvement plans (PIP). 
+
+8. EMPLOYEE BENEFITS 
+• Health Insurance: Group health insurance for employee and dependents 
+• Wellness Programs: Mental health counseling, gym membership reimbursement 
+• Learning and Development: Budget for courses, certifications, and conferences 
+• Referral Bonus: Bonus for referring successful candidates 
+
+3 
+
+9.', media='null', metadata={chunk_index=2, pii_masked=true, parent_document_id=9a23e4d5-e048-475e-80ad-b3b853af92ba, source=Eazybytes_HR_Policies.pdf, distance=0.21538621, total_chunks=6}, score=0.7846137881278992}, Document{id='32516d98-5cdd-4585-9a6c-b6cd137f4a98', text='EMPLOYMENT POLICIES 
+
+a. Equal Opportunity 
+
+EazyBytes is an equal opportunity employer and prohibits discrimination based on race, gender, 
+religion, caste, age, disability, or any other protected category. 
+
+2 
+
+b. Probation Period 
+
+All new hires will undergo a probationary period of 3-6 months, depending on the role. 
+c. Background Verification 
+
+All offers are contingent upon successful background verification. 
+
+4. WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL): 15 days per year', media='null', metadata={chunk_index=1, pii_masked=true, parent_document_id=9a23e4d5-e048-475e-80ad-b3b853af92ba, source=Eazybytes_HR_Policies.pdf, distance=0.24033946, total_chunks=6}, score=0.759660542011261}]}]
+2026-06-27T13:25:41.260+08:00  INFO 19980 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=711, completionTokens=28, totalTokens=739, cacheReadInputTokens=0}
+2026-06-27T13:25:41.289+08:00 DEBUG 19980 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvFpsnlxdNTGxKp7xQUpZ7S7wEtwC",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 711,
+      "completionTokens" : 28,
+      "totalTokens" : 739,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 28,
+        "prompt_tokens" : 711,
+        "total_tokens" : 739,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "refusal" : "",
+        "finishReason" : "STOP",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-DvFpsnlxdNTGxKp7xQUpZ7S7wEtwC",
+        "reasoningContent" : ""
+      },
+      "text" : "您可以透過電子郵件或親自聯繫，向HR部門提出有關通知期間的相關事宜。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "refusal" : "",
+        "finishReason" : "STOP",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-DvFpsnlxdNTGxKp7xQUpZ7S7wEtwC",
+        "reasoningContent" : ""
+      },
+      "text" : "您可以透過電子郵件或親自聯繫，向HR部門提出有關通知期間的相關事宜。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T13:25:41.290+08:00 DEBUG 19980 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ 您可以透過電子郵件或親自聯繫，向HR部門提出有關通知期間的相關事宜。
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T13:28:59.427+08:00  INFO 19980 --- [mySpringAi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T13:28:59.434+08:00  INFO 19980 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T13:28:59.646+08:00  INFO 19980 --- [mySpringAi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T13:28:59.651+08:00  INFO 19980 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-27T13:28:59.653+08:00  INFO 19980 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-27T13:29:17.579+08:00  INFO 29944 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 29944 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T13:29:17.581+08:00  INFO 29944 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T13:29:17.623+08:00  INFO 29944 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-27T13:29:17.624+08:00  INFO 29944 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-27T13:29:17.639+08:00  INFO 29944 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T13:29:18.695+08:00  INFO 29944 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Creating 
+2026-06-27T13:29:18.848+08:00  INFO 29944 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Created 
+2026-06-27T13:29:18.853+08:00  INFO 29944 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Creating 
+2026-06-27T13:29:19.531+08:00  INFO 29944 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Created 
+2026-06-27T13:29:19.553+08:00  INFO 29944 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Starting 
+2026-06-27T13:29:20.599+08:00  INFO 29944 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Started 
+2026-06-27T13:29:20.599+08:00  INFO 29944 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Waiting 
+2026-06-27T13:29:21.104+08:00  INFO 29944 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Healthy 
+2026-06-27T13:29:22.699+08:00  INFO 29944 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T13:29:22.848+08:00  INFO 29944 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137 ms. Found 1 JPA repository interface.
+2026-06-27T13:29:23.859+08:00  INFO 29944 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T13:29:23.872+08:00  INFO 29944 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T13:29:23.872+08:00  INFO 29944 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T13:29:23.956+08:00  INFO 29944 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2266 ms
+2026-06-27T13:29:24.115+08:00  INFO 29944 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-27T13:29:24.391+08:00  INFO 29944 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T13:29:24.393+08:00  INFO 29944 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-27T13:29:24.516+08:00  INFO 29944 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T13:29:24.574+08:00  INFO 29944 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-27T13:29:25.133+08:00  INFO 29944 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T13:29:25.261+08:00  INFO 29944 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T13:29:26.474+08:00  INFO 29944 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T13:29:26.527+08:00  INFO 29944 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T13:29:32.954+08:00  INFO 29944 --- [mySpringAi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-27T13:29:34.065+08:00  INFO 29944 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 6 chunks.
+2026-06-27T13:29:36.419+08:00  WARN 29944 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T13:29:36.754+08:00  INFO 29944 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T13:29:36.783+08:00  WARN 29944 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T13:29:36.784+08:00  WARN 29944 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T13:29:36.825+08:00  INFO 29944 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T13:29:36.833+08:00  INFO 29944 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 19.76 seconds (process running for 21.121)
+2026-06-27T13:29:37.134+08:00  INFO 29944 --- [mySpringAi] [RMI TCP Connection(3)-192.168.50.58] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-27T13:29:37.135+08:00  INFO 29944 --- [mySpringAi] [RMI TCP Connection(3)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-27T13:29:37.140+08:00  INFO 29944 --- [mySpringAi] [RMI TCP Connection(3)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-06-27T13:30:00.956+08:00  INFO 29944 --- [mySpringAi] [http-nio-8080-exec-2] c.e.mySpringAi.config.RaAdvisorConfig    : QueryTransformer 翻譯前 query = tell me about notice period contact ways
+2026-06-27T13:30:00.956+08:00  INFO 29944 --- [mySpringAi] [http-nio-8080-exec-2] c.e.mySpringAi.config.RaAdvisorConfig    : QueryTransformer 翻譯後 query = tell me about notice period contact ways
+2026-06-27T13:30:01.449+08:00  INFO 29944 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.util.MaskingDocumentPostProcessor  : 針對 3 筆 documents 執行機敏資訊遮罩
+2026-06-27T13:30:01.454+08:00 DEBUG 29944 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [INSTRUCTION] 你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。
+║               請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。
+║               如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+║ [CONTEXT]     • Secure internet and VPN usage is required.
+║               13. GRIEVANCE REDRESSAL
+║               • Any grievance should be reported to the HR department via email or in-person.
+║               • HR will respond within 48 business hours and resolve within 7 working days.
+║               14. EXIT POLICY
+║               • Minimum 36-day notice period for resignation. You can negotiate further by sending email to
+║               [機敏資訊遮罩_EMAIL] or calling [機敏資訊遮罩_PHONE]
+║               • Full and final settlement will be processed within 53 days of last working day.
+║               • Exit interviews are mandatory.
+║               15. ACKNOWLEDGEMENT
+║               All employees must sign an acknowledgement form confirming they have read, understood, and
+║               agreed to comply with this policy manual.
+║               mailto:[機敏資訊遮罩_EMAIL]
+║               4
+║               For any clarifications, please contact [機敏資訊遮罩_EMAIL]
+║               TABLE OF CONTENTS
+║               1. INTRODUCTION
+║               2.
+║               • Maternity Leave: 26 weeks
+║               • Paternity Leave: 10 days
+║               • Unpaid Leave: Subject to manager approval
+║               6. PAYROLL AND COMPENSATION
+║               • Salaries are credited by the 9th working day of every month.
+║               • Payslips are available through the HR portal.
+║               • Deductions are made for income tax, PF, ESI, etc.
+║               7. PERFORMANCE MANAGEMENT
+║               • Performance appraisals are conducted annually, with results typically announced in June.
+║               • Performance reviews are based on goal achievements, teamwork, leadership, and innovation.
+║               • Underperformance will be handled with performance improvement plans (PIP).
+║               8. EMPLOYEE BENEFITS
+║               • Health Insurance: Group health insurance for employee and dependents
+║               • Wellness Programs: Mental health counseling, gym membership reimbursement
+║               • Learning and Development: Budget for courses, certifications, and conferences
+║               • Referral Bonus: Bonus for referring successful candidates
+║               3
+║               9.
+║               EMPLOYMENT POLICIES
+║               a. Equal Opportunity
+║               EazyBytes is an equal opportunity employer and prohibits discrimination based on race, gender,
+║               religion, caste, age, disability, or any other protected category.
+║               2
+║               b. Probation Period
+║               All new hires will undergo a probationary period of 3-6 months, depending on the role.
+║               c. Background Verification
+║               All offers are contingent upon successful background verification.
+║               4. WORKING HOURS AND ATTENDANCE
+║               • Standard hours: 2:00 PM to 11:00 PM (Monday to Friday)
+║               • A flexible schedule may be offered upon manager's approval.
+║               • Late arrivals, early departures, and absences must be informed in advance.
+║               5. LEAVE POLICY
+║               • Casual Leave (CL): 8 days per year
+║               • Sick Leave (SL): 8 days per year
+║               • Earned Leave (EL): 15 days per year
+║ [QUESTION]    tell me about notice period contact ways
+║ [DOCS]        3 筆
+║               #1  chunk_index=4    score=0.7923  Eazybytes_HR_Policies.pdf
+║               #2  chunk_index=2    score=0.7859  Eazybytes_HR_Policies.pdf
+║               #3  chunk_index=1    score=0.7630  Eazybytes_HR_Policies.pdf
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T13:30:01.456+08:00 DEBUG 29944 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。
+
+請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。
+如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+
+CONTEXT:
+----------
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+[機敏資訊遮罩_EMAIL] or calling [機敏資訊遮罩_PHONE] 
+
+• Full and final settlement will be processed within 53 days of last working day.  
+• Exit interviews are mandatory. 
+
+15. ACKNOWLEDGEMENT 
+All employees must sign an acknowledgement form confirming they have read, understood, and 
+agreed to comply with this policy manual. 
+
+mailto:[機敏資訊遮罩_EMAIL]
+
+4 
+
+For any clarifications, please contact [機敏資訊遮罩_EMAIL] 
+
+	TABLE OF CONTENTS
+	1. INTRODUCTION
+	2.
+• Maternity Leave: 26 weeks 
+• Paternity Leave: 10 days 
+• Unpaid Leave: Subject to manager approval 
+
+6. PAYROLL AND COMPENSATION 
+• Salaries are credited by the 9th working day of every month. 
+• Payslips are available through the HR portal. 
+• Deductions are made for income tax, PF, ESI, etc. 
+
+7. PERFORMANCE MANAGEMENT 
+• Performance appraisals are conducted annually, with results typically announced in June. 
+• Performance reviews are based on goal achievements, teamwork, leadership, and innovation. 
+• Underperformance will be handled with performance improvement plans (PIP). 
+
+8. EMPLOYEE BENEFITS 
+• Health Insurance: Group health insurance for employee and dependents 
+• Wellness Programs: Mental health counseling, gym membership reimbursement 
+• Learning and Development: Budget for courses, certifications, and conferences 
+• Referral Bonus: Bonus for referring successful candidates 
+
+3 
+
+9.
+EMPLOYMENT POLICIES 
+
+a. Equal Opportunity 
+
+EazyBytes is an equal opportunity employer and prohibits discrimination based on race, gender, 
+religion, caste, age, disability, or any other protected category. 
+
+2 
+
+b. Probation Period 
+
+All new hires will undergo a probationary period of 3-6 months, depending on the role. 
+c. Background Verification 
+
+All offers are contingent upon successful background verification. 
+
+4. WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL): 15 days per year
+----------
+
+問題：
+tell me about notice period contact ways
+
+回答：', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={rag_document_context=[Document{id='5adf3853-67a9-4f7d-9a63-6e69661c7c79', text='• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+[機敏資訊遮罩_EMAIL] or calling [機敏資訊遮罩_PHONE] 
+
+• Full and final settlement will be processed within 53 days of last working day.  
+• Exit interviews are mandatory. 
+
+15. ACKNOWLEDGEMENT 
+All employees must sign an acknowledgement form confirming they have read, understood, and 
+agreed to comply with this policy manual. 
+
+mailto:[機敏資訊遮罩_EMAIL]
+
+4 
+
+For any clarifications, please contact [機敏資訊遮罩_EMAIL] 
+
+	TABLE OF CONTENTS
+	1. INTRODUCTION
+	2.', media='null', metadata={chunk_index=4, pii_masked=true, parent_document_id=74b56a23-a9b7-4e4b-bfcd-b57e2d081794, source=Eazybytes_HR_Policies.pdf, distance=0.20773566, total_chunks=6}, score=0.7922643423080444}, Document{id='fc613ced-7add-4cf5-ac07-f13eff99d405', text='• Maternity Leave: 26 weeks 
+• Paternity Leave: 10 days 
+• Unpaid Leave: Subject to manager approval 
+
+6. PAYROLL AND COMPENSATION 
+• Salaries are credited by the 9th working day of every month. 
+• Payslips are available through the HR portal. 
+• Deductions are made for income tax, PF, ESI, etc. 
+
+7. PERFORMANCE MANAGEMENT 
+• Performance appraisals are conducted annually, with results typically announced in June. 
+• Performance reviews are based on goal achievements, teamwork, leadership, and innovation. 
+• Underperformance will be handled with performance improvement plans (PIP). 
+
+8. EMPLOYEE BENEFITS 
+• Health Insurance: Group health insurance for employee and dependents 
+• Wellness Programs: Mental health counseling, gym membership reimbursement 
+• Learning and Development: Budget for courses, certifications, and conferences 
+• Referral Bonus: Bonus for referring successful candidates 
+
+3 
+
+9.', media='null', metadata={chunk_index=2, pii_masked=true, parent_document_id=74b56a23-a9b7-4e4b-bfcd-b57e2d081794, source=Eazybytes_HR_Policies.pdf, distance=0.214113, total_chunks=6}, score=0.7858870029449463}, Document{id='62b515f8-faa8-42fe-97d5-5e2e14fa3b80', text='EMPLOYMENT POLICIES 
+
+a. Equal Opportunity 
+
+EazyBytes is an equal opportunity employer and prohibits discrimination based on race, gender, 
+religion, caste, age, disability, or any other protected category. 
+
+2 
+
+b. Probation Period 
+
+All new hires will undergo a probationary period of 3-6 months, depending on the role. 
+c. Background Verification 
+
+All offers are contingent upon successful background verification. 
+
+4. WORKING HOURS AND ATTENDANCE 
+• Standard hours: 2:00 PM to 11:00 PM (Monday to Friday) 
+• A flexible schedule may be offered upon manager's approval. 
+• Late arrivals, early departures, and absences must be informed in advance. 
+
+5. LEAVE POLICY 
+• Casual Leave (CL): 8 days per year 
+• Sick Leave (SL): 8 days per year 
+• Earned Leave (EL): 15 days per year', media='null', metadata={chunk_index=1, pii_masked=true, parent_document_id=74b56a23-a9b7-4e4b-bfcd-b57e2d081794, source=Eazybytes_HR_Policies.pdf, distance=0.2369628, total_chunks=6}, score=0.7630372047424316}]}]
+2026-06-27T13:30:02.176+08:00  INFO 29944 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=711, completionTokens=23, totalTokens=734, cacheReadInputTokens=0}
+2026-06-27T13:30:02.333+08:00 DEBUG 29944 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvFu5LtzshT1MuDxSGg1qfgrNC6HS",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 711,
+      "completionTokens" : 23,
+      "totalTokens" : 734,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 23,
+        "prompt_tokens" : 711,
+        "total_tokens" : 734,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "refusal" : "",
+        "finishReason" : "STOP",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-DvFu5LtzshT1MuDxSGg1qfgrNC6HS",
+        "reasoningContent" : ""
+      },
+      "text" : "您可以透過電子郵件或親自聯繫來協商離職通知期相關事項。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "refusal" : "",
+        "finishReason" : "STOP",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-DvFu5LtzshT1MuDxSGg1qfgrNC6HS",
+        "reasoningContent" : ""
+      },
+      "text" : "您可以透過電子郵件或親自聯繫來協商離職通知期相關事項。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T13:30:02.334+08:00 DEBUG 29944 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ [ANSWER]      您可以透過電子郵件或親自聯繫來協商離職通知期相關事項。
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T13:33:21.321+08:00 DEBUG 29944 --- [mySpringAi] [http-nio-8080-exec-7] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      【規則】
+║               1. 請根據「文件」中的資訊回答，並使用繁體中文。
+║               2. 只要文件中有任何與問題相關的資訊，就必須整理這些資訊回答。
+║               3. 如果文件只有部分資訊，請根據已有資訊簡短回答，不要說無法確定。
+║               4. 只有在文件完全沒有任何相關資訊時，才回覆：「根據目前文件，我無法確定」。
+║               5. 不要捏造文件中沒有的事實。
+║               文件：
+║               ----------
+║               Compound interest increases investment returns over time.,
+║               Diversifying investments reduces overall risk.,
+║               Mutual funds pool money from investors to buy securities.,
+║               The stock market opens at 9:30 a.m. EST on weekdays.,
+║               A blockchain is a distributed, immutable ledger of transactions.
+║               ----------
+║ [USER]        tell me something about investment?
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T13:33:21.322+08:00 DEBUG 29944 --- [mySpringAi] [http-nio-8080-exec-7] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='【規則】
+1. 請根據「文件」中的資訊回答，並使用繁體中文。
+2. 只要文件中有任何與問題相關的資訊，就必須整理這些資訊回答。
+3. 如果文件只有部分資訊，請根據已有資訊簡短回答，不要說無法確定。
+4. 只有在文件完全沒有任何相關資訊時，才回覆：「根據目前文件，我無法確定」。
+5. 不要捏造文件中沒有的事實。
+
+文件：
+----------
+Compound interest increases investment returns over time.,
+Diversifying investments reduces overall risk.,
+Mutual funds pool money from investors to buy securities.,
+The stock market opens at 9:30 a.m. EST on weekdays.,
+A blockchain is a distributed, immutable ledger of transactions.
+----------', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='tell me something about investment?', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={}]
+2026-06-27T13:33:22.231+08:00  INFO 29944 --- [mySpringAi] [http-nio-8080-exec-7] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=195, completionTokens=57, totalTokens=252, cacheReadInputTokens=0}
+2026-06-27T13:33:22.232+08:00 DEBUG 29944 --- [mySpringAi] [http-nio-8080-exec-7] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvFxJnzHVh6DMY8iNoy9OnzakAGHR",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 195,
+      "completionTokens" : 57,
+      "totalTokens" : 252,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 57,
+        "prompt_tokens" : 195,
+        "total_tokens" : 252,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "refusal" : "",
+        "finishReason" : "STOP",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-DvFxJnzHVh6DMY8iNoy9OnzakAGHR",
+        "reasoningContent" : ""
+      },
+      "text" : "根據文件，投資的相關資訊包括：複利能隨著時間增加投資回報，分散投資可以降低整體風險，以及共同基金是將投資者的資金集中起來購買證券的方式。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "refusal" : "",
+        "finishReason" : "STOP",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-DvFxJnzHVh6DMY8iNoy9OnzakAGHR",
+        "reasoningContent" : ""
+      },
+      "text" : "根據文件，投資的相關資訊包括：複利能隨著時間增加投資回報，分散投資可以降低整體風險，以及共同基金是將投資者的資金集中起來購買證券的方式。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T13:33:22.233+08:00 DEBUG 29944 --- [mySpringAi] [http-nio-8080-exec-7] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ [ANSWER]      根據文件，投資的相關資訊包括：複利能隨著時間增加投資回報，分散投資可以降低整體風險，以及共同基金是將投資者的資金集中起來購買證券的方式。
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T13:39:08.411+08:00  INFO 29944 --- [mySpringAi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T13:39:08.418+08:00  INFO 29944 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T13:39:08.431+08:00  INFO 29944 --- [mySpringAi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T13:39:08.435+08:00  INFO 29944 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-27T13:39:08.436+08:00  INFO 29944 --- [mySpringAi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-27T13:39:15.628+08:00  INFO 20620 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 20620 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T13:39:15.630+08:00  INFO 20620 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T13:39:15.674+08:00  INFO 20620 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-27T13:39:15.674+08:00  INFO 20620 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-27T13:39:15.690+08:00  INFO 20620 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T13:39:16.705+08:00  INFO 20620 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Starting 
+2026-06-27T13:39:17.567+08:00  INFO 20620 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Started 
+2026-06-27T13:39:17.568+08:00  INFO 20620 --- [mySpringAi] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Waiting 
+2026-06-27T13:39:22.593+08:00  INFO 30432 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 30432 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T13:39:22.594+08:00  INFO 30432 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T13:39:22.633+08:00  INFO 30432 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-27T13:39:22.634+08:00  INFO 30432 --- [mySpringAi] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-27T13:39:22.648+08:00  INFO 30432 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T13:39:23.573+08:00  INFO 30432 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-27T13:39:24.479+08:00  INFO 30432 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T13:39:24.610+08:00  INFO 30432 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120 ms. Found 1 JPA repository interface.
+2026-06-27T13:39:25.589+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T13:39:25.603+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T13:39:25.603+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T13:39:25.687+08:00  INFO 30432 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2111 ms
+2026-06-27T13:39:25.835+08:00  INFO 30432 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-27T13:39:26.070+08:00  INFO 30432 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T13:39:26.072+08:00  INFO 30432 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-27T13:39:26.159+08:00  INFO 30432 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T13:39:26.211+08:00  INFO 30432 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-27T13:39:26.630+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T13:39:26.707+08:00  INFO 30432 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T13:39:27.630+08:00  INFO 30432 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T13:39:27.676+08:00  INFO 30432 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T13:39:29.132+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-27T13:39:34.496+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 6 chunks.
+2026-06-27T13:39:35.317+08:00  WARN 30432 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T13:39:35.648+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T13:39:35.667+08:00  WARN 30432 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T13:39:35.668+08:00  WARN 30432 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T13:39:35.714+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T13:39:35.721+08:00  INFO 30432 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 13.57 seconds (process running for 14.787)
+2026-06-27T13:39:36.238+08:00  INFO 30432 --- [mySpringAi] [RMI TCP Connection(1)-192.168.50.58] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-27T13:39:36.238+08:00  INFO 30432 --- [mySpringAi] [RMI TCP Connection(1)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-27T13:39:36.241+08:00  INFO 30432 --- [mySpringAi] [RMI TCP Connection(1)-192.168.50.58] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-27T13:39:51.216+08:00 DEBUG 30432 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      【規則】
+║               1. 請根據「文件」中的資訊回答，並使用繁體中文。
+║               2. 只要文件中有任何與問題相關的資訊，就必須整理這些資訊回答。
+║               3. 如果文件只有部分資訊，請根據已有資訊簡短回答，不要說無法確定。
+║               4. 只有在文件完全沒有任何相關資訊時，才回覆：「根據目前文件，我無法確定」。
+║               5. 不要捏造文件中沒有的事實。
+║               文件：
+║               ----------
+║               Compound interest increases investment returns over time.,
+║               Compound interest increases investment returns over time.,
+║               Diversifying investments reduces overall risk.,
+║               Diversifying investments reduces overall risk.,
+║               Mutual funds pool money from investors to buy securities.
+║               ----------
+║ [USER]        tell me something about investment?
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T13:39:51.217+08:00 DEBUG 30432 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='【規則】
+1. 請根據「文件」中的資訊回答，並使用繁體中文。
+2. 只要文件中有任何與問題相關的資訊，就必須整理這些資訊回答。
+3. 如果文件只有部分資訊，請根據已有資訊簡短回答，不要說無法確定。
+4. 只有在文件完全沒有任何相關資訊時，才回覆：「根據目前文件，我無法確定」。
+5. 不要捏造文件中沒有的事實。
+
+文件：
+----------
+Compound interest increases investment returns over time.,
+Compound interest increases investment returns over time.,
+Diversifying investments reduces overall risk.,
+Diversifying investments reduces overall risk.,
+Mutual funds pool money from investors to buy securities.
+----------', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='tell me something about investment?', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={}]
+2026-06-27T13:39:52.802+08:00  INFO 30432 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=183, completionTokens=37, totalTokens=220, cacheReadInputTokens=0}
+2026-06-27T13:39:52.821+08:00 DEBUG 30432 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvG3bBftX9uY56ReSpogJng5SbHIr",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 183,
+      "completionTokens" : 37,
+      "totalTokens" : 220,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 37,
+        "prompt_tokens" : 183,
+        "total_tokens" : 220,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvG3bBftX9uY56ReSpogJng5SbHIr",
+        "reasoningContent" : ""
+      },
+      "text" : "根據文件，投資可以透過複利來增加回報，並且多元化投資可以降低整體風險。\n\n【規則】",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvG3bBftX9uY56ReSpogJng5SbHIr",
+        "reasoningContent" : ""
+      },
+      "text" : "根據文件，投資可以透過複利來增加回報，並且多元化投資可以降低整體風險。\n\n【規則】",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T13:39:52.822+08:00 DEBUG 30432 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ [ANSWER]      根據文件，投資可以透過複利來增加回報，並且多元化投資可以降低整體風險。
+║               【規則】
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T13:40:49.625+08:00  INFO 30432 --- [mySpringAi] [http-nio-8080-exec-3] c.e.mySpringAi.config.RaAdvisorConfig    : QueryTransformer 翻譯前 query = tell me about notice period contact ways
+2026-06-27T13:40:49.626+08:00  INFO 30432 --- [mySpringAi] [http-nio-8080-exec-3] c.e.mySpringAi.config.RaAdvisorConfig    : QueryTransformer 翻譯後 query = tell me about notice period contact ways
+2026-06-27T13:40:50.427+08:00  INFO 30432 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.util.MaskingDocumentPostProcessor  : 針對 3 筆 documents 執行機敏資訊遮罩
+2026-06-27T13:40:50.432+08:00 DEBUG 30432 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]        你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。
+║               請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。
+║               如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+║               CONTEXT:
+║               ----------
+║               • Secure internet and VPN usage is required.
+║               13. GRIEVANCE REDRESSAL
+║               • Any grievance should be reported to the HR department via email or in-person.
+║               • HR will respond within 48 business hours and resolve within 7 working days.
+║               14. EXIT POLICY
+║               • Minimum 36-day notice period for resignation. You can negotiate further by sending email to
+║               [機敏資訊遮罩_EMAIL] or calling [機敏資訊遮罩_PHONE]
+║               • Full and final settlement will be processed within 53 days of last working day.
+║               • Exit interviews are mandatory.
+║               15. ACKNOWLEDGEMENT
+║               All employees must sign an acknowledgement form confirming they have read, understood, and
+║               agreed to comply with this policy manual.
+║               mailto:[機敏資訊遮罩_EMAIL]
+║               4
+║               For any clarifications, please contact [機敏資訊遮罩_EMAIL]
+║               TABLE OF CONTENTS
+║               1. INTRODUCTION
+║               2.
+║               • Secure internet and VPN usage is required.
+║               13. GRIEVANCE REDRESSAL
+║               • Any grievance should be reported to the HR department via email or in-person.
+║               • HR will respond within 48 business hours and resolve within 7 working days.
+║               14. EXIT POLICY
+║               • Minimum 36-day notice period for resignation. You can negotiate further by sending email to
+║               [機敏資訊遮罩_EMAIL] or calling [機敏資訊遮罩_PHONE]
+║               • Full and final settlement will be processed within 53 days of last working day.
+║               • Exit interviews are mandatory.
+║               15. ACKNOWLEDGEMENT
+║               All employees must sign an acknowledgement form confirming they have read, understood, and
+║               agreed to comply with this policy manual.
+║               mailto:[機敏資訊遮罩_EMAIL]
+║               4
+║               For any clarifications, please contact [機敏資訊遮罩_EMAIL]
+║               TABLE OF CONTENTS
+║               1. INTRODUCTION
+║               2.
+║               • Maternity Leave: 26 weeks
+║               • Paternity Leave: 10 days
+║               • Unpaid Leave: Subject to manager approval
+║               6. PAYROLL AND COMPENSATION
+║               • Salaries are credited by the 9th working day of every month.
+║               • Payslips are available through the HR portal.
+║               • Deductions are made for income tax, PF, ESI, etc.
+║               7. PERFORMANCE MANAGEMENT
+║               • Performance appraisals are conducted annually, with results typically announced in June.
+║               • Performance reviews are based on goal achievements, teamwork, leadership, and innovation.
+║               • Underperformance will be handled with performance improvement plans (PIP).
+║               8. EMPLOYEE BENEFITS
+║               • Health Insurance: Group health insurance for employee and dependents
+║               • Wellness Programs: Mental health counseling, gym membership reimbursement
+║               • Learning and Development: Budget for courses, certifications, and conferences
+║               • Referral Bonus: Bonus for referring successful candidates
+║               3
+║               9.
+║               ----------
+║               問題：
+║               tell me about notice period contact ways
+║               回答：
+║ [DOCS]        3 筆
+║               #1  chunk_index=4    score=0.7949  Eazybytes_HR_Policies.pdf
+║               #2  chunk_index=4    score=0.7923  Eazybytes_HR_Policies.pdf
+║               #3  chunk_index=2    score=0.7859  Eazybytes_HR_Policies.pdf
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T13:40:50.433+08:00 DEBUG 30432 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='你是一位樂於協助的助理，負責回答員工關於 EazyBytes 公司政策的問題。
+
+請只根據 CONTEXT 區塊中的內容回答員工的問題，不要使用既有知識。
+如果答案不在 CONTEXT 區塊中，請回答「我不知道」。
+
+CONTEXT:
+----------
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+[機敏資訊遮罩_EMAIL] or calling [機敏資訊遮罩_PHONE] 
+
+• Full and final settlement will be processed within 53 days of last working day.  
+• Exit interviews are mandatory. 
+
+15. ACKNOWLEDGEMENT 
+All employees must sign an acknowledgement form confirming they have read, understood, and 
+agreed to comply with this policy manual. 
+
+mailto:[機敏資訊遮罩_EMAIL]
+
+4 
+
+For any clarifications, please contact [機敏資訊遮罩_EMAIL] 
+
+	TABLE OF CONTENTS
+	1. INTRODUCTION
+	2.
+• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+[機敏資訊遮罩_EMAIL] or calling [機敏資訊遮罩_PHONE] 
+
+• Full and final settlement will be processed within 53 days of last working day.  
+• Exit interviews are mandatory. 
+
+15. ACKNOWLEDGEMENT 
+All employees must sign an acknowledgement form confirming they have read, understood, and 
+agreed to comply with this policy manual. 
+
+mailto:[機敏資訊遮罩_EMAIL]
+
+4 
+
+For any clarifications, please contact [機敏資訊遮罩_EMAIL] 
+
+	TABLE OF CONTENTS
+	1. INTRODUCTION
+	2.
+• Maternity Leave: 26 weeks 
+• Paternity Leave: 10 days 
+• Unpaid Leave: Subject to manager approval 
+
+6. PAYROLL AND COMPENSATION 
+• Salaries are credited by the 9th working day of every month. 
+• Payslips are available through the HR portal. 
+• Deductions are made for income tax, PF, ESI, etc. 
+
+7. PERFORMANCE MANAGEMENT 
+• Performance appraisals are conducted annually, with results typically announced in June. 
+• Performance reviews are based on goal achievements, teamwork, leadership, and innovation. 
+• Underperformance will be handled with performance improvement plans (PIP). 
+
+8. EMPLOYEE BENEFITS 
+• Health Insurance: Group health insurance for employee and dependents 
+• Wellness Programs: Mental health counseling, gym membership reimbursement 
+• Learning and Development: Budget for courses, certifications, and conferences 
+• Referral Bonus: Bonus for referring successful candidates 
+
+3 
+
+9.
+----------
+
+問題：
+tell me about notice period contact ways
+
+回答：', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={rag_document_context=[Document{id='ed4c740c-5f7a-4a88-8371-154a3b1b292e', text='• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+[機敏資訊遮罩_EMAIL] or calling [機敏資訊遮罩_PHONE] 
+
+• Full and final settlement will be processed within 53 days of last working day.  
+• Exit interviews are mandatory. 
+
+15. ACKNOWLEDGEMENT 
+All employees must sign an acknowledgement form confirming they have read, understood, and 
+agreed to comply with this policy manual. 
+
+mailto:[機敏資訊遮罩_EMAIL]
+
+4 
+
+For any clarifications, please contact [機敏資訊遮罩_EMAIL] 
+
+	TABLE OF CONTENTS
+	1. INTRODUCTION
+	2.', media='null', metadata={chunk_index=4, pii_masked=true, parent_document_id=df845388-d0aa-4eb1-acd6-612921ec33ed, source=Eazybytes_HR_Policies.pdf, distance=0.20506155, total_chunks=6}, score=0.7949384450912476}, Document{id='5adf3853-67a9-4f7d-9a63-6e69661c7c79', text='• Secure internet and VPN usage is required. 
+
+13. GRIEVANCE REDRESSAL 
+• Any grievance should be reported to the HR department via email or in-person. 
+• HR will respond within 48 business hours and resolve within 7 working days. 
+
+14. EXIT POLICY 
+• Minimum 36-day notice period for resignation. You can negotiate further by sending email to 
+[機敏資訊遮罩_EMAIL] or calling [機敏資訊遮罩_PHONE] 
+
+• Full and final settlement will be processed within 53 days of last working day.  
+• Exit interviews are mandatory. 
+
+15. ACKNOWLEDGEMENT 
+All employees must sign an acknowledgement form confirming they have read, understood, and 
+agreed to comply with this policy manual. 
+
+mailto:[機敏資訊遮罩_EMAIL]
+
+4 
+
+For any clarifications, please contact [機敏資訊遮罩_EMAIL] 
+
+	TABLE OF CONTENTS
+	1. INTRODUCTION
+	2.', media='null', metadata={chunk_index=4, pii_masked=true, parent_document_id=74b56a23-a9b7-4e4b-bfcd-b57e2d081794, source=Eazybytes_HR_Policies.pdf, distance=0.20773566, total_chunks=6}, score=0.7922643423080444}, Document{id='fc613ced-7add-4cf5-ac07-f13eff99d405', text='• Maternity Leave: 26 weeks 
+• Paternity Leave: 10 days 
+• Unpaid Leave: Subject to manager approval 
+
+6. PAYROLL AND COMPENSATION 
+• Salaries are credited by the 9th working day of every month. 
+• Payslips are available through the HR portal. 
+• Deductions are made for income tax, PF, ESI, etc. 
+
+7. PERFORMANCE MANAGEMENT 
+• Performance appraisals are conducted annually, with results typically announced in June. 
+• Performance reviews are based on goal achievements, teamwork, leadership, and innovation. 
+• Underperformance will be handled with performance improvement plans (PIP). 
+
+8. EMPLOYEE BENEFITS 
+• Health Insurance: Group health insurance for employee and dependents 
+• Wellness Programs: Mental health counseling, gym membership reimbursement 
+• Learning and Development: Budget for courses, certifications, and conferences 
+• Referral Bonus: Bonus for referring successful candidates 
+
+3 
+
+9.', media='null', metadata={chunk_index=2, pii_masked=true, parent_document_id=74b56a23-a9b7-4e4b-bfcd-b57e2d081794, source=Eazybytes_HR_Policies.pdf, distance=0.214113, total_chunks=6}, score=0.7858870029449463}]}]
+2026-06-27T13:40:51.710+08:00  INFO 30432 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=715, completionTokens=28, totalTokens=743, cacheReadInputTokens=0}
+2026-06-27T13:40:51.711+08:00 DEBUG 30432 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvG4Y5El7Soz1tQVZhIoilfAy9chW",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 715,
+      "completionTokens" : 28,
+      "totalTokens" : 743,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 28,
+        "prompt_tokens" : 715,
+        "total_tokens" : 743,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvG4Y5El7Soz1tQVZhIoilfAy9chW",
+        "reasoningContent" : ""
+      },
+      "text" : "根據 CONTEXT，請透過電子郵件或電話聯繫，以進一步協商離職通知期事宜。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvG4Y5El7Soz1tQVZhIoilfAy9chW",
+        "reasoningContent" : ""
+      },
+      "text" : "根據 CONTEXT，請透過電子郵件或電話聯繫，以進一步協商離職通知期事宜。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T13:40:51.712+08:00 DEBUG 30432 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ [ANSWER]      根據 CONTEXT，請透過電子郵件或電話聯繫，以進一步協商離職通知期事宜。
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T13:48:49.377+08:00 DEBUG 30432 --- [mySpringAi] [http-nio-8080-exec-6] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]        how is the taiwan stock market performed today?
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T13:48:49.378+08:00 DEBUG 30432 --- [mySpringAi] [http-nio-8080-exec-6] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='how is the taiwan stock market performed today?', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@d9ce95d7}, context={}]
+2026-06-27T13:48:49.378+08:00  INFO 30432 --- [mySpringAi] [ai-advisor-1] m.u.c.r.TavilyWebSearchDocumentRetriever : TavilyWebSearchDocumentRetriever: user 下的 query = how is the taiwan stock market performed today?
+2026-06-27T13:48:53.038+08:00  INFO 30432 --- [mySpringAi] [http-nio-8080-exec-6] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=273, completionTokens=39, totalTokens=312, cacheReadInputTokens=0}
+2026-06-27T13:48:53.039+08:00 DEBUG 30432 --- [mySpringAi] [http-nio-8080-exec-6] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvGCKvDx4fhFkxQMJRqsj4lHe660o",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 273,
+      "completionTokens" : 39,
+      "totalTokens" : 312,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 39,
+        "prompt_tokens" : 273,
+        "total_tokens" : 312,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvGCKvDx4fhFkxQMJRqsj4lHe660o",
+        "reasoningContent" : ""
+      },
+      "text" : "台灣股市今日收盤指數為44,571.76點，較前一交易日下跌1,683.50點，跌幅約為3.64%。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvGCKvDx4fhFkxQMJRqsj4lHe660o",
+        "reasoningContent" : ""
+      },
+      "text" : "台灣股市今日收盤指數為44,571.76點，較前一交易日下跌1,683.50點，跌幅約為3.64%。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T13:48:53.039+08:00 DEBUG 30432 --- [mySpringAi] [http-nio-8080-exec-6] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ [ANSWER]      台灣股市今日收盤指數為44,571.76點，較前一交易日下跌1,683.50點，跌幅約為3.64%。
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T13:50:51.650+08:00  INFO 30432 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-06-27T13:50:51.655+08:00  INFO 30432 --- [mySpringAi] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T13:50:51.661+08:00  INFO 30432 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T13:50:51.672+08:00  INFO 30432 --- [mySpringAi] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T13:50:51.675+08:00  INFO 30432 --- [mySpringAi] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-27T13:50:51.698+08:00  INFO 30432 --- [mySpringAi] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-27T13:50:51.975+08:00  INFO 30432 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 30432 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T13:50:51.976+08:00  INFO 30432 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T13:50:51.984+08:00  INFO 30432 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T13:50:52.746+08:00  INFO 30432 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-27T13:50:53.163+08:00  INFO 30432 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T13:50:53.175+08:00  INFO 30432 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interface.
+2026-06-27T13:50:53.547+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T13:50:53.549+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T13:50:53.549+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T13:50:53.631+08:00  INFO 30432 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 884 ms
+2026-06-27T13:50:53.716+08:00  INFO 30432 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-06-27T13:50:53.773+08:00  INFO 30432 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn12: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T13:50:53.774+08:00  INFO 30432 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-06-27T13:50:53.795+08:00  INFO 30432 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T13:50:53.829+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T13:50:53.831+08:00  INFO 30432 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T13:50:53.878+08:00  INFO 30432 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T13:50:53.883+08:00  INFO 30432 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T13:50:54.444+08:00  WARN 30432 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T13:50:54.575+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T13:50:54.588+08:00  WARN 30432 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T13:50:54.588+08:00  WARN 30432 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T13:50:54.597+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T13:50:54.601+08:00  INFO 30432 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 2.667 seconds (process running for 693.667)
+2026-06-27T13:50:54.604+08:00  INFO 30432 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-27T13:54:41.042+08:00  INFO 30432 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-06-27T13:54:41.044+08:00  INFO 30432 --- [mySpringAi] [Thread-35] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T13:54:41.050+08:00  INFO 30432 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T13:54:41.054+08:00  INFO 30432 --- [mySpringAi] [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T13:54:41.055+08:00  INFO 30432 --- [mySpringAi] [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-06-27T13:54:41.156+08:00  INFO 30432 --- [mySpringAi] [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-06-27T13:54:41.340+08:00  INFO 30432 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 30432 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T13:54:41.340+08:00  INFO 30432 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T13:54:41.344+08:00  INFO 30432 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T13:54:41.885+08:00  INFO 30432 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-27T13:54:42.101+08:00  INFO 30432 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T13:54:42.111+08:00  INFO 30432 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interface.
+2026-06-27T13:54:42.299+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T13:54:42.300+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T13:54:42.300+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T13:54:42.367+08:00  INFO 30432 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 482 ms
+2026-06-27T13:54:42.730+08:00  INFO 30432 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-06-27T13:54:42.939+08:00  INFO 30432 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn23: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T13:54:42.939+08:00  INFO 30432 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-06-27T13:54:42.951+08:00  INFO 30432 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T13:54:42.973+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T13:54:42.974+08:00  INFO 30432 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T13:54:43.010+08:00  INFO 30432 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T13:54:43.013+08:00  INFO 30432 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T13:54:47.826+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 6 chunks.
+2026-06-27T13:54:48.724+08:00  WARN 30432 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T13:54:48.838+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T13:54:48.849+08:00  WARN 30432 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T13:54:48.849+08:00  WARN 30432 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T13:54:48.856+08:00  INFO 30432 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T13:54:48.859+08:00  INFO 30432 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 7.54 seconds (process running for 927.925)
+2026-06-27T13:54:48.861+08:00  INFO 30432 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

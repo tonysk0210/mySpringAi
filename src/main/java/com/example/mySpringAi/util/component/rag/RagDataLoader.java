@@ -27,8 +27,8 @@ public class RagDataLoader {
      * vectorStore     -> Spring AI 自動建立 -> rag-collection
      * pdfVectorStore  -> 你自己建立       -> pdf-collection
      * <p>
-     * // vectorStore 來自 pom.xml 的 spring-ai-starter-vector-store-qdrant
-     * // 並透過 spring.ai.vectorstore.qdrant.collection-name=rag-collection 決定 collection
+     * vectorStore 來自 pom.xml 的 spring-ai-starter-vector-store-qdrant
+     * 並透過 spring.ai.vectorstore.qdrant.collection-name=rag-collection 決定 collection
      */
     @Autowired
     public RagDataLoader(VectorStore vectorStore, @Qualifier("pdfVectorStore") VectorStore pdfVectorSotre) {
@@ -101,7 +101,7 @@ public class RagDataLoader {
                 "Reading daily improves vocabulary and cognitive function.",
                 "Setting daily goals increases productivity.",
                 "STEM stands for Science, Technology, Engineering, and Mathematics.",
-                "Bloom’s taxonomy categorizes educational goals.",
+                "Bloom's taxonomy categorizes educational goals.",
                 "Project-based learning enhances student engagement.",
                 "Online courses offer flexibility for remote learners.",
                 "Flashcards are effective for memorizing vocabulary.",
