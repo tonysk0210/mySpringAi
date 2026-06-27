@@ -20683,3 +20683,2236 @@ Consider defining a bean of type 'org.springframework.ai.chat.client.ChatClient'
 ╔══ ◄ LLM Response ══════════════════════════════════════════════════
 ║ [ASSISTANT]   台灣的首都為台北市。
 ╚════════════════════════════════════════════════════════════════════
+2026-06-27T21:09:37.008+08:00  WARN 32536 --- [mySpringAi] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=39m37s884ms110µs).
+2026-06-27T21:12:57.206+08:00  INFO 32536 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-06-27T21:12:57.280+08:00  INFO 32536 --- [mySpringAi] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T21:12:57.301+08:00  INFO 32536 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T21:12:57.334+08:00  INFO 32536 --- [mySpringAi] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T21:12:57.344+08:00  INFO 32536 --- [mySpringAi] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-27T21:12:57.490+08:00  INFO 32536 --- [mySpringAi] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-27T21:12:58.479+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 32536 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T21:12:58.479+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T21:12:58.491+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T21:12:59.384+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-27T21:12:59.992+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-27T21:12:59.993+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T21:13:00.120+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 125 ms. Found 1 JPA repository interface.
+2026-06-27T21:13:00.636+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T21:13:00.639+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T21:13:00.639+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T21:13:00.730+08:00  INFO 32536 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1346 ms
+2026-06-27T21:13:00.832+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-06-27T21:13:00.900+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn33: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T21:13:00.901+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-06-27T21:13:00.934+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T21:13:00.991+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T21:13:00.993+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T21:13:01.147+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T21:13:01.163+08:00  INFO 32536 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T21:13:03.270+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.m.util.component.rag.RagDataLoader   : pdf-collection 已有資料，跳過載入
+2026-06-27T21:13:03.273+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.m.util.component.rag.RagDataLoader   : rag-collection 已有資料，跳過載入
+2026-06-27T21:13:03.296+08:00  WARN 32536 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T21:13:04.253+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T21:13:04.331+08:00  WARN 32536 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T21:13:04.331+08:00  WARN 32536 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T21:13:04.351+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T21:13:04.536+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 6.853 seconds (process running for 5186.878)
+2026-06-27T21:13:04.542+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-27T21:13:05.657+08:00  INFO 32536 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-06-27T21:13:05.663+08:00  INFO 32536 --- [mySpringAi] [Thread-36] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T21:13:05.672+08:00  INFO 32536 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T21:13:05.681+08:00  INFO 32536 --- [mySpringAi] [Thread-36] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T21:13:05.682+08:00  INFO 32536 --- [mySpringAi] [Thread-36] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-06-27T21:13:05.811+08:00  INFO 32536 --- [mySpringAi] [Thread-36] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-06-27T21:13:06.473+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 32536 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T21:13:06.473+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T21:13:06.479+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T21:13:07.103+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-27T21:13:07.420+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-27T21:13:07.420+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T21:13:07.503+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 1 JPA repository interface.
+2026-06-27T21:13:07.829+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T21:13:07.829+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T21:13:07.830+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T21:13:07.909+08:00  INFO 32536 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 805 ms
+2026-06-27T21:13:07.990+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-06-27T21:13:08.067+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn44: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T21:13:08.068+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-06-27T21:13:08.091+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T21:13:08.132+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T21:13:08.133+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T21:13:08.185+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T21:13:08.189+08:00  INFO 32536 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T21:13:09.357+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.m.util.component.rag.RagDataLoader   : pdf-collection 已有資料，跳過載入
+2026-06-27T21:13:09.361+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.m.util.component.rag.RagDataLoader   : rag-collection 已有資料，跳過載入
+2026-06-27T21:13:09.376+08:00  WARN 32536 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T21:13:10.085+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T21:13:10.171+08:00  WARN 32536 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T21:13:10.172+08:00  WARN 32536 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T21:13:10.232+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T21:13:10.371+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 4.424 seconds (process running for 5192.713)
+2026-06-27T21:13:10.372+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-27T22:30:37.394+08:00  INFO 32536 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2026-06-27T22:30:37.400+08:00  INFO 32536 --- [mySpringAi] [Thread-56] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T22:30:37.413+08:00  INFO 32536 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T22:30:37.421+08:00  INFO 32536 --- [mySpringAi] [Thread-56] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T22:30:37.424+08:00  INFO 32536 --- [mySpringAi] [Thread-56] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-06-27T22:30:37.558+08:00  INFO 32536 --- [mySpringAi] [Thread-56] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-06-27T22:30:38.232+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 32536 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T22:30:38.232+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T22:30:38.245+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T22:30:38.990+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-27T22:30:39.516+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-27T22:30:39.517+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T22:30:39.649+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 130 ms. Found 1 JPA repository interface.
+2026-06-27T22:30:40.217+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T22:30:40.221+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T22:30:40.221+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T22:30:40.334+08:00  INFO 32536 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1343 ms
+2026-06-27T22:30:40.463+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-06-27T22:30:40.522+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn79: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T22:30:40.522+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-06-27T22:30:40.557+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T22:30:40.628+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T22:30:40.630+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T22:30:40.743+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T22:30:40.752+08:00  INFO 32536 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T22:30:40.818+08:00  WARN 32536 --- [mySpringAi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'autoEmailResponseController' defined in file [D:\IdeaProjects\mySpringAi\target\classes\com\example\mySpringAi\controller\AutoEmailResponseController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.ai.chat.client.ChatClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("openaiChatClient-withoutMemory")}
+2026-06-27T22:30:40.819+08:00  INFO 32536 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T22:30:40.823+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-06-27T22:30:40.983+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-06-27T22:30:40.983+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-27T22:30:40.996+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-27T22:30:41.039+08:00 ERROR 32536 --- [mySpringAi] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.mySpringAi.controller.AutoEmailResponseController required a bean of type 'org.springframework.ai.chat.client.ChatClient' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Qualifier("openaiChatClient-withoutMemory")
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.ai.chat.client.ChatClient' in your configuration.
+
+2026-06-27T22:30:43.030+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 32536 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T22:30:43.030+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T22:30:43.033+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T22:30:43.694+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-27T22:30:43.978+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-27T22:30:43.978+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T22:30:44.051+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 1 JPA repository interface.
+2026-06-27T22:30:44.321+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T22:30:44.321+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T22:30:44.322+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T22:30:44.401+08:00  INFO 32536 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 707 ms
+2026-06-27T22:30:44.451+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-06-27T22:30:44.493+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn88: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T22:30:44.493+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-06-27T22:30:44.504+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T22:30:44.541+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T22:30:44.543+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T22:30:44.599+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T22:30:44.602+08:00  INFO 32536 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T22:30:45.665+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.m.util.component.rag.RagDataLoader   : pdf-collection 已有資料，跳過載入
+2026-06-27T22:30:45.669+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.m.util.component.rag.RagDataLoader   : rag-collection 已有資料，跳過載入
+2026-06-27T22:30:45.690+08:00  WARN 32536 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T22:30:46.021+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T22:30:46.079+08:00  WARN 32536 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T22:30:46.079+08:00  WARN 32536 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T22:30:46.095+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T22:30:46.235+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 3.45 seconds (process running for 9848.576)
+2026-06-27T22:30:46.240+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-27T22:33:36.860+08:00  INFO 32536 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2026-06-27T22:33:36.864+08:00  INFO 32536 --- [mySpringAi] [Thread-76] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T22:33:36.874+08:00  INFO 32536 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T22:33:36.880+08:00  INFO 32536 --- [mySpringAi] [Thread-76] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T22:33:36.882+08:00  INFO 32536 --- [mySpringAi] [Thread-76] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-06-27T22:33:37.012+08:00  INFO 32536 --- [mySpringAi] [Thread-76] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2026-06-27T22:33:37.541+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 32536 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T22:33:37.542+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T22:33:37.548+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T22:33:39.202+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-27T22:33:39.675+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-27T22:33:39.676+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T22:33:39.792+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 1 JPA repository interface.
+2026-06-27T22:33:40.334+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T22:33:40.336+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T22:33:40.336+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T22:33:40.434+08:00  INFO 32536 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1231 ms
+2026-06-27T22:33:40.529+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-06-27T22:33:40.580+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn99: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T22:33:40.580+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-06-27T22:33:40.619+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T22:33:40.683+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T22:33:40.685+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T22:33:40.755+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T22:33:40.759+08:00  INFO 32536 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T22:33:40.824+08:00  WARN 32536 --- [mySpringAi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'autoEmailResponseController' defined in file [D:\IdeaProjects\mySpringAi\target\classes\com\example\mySpringAi\controller\AutoEmailResponseController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.ai.chat.client.ChatClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("openaiChatClient-withoutMemory")}
+2026-06-27T22:33:40.826+08:00  INFO 32536 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T22:33:40.826+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-06-27T22:33:41.025+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2026-06-27T22:33:41.026+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-27T22:33:41.036+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-27T22:33:41.047+08:00 ERROR 32536 --- [mySpringAi] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.mySpringAi.controller.AutoEmailResponseController required a bean of type 'org.springframework.ai.chat.client.ChatClient' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Qualifier("openaiChatClient-withoutMemory")
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.ai.chat.client.ChatClient' in your configuration.
+
+2026-06-27T22:33:42.939+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 32536 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T22:33:42.940+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T22:33:42.947+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T22:33:43.806+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-27T22:33:44.166+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-27T22:33:44.166+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T22:33:44.252+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 1 JPA repository interface.
+2026-06-27T22:33:44.531+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T22:33:44.532+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T22:33:44.532+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T22:33:44.609+08:00  INFO 32536 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 803 ms
+2026-06-27T22:33:44.653+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-06-27T22:33:44.694+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection conn106: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T22:33:44.694+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-06-27T22:33:44.706+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T22:33:44.755+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T22:33:44.756+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T22:33:44.818+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T22:33:44.822+08:00  INFO 32536 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T22:33:45.871+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.m.util.component.rag.RagDataLoader   : pdf-collection 已有資料，跳過載入
+2026-06-27T22:33:45.893+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.m.util.component.rag.RagDataLoader   : rag-collection 已有資料，跳過載入
+2026-06-27T22:33:45.904+08:00  WARN 32536 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T22:33:46.167+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T22:33:46.220+08:00  WARN 32536 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T22:33:46.220+08:00  WARN 32536 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T22:33:46.232+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T22:33:46.302+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 3.814 seconds (process running for 10028.643)
+2026-06-27T22:33:46.304+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-27T22:35:56.635+08:00  INFO 32536 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-06-27T22:35:56.649+08:00  INFO 32536 --- [mySpringAi] [Thread-110] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T22:35:56.658+08:00  INFO 32536 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T22:35:56.666+08:00  INFO 32536 --- [mySpringAi] [Thread-110] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T22:35:56.668+08:00  INFO 32536 --- [mySpringAi] [Thread-110] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2026-06-27T22:35:56.800+08:00  INFO 32536 --- [mySpringAi] [Thread-110] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2026-06-27T22:35:57.481+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 32536 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T22:35:57.482+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T22:35:57.490+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T22:35:58.450+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-27T22:35:58.977+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-27T22:35:58.977+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T22:35:59.122+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 143 ms. Found 1 JPA repository interface.
+2026-06-27T22:35:59.683+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T22:35:59.684+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T22:35:59.684+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T22:35:59.793+08:00  INFO 32536 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1342 ms
+2026-06-27T22:35:59.936+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2026-06-27T22:35:59.983+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection conn117: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T22:35:59.984+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2026-06-27T22:36:00.012+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T22:36:00.088+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T22:36:00.092+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T22:36:00.260+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T22:36:00.268+08:00  INFO 32536 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T22:36:02.422+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.m.util.component.rag.RagDataLoader   : pdf-collection 已有資料，跳過載入
+2026-06-27T22:36:02.424+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.m.util.component.rag.RagDataLoader   : rag-collection 已有資料，跳過載入
+2026-06-27T22:36:02.435+08:00  WARN 32536 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T22:36:02.789+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T22:36:02.841+08:00  WARN 32536 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T22:36:02.841+08:00  WARN 32536 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T22:36:02.854+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T22:36:02.922+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 5.932 seconds (process running for 10165.264)
+2026-06-27T22:36:02.923+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-27T22:36:41.589+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-27T22:36:41.589+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-27T22:36:41.590+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-27T22:36:41.626+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]        tell me about current time
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T22:36:41.626+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='tell me about current time', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@6a6b733c}, context={chat_memory_conversation_id=tool-Anthony}]
+2026-06-27T22:36:43.962+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=107, completionTokens=48, totalTokens=155, cacheReadInputTokens=0}
+2026-06-27T22:36:43.964+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvOR9PsQfSxuipBReBhzD67RKYeYE",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 107,
+      "completionTokens" : 48,
+      "totalTokens" : 155,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 48,
+        "prompt_tokens" : 107,
+        "total_tokens" : 155,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "TOOL_CALLS"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "TOOL_CALLS",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvOR9PsQfSxuipBReBhzD67RKYeYE",
+        "reasoningContent" : ""
+      },
+      "text" : "",
+      "toolCalls" : [ {
+        "id" : "call_DgC7GgDyRHR6dbGQOz7O7dCd",
+        "type" : "function",
+        "name" : "getCurrentLocalTime",
+        "arguments" : "{}"
+      }, {
+        "id" : "call_uiUv0kxSngKsKX1yBh4Er7ho",
+        "type" : "function",
+        "name" : "getCurrentTime",
+        "arguments" : "{\"timeZone\": \"Asia/Taipei\"}"
+      } ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "TOOL_CALLS"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "TOOL_CALLS",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvOR9PsQfSxuipBReBhzD67RKYeYE",
+        "reasoningContent" : ""
+      },
+      "text" : "",
+      "toolCalls" : [ {
+        "id" : "call_DgC7GgDyRHR6dbGQOz7O7dCd",
+        "type" : "function",
+        "name" : "getCurrentLocalTime",
+        "arguments" : "{}"
+      }, {
+        "id" : "call_uiUv0kxSngKsKX1yBh4Er7ho",
+        "type" : "function",
+        "name" : "getCurrentTime",
+        "arguments" : "{\"timeZone\": \"Asia/Taipei\"}"
+      } ]
+    }
+  } ]
+}
+2026-06-27T22:36:43.964+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T22:36:43.971+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] com.example.mySpringAi.tools.TimeTool    : Returning current local time
+2026-06-27T22:36:43.972+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] com.example.mySpringAi.tools.TimeTool    : Returning current time in time zone: Asia/Taipei
+2026-06-27T22:36:43.979+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]        tell me about current time
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T22:36:43.984+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='tell me about current time', metadata={messageType=USER}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[ToolCall[id=call_DgC7GgDyRHR6dbGQOz7O7dCd, type=function, name=getCurrentLocalTime, arguments={}], ToolCall[id=call_uiUv0kxSngKsKX1yBh4Er7ho, type=function, name=getCurrentTime, arguments={"timeZone": "Asia/Taipei"}]], textContent=, metadata={role=assistant, messageType=ASSISTANT, finishReason=TOOL_CALLS, refusal=, annotations=[], index=0, id=chatcmpl-DvOR9PsQfSxuipBReBhzD67RKYeYE, reasoningContent=}], ToolResponseMessage{responses=[ToolResponse[id=call_DgC7GgDyRHR6dbGQOz7O7dCd, name=getCurrentLocalTime, responseData="現在時間是: 22:36:43.971320"], ToolResponse[id=call_uiUv0kxSngKsKX1yBh4Er7ho, name=getCurrentTime, responseData="22:36:43.972320"]], messageType=TOOL, metadata={messageType=TOOL}}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@6a6b733c}, context={chat_memory_conversation_id=tool-Anthony}]
+2026-06-27T22:36:45.305+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=190, completionTokens=27, totalTokens=217, cacheReadInputTokens=0}
+2026-06-27T22:36:45.306+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvORAFWxaY70CL2UPm8JQwT6Ys68a",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 190,
+      "completionTokens" : 27,
+      "totalTokens" : 217,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 27,
+        "prompt_tokens" : 190,
+        "total_tokens" : 217,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvORAFWxaY70CL2UPm8JQwT6Ys68a",
+        "reasoningContent" : ""
+      },
+      "text" : "目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvORAFWxaY70CL2UPm8JQwT6Ys68a",
+        "reasoningContent" : ""
+      },
+      "text" : "目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T22:36:45.306+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ [ASSISTANT]   目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T22:37:25.560+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。
+║ [USER]        tell me about current time
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T22:37:25.560+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:41.621508Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:45.311097Z}], UserMessage{content='tell me about current time', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@6a6b733c}, context={chat_memory_conversation_id=tool-Anthony}]
+2026-06-27T22:37:26.570+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=146, completionTokens=48, totalTokens=194, cacheReadInputTokens=0}
+2026-06-27T22:37:26.572+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvORqrT5qPczdx6iiaXZySQsDv3eT",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 146,
+      "completionTokens" : 48,
+      "totalTokens" : 194,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 48,
+        "prompt_tokens" : 146,
+        "total_tokens" : 194,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "TOOL_CALLS"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "TOOL_CALLS",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvORqrT5qPczdx6iiaXZySQsDv3eT",
+        "reasoningContent" : ""
+      },
+      "text" : "",
+      "toolCalls" : [ {
+        "id" : "call_aLYpEdK9JmoUSBBJ7MxhJ3YI",
+        "type" : "function",
+        "name" : "getCurrentLocalTime",
+        "arguments" : "{}"
+      }, {
+        "id" : "call_2e3B9zTZCxq372kE2WVeRNvP",
+        "type" : "function",
+        "name" : "getCurrentTime",
+        "arguments" : "{\"timeZone\": \"Asia/Taipei\"}"
+      } ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "TOOL_CALLS"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "TOOL_CALLS",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvORqrT5qPczdx6iiaXZySQsDv3eT",
+        "reasoningContent" : ""
+      },
+      "text" : "",
+      "toolCalls" : [ {
+        "id" : "call_aLYpEdK9JmoUSBBJ7MxhJ3YI",
+        "type" : "function",
+        "name" : "getCurrentLocalTime",
+        "arguments" : "{}"
+      }, {
+        "id" : "call_2e3B9zTZCxq372kE2WVeRNvP",
+        "type" : "function",
+        "name" : "getCurrentTime",
+        "arguments" : "{\"timeZone\": \"Asia/Taipei\"}"
+      } ]
+    }
+  } ]
+}
+2026-06-27T22:37:26.572+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T22:37:26.572+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-3] com.example.mySpringAi.tools.TimeTool    : Returning current local time
+2026-06-27T22:37:26.573+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-3] com.example.mySpringAi.tools.TimeTool    : Returning current time in time zone: Asia/Taipei
+2026-06-27T22:37:26.573+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。
+║ [USER]        tell me about current time
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T22:37:26.573+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:41.621508Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:45.311097Z}], UserMessage{content='tell me about current time', metadata={messageType=USER}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[ToolCall[id=call_aLYpEdK9JmoUSBBJ7MxhJ3YI, type=function, name=getCurrentLocalTime, arguments={}], ToolCall[id=call_2e3B9zTZCxq372kE2WVeRNvP, type=function, name=getCurrentTime, arguments={"timeZone": "Asia/Taipei"}]], textContent=, metadata={role=assistant, messageType=ASSISTANT, finishReason=TOOL_CALLS, refusal=, annotations=[], index=0, id=chatcmpl-DvORqrT5qPczdx6iiaXZySQsDv3eT, reasoningContent=}], ToolResponseMessage{responses=[ToolResponse[id=call_aLYpEdK9JmoUSBBJ7MxhJ3YI, name=getCurrentLocalTime, responseData="現在時間是: 22:37:26.572376800"], ToolResponse[id=call_2e3B9zTZCxq372kE2WVeRNvP, name=getCurrentTime, responseData="22:37:26.573377800"]], messageType=TOOL, metadata={messageType=TOOL}}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@6a6b733c}, context={chat_memory_conversation_id=tool-Anthony}]
+2026-06-27T22:37:27.093+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=231, completionTokens=10, totalTokens=241, cacheReadInputTokens=0}
+2026-06-27T22:37:27.093+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvORqOlUjSr12sDXRJwymZ4D0UqSn",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 231,
+      "completionTokens" : 10,
+      "totalTokens" : 241,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 10,
+        "prompt_tokens" : 231,
+        "total_tokens" : 241,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvORqOlUjSr12sDXRJwymZ4D0UqSn",
+        "reasoningContent" : ""
+      },
+      "text" : "目前的時間是22:37分。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvORqOlUjSr12sDXRJwymZ4D0UqSn",
+        "reasoningContent" : ""
+      },
+      "text" : "目前的時間是22:37分。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T22:37:27.094+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ [ASSISTANT]   目前的時間是22:37分。
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T22:54:53.329+08:00  INFO 32536 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2026-06-27T22:54:53.347+08:00  INFO 32536 --- [mySpringAi] [Thread-144] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T22:54:53.355+08:00  INFO 32536 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T22:54:53.371+08:00  INFO 32536 --- [mySpringAi] [Thread-144] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T22:54:53.374+08:00  INFO 32536 --- [mySpringAi] [Thread-144] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2026-06-27T22:54:53.375+08:00  INFO 32536 --- [mySpringAi] [Thread-144] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2026-06-27T22:54:54.269+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 32536 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T22:54:54.269+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T22:54:54.279+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T22:54:55.117+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-27T22:54:55.660+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-27T22:54:55.660+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T22:54:55.802+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138 ms. Found 1 JPA repository interface.
+2026-06-27T22:54:56.388+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T22:54:56.391+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T22:54:56.391+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T22:54:56.482+08:00  INFO 32536 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1364 ms
+2026-06-27T22:54:56.581+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2026-06-27T22:54:56.582+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection conn127: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T22:54:56.583+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2026-06-27T22:54:56.612+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T22:54:56.667+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T22:54:56.669+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T22:54:56.741+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T22:54:56.745+08:00  INFO 32536 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T22:54:58.153+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.m.util.component.rag.RagDataLoader   : pdf-collection 已有資料，跳過載入
+2026-06-27T22:54:58.155+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.m.util.component.rag.RagDataLoader   : rag-collection 已有資料，跳過載入
+2026-06-27T22:54:58.173+08:00  WARN 32536 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T22:54:58.502+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T22:54:58.569+08:00  WARN 32536 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T22:54:58.569+08:00  WARN 32536 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T22:54:58.582+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T22:54:58.702+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 5.114 seconds (process running for 11301.044)
+2026-06-27T22:54:58.705+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-27T22:55:18.742+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-27T22:55:18.742+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-27T22:55:18.744+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-27T22:55:18.756+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的時間是22:37分。
+║ [USER]        tell me about current time
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T22:55:18.757+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:41.621508Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:45.311097Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:25.557580Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的時間是22:37分。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:27.106021Z}], UserMessage{content='tell me about current time', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@56349129}, context={chat_memory_conversation_id=tool-Anthony}]
+2026-06-27T22:55:20.171+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=168, completionTokens=48, totalTokens=216, cacheReadInputTokens=0}
+2026-06-27T22:55:20.172+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvOj9U6yz6YhNUUxqFq6vS5cZGd7C",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 168,
+      "completionTokens" : 48,
+      "totalTokens" : 216,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 48,
+        "prompt_tokens" : 168,
+        "total_tokens" : 216,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "TOOL_CALLS"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "TOOL_CALLS",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvOj9U6yz6YhNUUxqFq6vS5cZGd7C",
+        "reasoningContent" : ""
+      },
+      "text" : "",
+      "toolCalls" : [ {
+        "id" : "call_scQcGUkrz5HSeg26LS5AfdUS",
+        "type" : "function",
+        "name" : "getCurrentLocalTime",
+        "arguments" : "{}"
+      }, {
+        "id" : "call_PjaRhGU0QaRqqsleSoEQntrc",
+        "type" : "function",
+        "name" : "getCurrentTime",
+        "arguments" : "{\"timeZone\": \"Asia/Taipei\"}"
+      } ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "TOOL_CALLS"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "TOOL_CALLS",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvOj9U6yz6YhNUUxqFq6vS5cZGd7C",
+        "reasoningContent" : ""
+      },
+      "text" : "",
+      "toolCalls" : [ {
+        "id" : "call_scQcGUkrz5HSeg26LS5AfdUS",
+        "type" : "function",
+        "name" : "getCurrentLocalTime",
+        "arguments" : "{}"
+      }, {
+        "id" : "call_PjaRhGU0QaRqqsleSoEQntrc",
+        "type" : "function",
+        "name" : "getCurrentTime",
+        "arguments" : "{\"timeZone\": \"Asia/Taipei\"}"
+      } ]
+    }
+  } ]
+}
+2026-06-27T22:55:20.172+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ [TOOL_CALL]   getCurrentLocalTime({})
+║ [TOOL_CALL]   getCurrentTime({"timeZone": "Asia/Taipei"})
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T22:55:20.173+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] com.example.mySpringAi.tools.TimeTool    : Returning current local time
+2026-06-27T22:55:20.173+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] com.example.mySpringAi.tools.TimeTool    : Returning current time in time zone: Asia/Taipei
+2026-06-27T22:55:20.373+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的時間是22:37分。
+║ [USER]        tell me about current time
+║ [TOOL_CALL]   getCurrentLocalTime({})
+║ [TOOL_CALL]   getCurrentTime({"timeZone": "Asia/Taipei"})
+║ [TOOL_RESP]   getCurrentLocalTime → "現在時間是: 22:55:20.173500300"
+║ [TOOL_RESP]   getCurrentTime → "22:55:20.173500300"
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T22:55:20.586+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:41.621508Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:45.311097Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:25.557580Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的時間是22:37分。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:27.106021Z}], UserMessage{content='tell me about current time', metadata={messageType=USER}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[ToolCall[id=call_scQcGUkrz5HSeg26LS5AfdUS, type=function, name=getCurrentLocalTime, arguments={}], ToolCall[id=call_PjaRhGU0QaRqqsleSoEQntrc, type=function, name=getCurrentTime, arguments={"timeZone": "Asia/Taipei"}]], textContent=, metadata={role=assistant, messageType=ASSISTANT, finishReason=TOOL_CALLS, refusal=, annotations=[], index=0, id=chatcmpl-DvOj9U6yz6YhNUUxqFq6vS5cZGd7C, reasoningContent=}], ToolResponseMessage{responses=[ToolResponse[id=call_scQcGUkrz5HSeg26LS5AfdUS, name=getCurrentLocalTime, responseData="現在時間是: 22:55:20.173500300"], ToolResponse[id=call_PjaRhGU0QaRqqsleSoEQntrc, name=getCurrentTime, responseData="22:55:20.173500300"]], messageType=TOOL, metadata={messageType=TOOL}}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@56349129}, context={chat_memory_conversation_id=tool-Anthony}]
+2026-06-27T22:55:21.468+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=253, completionTokens=12, totalTokens=265, cacheReadInputTokens=0}
+2026-06-27T22:55:21.468+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvOjBnzgzG9rKZWBrlR1W8edZyYXA",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 253,
+      "completionTokens" : 12,
+      "totalTokens" : 265,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 12,
+        "prompt_tokens" : 253,
+        "total_tokens" : 265,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvOjBnzgzG9rKZWBrlR1W8edZyYXA",
+        "reasoningContent" : ""
+      },
+      "text" : "目前的時間是22:55分20秒。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvOjBnzgzG9rKZWBrlR1W8edZyYXA",
+        "reasoningContent" : ""
+      },
+      "text" : "目前的時間是22:55分20秒。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T22:55:21.469+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ [ASSISTANT]   目前的時間是22:55分20秒。
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T23:03:44.696+08:00  INFO 32536 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-06-27T23:03:44.702+08:00  INFO 32536 --- [mySpringAi] [Thread-166] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T23:03:44.712+08:00  INFO 32536 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T23:03:44.719+08:00  INFO 32536 --- [mySpringAi] [Thread-166] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T23:03:44.721+08:00  INFO 32536 --- [mySpringAi] [Thread-166] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2026-06-27T23:03:44.723+08:00  INFO 32536 --- [mySpringAi] [Thread-166] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2026-06-27T23:03:45.358+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 32536 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T23:03:45.358+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T23:03:45.367+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T23:03:46.167+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-27T23:03:46.692+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-27T23:03:46.692+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T23:03:46.808+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 1 JPA repository interface.
+2026-06-27T23:03:47.353+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T23:03:47.357+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T23:03:47.357+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T23:03:47.452+08:00  INFO 32536 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1284 ms
+2026-06-27T23:03:47.553+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2026-06-27T23:03:47.554+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection conn137: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T23:03:47.555+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2026-06-27T23:03:47.586+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T23:03:47.650+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T23:03:47.652+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T23:03:47.718+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T23:03:47.722+08:00  INFO 32536 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T23:03:49.670+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.m.util.component.rag.RagDataLoader   : pdf-collection 已有資料，跳過載入
+2026-06-27T23:03:49.674+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.m.util.component.rag.RagDataLoader   : rag-collection 已有資料，跳過載入
+2026-06-27T23:03:49.690+08:00  WARN 32536 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T23:03:49.965+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T23:03:50.026+08:00  WARN 32536 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T23:03:50.026+08:00  WARN 32536 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T23:03:50.039+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T23:03:50.157+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 5.302 seconds (process running for 11832.499)
+2026-06-27T23:03:50.159+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-27T23:17:54.592+08:00  INFO 32536 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-06-27T23:17:54.598+08:00  INFO 32536 --- [mySpringAi] [Thread-185] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T23:17:54.612+08:00  INFO 32536 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T23:17:54.628+08:00  INFO 32536 --- [mySpringAi] [Thread-185] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T23:17:54.630+08:00  INFO 32536 --- [mySpringAi] [Thread-185] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2026-06-27T23:17:54.631+08:00  INFO 32536 --- [mySpringAi] [Thread-185] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2026-06-27T23:17:55.365+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 32536 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T23:17:55.366+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T23:17:55.372+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T23:17:56.223+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-27T23:17:56.487+08:00  WARN 32536 --- [mySpringAi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+2026-06-27T23:17:56.488+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-27T23:17:56.493+08:00 ERROR 32536 --- [mySpringAi] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-4.1.0.jar:4.1.0]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:100) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:196) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:124) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:464) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:316) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:795) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:603) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
+	at com.example.mySpringAi.MySpringAiApplication.main(MySpringAiApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.0.jar:4.1.0]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.example.mySpringAi.config.ChatClientConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3e69c31d]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-7.0.8.jar:7.0.8]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-7.0.8.jar:7.0.8]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$0(AbstractAutowireCapableBeanFactory.java:748) ~[spring-beans-7.0.8.jar:7.0.8]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1724) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:747) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:681) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:653) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1699) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:632) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:604) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:589) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanDefinitionsForType(OnBeanCondition.java:334) ~[spring-boot-autoconfigure-4.1.0.jar:4.1.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanDefinitionsForType(OnBeanCondition.java:323) ~[spring-boot-autoconfigure-4.1.0.jar:4.1.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:221) ~[spring-boot-autoconfigure-4.1.0.jar:4.1.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.evaluateConditionalOnMissingBean(OnBeanCondition.java:204) ~[spring-boot-autoconfigure-4.1.0.jar:4.1.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:149) ~[spring-boot-autoconfigure-4.1.0.jar:4.1.0]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-4.1.0.jar:4.1.0]
+	... 20 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/example/mySpringAi/tools/TimeTool
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3010) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2329) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-7.0.8.jar:7.0.8]
+	... 37 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.example.mySpringAi.tools.TimeTool
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:547) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:123) ~[spring-boot-devtools-4.1.0.jar:4.1.0]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	... 41 common frames omitted
+
+2026-06-27T23:17:58.263+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 32536 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T23:17:58.263+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T23:17:58.269+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T23:17:58.910+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-27T23:17:59.189+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-27T23:17:59.189+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T23:17:59.272+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 1 JPA repository interface.
+2026-06-27T23:17:59.582+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T23:17:59.584+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T23:17:59.584+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T23:17:59.683+08:00  INFO 32536 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 773 ms
+2026-06-27T23:17:59.745+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2026-06-27T23:17:59.746+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection conn147: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T23:17:59.747+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2026-06-27T23:17:59.761+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T23:17:59.813+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T23:17:59.817+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T23:17:59.884+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T23:17:59.887+08:00  INFO 32536 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T23:18:00.894+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.m.util.component.rag.RagDataLoader   : pdf-collection 已有資料，跳過載入
+2026-06-27T23:18:00.897+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.m.util.component.rag.RagDataLoader   : rag-collection 已有資料，跳過載入
+2026-06-27T23:18:00.911+08:00  WARN 32536 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T23:18:01.505+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T23:18:01.654+08:00  WARN 32536 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T23:18:01.654+08:00  WARN 32536 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T23:18:01.690+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T23:18:01.884+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 3.96 seconds (process running for 12684.226)
+2026-06-27T23:18:01.890+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-27T23:18:30.626+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-7] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-27T23:18:30.626+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-27T23:18:30.628+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-27T23:18:30.652+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-7] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的時間是22:37分。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的時間是22:55分20秒。
+║ [USER]        tell me about current time
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T23:18:30.653+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-7] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:41.621508Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:45.311097Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:25.557580Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的時間是22:37分。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:27.106021Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:55:18.754633Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的時間是22:55分20秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:55:21.473108Z}], UserMessage{content='tell me about current time', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@37068e40}, context={chat_memory_conversation_id=tool-Anthony}]
+2026-06-27T23:18:32.343+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-7] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=194, completionTokens=19, totalTokens=213, cacheReadInputTokens=0}
+2026-06-27T23:18:32.344+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-7] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvP5cnOT3iAO84tATaIFyAJgzWzQq",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 194,
+      "completionTokens" : 19,
+      "totalTokens" : 213,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 19,
+        "prompt_tokens" : 194,
+        "total_tokens" : 213,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "TOOL_CALLS"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "TOOL_CALLS",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvP5cnOT3iAO84tATaIFyAJgzWzQq",
+        "reasoningContent" : ""
+      },
+      "text" : "",
+      "toolCalls" : [ {
+        "id" : "call_ufcLjS9nVdRniLJBEDIwXgJk",
+        "type" : "function",
+        "name" : "getCurrentTime",
+        "arguments" : "{\"timeZone\":\"Asia/Taipei\"}"
+      } ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "TOOL_CALLS"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "TOOL_CALLS",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvP5cnOT3iAO84tATaIFyAJgzWzQq",
+        "reasoningContent" : ""
+      },
+      "text" : "",
+      "toolCalls" : [ {
+        "id" : "call_ufcLjS9nVdRniLJBEDIwXgJk",
+        "type" : "function",
+        "name" : "getCurrentTime",
+        "arguments" : "{\"timeZone\":\"Asia/Taipei\"}"
+      } ]
+    }
+  } ]
+}
+2026-06-27T23:18:32.344+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-7] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ [TOOL_CALL]   getCurrentTime({"timeZone":"Asia/Taipei"})
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T23:18:32.344+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-7] com.example.mySpringAi.tools.TimeTool    : 呼叫 Tool - getCurrentTime: Asia/Taipei
+2026-06-27T23:18:32.345+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-7] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的時間是22:37分。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的時間是22:55分20秒。
+║ [USER]        tell me about current time
+║ [TOOL_CALL]   getCurrentTime({"timeZone":"Asia/Taipei"})
+║ [TOOL_RESP]   getCurrentTime → "23:18:32.345910"
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T23:18:32.345+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-7] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:41.621508Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:45.311097Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:25.557580Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的時間是22:37分。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:27.106021Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:55:18.754633Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的時間是22:55分20秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:55:21.473108Z}], UserMessage{content='tell me about current time', metadata={messageType=USER}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[ToolCall[id=call_ufcLjS9nVdRniLJBEDIwXgJk, type=function, name=getCurrentTime, arguments={"timeZone":"Asia/Taipei"}]], textContent=, metadata={role=assistant, messageType=ASSISTANT, finishReason=TOOL_CALLS, refusal=, annotations=[], index=0, id=chatcmpl-DvP5cnOT3iAO84tATaIFyAJgzWzQq, reasoningContent=}], ToolResponseMessage{responses=[ToolResponse[id=call_ufcLjS9nVdRniLJBEDIwXgJk, name=getCurrentTime, responseData="23:18:32.345910"]], messageType=TOOL, metadata={messageType=TOOL}}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@37068e40}, context={chat_memory_conversation_id=tool-Anthony}]
+2026-06-27T23:18:33.456+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-7] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=232, completionTokens=14, totalTokens=246, cacheReadInputTokens=0}
+2026-06-27T23:18:33.457+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-7] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvP5dSlRFsWQiJEFY7wgNSmWhco69",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 232,
+      "completionTokens" : 14,
+      "totalTokens" : 246,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 14,
+        "prompt_tokens" : 232,
+        "total_tokens" : 246,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvP5dSlRFsWQiJEFY7wgNSmWhco69",
+        "reasoningContent" : ""
+      },
+      "text" : "目前台北時間是晚上11點18分32秒。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvP5dSlRFsWQiJEFY7wgNSmWhco69",
+        "reasoningContent" : ""
+      },
+      "text" : "目前台北時間是晚上11點18分32秒。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T23:18:33.457+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-7] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ [ASSISTANT]   目前台北時間是晚上11點18分32秒。
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T23:26:44.833+08:00  INFO 32536 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-06-27T23:26:44.836+08:00  INFO 32536 --- [mySpringAi] [Thread-204] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T23:26:44.845+08:00  INFO 32536 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T23:26:44.851+08:00  INFO 32536 --- [mySpringAi] [Thread-204] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T23:26:44.853+08:00  INFO 32536 --- [mySpringAi] [Thread-204] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2026-06-27T23:26:44.853+08:00  INFO 32536 --- [mySpringAi] [Thread-204] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2026-06-27T23:26:45.602+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 32536 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T23:26:45.603+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T23:26:45.613+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T23:26:46.618+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-27T23:26:47.053+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-27T23:26:47.053+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T23:26:47.152+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 1 JPA repository interface.
+2026-06-27T23:26:47.687+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T23:26:47.691+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T23:26:47.691+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T23:26:47.789+08:00  INFO 32536 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1171 ms
+2026-06-27T23:26:48.074+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2026-06-27T23:26:48.077+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Added connection conn157: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T23:26:48.079+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2026-06-27T23:26:48.112+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T23:26:48.176+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T23:26:48.179+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T23:26:48.261+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T23:26:48.266+08:00  INFO 32536 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T23:26:49.582+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.m.util.component.rag.RagDataLoader   : pdf-collection 已有資料，跳過載入
+2026-06-27T23:26:49.585+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.m.util.component.rag.RagDataLoader   : rag-collection 已有資料，跳過載入
+2026-06-27T23:26:49.615+08:00  WARN 32536 --- [mySpringAi] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-27T23:26:49.965+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-06-27T23:26:50.030+08:00  WARN 32536 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-06-27T23:26:50.030+08:00  WARN 32536 --- [mySpringAi] [restartedMain] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-06-27T23:26:50.048+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-06-27T23:26:50.154+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 5.148 seconds (process running for 13212.496)
+2026-06-27T23:26:50.157+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-27T23:27:02.484+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-27T23:27:02.484+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-27T23:27:02.485+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-27T23:27:02.501+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的時間是22:37分。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的時間是22:55分20秒。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前台北時間是晚上11點18分32秒。
+║ [USER]        tell me about current time
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T23:27:02.502+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:41.621508Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:45.311097Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:25.557580Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的時間是22:37分。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:27.106021Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:55:18.754633Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的時間是22:55分20秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:55:21.473108Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:18:30.641869Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前台北時間是晚上11點18分32秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:18:33.461094Z}], UserMessage{content='tell me about current time', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@473e309f}, context={chat_memory_conversation_id=tool-Anthony}]
+2026-06-27T23:27:03.714+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=220, completionTokens=19, totalTokens=239, cacheReadInputTokens=0}
+2026-06-27T23:27:03.715+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvPDrblngL99kiWSTBRGNqU6qAdhv",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 220,
+      "completionTokens" : 19,
+      "totalTokens" : 239,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 19,
+        "prompt_tokens" : 220,
+        "total_tokens" : 239,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "TOOL_CALLS"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "TOOL_CALLS",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvPDrblngL99kiWSTBRGNqU6qAdhv",
+        "reasoningContent" : ""
+      },
+      "text" : "",
+      "toolCalls" : [ {
+        "id" : "call_5xJGaR7D6h4xKtfSv4wijIZs",
+        "type" : "function",
+        "name" : "getCurrentTime",
+        "arguments" : "{\"timeZone\":\"Asia/Taipei\"}"
+      } ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "TOOL_CALLS"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "TOOL_CALLS",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvPDrblngL99kiWSTBRGNqU6qAdhv",
+        "reasoningContent" : ""
+      },
+      "text" : "",
+      "toolCalls" : [ {
+        "id" : "call_5xJGaR7D6h4xKtfSv4wijIZs",
+        "type" : "function",
+        "name" : "getCurrentTime",
+        "arguments" : "{\"timeZone\":\"Asia/Taipei\"}"
+      } ]
+    }
+  } ]
+}
+2026-06-27T23:27:03.716+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ [TOOL_CALL]   getCurrentTime({"timeZone":"Asia/Taipei"})
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T23:27:03.716+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] com.example.mySpringAi.tools.TimeTool    : 呼叫 Tool - getCurrentTime: Asia/Taipei
+2026-06-27T23:27:03.717+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的時間是22:37分。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的時間是22:55分20秒。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前台北時間是晚上11點18分32秒。
+║ [USER]        tell me about current time
+║ [TOOL_CALL]   getCurrentTime({"timeZone":"Asia/Taipei"})
+║ [TOOL_RESP]   getCurrentTime → "23:27:03.716196200"
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T23:27:03.717+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:41.621508Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:45.311097Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:25.557580Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的時間是22:37分。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:27.106021Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:55:18.754633Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的時間是22:55分20秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:55:21.473108Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:18:30.641869Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前台北時間是晚上11點18分32秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:18:33.461094Z}], UserMessage{content='tell me about current time', metadata={messageType=USER}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[ToolCall[id=call_5xJGaR7D6h4xKtfSv4wijIZs, type=function, name=getCurrentTime, arguments={"timeZone":"Asia/Taipei"}]], textContent=, metadata={role=assistant, messageType=ASSISTANT, finishReason=TOOL_CALLS, refusal=, annotations=[], index=0, id=chatcmpl-DvPDrblngL99kiWSTBRGNqU6qAdhv, reasoningContent=}], ToolResponseMessage{responses=[ToolResponse[id=call_5xJGaR7D6h4xKtfSv4wijIZs, name=getCurrentTime, responseData="23:27:03.716196200"]], messageType=TOOL, metadata={messageType=TOOL}}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@473e309f}, context={chat_memory_conversation_id=tool-Anthony}]
+2026-06-27T23:27:04.512+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=259, completionTokens=14, totalTokens=273, cacheReadInputTokens=0}
+2026-06-27T23:27:04.512+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvPDs1ffCm3RYxms9M0xBqB8lJ7qU",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 259,
+      "completionTokens" : 14,
+      "totalTokens" : 273,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 14,
+        "prompt_tokens" : 259,
+        "total_tokens" : 273,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvPDs1ffCm3RYxms9M0xBqB8lJ7qU",
+        "reasoningContent" : ""
+      },
+      "text" : "目前台北時間是晚上11點27分03秒。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvPDs1ffCm3RYxms9M0xBqB8lJ7qU",
+        "reasoningContent" : ""
+      },
+      "text" : "目前台北時間是晚上11點27分03秒。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T23:27:04.512+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-2] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ [ASSISTANT]   目前台北時間是晚上11點27分03秒。
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T23:27:36.334+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的時間是22:37分。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的時間是22:55分20秒。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前台北時間是晚上11點18分32秒。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前台北時間是晚上11點27分03秒。
+║ [USER]        現在是幾點
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T23:27:36.334+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:41.621508Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:45.311097Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:25.557580Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的時間是22:37分。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:27.106021Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:55:18.754633Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的時間是22:55分20秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:55:21.473108Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:18:30.641869Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前台北時間是晚上11點18分32秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:18:33.461094Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:27:02.497031Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前台北時間是晚上11點27分03秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:27:04.516823Z}], UserMessage{content='現在是幾點', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@473e309f}, context={chat_memory_conversation_id=tool-Anthony}]
+2026-06-27T23:27:36.966+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=246, completionTokens=19, totalTokens=265, cacheReadInputTokens=0}
+2026-06-27T23:27:36.966+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvPEOynz16uhdRBGR67X54ZdOZa1I",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 246,
+      "completionTokens" : 19,
+      "totalTokens" : 265,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 19,
+        "prompt_tokens" : 246,
+        "total_tokens" : 265,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "TOOL_CALLS"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "TOOL_CALLS",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvPEOynz16uhdRBGR67X54ZdOZa1I",
+        "reasoningContent" : ""
+      },
+      "text" : "",
+      "toolCalls" : [ {
+        "id" : "call_kuhL1OYeROw8wStM7NtGGD5T",
+        "type" : "function",
+        "name" : "getCurrentTime",
+        "arguments" : "{\"timeZone\":\"Asia/Taipei\"}"
+      } ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "TOOL_CALLS"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "TOOL_CALLS",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvPEOynz16uhdRBGR67X54ZdOZa1I",
+        "reasoningContent" : ""
+      },
+      "text" : "",
+      "toolCalls" : [ {
+        "id" : "call_kuhL1OYeROw8wStM7NtGGD5T",
+        "type" : "function",
+        "name" : "getCurrentTime",
+        "arguments" : "{\"timeZone\":\"Asia/Taipei\"}"
+      } ]
+    }
+  } ]
+}
+2026-06-27T23:27:36.967+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ [TOOL_CALL]   getCurrentTime({"timeZone":"Asia/Taipei"})
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T23:27:36.967+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-3] com.example.mySpringAi.tools.TimeTool    : 呼叫 Tool - getCurrentTime: Asia/Taipei
+2026-06-27T23:27:36.967+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的時間是22:37分。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的時間是22:55分20秒。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前台北時間是晚上11點18分32秒。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前台北時間是晚上11點27分03秒。
+║ [USER]        現在是幾點
+║ [TOOL_CALL]   getCurrentTime({"timeZone":"Asia/Taipei"})
+║ [TOOL_RESP]   getCurrentTime → "23:27:36.967531700"
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T23:27:36.967+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:41.621508Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:45.311097Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:25.557580Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的時間是22:37分。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:27.106021Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:55:18.754633Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的時間是22:55分20秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:55:21.473108Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:18:30.641869Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前台北時間是晚上11點18分32秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:18:33.461094Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:27:02.497031Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前台北時間是晚上11點27分03秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:27:04.516823Z}], UserMessage{content='現在是幾點', metadata={messageType=USER}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[ToolCall[id=call_kuhL1OYeROw8wStM7NtGGD5T, type=function, name=getCurrentTime, arguments={"timeZone":"Asia/Taipei"}]], textContent=, metadata={role=assistant, messageType=ASSISTANT, finishReason=TOOL_CALLS, refusal=, annotations=[], index=0, id=chatcmpl-DvPEOynz16uhdRBGR67X54ZdOZa1I, reasoningContent=}], ToolResponseMessage{responses=[ToolResponse[id=call_kuhL1OYeROw8wStM7NtGGD5T, name=getCurrentTime, responseData="23:27:36.967531700"]], messageType=TOOL, metadata={messageType=TOOL}}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@473e309f}, context={chat_memory_conversation_id=tool-Anthony}]
+2026-06-27T23:27:37.794+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=285, completionTokens=11, totalTokens=296, cacheReadInputTokens=0}
+2026-06-27T23:27:37.795+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-3] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvPEP7AvLkVFMNSUA3JMrNUuf9ozy",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 285,
+      "completionTokens" : 11,
+      "totalTokens" : 296,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 11,
+        "prompt_tokens" : 285,
+        "total_tokens" : 296,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvPEP7AvLkVFMNSUA3JMrNUuf9ozy",
+        "reasoningContent" : ""
+      },
+      "text" : "現在是晚上11點27分36秒。",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvPEP7AvLkVFMNSUA3JMrNUuf9ozy",
+        "reasoningContent" : ""
+      },
+      "text" : "現在是晚上11點27分36秒。",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-06-27T23:27:37.795+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-3] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ [ASSISTANT]   現在是晚上11點27分36秒。
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T23:29:17.340+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-6] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的時間是22:37分。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的時間是22:55分20秒。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前台北時間是晚上11點18分32秒。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前台北時間是晚上11點27分03秒。
+║ [USER]        現在是幾點
+║ [ASSISTANT]   現在是晚上11點27分36秒。
+║ [USER]        現在本地時間?
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T23:29:17.340+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-6] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:41.621508Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:45.311097Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:25.557580Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的時間是22:37分。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:27.106021Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:55:18.754633Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的時間是22:55分20秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:55:21.473108Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:18:30.641869Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前台北時間是晚上11點18分32秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:18:33.461094Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:27:02.497031Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前台北時間是晚上11點27分03秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:27:04.516823Z}], UserMessage{content='現在是幾點', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:27:36.331984Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=現在是晚上11點27分36秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:27:37.800793Z}], UserMessage{content='現在本地時間?', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@473e309f}, context={chat_memory_conversation_id=tool-Anthony}]
+2026-06-27T23:29:18.130+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-6] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=269, completionTokens=12, totalTokens=281, cacheReadInputTokens=0}
+2026-06-27T23:29:18.131+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-6] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvPG18LB0yaeiB5FsUz52CsuDa0P2",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 269,
+      "completionTokens" : 12,
+      "totalTokens" : 281,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 12,
+        "prompt_tokens" : 269,
+        "total_tokens" : 281,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "TOOL_CALLS"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "TOOL_CALLS",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvPG18LB0yaeiB5FsUz52CsuDa0P2",
+        "reasoningContent" : ""
+      },
+      "text" : "",
+      "toolCalls" : [ {
+        "id" : "call_18aD3BCYRt6VuqdEBQnHoyF1",
+        "type" : "function",
+        "name" : "getCurrentLocalTime",
+        "arguments" : "{}"
+      } ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "TOOL_CALLS"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "TOOL_CALLS",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvPG18LB0yaeiB5FsUz52CsuDa0P2",
+        "reasoningContent" : ""
+      },
+      "text" : "",
+      "toolCalls" : [ {
+        "id" : "call_18aD3BCYRt6VuqdEBQnHoyF1",
+        "type" : "function",
+        "name" : "getCurrentLocalTime",
+        "arguments" : "{}"
+      } ]
+    }
+  } ]
+}
+2026-06-27T23:29:18.131+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-6] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ [TOOL_CALL]   getCurrentLocalTime({})
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T23:29:18.131+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-6] com.example.mySpringAi.tools.TimeTool    : 呼叫 Tool - getCurrentLocalTime
+2026-06-27T23:29:45.852+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-7] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的時間是22:37分。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前的時間是22:55分20秒。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前台北時間是晚上11點18分32秒。
+║ [USER]        tell me about current time
+║ [ASSISTANT]   目前台北時間是晚上11點27分03秒。
+║ [USER]        現在是幾點
+║ [ASSISTANT]   現在是晚上11點27分36秒。
+║ [USER]        現在本地時間?
+║ [ASSISTANT]   "現在時間是: 23:29:18.131097400"
+║ [USER]        現在本地時間?
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T23:29:45.852+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-7] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='回答時請使用清楚、易理解且專業的繁體中文。', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:41.621508Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的本地時間是22:36:43，而台北時間也是相同的，約為22:36。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:36:45.311097Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:25.557580Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的時間是22:37分。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:37:27.106021Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:55:18.754633Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前的時間是22:55分20秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T14:55:21.473108Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:18:30.641869Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前台北時間是晚上11點18分32秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:18:33.461094Z}], UserMessage{content='tell me about current time', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:27:02.497031Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=目前台北時間是晚上11點27分03秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:27:04.516823Z}], UserMessage{content='現在是幾點', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:27:36.331984Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=現在是晚上11點27分36秒。, metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:27:37.800793Z}], UserMessage{content='現在本地時間?', metadata={messageType=USER, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:29:17.338069Z}, messageType=USER}, AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent="現在時間是: 23:29:18.131097400", metadata={messageType=ASSISTANT, JdbcChatMemoryRepository_message_timestamp=2026-06-27T15:29:18.135511Z}], UserMessage{content='現在本地時間?', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@473e309f}, context={chat_memory_conversation_id=tool-Anthony}]
+2026-06-27T23:29:46.383+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-7] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=298, completionTokens=12, totalTokens=310, cacheReadInputTokens=0}
+2026-06-27T23:29:46.384+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-7] o.s.a.c.c.advisor.SimpleLoggerAdvisor    : response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-DvPGUP5jrI3IpJ1kaomSeL48ySGxt",
+    "model" : "gpt-4.1-nano-2025-04-14",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 298,
+      "completionTokens" : 12,
+      "totalTokens" : 310,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 12,
+        "prompt_tokens" : 298,
+        "total_tokens" : 310,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "TOOL_CALLS"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "TOOL_CALLS",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvPGUP5jrI3IpJ1kaomSeL48ySGxt",
+        "reasoningContent" : ""
+      },
+      "text" : "",
+      "toolCalls" : [ {
+        "id" : "call_lY1gGaHP2QaLVdA9mmnYRwt4",
+        "type" : "function",
+        "name" : "getCurrentLocalTime",
+        "arguments" : "{}"
+      } ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "TOOL_CALLS"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "TOOL_CALLS",
+        "refusal" : "",
+        "annotations" : [ ],
+        "index" : 0,
+        "id" : "chatcmpl-DvPGUP5jrI3IpJ1kaomSeL48ySGxt",
+        "reasoningContent" : ""
+      },
+      "text" : "",
+      "toolCalls" : [ {
+        "id" : "call_lY1gGaHP2QaLVdA9mmnYRwt4",
+        "type" : "function",
+        "name" : "getCurrentLocalTime",
+        "arguments" : "{}"
+      } ]
+    }
+  } ]
+}
+2026-06-27T23:29:46.384+08:00 DEBUG 32536 --- [mySpringAi] [http-nio-8080-exec-7] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response ══════════════════════════════════════════════════
+║ [TOOL_CALL]   getCurrentLocalTime({})
+╚════════════════════════════════════════════════════════════════════
+2026-06-27T23:29:46.384+08:00  INFO 32536 --- [mySpringAi] [http-nio-8080-exec-7] com.example.mySpringAi.tools.TimeTool    : 呼叫 Tool - getCurrentLocalTime
+2026-06-27T23:35:55.665+08:00  INFO 32536 --- [mySpringAi] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-06-27T23:35:55.685+08:00  INFO 32536 --- [mySpringAi] [Thread-234] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-27T23:35:55.698+08:00  INFO 32536 --- [mySpringAi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-27T23:35:55.732+08:00  INFO 32536 --- [mySpringAi] [Thread-234] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T23:35:55.735+08:00  INFO 32536 --- [mySpringAi] [Thread-234] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2026-06-27T23:35:55.737+08:00  INFO 32536 --- [mySpringAi] [Thread-234] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2026-06-27T23:35:56.796+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25.0.1 with PID 32536 (D:\IdeaProjects\mySpringAi\target\classes started by tony.shangkuan in D:\IdeaProjects\MySpringAi)
+2026-06-27T23:35:56.797+08:00  INFO 32536 --- [mySpringAi] [restartedMain] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-27T23:35:56.808+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\IdeaProjects\mySpringAi\compose.yml
+2026-06-27T23:35:57.559+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-06-27T23:35:58.031+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-27T23:35:58.031+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-27T23:35:58.144+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 1 JPA repository interface.
+2026-06-27T23:35:58.672+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-06-27T23:35:58.676+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-27T23:35:58.676+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-27T23:35:58.764+08:00  INFO 32536 --- [mySpringAi] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1204 ms
+2026-06-27T23:35:58.857+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2026-06-27T23:35:58.858+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-13 - Added connection conn167: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-06-27T23:35:58.858+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2026-06-27T23:35:58.884+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-27T23:35:58.931+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-27T23:35:58.932+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-27T23:35:59.033+08:00  INFO 32536 --- [mySpringAi] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-27T23:35:59.038+08:00  INFO 32536 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T23:36:00.286+08:00  WARN 32536 --- [mySpringAi] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'toolCallingController' defined in file [D:\IdeaProjects\mySpringAi\target\classes\com\example\mySpringAi\controller\ToolCallingController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'openaiChatClient-jdbcChatMemory-toolCalling' defined in class path resource [com/example/mySpringAi/config/ChatClientConfig.class]: Unsatisfied dependency expressed through method 'openaiToolCalling' parameter 2: No qualifying bean of type 'com.example.mySpringAi.tools.TimeTool' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-06-27T23:36:00.288+08:00  INFO 32536 --- [mySpringAi] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-27T23:36:00.289+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2026-06-27T23:36:00.289+08:00  INFO 32536 --- [mySpringAi] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2026-06-27T23:36:00.291+08:00  INFO 32536 --- [mySpringAi] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-27T23:36:00.297+08:00  INFO 32536 --- [mySpringAi] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-27T23:36:00.302+08:00 ERROR 32536 --- [mySpringAi] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 2 of method openaiToolCalling in com.example.mySpringAi.config.ChatClientConfig required a bean of type 'com.example.mySpringAi.tools.TimeTool' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Qualifier("openaiChatClient-jdbcChatMemory-toolCalling")
+
+
+Action:
+
+Consider defining a bean of type 'com.example.mySpringAi.tools.TimeTool' in your configuration.
+

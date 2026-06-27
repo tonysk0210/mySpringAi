@@ -125,9 +125,13 @@ public class ChatClientConfig {
 
     @Bean("openaiChatClient-jdbcChatMemory-toolCalling")
     public ChatClient openaiToolCalling(OpenAiChatModel openAiChatModel, @Qualifier("jdbcChatMemory") ChatMemory chatMemory, TimeTool timeTool) {
+        // 1. 設定模型用的「參數」
         ChatOptions.Builder<OpenAiChatOptions.Builder> chatOptions = OpenAiChatOptions.builder().temperature(0.5).maxTokens(500);
+
+        // 2. 建立 MessageChatMemoryAdvisor，也就是「會話記憶攔截器」。使用 jdbcChatMemory 作為記憶源
         Advisor jdbcChatMemoryAdvisor = MessageChatMemoryAdvisor.builder(chatMemory).build();
 
+        // 3. 建立 ChatClient 並加入 4 種 advisor：TokenUsageAuditAdvisor、SimpleLoggerAdvisor、jdbcChatMemoryAdvisor、PrettyLoggerAdvisor 及 ToolAdvisor
         return ChatClient.builder(openAiChatModel)
                 .defaultOptions(chatOptions)
                 .defaultAdvisors(new TokenUsageAuditAdvisor(), new PrettyLoggerAdvisor(), new SimpleLoggerAdvisor(), jdbcChatMemoryAdvisor)

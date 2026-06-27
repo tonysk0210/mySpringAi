@@ -29,13 +29,16 @@ public class ToolCallingController {
     Resource helpDeskTicketPromptTemplate;
 
     @Autowired
-    public ToolCallingController(@Qualifier("openaiChatClient-jdbcChatMemory-toolCalling") ChatClient chatClientTimeCalling, HelpDeskTicketTool helpDeskTicketTool) {
+    public ToolCallingController(@Qualifier("openaiChatClient-jdbcChatMemory-toolCalling") ChatClient chatClientTimeCalling,
+                                 HelpDeskTicketTool helpDeskTicketTool) {
         this.chatClientTimeCalling = chatClientTimeCalling;
         this.helpDeskTicketTool = helpDeskTicketTool;
     }
 
     @PostMapping("/time")
     public ResponseEntity<String> time(@RequestBody GenericChatPayload payload, @RequestHeader("userName") String userName) {
+
+        // 調用時間工具
         String response = chatClientTimeCalling.prompt()
                 .advisors(aSpec -> aSpec.param(CONVERSATION_ID, "tool-" + userName))
                 .user(payload.message())
