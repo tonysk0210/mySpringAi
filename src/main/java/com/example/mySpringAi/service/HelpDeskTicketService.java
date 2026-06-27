@@ -15,7 +15,11 @@ public class HelpDeskTicketService {
 
     private final HelpDeskTicketRepository helpDeskTicketRepository;
 
+    /**
+     * 建立一個 HelpDeskTicket
+     */
     public HelpDeskTicketEntity createHelpDeskTicket(HelpDeskTicketPayload payload, String username) {
+        // 1. 建立一個 HelpDeskTicketEntity
         HelpDeskTicketEntity ticket = HelpDeskTicketEntity.builder()
                 .username(username)
                 .issue(payload.issue())
@@ -23,9 +27,13 @@ public class HelpDeskTicketService {
                 .createdAt(LocalDateTime.now())
                 .eta(LocalDateTime.now().plusDays(7))
                 .build();
+        // 2. 儲存 HelpDeskTicketEntity
         return helpDeskTicketRepository.save(ticket);
     }
 
+    /**
+     * 根據用戶名查詢 HelpDeskTicket
+     */
     public List<HelpDeskTicketEntity> getHelpDeskTicketsByUser(String username) {
         return helpDeskTicketRepository.findByUsername(username);
     }

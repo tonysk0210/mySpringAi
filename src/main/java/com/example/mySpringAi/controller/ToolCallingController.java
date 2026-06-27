@@ -2,11 +2,13 @@ package com.example.mySpringAi.controller;
 
 import com.example.mySpringAi.payload.GenericChatPayload;
 import com.example.mySpringAi.tools.HelpDeskTicketTool;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,6 +26,7 @@ public class ToolCallingController {
 
     private final ChatClient chatClientTimeCalling;
     private final HelpDeskTicketTool helpDeskTicketTool;
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Value("classpath:/promptTemplate/HelpDeskTicketPromptTemplate.st")
     Resource helpDeskTicketPromptTemplate;
@@ -49,12 +52,28 @@ public class ToolCallingController {
     @PostMapping("/helpDeskTicket")
     public ResponseEntity<String> helpDeskTicket(@RequestBody GenericChatPayload payload, @RequestHeader("userName") String userName) {
         String response = chatClientTimeCalling.prompt()
-                .system(helpDeskTicketPromptTemplate)        // System Prompt：指示 LLM 如何處理工單
-                .tools(helpDeskTicketTool)                   // 註冊可呼叫的 tool（新增工單）疊加 .defaultTools()
-                .toolContext(Map.of("userName", userName))   // 傳遞上下文給 tool，例如當前使用者
-                .advisors(aSpec -> aSpec.param(CONVERSATION_ID, "toolHelpDeskTicket-" + userName)) // 以 userName 隔離對話記憶
-                .user(payload.message())                     // 使用者輸入
-                .call().content();                           // 觸發模型與工具呼叫，取得內容
-        return ResponseEntity.ok(response);
+                .system(helpDeskTicketPromptTemplate)
+                .tools(helpDeskTicketTool) // 註冊 HelpDeskTicketTool，本次呼叫可建立工單或查詢工單狀態；會疊加 defaultTools()
+                .toolContext(Map.of("userName", userName)) // 傳入 userName 給 HelpDeskTicketTool
+                .advisors(aSpec -> aSpec.param(CONVERSATION_ID, "toolHelpDeskTicket-" + userName))
+                .user(payload.message())
+                .call().content();
+        // returnDirect=true 的 tool 結果會被 Spring AI 用 ObjectMapper 序列化成 JSON string
+        // 這裡把它反序列化回純字串，換行符號才能正常顯示
+        String body = unwrapJsonString(response);
+        return ResponseEntity.ok()
+                .contentType(MediaType.TEXT_PLAIN)
+                .body(body);
+    }
+
+    // 反序列化 JSON string
+    private String unwrapJsonString(String s) {
+        if (s != null && s.startsWith("\"")) {
+            try {
+                return objectMapper.readValue(s, String.class);
+            } catch (Exception ignored) {
+            }
+        }
+        return s;
     }
 }

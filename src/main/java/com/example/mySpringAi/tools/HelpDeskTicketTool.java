@@ -20,32 +20,51 @@ public class HelpDeskTicketTool {
     private final HelpDeskTicketService service;
 
     // 內部 framework + reflection so Tool's methods still gets called even not declared as public
-    @Tool(name = "createTicket", description = "Create a HelpDesk support ticket", returnDirect = true)
-    String createTicket(@ToolParam(description = "Details to create a Support ticket") HelpDeskTicketPayload payload, ToolContext toolContext) {
 
-        // ToolContext 提供當前 Tool 呼叫的上下文（如 userName / headers），只在這次 call 中有效
+    /**
+     * 建立「服務工單」Tool
+     */
+    @Tool(name = "createTicket", description = "建立「服務工單」", returnDirect = true)
+    String createTicket(@ToolParam(description = "需要建立的「服務工單」的 payload") HelpDeskTicketPayload payload, ToolContext toolContext) {
+
+        // 1. 從 ToolContext 拿出呼叫者 username，避免讓模型自由填寫，從 ChatClient 傳入
         String username = (String) toolContext.getContext().get("userName");
-        log.info("Creating support ticket for user: {} with details: {}", username, payload);
 
-        // 將 LLM 填入的 payload + 呼叫者 username 寫入資料庫
+        log.info("協助 userName: {} 來建立「服務工單」；問題訴求: {}", username, payload);
+
+        // 2. 呼叫 Service 層建立「服務工單」
         HelpDeskTicketEntity savedTicket = service.createHelpDeskTicket(payload, username);
-        log.info("Ticket created successfully. Ticket ID: {}, UserName: {}", savedTicket.getId(), savedTicket.getUsername());
+        log.info("成功建立「服務工單」 id#: {}, userName: {}", savedTicket.getId(), savedTicket.getUsername());
 
-        // returnDirect=true：模型會直接回傳此字串給使用者，不再追加其他回答
-        return "Ticket id#: " + savedTicket.getId() + " created successfully for user: " + savedTicket.getUsername();
+        // 3. 回傳建立「服務工單」的結果 returnDirect=true：模型會直接回傳此字串給使用者，不再追加其他回答
+        return String.format("""
+                工單建立成功！
+                - 工單編號：#%d
+                - 使用者：%s
+                - 問題描述：%s
+                - 狀態：%s
+                - 建立時間：%s
+                - 預計處理時間：%s
+                """,
+                savedTicket.getId(),
+                savedTicket.getUsername(),
+                savedTicket.getIssue(),
+                savedTicket.getStatus(),
+                savedTicket.getCreatedAt(),
+                savedTicket.getEta());
     }
 
-    @Tool(description = "Fetch the status of the tickets based on a given userName")
+    @Tool(description = "取得所有「服務工單」並提供工單相關細節，包括工單編號、問題描述、狀態、建立時間及預計完成時間")
     List<HelpDeskTicketEntity> getTicketStatus(ToolContext toolContext) {
-        // 一樣由 ToolContext 拿出呼叫者 username，避免讓模型自由填寫
+        // 1. 從 ToolContext 拿出呼叫者 username，避免讓模型自由填寫，從 ChatClient 傳入
         String username = (String) toolContext.getContext().get("userName");
-        log.info("Fetching tickets for user: {}", username);
+        log.info("取得 {} 的所有「服務工單」: ", username);
 
-        // 查詢該使用者所有工單並回傳；模型可用此結果回答進度
+        // 2. 查詢該使用者所有「服務工單」並回傳；模型可用此結果回答進度
         List<HelpDeskTicketEntity> tickets = service.getHelpDeskTicketsByUser(username);
-        log.info("Found {} tickets for user: {}", tickets.size(), username);
+        log.info("共 {} 張「服務工單」 for userName: {}", tickets.size(), username);
 
-        // throw new RuntimeException("Unable to fetch ticket status");
-        return tickets;
+        return tickets;         // throw new RuntimeException("Unable to fetch ticket status");
+
     }
 }

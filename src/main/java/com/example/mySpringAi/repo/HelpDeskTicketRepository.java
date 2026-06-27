@@ -8,7 +8,7 @@ import java.util.List;
 
 @Repository
 public interface HelpDeskTicketRepository extends JpaRepository<HelpDeskTicketEntity, Long> {
-
-    //Derived Query
+    
+    // 根據用戶名查詢 HelpDeskTicket Derived Query
     List<HelpDeskTicketEntity> findByUsername(String username);
 }
