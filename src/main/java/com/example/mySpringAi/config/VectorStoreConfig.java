@@ -2,6 +2,7 @@ package com.example.mySpringAi.config;
 
 import io.qdrant.client.QdrantClient;
 import org.springframework.ai.embedding.EmbeddingModel;
+import org.springframework.ai.embedding.TokenCountBatchingStrategy;
 import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.ai.vectorstore.qdrant.QdrantVectorStore;
 import org.springframework.context.annotation.Bean;
@@ -23,6 +24,7 @@ public class VectorStoreConfig {
         return QdrantVectorStore.builder(qdrantClient, embeddingModel)
                 .collectionName("pdf-collection") // 這個 VectorStore 專門存取 Qdrant 裡的 pdf-collection
                 .initializeSchema(true) // 啟動時如果 collection/schema 不存在，會嘗試建立
+                .batchingStrategy(new TokenCountBatchingStrategy())  // 使用 token 數量分批送 embedding；這也是 Spring AI 的預設策略
                 .build();
     }
 }

@@ -12,3 +12,10 @@ services:
     ports:
       - "6333:6333" # 開放 Qdrant REST API　http://localhost:6333/dashboard#/collections 可存取 dashboard
       - "6334:6334" # 開放 Qdrant gRPC API
+
+  # 啟動 Redis Stack，提供 Redis 連線與 semantic cache 需要的 vector search / RediSearch 能力。
+  redis:
+    image: 'redis/redis-stack:latest'
+    ports:
+      - '6379:6379' # Spring app 連 Redis
+      - '8001:8001' # Redis Stack UI

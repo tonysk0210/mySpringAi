@@ -84,7 +84,7 @@
             <artifactId>spring-ai-rag</artifactId>
         </dependency>
 
-        <!-- ChatClient 的自動 RAG Advisor -->
+        <!-- 提供 QuestionAnswerAdvisor / VectorStoreChatMemoryAdvisor；目前專案主要使用 spring-ai-rag 的 RetrievalAugmentationAdvisor -->
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-vector-store-advisor</artifactId>
@@ -101,6 +101,12 @@
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-tika-document-reader</artifactId>
+        </dependency>
+
+        <!-- 提供 Redis-based semantic cache；需手動建立 SemanticCacheAdvisor 並掛到 ChatClient 才會生效 -->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-redis-semantic-cache</artifactId>
         </dependency>
 
         <!-- 讓 Spring Boot 具備「自動啟動 MCP Server、建立 MCP Client、並把 MCP tools 接到 LLM Tool Calling」的能力-->

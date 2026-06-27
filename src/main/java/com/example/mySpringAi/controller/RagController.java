@@ -116,6 +116,22 @@ public class RagController {
                 .call().content();
     }
 
+    /**
+     * Pre-retrieval:
+     * QueryTransformer 把使用者問題翻譯成英文
+     * <p>
+     * Retrieval:
+     * VectorStoreDocumentRetriever 用翻譯後 query 查 pdfVectorStore / Qdrant
+     * <p>
+     * Post-retrieval:
+     * MaskingDocumentPostProcessor 遮罩文件裡的 email / phone
+     * <p>
+     * Augmentation:
+     * ContextualQueryAugmenter 把檢索到的 documents 塞進 RagPdfPromptTemplate.st
+     * <p>
+     * Generation:
+     * OpenAI chat model 產生回答
+     */
     @PostMapping("/preAndPostRAAdvisor")
     public String preRetrieval(@RequestBody GenericChatPayload genericChatPayload) {
         return openaiChatClientWithoutMemory.prompt()
