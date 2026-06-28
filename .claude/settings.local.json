@@ -8,7 +8,10 @@
       "Bash(git mv *)",
       "Bash(git add *)",
       "Bash(git commit *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "WebFetch(domain:github.com)",
+      "Bash(gh api *)",
+      "Bash(gh search *)"
     ]
   }
 }

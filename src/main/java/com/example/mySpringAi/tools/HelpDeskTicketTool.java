@@ -38,14 +38,14 @@ public class HelpDeskTicketTool {
 
         // 3. 回傳建立「服務工單」的結果 returnDirect=true：模型會直接回傳此字串給使用者，不再追加其他回答
         return String.format("""
-                工單建立成功！
-                - 工單編號：#%d
-                - 使用者：%s
-                - 問題描述：%s
-                - 狀態：%s
-                - 建立時間：%s
-                - 預計處理時間：%s
-                """,
+                        工單建立成功！
+                        - 工單編號：#%d
+                        - 使用者：%s
+                        - 問題描述：%s
+                        - 狀態：%s
+                        - 建立時間：%s
+                        - 預計處理時間：%s
+                        """,
                 savedTicket.getId(),
                 savedTicket.getUsername(),
                 savedTicket.getIssue(),
@@ -64,7 +64,7 @@ public class HelpDeskTicketTool {
         List<HelpDeskTicketEntity> tickets = service.getHelpDeskTicketsByUser(username);
         log.info("共 {} 張「服務工單」 for userName: {}", tickets.size(), username);
 
-        return tickets;         // throw new RuntimeException("Unable to fetch ticket status");
-
+        return tickets;
+        // throw new RuntimeException("系統發生錯誤-請聯繫人工客服"); // 用來測試 Tool calling 發生錯誤情境
     }
 }
