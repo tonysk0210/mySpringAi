@@ -30,7 +30,7 @@ public class HelpDeskTicketTool {
         // 1. 從 ToolContext 拿出呼叫者 username，避免讓模型自由填寫，從 ChatClient 傳入
         String username = (String) toolContext.getContext().get("userName");
 
-        log.info("協助 userName: {} 來建立「服務工單」；問題訴求: {}", username, payload);
+        log.info("協助 userName: {} 來建立「服務工單」；問題訴求: {}", username, payload.issue());
 
         // 2. 呼叫 Service 層建立「服務工單」
         HelpDeskTicketEntity savedTicket = service.createHelpDeskTicket(payload, username);
@@ -54,7 +54,7 @@ public class HelpDeskTicketTool {
                 savedTicket.getEta());
     }
 
-    @Tool(description = "取得所有「服務工單」並提供工單相關細節，包括工單編號、問題描述、狀態、建立時間及預計完成時間")
+    @Tool(name = "getTicketStatus", description = "取得所有「服務工單」並提供工單相關細節，包括工單編號、問題描述、狀態、建立時間及預計完成時間")
     List<HelpDeskTicketEntity> getTicketStatus(ToolContext toolContext) {
         // 1. 從 ToolContext 拿出呼叫者 username，避免讓模型自由填寫，從 ChatClient 傳入
         String username = (String) toolContext.getContext().get("userName");
