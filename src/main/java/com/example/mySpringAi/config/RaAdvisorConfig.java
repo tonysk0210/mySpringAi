@@ -164,7 +164,7 @@ public class RaAdvisorConfig {
                                 .promptTemplate(new PromptTemplate(ragPdfPromptTemplate))
                                 // 9. 建立 ContextualQueryAugmenter；執行時會把 {context} 換成 Document 文字，把 {query} 換成使用者問題。
                                 .build())
-                .order(-100)
+                .order(2)
                 .build();
     }
     /**

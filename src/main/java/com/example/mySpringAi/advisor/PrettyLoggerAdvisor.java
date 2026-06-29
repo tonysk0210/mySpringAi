@@ -132,6 +132,6 @@ public class PrettyLoggerAdvisor implements CallAdvisor {
 
     @Override
     public int getOrder() {
-        return 0;
+        return 3;
     }
 }

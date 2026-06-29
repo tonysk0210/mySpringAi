@@ -35,7 +35,7 @@ public class ChatClientConfig {
         // 2. 建立 ChatClient 並加入 2 種 advisor：TokenUsageAuditAdvisor、SimpleLoggerAdvisor
         return ChatClient.builder(openAiChatModel)
                 .defaultOptions(chatOptions)
-                .defaultAdvisors(new TokenUsageAuditAdvisor(), new PrettyLoggerAdvisor(), new SimpleLoggerAdvisor())
+                .defaultAdvisors(new TokenUsageAuditAdvisor(), new PrettyLoggerAdvisor(), new SimpleLoggerAdvisor(4))
                 .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。")
                 .build();
     }
@@ -50,7 +50,7 @@ public class ChatClientConfig {
         // 2. 建立 ChatClient 並加入 3 種 advisor：TokenUsageAuditAdvisor、SimpleLoggerAdvisor、semanticCacheAdvisor
         return ChatClient.builder(openAiChatModel)
                 .defaultOptions(chatOptions)
-                .defaultAdvisors(new TokenUsageAuditAdvisor(), new PrettyLoggerAdvisor(), new SimpleLoggerAdvisor(), semanticCacheAdvisor)
+                .defaultAdvisors(new TokenUsageAuditAdvisor(), new PrettyLoggerAdvisor(), new SimpleLoggerAdvisor(4), semanticCacheAdvisor)
                 .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。")
                 .build();
     }
@@ -64,7 +64,7 @@ public class ChatClientConfig {
         // 2. 建立 ChatClient 並加入 3 種 advisor：TokenUsageAuditAdvisor、SimpleLoggerAdvisor、semanticCacheAdvisor
         return ChatClient.builder(openAiChatModel)
                 .defaultOptions(chatOptions)
-                .defaultAdvisors(new TokenUsageAuditAdvisor(), new PrettyLoggerAdvisor(), new SimpleLoggerAdvisor(), semanticCacheAdvisor)
+                .defaultAdvisors(new TokenUsageAuditAdvisor(), new PrettyLoggerAdvisor(), new SimpleLoggerAdvisor(4), semanticCacheAdvisor)
                 .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。")
                 .build();
     }
@@ -82,7 +82,7 @@ public class ChatClientConfig {
         // 3. 建立 ChatClient 並加入 3 種 advisor：TokenUsageAuditAdvisor、SimpleLoggerAdvisor、inMemoryAdvisor
         return ChatClient.builder(openAiChatModel)
                 .defaultOptions(chatOptions)
-                .defaultAdvisors(new TokenUsageAuditAdvisor(), new PrettyLoggerAdvisor(), new SimpleLoggerAdvisor(), inMemoryAdvisor)
+                .defaultAdvisors(new TokenUsageAuditAdvisor(), new PrettyLoggerAdvisor(), new SimpleLoggerAdvisor(4), inMemoryAdvisor)
                 .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。")
                 .build();
     }
@@ -99,7 +99,7 @@ public class ChatClientConfig {
         // 3. 建立 ChatClient 並加入 3 種 advisor：TokenUsageAuditAdvisor、SimpleLoggerAdvisor、jdbcChatMemoryAdvisor
         return ChatClient.builder(openAiChatModel)
                 .defaultOptions(chatOptions)
-                .defaultAdvisors(new TokenUsageAuditAdvisor(), new PrettyLoggerAdvisor(), new SimpleLoggerAdvisor(), jdbcChatMemoryAdvisor)
+                .defaultAdvisors(new TokenUsageAuditAdvisor(), new PrettyLoggerAdvisor(), new SimpleLoggerAdvisor(4), jdbcChatMemoryAdvisor)
                 .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。")
                 .build();
     }
@@ -117,7 +117,7 @@ public class ChatClientConfig {
         // 3. 建立 ChatClient 並加入 3 種 advisor：TokenUsageAuditAdvisor、SimpleLoggerAdvisor、jdbcChatMemoryAdvisor
         return ChatClient.builder(ollamaChatModel)
                 .defaultOptions(chatOptions)
-                .defaultAdvisors(new TokenUsageAuditAdvisor(), new PrettyLoggerAdvisor(), new SimpleLoggerAdvisor(), jdbcChatMemoryAdvisor)
+                .defaultAdvisors(new TokenUsageAuditAdvisor(), new PrettyLoggerAdvisor(), new SimpleLoggerAdvisor(4), jdbcChatMemoryAdvisor)
                 .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。")
                 .build();
     }
@@ -134,7 +134,7 @@ public class ChatClientConfig {
         // 3. 建立 ChatClient 並加入 4 種 advisor：TokenUsageAuditAdvisor、SimpleLoggerAdvisor、jdbcChatMemoryAdvisor、PrettyLoggerAdvisor 及 ToolAdvisor
         return ChatClient.builder(openAiChatModel)
                 .defaultOptions(chatOptions)
-                .defaultAdvisors(new TokenUsageAuditAdvisor(), new PrettyLoggerAdvisor(), new SimpleLoggerAdvisor(), jdbcChatMemoryAdvisor)
+                .defaultAdvisors(new TokenUsageAuditAdvisor(), new PrettyLoggerAdvisor(), new SimpleLoggerAdvisor(4), jdbcChatMemoryAdvisor)
                 .defaultTools(timeTool)
                 .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。")
                 .build();
