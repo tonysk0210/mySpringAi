@@ -138,6 +138,12 @@
             <artifactId>micrometer-registry-prometheus</artifactId>
         </dependency>
 
+        <!-- Spring Boot 應用程式支援 OpenTelemetry（OTel），自動收集並輸出「追蹤（Trace）」資料，用來分析每個請求從頭到尾經過了哪些服務與步驟。　-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-opentelemetry</artifactId>
+        </dependency>
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

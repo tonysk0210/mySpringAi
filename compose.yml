@@ -21,26 +21,30 @@ services:
       - '8001:8001' # Redis Stack UI
 
   # 啟動一個 Prometheus 容器，把本機的設定檔掛載進去告訴它要去哪裡抓指標，並開放 localhost:9090 讓你用瀏覽器查看
-  # profiles: [monitoring] 代表 Spring Boot 啟動時不會自動啟動此服務；需手動執行 docker compose --profile monitoring up
   prometheus:
     image: prom/prometheus
-    profiles:
-      - monitoring
     volumes:
       - "./prometheus-config.yml:/etc/prometheus/prometheus.yml" # 把本機的 prometheus-config.yml 掛載進容器內 Prometheus 預設讀取設定的位置，讓它知道要去哪裡抓資料。
     ports:
       - 9090:9090
 
   # 啟動一個 Grafana 容器，讓你可以用瀏覽器開啟漂亮的監控儀表板，視覺化 Prometheus 收集到的指標
-  # profiles: [monitoring] 代表 Spring Boot 啟動時不會自動啟動此服務；需手動執行 docker compose --profile monitoring up
   grafana:
     image: grafana/grafana
-    profiles:
-      - monitoring
     ports:
       - '3000:3000' # 開放 Grafana UI，讓你從瀏覽器存取： http://localhost:3000 預設帳號密碼是 admin / admin。
     volumes:
       - grafana-storage:/var/lib/grafana # 實際把它掛進容器使用，跟 Prometheus 的 volumes 不一樣！ 這是 named volume（命名卷），不是掛載本機檔案，而是讓 Docker 自己管理一塊持久化儲存空間。 用途是儲存 Grafana 的儀表板設定、資料來源、帳號等，重啟容器後這些設定不會消失。
+
+  # 啟動一個 Jaeger 容器，用來接收並視覺化 Spring Boot 送來的 Trace（請求追蹤）資料
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    ports:
+      - "16686:16686" # 開放 Jaeger UI，讓你從瀏覽器存取： http://localhost:16686
+      - "4317:4317"   # 開放 Jaeger gRPC API
+      - "4318:4318"   # 開放 Jaeger HTTP API
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true #  開啟 Jaeger 的 OTLP 接收器，讓它能接受 OpenTelemetry 標準格式的 Trace 資料。預設 Jaeger 只接受自己的格式，加這行才能接受 Spring Boot 送來的 OTel 格式。
 
 # 向 Docker 宣告「這個 volume 存在」
 volumes:
