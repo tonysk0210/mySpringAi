@@ -12,7 +12,19 @@
       "WebFetch(domain:github.com)",
       "Bash(gh api *)",
       "Bash(gh search *)",
-      "Bash(jobs -l)"
+      "Bash(jobs -l)",
+      "Bash(docker start myspringai-qdrant-1 *)",
+      "Bash(netstat -ano)",
+      "Bash(findstr \":6333 \\\\|:6334 \\\\|:6379 \\\\|:8001 \")",
+      "Bash(docker system df *)",
+      "Bash(docker info *)",
+      "Bash(docker compose up *)",
+      "Bash(docker run *)",
+      "Bash(wsl --status)",
+      "Bash(wsl -l -v)",
+      "Skill(explain)",
+      "Bash(Get-Content *)",
+      "PowerShell(Get-Process *)"
     ]
   }
 }
