@@ -17,11 +17,18 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Slf4j
 public class PrettyLoggerAdvisor implements CallAdvisor {
 
-    private static final String BAR      = "═".repeat(50);
-    private static final String CONT     = "║               ";
-    private static final int    MAX_LINE = 160; // 超過此寬度強制換行，確保每行都有 ║ 前綴
+    private static final String BAR = "═".repeat(50);
+    private static final String CONT = "║               ";
+    private static final int MAX_LINE = 160; // 超過此寬度強制換行，確保每行都有 ║ 前綴
 
     private final AtomicInteger callCount = new AtomicInteger(0);
+
+    /**
+     * 每次 API 請求開始前呼叫，讓本次 LLM 呼叫序號從 #1 重新計算。
+     */
+    public void reset() {
+        callCount.set(0);
+    }
 
     @Override
     public ChatClientResponse adviseCall(ChatClientRequest request, CallAdvisorChain chain) {
@@ -42,11 +49,11 @@ public class PrettyLoggerAdvisor implements CallAdvisor {
 
         for (Message message : request.prompt().getInstructions()) {
             switch (message.getMessageType()) {
-                case SYSTEM    -> appendSection(sb, "[SYSTEM]", message.getText());
-                case USER      -> appendSection(sb, "[USER]", message.getText());
+                case SYSTEM -> appendSection(sb, "[SYSTEM]", message.getText());
+                case USER -> appendSection(sb, "[USER]", message.getText());
                 case ASSISTANT -> appendAssistantMessage(sb, (AssistantMessage) message);
-                case TOOL      -> appendToolResponse(sb, (ToolResponseMessage) message);
-                default        -> appendSection(sb, "[" + message.getMessageType() + "]", message.getText());
+                case TOOL -> appendToolResponse(sb, (ToolResponseMessage) message);
+                default -> appendSection(sb, "[" + message.getMessageType() + "]", message.getText());
             }
         }
 
@@ -147,6 +154,6 @@ public class PrettyLoggerAdvisor implements CallAdvisor {
 
     @Override
     public int getOrder() {
-        return 3;
+        return 0;
     }
 }
