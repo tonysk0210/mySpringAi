@@ -15,15 +15,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class AutoEmailResponseController {
 
-    private final ChatClient openaiChatClientWithoutMemory;
+    private final ChatClient openaiCCNoMem;
 
     // 指定 PromptTemplate 的位置，Spring 會自動讀取這個檔案並注入 Resource 物件。這裡的 promptTemplateText 是一個 Resource，可以透過 getInputStream() 來讀取檔案內容。
     @Value("classpath:promptTemplate/AutoEmailResponsePromptTemplate.st")
-    private Resource emailResponsePromptTemplateText;
+    private Resource autoEmailResponsePromptTemplate;
 
     @Autowired
-    public AutoEmailResponseController(@Qualifier("openaiChatClient-withoutMemory") ChatClient openaiChatClientWithoutMemory) {
-        this.openaiChatClientWithoutMemory = openaiChatClientWithoutMemory;
+    public AutoEmailResponseController(@Qualifier("openaiCCNoMem") ChatClient openaiCCNoMem) {
+        this.openaiCCNoMem = openaiCCNoMem;
     }
 
     /**
@@ -34,9 +34,10 @@ public class AutoEmailResponseController {
      */
     @PostMapping("/openai/emailResponse")
     public String openaiEmailResponse(@RequestBody AutoEmailResponsePayload autoEmailResponsePayload) {
-        return openaiChatClientWithoutMemory.prompt()
+        return openaiCCNoMem.prompt()
+
                 // 使用預先定義的 PromptTemplate 來生成 Prompt，並將客戶名稱和訊息作為參數傳入。這裡的 promptUserSpec.text() 方法會將 PromptTemplate 的內容與參數結合，生成最終的 Prompt。
-                .user(promptUserSpec -> promptUserSpec.text(emailResponsePromptTemplateText)
+                .user(promptUserSpec -> promptUserSpec.text(autoEmailResponsePromptTemplate)
                         .param("customerName", autoEmailResponsePayload.customerName())
                         .param("customerMessage", autoEmailResponsePayload.customerMessage()))
                 .call().content();

@@ -24,7 +24,8 @@
       "Bash(wsl -l -v)",
       "Skill(explain)",
       "Bash(Get-Content *)",
-      "PowerShell(Get-Process *)"
+      "PowerShell(Get-Process *)",
+      "Bash(npx ctx7@latest *)"
     ]
   }
 }

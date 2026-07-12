@@ -1,6 +1,6 @@
 package com.example.mySpringAi.controller;
 
-import com.example.mySpringAi.payload.GenericChatPayload;
+import com.example.mySpringAi.payload.MessageChatPayload;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.rag.advisor.RetrievalAugmentationAdvisor;
@@ -33,7 +33,7 @@ public class RagController {
     Resource ragPromptTemplate;
 
     @Autowired
-    public RagController(@Qualifier("openaiChatClient-withoutMemory") ChatClient openaiChatClientWithoutMemory,
+    public RagController(@Qualifier("openaiCCNoMem") ChatClient openaiChatClientWithoutMemory,
                          VectorStore vectorStore,
                          @Qualifier("pdfVectorStore") VectorStore pdfVectorStore,
                          RetrievalAugmentationAdvisor retrievalAugmentationAdvisor,
@@ -56,11 +56,11 @@ public class RagController {
      * -> 用 OpenAI 回答
      */
     @PostMapping("/rag")
-    public String openaiChat(@RequestBody GenericChatPayload genericChatPayload) {
+    public String openaiChat(@RequestBody MessageChatPayload messageChatPayload) {
 
         // 1. 建立「搜尋條件」準備向量搜尋條件，用用戶輸入去找語意相近的文件
         SearchRequest searchRequest = SearchRequest.builder()
-                .query(genericChatPayload.message())    // 使用者輸入當查詢文字
+                .query(messageChatPayload.message())    // 使用者輸入當查詢文字
                 .topK(5)                                 // 最多取前 5 筆最相似的 Document
                 .similarityThreshold(.5)             // 搜尋的相似度門檻
                 .build();
@@ -74,7 +74,7 @@ public class RagController {
         // 4. 帶著對話記憶與檢索結果呼叫大模型
         return openaiChatClientWithoutMemory.prompt()
                 .system(systemSpec -> systemSpec.text(ragPromptTemplate).param("documents", similarContext)) // 讀取 RAG prompt template，並把向量搜尋取得的文件內容填入 {documents}，作為 system prompt 傳給模型
-                .user(genericChatPayload.message()) // 將用戶的訊息加到 User Prompt
+                .user(messageChatPayload.message()) // 將用戶的訊息加到 User Prompt
                 .call().content();
     }
 
@@ -90,10 +90,10 @@ public class RagController {
      * -> 用不帶 chat memory 的 OpenAI ChatClient 產生回答
      */
     @PostMapping("/ragPdf")
-    public String pdf(@RequestBody GenericChatPayload genericChatPayload) {
+    public String pdf(@RequestBody MessageChatPayload messageChatPayload) {
         return openaiChatClientWithoutMemory.prompt()
                 .advisors(retrievalAugmentationAdvisor) // 帶著 retrievalAugmentationAdvisor
-                .user(genericChatPayload.message())
+                .user(messageChatPayload.message())
                 .call().content();
     }
 
@@ -109,10 +109,10 @@ public class RagController {
      * -> 使用 openaiChatClientWithoutMemory 呼叫模型產生回答
      */
     @PostMapping("/ragTavily")
-    public String tavily(@RequestBody GenericChatPayload genericChatPayload) {
+    public String tavily(@RequestBody MessageChatPayload messageChatPayload) {
         return openaiChatClientWithoutMemory.prompt()
                 .advisors(tavilyRaAdvisor) // 帶著 tavilyRaAdvisor 自定義 retrievalAugmentationAdvisor
-                .user(genericChatPayload.message())
+                .user(messageChatPayload.message())
                 .call().content();
     }
 
@@ -133,10 +133,10 @@ public class RagController {
      * OpenAI chat model 產生回答
      */
     @PostMapping("/preAndPostRAAdvisor")
-    public String preRetrieval(@RequestBody GenericChatPayload genericChatPayload) {
+    public String preRetrieval(@RequestBody MessageChatPayload messageChatPayload) {
         return openaiChatClientWithoutMemory.prompt()
                 .advisors(preAndPostRAAdvisor)
-                .user(genericChatPayload.message())
+                .user(messageChatPayload.message())
                 .call().content();
     }
 }

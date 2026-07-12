@@ -3,24 +3,21 @@ package com.example.mySpringAi.config;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.ollama.OllamaChatModel;
 import org.springframework.ai.openai.OpenAiChatModel;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class ChatClientBuilderConfig {
 
-    // 手動建立 OpenAI 專用 ChatClient.Builder，避免依賴 Spring AI 預設 builder。
-    @Bean
-    @Qualifier("openaiBuilder")
-    public ChatClient.Builder openAiChatClientBuilder(OpenAiChatModel model) {
+    @Primary
+    @Bean("openaiBuilder")
+    public ChatClient.Builder openaiBuilder(OpenAiChatModel model) {
         return ChatClient.builder(model);
     }
 
-    // 手動建立 Ollama 專用 ChatClient.Builder，避免依賴 Spring AI 預設 builder。
-    @Bean
-    @Qualifier("ollamaBuilder")
-    public ChatClient.Builder ollamaChatClientBuilder(OllamaChatModel model) {
+    @Bean("ollamaBuilder")
+    public ChatClient.Builder ollamaBuilder(OllamaChatModel model) {
         return ChatClient.builder(model);
     }
 }

@@ -1,6 +1,6 @@
 package com.example.mySpringAi.controller;
 
-import com.example.mySpringAi.payload.GenericChatPayload;
+import com.example.mySpringAi.payload.MessageChatPayload;
 import com.example.mySpringAi.tools.HelpDeskTicketTool;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.ai.chat.client.ChatClient;
@@ -32,14 +32,14 @@ public class ToolCallingController {
     Resource helpDeskTicketPromptTemplate;
 
     @Autowired
-    public ToolCallingController(@Qualifier("openaiChatClient-jdbcChatMemory-toolCalling") ChatClient chatClientTimeCalling,
+    public ToolCallingController(@Qualifier("openaiCCJdbcMemoryWithToolCalling") ChatClient chatClientTimeCalling,
                                  HelpDeskTicketTool helpDeskTicketTool) {
         this.chatClientTimeCalling = chatClientTimeCalling;
         this.helpDeskTicketTool = helpDeskTicketTool;
     }
 
     @PostMapping("/time")
-    public ResponseEntity<String> time(@RequestBody GenericChatPayload payload, @RequestHeader("userName") String userName) {
+    public ResponseEntity<String> time(@RequestBody MessageChatPayload payload, @RequestHeader("userName") String userName) {
 
         // 調用時間工具
         String response = chatClientTimeCalling.prompt()
@@ -50,7 +50,7 @@ public class ToolCallingController {
     }
 
     @PostMapping("/helpDeskTicket")
-    public ResponseEntity<String> helpDeskTicket(@RequestBody GenericChatPayload payload, @RequestHeader("userName") String userName) {
+    public ResponseEntity<String> helpDeskTicket(@RequestBody MessageChatPayload payload, @RequestHeader("userName") String userName) {
         String response = chatClientTimeCalling.prompt()
                 .system(helpDeskTicketPromptTemplate)
                 .tools(helpDeskTicketTool) // 註冊 HelpDeskTicketTool，本次呼叫可建立工單或查詢工單狀態；會疊加 defaultTools()

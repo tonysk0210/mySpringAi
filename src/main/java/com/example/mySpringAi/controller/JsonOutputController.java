@@ -1,7 +1,7 @@
 package com.example.mySpringAi.controller;
 
 import com.example.mySpringAi.dto.CountryCitiesDto;
-import com.example.mySpringAi.payload.JsonOutputPayload;
+import com.example.mySpringAi.payload.MessageChatPayload;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.converter.ListOutputConverter;
 import org.springframework.ai.converter.MapOutputConverter;
@@ -25,24 +25,24 @@ import java.util.Map;
 @RequestMapping("/api")
 public class JsonOutputController {
 
-    private final ChatClient openaiChatClientWithoutMemory;
+    private final ChatClient openaiCCNoMem;
 
     @Autowired
-    public JsonOutputController(@Qualifier("openaiChatClient-withoutMemory") ChatClient openaiChatClientWithoutMemory) {
-        this.openaiChatClientWithoutMemory = openaiChatClientWithoutMemory;
+    public JsonOutputController(@Qualifier("openaiCCNoMem") ChatClient openaiCCNoMem) {
+        this.openaiCCNoMem = openaiCCNoMem;
     }
 
     /**
      * 讓 Spring AI 要求模型輸出符合 CountryCitiesDto 結構的內容，然後用 CountryCitiesDto.class 把模型回傳文字轉成 CountryCitiesDto 物件。
      */
     @PostMapping("/openai/generateJsonDto")
-    public ResponseEntity<CountryCitiesDto> openaiGenerateJsonDto(@RequestBody JsonOutputPayload jsonOutputPayload) {
+    public ResponseEntity<CountryCitiesDto> openaiGenerateJsonDto(@RequestBody MessageChatPayload messageChatPayload) {
 
         // 呼叫 OpenAI 生成符合 CountryCitiesDto 結構的 JSON 數據
-        CountryCitiesDto dto = openaiChatClientWithoutMemory.prompt()
-                .user(jsonOutputPayload.message())
+        CountryCitiesDto dto = openaiCCNoMem.prompt()
+                .user(messageChatPayload.message())
                 .call()
-                .entity(CountryCitiesDto.class); // 要求 LLM 回傳符合 CountryCitiesDto 結構的內容，並轉成 DTO 物件。
+                .entity(CountryCitiesDto.class); // 要求 LLM 回傳符合 CountryCitiesDto 結構的物件
         return ResponseEntity.ok(dto);
     }
 
@@ -50,14 +50,14 @@ public class JsonOutputController {
      * 讓 Spring AI 要求模型輸出符合 List<CountryCitiesDto> 結構的內容，然後用 ParameterizedTypeReference 把模型回傳文字轉成 List<CountryCitiesDto> 物件。
      */
     @PostMapping("/openai/generateListJsonDto")
-    public ResponseEntity<List<CountryCitiesDto>> openaiGenerateListJsonDto(@RequestBody JsonOutputPayload jsonOutputPayload) {
+    public ResponseEntity<List<CountryCitiesDto>> openaiGenerateListJsonDto(@RequestBody MessageChatPayload messageChatPayload) {
 
         // 呼叫 OpenAI 生成符合 List<CountryCitiesDto> 結構的 JSON 數據
-        List<CountryCitiesDto> listDto = openaiChatClientWithoutMemory.prompt()
-                .user(jsonOutputPayload.message())
+        List<CountryCitiesDto> listDto = openaiCCNoMem.prompt()
+                .user(messageChatPayload.message())
                 .call()
-                .entity(new ParameterizedTypeReference<List<CountryCitiesDto>>() {
-                }); // 要求 LLM 回傳符合 List<CountryCitiesDto> 結構的內容，並轉成 List<CountryCitiesDto> 物件。
+                .entity(new ParameterizedTypeReference<>() {
+                }); // 要求 LLM 回傳符合 List<CountryCitiesDto> 結構的物件
         return ResponseEntity.ok(listDto);
     }
 
@@ -65,13 +65,13 @@ public class JsonOutputController {
      * 讓 Spring AI 要求模型輸出符合 List<String> 結構的內容，然後用 ListOutputConverter 把模型回傳文字轉成 List<String> 物件。
      */
     @PostMapping("/openai/generateList")
-    public ResponseEntity<List<String>> openaiGenerateList(@RequestBody JsonOutputPayload jsonOutputPayload) {
+    public ResponseEntity<List<String>> openaiGenerateList(@RequestBody MessageChatPayload messageChatPayload) {
 
         // 呼叫 OpenAI 生成符合 List<String> 結構的 JSON 數據
-        List<String> list = openaiChatClientWithoutMemory.prompt()
-                .user(jsonOutputPayload.message())
+        List<String> list = openaiCCNoMem.prompt()
+                .user(messageChatPayload.message())
                 .call()
-                .entity(new ListOutputConverter()); // 要求 LLM 回傳符合 List<String> 結構的內容，並轉成 List<String> 物件。
+                .entity(new ListOutputConverter()); // 要求 LLM 回傳符合 List<String> 結構的物件
         return ResponseEntity.ok(list);
     }
 
@@ -79,13 +79,13 @@ public class JsonOutputController {
      * 讓 Spring AI 要求模型輸出符合 Map<String, Object> 結構的內容，然後用 MapOutputConverter 把模型回傳文字轉成 Map<String, Object> 物件。
      */
     @PostMapping("/openai/generateMap")
-    public ResponseEntity<Map<String, Object>> openaiGenerateMap(@RequestBody JsonOutputPayload jsonOutputPayload) {
+    public ResponseEntity<Map<String, Object>> openaiGenerateMap(@RequestBody MessageChatPayload messageChatPayload) {
 
         // 呼叫 OpenAI 生成符合 Map<String, Object> 結構的 JSON 數據
-        Map<String, Object> map = openaiChatClientWithoutMemory.prompt()
-                .user(jsonOutputPayload.message())
+        Map<String, Object> map = openaiCCNoMem.prompt()
+                .user(messageChatPayload.message())
                 .call()
-                .entity(new MapOutputConverter()); // 要求 LLM 回傳符合 Map<String, Object> 結構的內容，並轉成 Map<String, Object> 物件。
+                .entity(new MapOutputConverter()); // 要求 LLM 回傳符合 Map<String, Object> 結構的物件
         return ResponseEntity.ok(map);
     }
 }
