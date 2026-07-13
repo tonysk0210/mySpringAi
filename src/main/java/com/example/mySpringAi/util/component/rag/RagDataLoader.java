@@ -20,40 +20,20 @@ import java.util.List;
 @Component
 public class RagDataLoader {
 
-    private final VectorStore vectorStore;
+    private final VectorStore ragVectorStore;
     private final VectorStore pdfVectorStore;
     private final QdrantClient qdrantClient;
 
     @Value("classpath:/Eazybytes_HR_Policies.pdf")
     Resource pdfFile;
 
-    /**
-     * vectorStore     -> Spring AI 自動建立 -> rag-collection
-     * pdfVectorStore  -> 你自己建立       -> pdf-collection
-     * <p>
-     * vectorStore 來自 pom.xml 的 spring-ai-starter-vector-store-qdrant
-     * 並透過 spring.ai.vectorstore.qdrant.collection-name=rag-collection 決定 collection
-     */
     @Autowired
-    public RagDataLoader(VectorStore vectorStore,
+    public RagDataLoader(@Qualifier("vectorStore") VectorStore ragVectorStore, // spring-ai 自動建立的 vectorStore
                          @Qualifier("pdfVectorStore") VectorStore pdfVectorStore,
                          QdrantClient qdrantClient) {
-        this.vectorStore = vectorStore;
+        this.ragVectorStore = ragVectorStore;
         this.pdfVectorStore = pdfVectorStore;
         this.qdrantClient = qdrantClient;
-        /*
-        第一個參數：
-        VectorStore vectorStore
-          -> 找 VectorStore 型別
-          -> 找到 vectorStore、pdfVectorStore 兩個
-          -> 沒有 @Qualifier
-          -> 用參數名稱 vectorStore 去 match bean 名稱
-          -> 選到 auto-config 的 vectorStore
-
-        第二個參數：
-        @Qualifier("pdfVectorStore") VectorStore pdfVectorSotre
-          -> 直接選 pdfVectorStore
-        */
     }
 
     /**
@@ -126,9 +106,9 @@ public class RagDataLoader {
         // 1. 把句子轉成 Document
         List<Document> documents = sentences.stream().map(Document::new).toList();
 
-        // 2. 把 Document 送進 Qdrant
-        vectorStore.add(documents);
-        log.info("rag-collection 載入完成，共 {} 筆", documents.size());
+        // 2. 把 Document 送進 ragVectorStore，完成建立 rag-collection
+        ragVectorStore.add(documents);
+        log.info("rag-collection 載入完成，共 {} 筆 Documents.", documents.size());
     }
 
     /**
@@ -141,7 +121,7 @@ public class RagDataLoader {
             return;
         }
 
-        // 1. 建立一個 TikaDocumentReader 讀取 pdfFile，並嘗試從 PDF 中抽出文字內容
+        // 1. 建立一個 Apache Tika TikaDocumentReader 讀取 pdfFile，並嘗試從 PDF 中抽出文字內容
         TikaDocumentReader reader = new TikaDocumentReader(pdfFile);
 
         // 2. 真正讀取 PDF，並把結果轉成 Spring AI 的 Document 清單
@@ -151,12 +131,15 @@ public class RagDataLoader {
         // 3. 使用 TokenTextSplitter，用 token 數量來切文件：每個 chunk 目標大小約為 200 tokens，最多切 400 個 chunk
         TextSplitter splitter = TokenTextSplitter.builder().withChunkSize(200).withMaxNumChunks(400).build();
 
-        // 4. 把切好的 Document 清單送進 pdfVectorSotre，完成建立 pdf-collection
-        pdfVectorStore.add(splitter.split(documents));
-        log.info("pdf-collection 載入完成");
+        // 4. 把切好的 Document 清單送進 pdfVectorStore，完成建立 pdf-collection
+        List<Document> splitDocuments = splitter.split(documents);
+
+        // 5. 把切好的 Document 清單送進 pdfVectorStore，完成建立 pdf-collection
+        pdfVectorStore.add(splitDocuments);
+        log.info("pdf-collection 載入完成，共 {} 筆 Documents.", splitDocuments.size());
     }
 
-    // 向 Qdrant 查詢 collection 的 point 數量，大於 0 表示已有資料
+    // 判斷某個 Qdrant collection 裡面是否已經有資料，避免每次 Spring Boot 啟動都重複把資料塞進向量資料庫
     private boolean hasData(String collectionName) {
         try {
             long count = qdrantClient.getCollectionInfoAsync(collectionName).get().getPointsCount();

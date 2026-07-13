@@ -2,6 +2,7 @@ package com.example.mySpringAi.config;
 
 import io.micrometer.observation.ObservationRegistry;
 import io.qdrant.client.QdrantClient;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.embedding.EmbeddingModel;
 import org.springframework.ai.embedding.TokenCountBatchingStrategy;
 import org.springframework.ai.vectorstore.VectorStore;
@@ -14,6 +15,7 @@ import org.springframework.context.annotation.Configuration;
  * pdfVectorStore 操作 Qdrant 的 pdf-collection，用於 PDF/RAG 檢索。
  * cachingVectorStore 操作 Qdrant 的 caching-collection，用於 semantic cache。
  */
+@Slf4j
 @Configuration
 public class VectorStoreConfig {
 
@@ -25,20 +27,32 @@ public class VectorStoreConfig {
 
     @Bean("pdfVectorStore")
     public VectorStore pdfVectorStore(QdrantClient qdrantClient, EmbeddingModel embeddingModel, ObservationRegistry observationRegistry) {
-        return QdrantVectorStore.builder(qdrantClient, embeddingModel).collectionName("pdf-collection") // 這個 VectorStore 專門存取 Qdrant 裡的 pdf-collection
+        TokenCountBatchingStrategy batchingStrategy = new TokenCountBatchingStrategy();
+
+        VectorStore vectorStore = QdrantVectorStore.builder(qdrantClient, embeddingModel).collectionName("pdf-collection") // 這個 VectorStore 專門存取 Qdrant 裡的 pdf-collection
                 .initializeSchema(true) // 啟動時如果 collection/schema 不存在，會嘗試建立
-                .batchingStrategy(new TokenCountBatchingStrategy())  // 使用 token 數量分批送 embedding；這也是 Spring AI 的預設策略
+                .batchingStrategy(batchingStrategy)  // 使用 token 數量分批送 embedding；這也是 Spring AI 的預設策略
                 // 接上 Spring/Micrometer 觀測機制；add、delete、similaritySearch 會產生 db.vector.client.operation 指標/追蹤資料 (prometheus, grafana, Jaeger / OpenTelemetry)
                 .observationRegistry(observationRegistry)
                 .build();
+
+        log.info("VectorStore Bean 建立完成：beanName={}, provider=Qdrant, collection={}, initializeSchema={}, batchingStrategy={}, observationRegistry={}",
+                "pdfVectorStore", "pdf-collection", true, batchingStrategy.getClass().getSimpleName(), observationRegistry.getClass().getSimpleName());
+        return vectorStore;
     }
 
     @Bean("cachingVectorStore")
     public VectorStore cachingVectorStore(QdrantClient qdrantClient, EmbeddingModel embeddingModel, ObservationRegistry observationRegistry) {
-        return QdrantVectorStore.builder(qdrantClient, embeddingModel).collectionName("caching-collection") // 這個 VectorStore 專門存取 Qdrant 裡的 caching-collection
+        TokenCountBatchingStrategy batchingStrategy = new TokenCountBatchingStrategy();
+
+        VectorStore vectorStore = QdrantVectorStore.builder(qdrantClient, embeddingModel).collectionName("caching-collection") // 這個 VectorStore 專門存取 Qdrant 裡的 caching-collection
                 .initializeSchema(true)
-                .batchingStrategy(new TokenCountBatchingStrategy())
+                .batchingStrategy(batchingStrategy)
                 .observationRegistry(observationRegistry)
                 .build();
+
+        log.info("VectorStore Bean 建立完成：beanName={}, provider=Qdrant, collection={}, initializeSchema={}, batchingStrategy={}, observationRegistry={}",
+                "cachingVectorStore", "caching-collection", true, batchingStrategy.getClass().getSimpleName(), observationRegistry.getClass().getSimpleName());
+        return vectorStore;
     }
 }
