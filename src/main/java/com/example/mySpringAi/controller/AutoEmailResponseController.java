@@ -28,9 +28,6 @@ public class AutoEmailResponseController {
 
     /**
      * 使用 OpenAI 的 ChatGPT 來生成電子郵件回應。這個 API 接收一個 AutoEmailResponsePayload 物件，包含客戶名稱和客戶訊息，然後使用預先定義的 PromptTemplate 來生成回應。
-     *
-     * @param autoEmailResponsePayload 包含客戶名稱和客戶訊息的物件
-     * @return 生成的電子郵件回應內容
      */
     @PostMapping("/openai/emailResponse")
     public String openaiEmailResponse(@RequestBody AutoEmailResponsePayload autoEmailResponsePayload) {

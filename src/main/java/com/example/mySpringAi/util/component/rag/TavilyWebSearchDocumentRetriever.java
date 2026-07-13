@@ -17,80 +17,61 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 自定義的 DocumentRetriever：收到 query -> 去 Tavily 搜尋 -> 把搜尋結果轉成 List<Document> -> 回傳
+ * 自定義 DocumentRetriever：query → 打 Tavily Web Search API → 轉成 List<Document>。
+ * 相對於 VectorStoreDocumentRetriever（查本地向量庫），本 retriever 走網路即時搜尋。
  */
-// 對外 REST API 連線
 @Slf4j
 @Component
 public class TavilyWebSearchDocumentRetriever implements DocumentRetriever {
 
     private static final String TAVILY_BASE_URL = "https://api.tavily.com/search";
-    private final int resultLimit = 5; // 最多要拿幾筆搜尋結果
+    private final int resultLimit = 5;
     private final RestClient restClient;
 
-    /**
-     * 建立一個可以呼叫 Tavily Web Search API 的 RestClient，並設定最多要拿幾筆搜尋結果。
-     *
-     */
     public TavilyWebSearchDocumentRetriever(RestClient.Builder restClientBuilder,
                                             @Value("${tavily.apiKey:}") String apiKey) {
-        // 1. 驗證 clientBuilder 不為 null
-        Assert.notNull(restClientBuilder, "restClientBuilder 不可為 null"); // 如果 restClientBuilder 是 null，立刻丟出 IllegalArgumentException，避免後面呼叫 baseUrl() 時才發生 NullPointerException
-
-        // 2. 驗證 api.properties 注入的 tavily.apiKey 不為空
+        // 前置檢查
+        Assert.notNull(restClientBuilder, "restClientBuilder 不可為 null");
         Assert.hasText(apiKey, "tavily.apiKey 設定不可為空");
 
-        // 3. 建立 RestClient 物件；所以之後在 retrieve(Query query) 裡面呼叫：restClient.post()　就會直接對 Tavily API 發送 POST request，而且自動帶上 Authorization header
-        // restClient 是這個類別用來發 HTTP request 給 Tavily API 的工具。
+        // 預設帶上 Authorization header，後續 restClient.post() 就自動使用
         this.restClient = restClientBuilder
                 .baseUrl(TAVILY_BASE_URL)
-                .defaultHeader(HttpHeaders.AUTHORIZATION, "Bearer " + apiKey) // 帶上 Authorization header
+                .defaultHeader(HttpHeaders.AUTHORIZATION, "Bearer " + apiKey)
                 .build();
     }
 
     /**
-     * 實作 DocumentRetriever 介面的核心方法：從 Tavily 網路搜尋 API 取得相關文件
+     * 你只要在 RetrievalAugmentationAdvisor.builder().documentRetriever(tavilyRetriever) 註冊進去，advisor 就會在 before() 階段自動幫你呼叫 retrieve(query)——這是策略模式 +
+     * 控制反轉的典型應用：你實作介面，框架呼叫你（Don't call us, we'll call you）。除非你完全不用 advisor、走手動 RAG，才需要自己 tavilyRetriever.retrieve(...)。
      */
     @Override
     public List<Document> retrieve(Query query) {
-        // 1. user 下的 query 內容
-        log.info("TavilyWebSearchDocumentRetriever: user 下的 query = {}", query.text());
         Assert.notNull(query, "query 不可為 null");
-
-        // 2. 提取 user 查詢文字
         String q = query.text();
         Assert.hasText(q, "query 不可為空");
+        log.info("TavilyWebSearchDocumentRetriever: user 下的 query = {}", q);
 
-        // 3. 呼叫 Tavily API 進行網路搜尋
-        // POST https://api.tavily.com/search
-        // Body = {"query": "使用者問題", "search_depth": "advanced", "max_results": resultLimit}
-        // Header = Authorization: Bearer {tavily.apiKey}
+        // 1. 呼叫 Tavily Web Search API: search_depth=advanced 走深度搜尋（較慢但相關性較高）
         TavilyResponseDto responseDto = restClient.post()
-                .body(new TavilyRequestPayload(q, "advanced", resultLimit))  // 建立請求 payload: advanced 用比較深入、相關性較高的搜尋模式。
-                .retrieve()                                                                                      // 取得 HTTP response
-                .body(TavilyResponseDto.class);                                                        // 將 JSON 回應反序列化成 TavilyDto
+                .body(new TavilyRequestPayload(q, "advanced", resultLimit))
+                .retrieve()
+                .body(TavilyResponseDto.class);
 
-        // 4. 檢查回應是否有效：如果 responseDto 是 null「或」結果為空，就回傳空列表
         if (responseDto == null || CollectionUtils.isEmpty(responseDto.results())) {
             return List.of();
         }
 
-        // 5. 將 Tavily API 回應轉換成 Spring AI Document 格式
+        // 2. 將 Tavily API 回傳的結果轉成 List<Document>
         List<Document> docs = new ArrayList<>(responseDto.results().size());
-
-        // 6. 遍歷每個搜尋結果（Hit）
         for (TavilyResponseDto.Hit hit : responseDto.results()) {
-            // 6.1 逐一處理 Tavily 回傳的每一筆搜尋結果，並建立 Document 物件：Document 是 Spring AI 用來表示「一段可被 RAG 使用的資料」的標準格式。
-            Document doc = Document.builder()
-                    .text(hit.content())              // 真正給 AI 看的搜尋內容：必要
-                    .metadata("title", hit.title())        // 來源網頁標題：非必要，但建議保留，因為可以追來源
-                    .metadata("url", hit.url())            // 來源網址：非必要，但建議保留，因為可以追來源
-                    .score(hit.score())                    // 相關性分數（Tavily 計算的搜尋相關度）：非必要，但建議保留，因為可以看相關性
-                    .build();
-            docs.add(doc);
+            docs.add(Document.builder()
+                    .text(hit.content())       // 給 LLM 看的搜尋內容（Document 唯一必填欄位）
+                    .metadata("title", hit.title()) // 來源標題（追來源用）
+                    .metadata("url", hit.url())     // 來源網址（追來源用）
+                    .score(hit.score())             // Tavily 計算的相關性分數
+                    .build());
         }
-
-        // 7. 回傳轉換完成的文件列表：這些 Documents 可以被 RAG Advisor 或手動流程注入到 LLM prompt 中
         return docs;
     }
 }

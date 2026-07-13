@@ -38,6 +38,6 @@ public class TokenUsageAuditAdvisor implements CallAdvisor {
 
     @Override
     public int getOrder() {
-        return -1;
+        return -2;
     } // 優先順序，數字越小越先執行
 }
