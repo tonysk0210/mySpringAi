@@ -71,7 +71,8 @@ public class AudioController {
     }
 
     /**
-     * 把文字轉成音檔
+     * 基本文字轉語音：丟文字即可，其他全用 OpenAI TTS 預設值（預設聲音、正常語速、MP3 格式）。
+     * 對比 /text-to-speech-options：本 endpoint 不帶 options，適合快速產生語音檔。
      */
     @GetMapping("/text-to-speech")
     String speech(@RequestParam("message") String message) throws IOException {
@@ -79,7 +80,7 @@ public class AudioController {
         // 1. 呼叫 textToSpeechModel 的 call 方法，傳入要轉成音檔的文字
         byte[] audioBytes = textToSpeechModel.call(message);
 
-        // 2. 將音檔保存到本地
+        // 2. 建立輸出檔案路徑
         Path path = Paths.get("audio-output", "speech.mp3");
 
         // 3. 寫入音檔
@@ -90,20 +91,26 @@ public class AudioController {
         return "MP3 已成功儲存至：" + path.toAbsolutePath();
     }
 
+    /**
+     * 進階文字轉語音：帶 OpenAiAudioSpeechOptions 精細控制音色、語速、輸出格式（此處為 NOVA 聲音、1.0 語速、MP3）。
+     * 對比 /text-to-speech：本 endpoint 適合需要特定音色或語速的情境；/text-to-speech 適合快速產生語音檔。
+     */
     @GetMapping("/text-to-speech-options")
     String speechWithOptions(@RequestParam("message") String message) throws IOException {
         log.info("TTS 請求 (options): {}", message);
         // 1. 建立 TextToSpeechPrompt，把文字和語音合成 options 打包成請求
         TextToSpeechResponse speechResponse = textToSpeechModel.call(new TextToSpeechPrompt(message,
-                OpenAiAudioSpeechOptions.builder().voice(OpenAiAudioSpeechOptions.Voice.NOVA) // 指定 TTS 使用 NOVA 聲音
+                OpenAiAudioSpeechOptions.builder()
+                        .voice(OpenAiAudioSpeechOptions.Voice.NOVA) // 指定 TTS 使用 NOVA 聲音
                         .speed(1.0) // 語速倍率；1.0 代表正常速度
                         .responseFormat(OpenAiAudioSpeechOptions.AudioResponseFormat.MP3).build())); // 要求回傳 MP3 音訊格式
 
         // 2. 建立輸出檔案路徑
         Path path = Paths.get("audio-output", "speech-options.mp3");
 
-        // 3. 從回應取出音訊 bytes，寫入 MP3 檔案
+        // 3. 寫入音檔
         Files.write(path, speechResponse.getResult().getOutput());
+
         log.info("TTS 完成 (options)，檔案儲存至: {}", path.toAbsolutePath());
         // 4. 回應結果
         return "MP3 已成功儲存至：" + path.toAbsolutePath();
