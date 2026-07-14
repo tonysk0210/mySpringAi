@@ -104,10 +104,10 @@ public class ChatClientConfig {
     @Bean("openaiCCJdbcMemoryWithToolCalling")
     public ChatClient openaiCCJdbcMemoryWithToolCalling(OpenAiChatModel openAiChatModel, @Qualifier("jdbcChatMemory") ChatMemory chatMemory, TimeTool timeTool, ObservationRegistry observationRegistry, ToolCallingManager toolCallingManager) {
 
-        // 建立 MessageChatMemoryAdvisor，也就是「會話記憶攔截器」。使用 Jdbc Chat Memory 作為記憶源
+        // 1. 建立 MessageChatMemoryAdvisor，也就是「會話記憶攔截器」。使用 Jdbc Chat Memory 作為記憶源
         Advisor jdbcChatMemoryAdvisor = MessageChatMemoryAdvisor.builder(chatMemory).build();
 
-        // 建立 ToolCallingAdvisor，也就是「工具呼叫攔截器」。使用 ToolCallingManager 作為工具管理器
+        // 2. 建立 ToolCallingAdvisor 的 Builder，指定工具呼叫流程要使用的 ToolCallingManager。當模型回傳 tool call 時，ToolCallingAdvisor 會透過此 manager 執行對應工 - toolExecutionExceptionProcessor 用於處理工具執行過程中的異常
         ToolCallingAdvisor.Builder<?> toolCallingAdvisorBuilder = ToolCallingAdvisor.builder()
                 .toolCallingManager(toolCallingManager);
 
