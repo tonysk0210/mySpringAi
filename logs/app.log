@@ -4362,3 +4362,208 @@ Consider defining a bean of type 'org.springframework.ai.chat.client.ChatClient'
 2026-07-14T13:23:02.173+08:00  INFO 10592 --- [mySpringAi] [http-nio-8080-exec-1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2026-07-14T13:23:02.173+08:00  INFO 10592 --- [mySpringAi] [http-nio-8080-exec-1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2026-07-14T13:23:02.174+08:00  INFO 10592 --- [mySpringAi] [http-nio-8080-exec-1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-14T13:24:37.386+08:00  INFO 10592 --- [mySpringAi] [SpringApplicationShutdownHook] [                                                 ] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-14T13:24:37.398+08:00  INFO 10592 --- [mySpringAi] [tomcat-shutdown] [                                                 ] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-14T13:24:37.405+08:00  INFO 10592 --- [mySpringAi] [SpringApplicationShutdownHook] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14T13:24:37.406+08:00  INFO 10592 --- [mySpringAi] [SpringApplicationShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-07-14T13:24:37.408+08:00  INFO 10592 --- [mySpringAi] [SpringApplicationShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-07-14T16:46:54.262+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 7764 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-07-14T16:46:54.268+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-07-14T16:46:54.379+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-14T16:46:54.382+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-14T16:46:54.417+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-07-14T16:46:58.433+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Creating 
+2026-07-14T16:46:58.536+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Network myspringai_default Created 
+2026-07-14T16:46:58.559+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-redis-1 Creating 
+2026-07-14T16:46:58.560+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Creating 
+2026-07-14T16:46:58.561+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-prometheus-1 Creating 
+2026-07-14T16:46:58.561+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-jaeger-1 Creating 
+2026-07-14T16:46:58.561+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-grafana-1 Creating 
+2026-07-14T16:46:58.838+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-jaeger-1 Created 
+2026-07-14T16:46:58.852+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-prometheus-1 Created 
+2026-07-14T16:46:58.868+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Created 
+2026-07-14T16:46:58.874+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-redis-1 Created 
+2026-07-14T16:46:58.878+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-grafana-1 Created 
+2026-07-14T16:46:58.970+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-redis-1 Starting 
+2026-07-14T16:46:58.970+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Starting 
+2026-07-14T16:46:58.971+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-prometheus-1 Starting 
+2026-07-14T16:46:58.971+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-jaeger-1 Starting 
+2026-07-14T16:46:58.971+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-grafana-1 Starting 
+2026-07-14T16:46:59.872+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-grafana-1 Started 
+2026-07-14T16:46:59.908+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-prometheus-1 Started 
+2026-07-14T16:46:59.992+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-redis-1 Started 
+2026-07-14T16:47:00.156+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-jaeger-1 Started 
+2026-07-14T16:47:00.220+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Started 
+2026-07-14T16:47:00.222+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-redis-1 Waiting 
+2026-07-14T16:47:00.222+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-prometheus-1 Waiting 
+2026-07-14T16:47:00.222+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-grafana-1 Waiting 
+2026-07-14T16:47:00.223+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-jaeger-1 Waiting 
+2026-07-14T16:47:00.223+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Waiting 
+2026-07-14T16:47:00.730+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-redis-1 Healthy 
+2026-07-14T16:47:00.731+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-prometheus-1 Healthy 
+2026-07-14T16:47:00.733+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-jaeger-1 Healthy 
+2026-07-14T16:47:00.739+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-qdrant-1 Healthy 
+2026-07-14T16:47:00.740+08:00  INFO 7764 --- [mySpringAi] [OutputReader-stderr] [                                                 ] o.s.boot.docker.compose.core.DockerCli   :  Container myspringai-grafana-1 Healthy 
+2026-07-14T16:47:11.561+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-14T16:47:11.565+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-14T16:47:12.654+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1057 ms. Found 1 JPA repository interface.
+2026-07-14T16:47:17.427+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-14T16:47:17.477+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-14T16:47:17.478+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-14T16:47:17.735+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 8472 ms
+2026-07-14T16:47:19.051+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-14T16:47:19.910+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-07-14T16:47:19.914+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-14T16:47:20.314+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-14T16:47:20.610+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-14T16:47:22.185+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-14T16:47:22.390+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-14T16:47:24.964+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-14T16:47:25.080+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14T16:47:34.175+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.mySpringAi.config.VectorStoreConfig  : VectorStore Bean 建立完成：beanName=pdfVectorStore, provider=Qdrant, collection=pdf-collection, initializeSchema=true, batchingStrategy=TokenCountBatchingStrategy, observationRegistry=SimpleObservationRegistry
+2026-07-14T16:47:35.336+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.mySpringAi.config.VectorStoreConfig  : VectorStore Bean 建立完成：beanName=cachingVectorStore, provider=Qdrant, collection=caching-collection, initializeSchema=true, batchingStrategy=TokenCountBatchingStrategy, observationRegistry=SimpleObservationRegistry
+2026-07-14T16:47:35.924+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-14T16:47:38.085+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.m.util.component.rag.RagDataLoader   : PDF 讀取完成，共 1 份文件
+2026-07-14T16:47:38.230+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 6 chunks.
+2026-07-14T16:47:38.673+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.m.util.component.rag.RagDataLoader   : pdf-collection 載入完成，共 6 筆 Documents.
+2026-07-14T16:47:40.502+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.m.util.component.rag.RagDataLoader   : rag-collection 載入完成，共 54 筆 Documents.
+2026-07-14T16:47:40.532+08:00  WARN 7764 --- [mySpringAi] [restartedMain] [                                                 ] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-14T16:47:41.336+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-07-14T16:47:41.419+08:00  WARN 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-07-14T16:47:41.420+08:00  WARN 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-07-14T16:47:41.512+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-14T16:47:41.880+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 49.489 seconds (process running for 54.347)
+2026-07-14T16:47:42.498+08:00  INFO 7764 --- [mySpringAi] [RMI TCP Connection(4)-192.168.20.58] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-14T16:47:42.499+08:00  INFO 7764 --- [mySpringAi] [RMI TCP Connection(4)-192.168.20.58] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-14T16:47:42.503+08:00  INFO 7764 --- [mySpringAi] [RMI TCP Connection(4)-192.168.20.58] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-07-14T16:50:24.813+08:00 DEBUG 7764 --- [mySpringAi] [http-nio-8080-exec-6] [11daf7fd7bb9d2d255394e8d4f1a1149-36466f2b6655bcec] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request #1 ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]        paris is the capital of which country?
+╚════════════════════════════════════════════════════════════════════
+2026-07-14T16:50:27.269+08:00 DEBUG 7764 --- [mySpringAi] [http-nio-8080-exec-6] [11daf7fd7bb9d2d255394e8d4f1a1149-36466f2b6655bcec] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response #1 ══════════════════════════════════════════════════
+║ [ASSISTANT]   巴黎是法國的首都。
+╚════════════════════════════════════════════════════════════════════
+2026-07-14T16:50:27.272+08:00  INFO 7764 --- [mySpringAi] [http-nio-8080-exec-6] [11daf7fd7bb9d2d255394e8d4f1a1149-ab1a00d399a713e3] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=37, completionTokens=8, totalTokens=45, cacheReadInputTokens=0}
+2026-07-14T16:56:23.146+08:00  INFO 7764 --- [mySpringAi] [File Watcher] [                                                 ] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-07-14T16:56:23.168+08:00  INFO 7764 --- [mySpringAi] [Thread-1] [                                                 ] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-14T16:56:23.191+08:00  INFO 7764 --- [mySpringAi] [tomcat-shutdown] [                                                 ] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-14T16:56:23.225+08:00  INFO 7764 --- [mySpringAi] [Thread-1] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14T16:56:23.236+08:00  INFO 7764 --- [mySpringAi] [Thread-1] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-14T16:56:23.287+08:00  INFO 7764 --- [mySpringAi] [Thread-1] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-14T16:56:24.155+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 7764 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-07-14T16:56:24.156+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-07-14T16:56:24.172+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-07-14T16:56:25.089+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-07-14T16:56:25.900+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-14T16:56:25.901+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-14T16:56:26.037+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 133 ms. Found 1 JPA repository interface.
+2026-07-14T16:56:26.613+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-14T16:56:26.615+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-14T16:56:26.615+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-14T16:56:26.689+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1599 ms
+2026-07-14T16:56:26.834+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-07-14T16:56:26.896+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn12: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-07-14T16:56:26.896+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-07-14T16:56:26.923+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-14T16:56:26.971+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-14T16:56:26.974+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-14T16:56:27.058+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-14T16:56:27.064+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14T16:56:27.695+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.mySpringAi.config.VectorStoreConfig  : VectorStore Bean 建立完成：beanName=pdfVectorStore, provider=Qdrant, collection=pdf-collection, initializeSchema=true, batchingStrategy=TokenCountBatchingStrategy, observationRegistry=SimpleObservationRegistry
+2026-07-14T16:56:28.039+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.mySpringAi.config.VectorStoreConfig  : VectorStore Bean 建立完成：beanName=cachingVectorStore, provider=Qdrant, collection=caching-collection, initializeSchema=true, batchingStrategy=TokenCountBatchingStrategy, observationRegistry=SimpleObservationRegistry
+2026-07-14T16:56:28.107+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.m.util.component.rag.RagDataLoader   : pdf-collection 已有資料，跳過載入
+2026-07-14T16:56:28.111+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.m.util.component.rag.RagDataLoader   : rag-collection 已有資料，跳過載入
+2026-07-14T16:56:28.131+08:00  WARN 7764 --- [mySpringAi] [restartedMain] [                                                 ] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-14T16:56:28.503+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-07-14T16:56:28.550+08:00  WARN 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-07-14T16:56:28.551+08:00  WARN 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-07-14T16:56:28.564+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-14T16:56:28.683+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 5.184 seconds (process running for 581.148)
+2026-07-14T16:56:28.687+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-14T16:56:29.163+08:00  INFO 7764 --- [mySpringAi] [http-nio-8080-exec-1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-14T16:56:29.163+08:00  INFO 7764 --- [mySpringAi] [http-nio-8080-exec-1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-14T16:56:29.166+08:00  INFO 7764 --- [mySpringAi] [http-nio-8080-exec-1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-07-14T16:56:29.897+08:00  INFO 7764 --- [mySpringAi] [File Watcher] [                                                 ] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-07-14T16:56:29.901+08:00  INFO 7764 --- [mySpringAi] [Thread-35] [                                                 ] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-14T16:56:29.917+08:00  INFO 7764 --- [mySpringAi] [tomcat-shutdown] [                                                 ] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-14T16:56:29.926+08:00  INFO 7764 --- [mySpringAi] [Thread-35] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14T16:56:29.927+08:00  INFO 7764 --- [mySpringAi] [Thread-35] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-07-14T16:56:29.964+08:00  INFO 7764 --- [mySpringAi] [Thread-35] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-07-14T16:56:30.603+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.mySpringAi.MySpringAiApplication     : Starting MySpringAiApplication using Java 25 with PID 7764 (D:\Fork\mySpringAi\target\classes started by E3378 in D:\Fork\mySpringAi)
+2026-07-14T16:56:30.604+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.mySpringAi.MySpringAiApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-07-14T16:56:30.608+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file D:\Fork\mySpringAi\compose.yml
+2026-07-14T16:56:31.242+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2026-07-14T16:56:31.475+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-14T16:56:31.476+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-14T16:56:31.555+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 1 JPA repository interface.
+2026-07-14T16:56:31.827+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-14T16:56:31.828+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-14T16:56:31.828+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-14T16:56:31.873+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 630 ms
+2026-07-14T16:56:31.940+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-07-14T16:56:31.987+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn23: url=jdbc:h2:file:./h2db/chatmemory user=SA
+2026-07-14T16:56:31.988+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-07-14T16:56:32.000+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-14T16:56:32.029+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-14T16:56:32.031+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./h2db/chatmemory]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CHATMEMORY/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-14T16:56:32.073+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-14T16:56:32.075+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14T16:56:32.630+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.mySpringAi.config.VectorStoreConfig  : VectorStore Bean 建立完成：beanName=pdfVectorStore, provider=Qdrant, collection=pdf-collection, initializeSchema=true, batchingStrategy=TokenCountBatchingStrategy, observationRegistry=SimpleObservationRegistry
+2026-07-14T16:56:33.014+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.mySpringAi.config.VectorStoreConfig  : VectorStore Bean 建立完成：beanName=cachingVectorStore, provider=Qdrant, collection=caching-collection, initializeSchema=true, batchingStrategy=TokenCountBatchingStrategy, observationRegistry=SimpleObservationRegistry
+2026-07-14T16:56:33.054+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.m.util.component.rag.RagDataLoader   : pdf-collection 已有資料，跳過載入
+2026-07-14T16:56:33.058+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.m.util.component.rag.RagDataLoader   : rag-collection 已有資料，跳過載入
+2026-07-14T16:56:33.068+08:00  WARN 7764 --- [mySpringAi] [restartedMain] [                                                 ] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-14T16:56:33.371+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-07-14T16:56:33.414+08:00  WARN 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.a.m.a.p.s.SyncMcpSamplingProvider    : No sampling methods found
+2026-07-14T16:56:33.414+08:00  WARN 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.a.m.a.p.e.SyncMcpElicitationProvider : No elicitation methods found
+2026-07-14T16:56:33.428+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-14T16:56:33.520+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] c.e.mySpringAi.MySpringAiApplication     : Started MySpringAiApplication in 3.429 seconds (process running for 585.986)
+2026-07-14T16:56:33.523+08:00  INFO 7764 --- [mySpringAi] [restartedMain] [                                                 ] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-07-14T16:56:34.164+08:00  INFO 7764 --- [mySpringAi] [http-nio-8080-exec-1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-14T16:56:34.164+08:00  INFO 7764 --- [mySpringAi] [http-nio-8080-exec-1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-14T16:56:34.167+08:00  INFO 7764 --- [mySpringAi] [http-nio-8080-exec-1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-07-14T16:56:52.426+08:00 DEBUG 7764 --- [mySpringAi] [http-nio-8080-exec-6] [d9d4f14b5e45c5da5d75e1c8c539d956-64fedbb5778bc18f] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ► LLM Request #1 ══════════════════════════════════════════════════
+║ [SYSTEM]      回答時請使用清楚、易理解且專業的繁體中文。
+║ [USER]        what is the capital city of France?
+╚════════════════════════════════════════════════════════════════════
+2026-07-14T16:56:53.830+08:00 DEBUG 7764 --- [mySpringAi] [http-nio-8080-exec-6] [d9d4f14b5e45c5da5d75e1c8c539d956-64fedbb5778bc18f] c.e.m.advisor.PrettyLoggerAdvisor        : 
+╔══ ◄ LLM Response #1 ══════════════════════════════════════════════════
+║ [ASSISTANT]   法國的首都為巴黎。
+╚════════════════════════════════════════════════════════════════════
+2026-07-14T16:56:53.831+08:00  INFO 7764 --- [mySpringAi] [http-nio-8080-exec-6] [d9d4f14b5e45c5da5d75e1c8c539d956-d13cc0872c48226d] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=36, completionTokens=8, totalTokens=44, cacheReadInputTokens=0}

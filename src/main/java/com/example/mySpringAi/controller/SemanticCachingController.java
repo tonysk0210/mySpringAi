@@ -32,8 +32,8 @@ public class SemanticCachingController {
     /**
      * 使用 Qdrant Semantic Cache 處理聊天請求。
      */
-    @PostMapping("/vectorStoreCaching-chat")
-    public String vectorStoreChat(@RequestBody MessageChatPayload messageChatPayload) {
+    @PostMapping("/qdrantCaching-chat")
+    public String qdrantChat(@RequestBody MessageChatPayload messageChatPayload) {
         return qdrantChatClient.prompt().user(messageChatPayload.message()).call().content();
     }
 }
