@@ -49,13 +49,13 @@ public class ChatClientConfig {
                 .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。").build();
     }
 
-    // 3. 使用 OpenAI 模型、沒有聊天記憶功能，有 Vector Store Caching 功能
-    @Bean("openaiCCNoMemVectorStoreCache")
-    public ChatClient openaiCCNoMemVectorStoreCache(OpenAiChatModel openAiChatModel, @Qualifier("qdrantSemanticCacheAdvisor") SemanticCacheAdvisor vectorStoreSemanticCacheAdvisor, ObservationRegistry observationRegistry) {
+    // 3. 使用 OpenAI 模型、沒有聊天記憶功能，有 Qdrant Caching 功能
+    @Bean("openaiCCNoMemQdrantCache")
+    public ChatClient openaiCCNoMemQdrantCache(OpenAiChatModel openAiChatModel, @Qualifier("qdrantSemanticCacheAdvisor") SemanticCacheAdvisor qdrantSemanticCacheAdvisor, ObservationRegistry observationRegistry) {
 
         return ChatClient.builder(openAiChatModel, observationRegistry, null, null)
                 .defaultOptions(openAiChatOptions)
-                .defaultAdvisors(new TokenUsageAuditAdvisor(), new PrettyLoggerAdvisor(), vectorStoreSemanticCacheAdvisor)
+                .defaultAdvisors(new TokenUsageAuditAdvisor(), new PrettyLoggerAdvisor(), qdrantSemanticCacheAdvisor)
                 .defaultSystem("回答時請使用清楚、易理解且專業的繁體中文。").build();
     }
 

@@ -11,13 +11,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import redis.clients.jedis.RedisClient;
 
+/**
+ * 建立 Redis 與 Qdrant 兩套 Semantic Cache，並提供對應的 ChatClient Advisor。
+ */
 @Configuration
-public class RedisSemanticCacheConfig {
+public class SemanticCacheAdvisorConfig {
 
     /**
-     * 建立 Jedis RedisClient，連到 spring.data.redis.* 指定的 Redis；後續可提供給 Redis semantic cache 使用
-     * Redis: 跑在 Docker 裡，負責存資料
-     * Jedis: 跑在你的 Spring Boot app 裡，負責連 Redis
+     * 建立 Jedis Client，使用 spring.data.redis.* 設定連線至 Redis Server。
      */
     @Bean
     RedisClient redisClient(
@@ -27,44 +28,43 @@ public class RedisSemanticCacheConfig {
     }
 
     /**
-     * 建立 Redis-backed SemanticCache。
-     * 它負責把 query embedding 與 ChatResponse 存進 Redis，並用向量相似度查找可重用的回答。
+     * 建立 Redis Semantic Cache，儲存問題向量與 ChatResponse，
+     * 並透過向量相似度搜尋可重用的回答。
      */
     @Bean("redisSemanticCache")
     public SemanticCache redisSemanticCache(RedisClient redisClient, EmbeddingModel embeddingModel) {
         return DefaultSemanticCache.builder()
                 .jedisClient(redisClient)
                 .embeddingModel(embeddingModel)
-                .similarityThreshold(0.9)
-                .indexName("mySemantic-cache")
-                .prefix("cache:")
+                .similarityThreshold(0.9) // 快取命中的最低相似度
+                .indexName("redis-semantic-cache-index") // Redis Search 索引名稱
+                .prefix("cache:") // 快取資料的 key 前綴
                 .build();
     }
 
     /**
-     * 建立 SemanticCacheAdvisor。
-     * 注意：只有把這個 advisor 加到 ChatClient 的 defaultAdvisors / advisors 後，semantic cache 才會實際生效。
+     * 建立 Redis Semantic Cache Advisor；掛到 ChatClient 後才會攔截請求並使用快取。
      */
     @Bean("redisSemanticCacheAdvisor")
     public SemanticCacheAdvisor redisSemanticCacheAdvisor(@Qualifier("redisSemanticCache") SemanticCache semanticCache) {
         return SemanticCacheAdvisor.builder().cache(semanticCache).build();
     }
 
+    // Qdrant Semantic Cache
+
     /**
-     * 建立 Qdrant-backed SemanticCache。
+     * 使用 cachingVectorStore 建立 Qdrant Semantic Cache。
      */
     @Bean("qdrantSemanticCache")
-    SemanticCache qdrantSemanticCache(@Qualifier("cachingVectorStore") VectorStore vectorStore,
-                                      EmbeddingModel embeddingModel) {
+    SemanticCache qdrantSemanticCache(@Qualifier("cachingVectorStore") VectorStore vectorStore) {
         return DefaultSemanticCache.builder()
                 .vectorStore(vectorStore)
-                .embeddingModel(embeddingModel)
                 .similarityThreshold(0.8)
                 .build();
     }
 
     /**
-     * 建立 Qdrant-backed SemanticCacheAdvisor。
+     * 建立 Qdrant Semantic Cache Advisor；掛到 ChatClient 後才會攔截請求並使用快取。
      */
     @Bean("qdrantSemanticCacheAdvisor")
     public SemanticCacheAdvisor qdrantSemanticCacheAdvisor(@Qualifier("qdrantSemanticCache") SemanticCache semanticCache) {
