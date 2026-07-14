@@ -35,11 +35,11 @@ import org.springframework.core.io.Resource;
  */
 @Slf4j
 @Configuration
-public class RaAdvisorConfig {
+public class RAAdvisorConfig {
 
     /**
-     * PDF RAG advisor（給 /api/ragPdf 用）：檢索 pdf-collection → 套進 RagPdfPromptTemplate.st → 改寫 user message → 送 LLM。
-     * Template placeholder 必須是 {context} + {query}（Spring AI 硬性規定；對比手動 RAG /api/rag 的 {documents}）。
+     * PDF RAG advisor（給 /api/openai/ragPdf 用）：檢索 pdf-collection → 套進 RagPdfPromptTemplate.st → 改寫 user message → 送 LLM。
+     * Template placeholder 必須是 {context} + {query}（Spring AI 硬性規定；對比手動 RAG /api/openai/rag 的 {documents}）。
      */
     @Primary
     @Bean("pdf-RA-Advisor")
@@ -66,7 +66,7 @@ public class RaAdvisorConfig {
     }
 
     /**
-     * 建立給 /api/ragTavily 使用的 Tavily RAG advisor。
+     * 建立給 /api/openai/ragTavily 使用的 Tavily RAG advisor。
      * 這個 advisor 使用自定義的 TavilyWebSearchDocumentRetriever，
      * 將使用者問題送到 Tavily Web Search API，並把搜尋結果轉成 Spring AI Document。
      */
@@ -78,7 +78,7 @@ public class RaAdvisorConfig {
     }
 
     /**
-     * 完整 pipeline RAG advisor（給 /api/preAndPostRAAdvisor 用）：Pre-retrieval query 翻譯 → 檢索 → Post-retrieval PII 遮罩 → 增強 → 生成。
+     * 完整 pipeline RAG advisor（給 /api/openai/preAndPostRAAdvisor 用）：Pre-retrieval query 翻譯 → 檢索 → Post-retrieval PII 遮罩 → 增強 → 生成。
      * 對比 pdfRetrievalAugmentationAdvisor：本 advisor 多加 pre-retrieval 翻譯與 post-retrieval PII 遮罩；pdfRAAdvisor 只做基本檢索與增強。
      */
     @Bean("preAndPost-RA-Advisor")

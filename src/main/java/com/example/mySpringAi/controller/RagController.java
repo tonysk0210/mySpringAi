@@ -51,7 +51,7 @@ public class RagController {
      * 手動 RAG：呼叫 vectorStore.similaritySearch()，自行組 context 塞入 prompt。
      * 對比 /ragPdf：手動版適合理解底層流程；/ragPdf 交給 advisor 自動處理。
      */
-    @PostMapping("/rag")
+    @PostMapping("/openai/rag")
     public String rag(@RequestBody MessageChatPayload messageChatPayload) {
 
         // 1. 用 user 輸入去找相關文件，手動建立 SearchRequest 條件
@@ -80,7 +80,7 @@ public class RagController {
      * 自動 RAG（PDF）：一行 .advisors(retrievalAugmentationAdvisor) 完成檢索、增強、生成。
      * 對比 /rag：advisor 自動處理；/rag 需手動 similaritySearch + 組 prompt。
      */
-    @PostMapping("/ragPdf")
+    @PostMapping("/openai/ragPdf")
     public String ragPdf(@RequestBody MessageChatPayload messageChatPayload) {
         return openaiCCNoMem.prompt()
                 .advisors(pdfRAAdvisor) // 帶著 retrievalAugmentationAdvisor
@@ -92,7 +92,7 @@ public class RagController {
      * 網路搜尋 RAG：換掉 documentRetriever 為 TavilyWebSearchDocumentRetriever，改從網路即時搜尋資料。
      * 對比 /ragPdf：本 endpoint 用 Tavily 網路搜尋；/ragPdf 用本地 Qdrant 向量庫。
      */
-    @PostMapping("/ragTavily")
+    @PostMapping("/openai/ragTavily")
     public String tavily(@RequestBody MessageChatPayload messageChatPayload) {
         return openaiCCNoMem.prompt()
                 .advisors(tavilyRAAdvisor) // 帶著 tavilyRaAdvisor 自定義 retrievalAugmentationAdvisor
@@ -104,7 +104,7 @@ public class RagController {
      * 完整 pipeline RAG：Query 翻譯成英文（Pre-retrieval）→ 檢索 → 遮罩 email/phone（Post-retrieval）→ 增強 → 生成。
      * 對比 /ragPdf：本 endpoint 多加 pre-retrieval query 翻譯與 post-retrieval PII 遮罩；/ragPdf 只做基本檢索與增強。
      */
-    @PostMapping("/preAndPostRAAdvisor")
+    @PostMapping("/openai/preAndPostRAAdvisor")
     public String preRetrieval(@RequestBody MessageChatPayload messageChatPayload) {
         return openaiCCNoMem.prompt()
                 .advisors(preAndPostRAAdvisor) // 帶著 preAndPostRAAdvisor
