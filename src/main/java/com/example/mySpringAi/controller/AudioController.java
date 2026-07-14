@@ -1,5 +1,6 @@
 package com.example.mySpringAi.controller;
 
+import com.example.mySpringAi.payload.MessageChatPayload;
 import com.openai.models.audio.AudioResponseFormat;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,8 +15,9 @@ import org.springframework.ai.openai.OpenAiAudioTranscriptionOptions;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
@@ -74,11 +76,11 @@ public class AudioController {
      * 基本文字轉語音：丟文字即可，其他全用 OpenAI TTS 預設值（預設聲音、正常語速、MP3 格式）。
      * 對比 /text-to-speech-options：本 endpoint 不帶 options，適合快速產生語音檔。
      */
-    @GetMapping("/text-to-speech")
-    String speech(@RequestParam("message") String message) throws IOException {
-        log.info("TTS 請求: {}", message);
+    @PostMapping("/text-to-speech")
+    String speech(@RequestBody MessageChatPayload payload) throws IOException {
+        log.info("TTS 請求: {}", payload.message());
         // 1. 呼叫 textToSpeechModel 的 call 方法，傳入要轉成音檔的文字
-        byte[] audioBytes = textToSpeechModel.call(message);
+        byte[] audioBytes = textToSpeechModel.call(payload.message());
 
         // 2. 建立輸出檔案路徑
         Path path = Paths.get("audio-output", "speech.mp3");
@@ -95,11 +97,11 @@ public class AudioController {
      * 進階文字轉語音：帶 OpenAiAudioSpeechOptions 精細控制音色、語速、輸出格式（此處為 NOVA 聲音、1.0 語速、MP3）。
      * 對比 /text-to-speech：本 endpoint 適合需要特定音色或語速的情境；/text-to-speech 適合快速產生語音檔。
      */
-    @GetMapping("/text-to-speech-options")
-    String speechWithOptions(@RequestParam("message") String message) throws IOException {
-        log.info("TTS 請求 (options): {}", message);
+    @PostMapping("/text-to-speech-options")
+    String speechWithOptions(@RequestBody MessageChatPayload payload) throws IOException {
+        log.info("TTS 請求 (options): {}", payload.message());
         // 1. 建立 TextToSpeechPrompt，把文字和語音合成 options 打包成請求
-        TextToSpeechResponse speechResponse = textToSpeechModel.call(new TextToSpeechPrompt(message,
+        TextToSpeechResponse speechResponse = textToSpeechModel.call(new TextToSpeechPrompt(payload.message(),
                 OpenAiAudioSpeechOptions.builder()
                         .voice(OpenAiAudioSpeechOptions.Voice.NOVA) // 指定 TTS 使用 NOVA 聲音
                         .speed(1.0) // 語速倍率；1.0 代表正常速度
