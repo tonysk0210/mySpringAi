@@ -42,8 +42,5 @@ GEMINI.md
 *.lock.db
 *.trace.db
 
-### media ###
-*.mp3
-
 # macOS
 .DS_Store

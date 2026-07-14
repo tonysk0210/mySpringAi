@@ -1,6 +1,7 @@
 package com.example.mySpringAi.controller;
 
 import com.openai.models.audio.AudioResponseFormat;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.audio.transcription.AudioTranscriptionPrompt;
 import org.springframework.ai.audio.transcription.AudioTranscriptionResponse;
@@ -10,7 +11,6 @@ import org.springframework.ai.audio.tts.TextToSpeechPrompt;
 import org.springframework.ai.audio.tts.TextToSpeechResponse;
 import org.springframework.ai.openai.OpenAiAudioSpeechOptions;
 import org.springframework.ai.openai.OpenAiAudioTranscriptionOptions;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,60 +25,47 @@ import java.nio.file.Paths;
 
 @Slf4j
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/audio")
 public class AudioController {
     private final TranscriptionModel transcriptionModel;
     private final TextToSpeechModel textToSpeechModel; // OpenAiAudioSpeechModel implements TextToSpeechModel
 
-
-    @Autowired
-    public AudioController(TranscriptionModel transcriptionModel, TextToSpeechModel textToSpeechModel) {
-        this.transcriptionModel = transcriptionModel;
-        this.textToSpeechModel = textToSpeechModel;
-    }
-
     /**
-     * 把音檔轉成文字
+     * 基本語音轉文字：丟音檔即可，其他全用 OpenAI Whisper 預設值（輸出純文字、自動偵測語言）。
+     * 對比 /transcribe-options：本 endpoint 不帶 options，適合快速純文字轉錄。
      */
     @GetMapping("/transcribe")
     String transcribe(@Value("classpath:SpringAI.mp3") Resource audioFile) {
         log.info("Transcription 請求: {}", audioFile.getFilename());
-        String result = transcriptionModel.call(new AudioTranscriptionPrompt(audioFile))
-                .getResult()
-                .getOutput();
+
+        // 1. 呼叫 transcriptionModel 的 call 方法，傳入音檔
+        AudioTranscriptionResponse response = transcriptionModel.call(new AudioTranscriptionPrompt(audioFile));
+        String result = response.getResult().getOutput();
+
         log.info("Transcription 回應: {}", result);
         return result;
     }
 
     /**
-     * 把音檔轉成文字，但可以帶額外設定來控制轉錄行為
-     * <p>
-     * 流程拆解
-     * 音檔 (SpringAI.mp3)
-     * ↓
-     * AudioTranscriptionPrompt（把音檔 + 選項包成請求）
-     * ↓
-     * transcriptionModel.call(...)（送給 OpenAI Whisper API）
-     * ↓
-     * AudioTranscriptionResponse（收到回應）
-     * ↓
-     * .getResult().getOutput()（取出純文字）
+     * 進階語音轉文字：帶 OpenAiAudioTranscriptionOptions 精細控制主題提示、語言、隨機性、輸出格式（此處為 VTT 字幕）。
+     * 對比 /transcribe：本 endpoint 適合有專有名詞或需要字幕檔的情境；/transcribe 適合快速純文字轉錄。
      */
     @GetMapping("/transcribe-options")
     String transcribeWithOptions(@Value("classpath:SpringAI.mp3") Resource audioFile) {
         log.info("Transcription 請求 (options): {}", audioFile.getFilename());
-        // AudioTranscriptionPrompt 的用途是把「音檔 + 轉錄設定 options」包成一個完整請求，交給 transcriptionModel 執行。
-        // 1. 建立 AudioTranscriptionPrompt 物件，把音檔和轉錄設定 options 打包起來
-        AudioTranscriptionResponse audioTranscriptionResponse = transcriptionModel.call(new AudioTranscriptionPrompt(
+
+        // 1. 呼叫 transcriptionModel 的 call 方法，傳入音檔和轉錄設定
+        AudioTranscriptionResponse response = transcriptionModel.call(new AudioTranscriptionPrompt(
                 audioFile,
                 OpenAiAudioTranscriptionOptions.builder()
-                        .prompt("Talking about Spring AI") // 提供音檔主題/上下文，幫助模型辨識像 "Spring AI" 這類專有名詞
-                        .language("en") // 明確指定音檔語言是英文，避免模型自行偵測語言
-                        .temperature(0.5f) // 控制轉錄結果的不確定性；0 較保守，較高值可能產生較多變化
-                        .responseFormat(AudioResponseFormat.VTT).build())); // 回傳 WebVTT 字幕格式，通常包含時間戳記，不是單純純文字
+                        .prompt("Talking about Spring AI")       // 主題提示：幫模型正確辨識 "Spring AI" 這類專有名詞
+                        .language("en")                          // 強制語言：跳過自動偵測（短音檔易誤判）
+                        .temperature(0.5f)                       // 隨機性：0 = 最保守可重現、1 = 較有變化
+                        .responseFormat(AudioResponseFormat.VTT) // WebVTT 字幕格式（含時間戳記，非純文字）
+                        .build()));
+        String result = response.getResult().getOutput();
 
-        // 2. 取出轉錄結果
-        String result = audioTranscriptionResponse.getResult().getOutput();
         log.info("Transcription 回應 (options): {}", result);
         return result;
     }
