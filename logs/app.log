@@ -4567,3 +4567,8 @@ Consider defining a bean of type 'org.springframework.ai.chat.client.ChatClient'
 ║ [ASSISTANT]   法國的首都為巴黎。
 ╚════════════════════════════════════════════════════════════════════
 2026-07-14T16:56:53.831+08:00  INFO 7764 --- [mySpringAi] [http-nio-8080-exec-6] [d9d4f14b5e45c5da5d75e1c8c539d956-d13cc0872c48226d] c.e.m.advisor.TokenUsageAuditAdvisor     : Token 使用量 : DefaultUsage{promptTokens=36, completionTokens=8, totalTokens=44, cacheReadInputTokens=0}
+2026-07-14T16:58:03.164+08:00  INFO 7764 --- [mySpringAi] [SpringApplicationShutdownHook] [                                                 ] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-14T16:58:03.182+08:00  INFO 7764 --- [mySpringAi] [tomcat-shutdown] [                                                 ] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-14T16:58:03.193+08:00  INFO 7764 --- [mySpringAi] [SpringApplicationShutdownHook] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-14T16:58:03.195+08:00  INFO 7764 --- [mySpringAi] [SpringApplicationShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-07-14T16:58:03.197+08:00  INFO 7764 --- [mySpringAi] [SpringApplicationShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
