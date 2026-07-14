@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/email")
 public class AutoEmailResponseController {
 
     private final ChatClient openaiCCNoMem;
@@ -29,7 +29,7 @@ public class AutoEmailResponseController {
     /**
      * 使用 OpenAI 的 ChatGPT 來生成電子郵件回應。這個 API 接收一個 AutoEmailResponsePayload 物件，包含客戶名稱和客戶訊息，然後使用預先定義的 PromptTemplate 來生成回應。
      */
-    @PostMapping("/openai/emailResponse")
+    @PostMapping("/emailResponse")
     public String openaiEmailResponse(@RequestBody AutoEmailResponsePayload autoEmailResponsePayload) {
         return openaiCCNoMem.prompt()
 

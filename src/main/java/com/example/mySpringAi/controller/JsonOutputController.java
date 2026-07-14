@@ -22,7 +22,7 @@ import java.util.Map;
  * openaiGenerateList 和 openaiGenerateMap 只有集合型別約束，不能保證固定業務欄位或語意格式。
  */
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/dto")
 public class JsonOutputController {
 
     private final ChatClient openaiCCNoMem;
@@ -35,7 +35,7 @@ public class JsonOutputController {
     /**
      * 讓 Spring AI 要求模型輸出符合 CountryCitiesDto 結構的內容，然後用 CountryCitiesDto.class 把模型回傳文字轉成 CountryCitiesDto 物件。
      */
-    @PostMapping("/openai/generateJsonDto")
+    @PostMapping("/generateJsonDto")
     public ResponseEntity<CountryCitiesDto> openaiGenerateJsonDto(@RequestBody MessageChatPayload messageChatPayload) {
 
         // 呼叫 OpenAI 生成符合 CountryCitiesDto 結構的 JSON 數據
@@ -49,7 +49,7 @@ public class JsonOutputController {
     /**
      * 讓 Spring AI 要求模型輸出符合 List<CountryCitiesDto> 結構的內容，然後用 ParameterizedTypeReference 把模型回傳文字轉成 List<CountryCitiesDto> 物件。
      */
-    @PostMapping("/openai/generateListJsonDto")
+    @PostMapping("/generateListJsonDto")
     public ResponseEntity<List<CountryCitiesDto>> openaiGenerateListJsonDto(@RequestBody MessageChatPayload messageChatPayload) {
 
         // 呼叫 OpenAI 生成符合 List<CountryCitiesDto> 結構的 JSON 數據
@@ -64,7 +64,7 @@ public class JsonOutputController {
     /**
      * 讓 Spring AI 要求模型輸出符合 List<String> 結構的內容，然後用 ListOutputConverter 把模型回傳文字轉成 List<String> 物件。
      */
-    @PostMapping("/openai/generateList")
+    @PostMapping("/generateList")
     public ResponseEntity<List<String>> openaiGenerateList(@RequestBody MessageChatPayload messageChatPayload) {
 
         // 呼叫 OpenAI 生成符合 List<String> 結構的 JSON 數據
@@ -78,7 +78,7 @@ public class JsonOutputController {
     /**
      * 讓 Spring AI 要求模型輸出符合 Map<String, Object> 結構的內容，然後用 MapOutputConverter 把模型回傳文字轉成 Map<String, Object> 物件。
      */
-    @PostMapping("/openai/generateMap")
+    @PostMapping("/generateMap")
     public ResponseEntity<Map<String, Object>> openaiGenerateMap(@RequestBody MessageChatPayload messageChatPayload) {
 
         // 呼叫 OpenAI 生成符合 Map<String, Object> 結構的 JSON 數據

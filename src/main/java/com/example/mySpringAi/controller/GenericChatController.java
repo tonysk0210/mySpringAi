@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api")
 public class GenericChatController {
 
     private final ChatClient openaiCCInMemory;

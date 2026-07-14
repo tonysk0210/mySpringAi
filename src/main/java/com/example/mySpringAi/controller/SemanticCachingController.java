@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
  * 語意相近的問題可直接重用快取回答，減少重複呼叫 LLM。
  */
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/cache")
 public class SemanticCachingController {
     private final ChatClient redicChatClient;
     private final ChatClient qdrantChatClient;
