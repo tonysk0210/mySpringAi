@@ -1,5 +1,6 @@
 package com.example.mySpringAi.config;
 
+import io.micrometer.observation.ObservationRegistry;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.ollama.OllamaChatModel;
 import org.springframework.ai.openai.OpenAiChatModel;
@@ -22,13 +23,13 @@ public class ChatClientBuilderConfig {
     @Primary
     @Bean("openaiBuilder")
     @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-    public ChatClient.Builder openaiBuilder(OpenAiChatModel model) {
-        return ChatClient.builder(model);
+    public ChatClient.Builder openaiBuilder(OpenAiChatModel model, ObservationRegistry observationRegistry) {
+        return ChatClient.builder(model, observationRegistry, null, null);
     }
 
     @Bean("ollamaBuilder")
     @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-    public ChatClient.Builder ollamaBuilder(OllamaChatModel model) {
-        return ChatClient.builder(model);
+    public ChatClient.Builder ollamaBuilder(OllamaChatModel model, ObservationRegistry observationRegistry) {
+        return ChatClient.builder(model, observationRegistry, null, null);
     }
 }

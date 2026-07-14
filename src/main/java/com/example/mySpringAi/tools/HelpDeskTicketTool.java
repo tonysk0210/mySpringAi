@@ -64,7 +64,7 @@ public class HelpDeskTicketTool {
         List<HelpDeskTicketEntity> tickets = service.getHelpDeskTicketsByUser(username);
         log.info("共 {} 張「服務工單」 for userName: {}", tickets.size(), username);
 
-        // return tickets;
-        throw new RuntimeException("系統發生錯誤-請聯繫人工客服"); // 用來測試 Tool calling 發生錯誤情境
+        return tickets;
+        // throw new RuntimeException("系統發生錯誤-請聯繫人工客服"); // 用來測試 Tool calling 發生錯誤情境
     }
 }
